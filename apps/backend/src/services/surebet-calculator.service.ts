@@ -2,17 +2,48 @@ import {
   BookmakerOdd,
   SurebetOpportunity,
   SurebetOutcome,
-  AnalyzeSurebetsRequestDto,
   AnalyzeSurebetsResponseDto,
   MarketType,
   SportType,
 } from '../domain/types/surebet.types.js';
 
 export class SurebetCalculatorService {
+  private static instance: SurebetCalculatorService;
+  private liveOddsStore: BookmakerOdd[] = [];
+
+  public static getInstance(): SurebetCalculatorService {
+    if (!SurebetCalculatorService.instance) {
+      SurebetCalculatorService.instance = new SurebetCalculatorService();
+    }
+    return SurebetCalculatorService.instance;
+  }
+
+  /**
+   * Adds newly scraped odds from live bookmaker missions into the active pipeline
+   */
+  public addScrapedOdds(odds: BookmakerOdd[]): void {
+    if (!odds || odds.length === 0) return;
+    this.liveOddsStore = [...odds, ...this.liveOddsStore].slice(0, 500); // retain latest 500 odds
+  }
+
+  /**
+   * Clears in-memory live odds store
+   */
+  public clearLiveOdds(): void {
+    this.liveOddsStore = [];
+  }
+
+  /**
+   * Retrieves active live odds
+   */
+  public getLiveOdds(): BookmakerOdd[] {
+    return this.liveOddsStore;
+  }
+
   /**
    * Calculates arbitrage metrics and optimal stake distribution for a given set of odds
    *
-   * @param odds Array of odds from multiple bookmakers
+   * @param odds Array of real odds from multiple bookmakers
    * @param totalStake Total bankroll/capital to distribute (default: 1000)
    * @param minProfitMargin Minimum profit percentage threshold (default: 0%)
    */
@@ -21,6 +52,17 @@ export class SurebetCalculatorService {
     totalStake: number = 1000,
     minProfitMargin: number = 0
   ): AnalyzeSurebetsResponseDto {
+    if (!odds || odds.length === 0) {
+      return {
+        success: true,
+        opportunities: [],
+        analyzedEventsCount: 0,
+        surebetsFoundCount: 0,
+        highestProfitMargin: 0,
+        timestamp: new Date().toISOString(),
+      };
+    }
+
     // 1. Group odds by eventName and marketType
     const eventMarketMap = new Map<string, BookmakerOdd[]>();
 
@@ -79,7 +121,6 @@ export class SurebetCalculatorService {
     sport: SportType,
     totalStake: number
   ): SurebetOpportunity | null {
-    // Determine expected mutually exclusive selections
     const requiredSelections = this.getRequiredSelectionsForMarket(marketType);
     if (!requiredSelections || requiredSelections.length === 0) return null;
 
@@ -168,36 +209,13 @@ export class SurebetCalculatorService {
   }
 
   /**
-   * Return predefined live opportunities across sports for dashboard tracking
+   * Return live calculated opportunities from real scraped data (starts empty [] if no data scraped yet)
    */
-  public getLiveSeededOpportunities(totalStake = 1000): SurebetOpportunity[] {
-    const sampleOdds: BookmakerOdd[] = [
-      // 1. Real Madrid vs Manchester City (Football 1X2 - Arbitrage ~4.12%)
-      { bookmaker: 'Pinnacle', eventName: 'Real Madrid vs Manchester City', sport: 'football', marketType: '1X2', selection: '1', odd: 2.85 },
-      { bookmaker: 'Bet365', eventName: 'Real Madrid vs Manchester City', sport: 'football', marketType: '1X2', selection: '1', odd: 2.60 },
-      { bookmaker: 'Betfair', eventName: 'Real Madrid vs Manchester City', sport: 'football', marketType: '1X2', selection: 'X', odd: 3.75 },
-      { bookmaker: '1xBet', eventName: 'Real Madrid vs Manchester City', sport: 'football', marketType: '1X2', selection: 'X', odd: 3.50 },
-      { bookmaker: 'WilliamHill', eventName: 'Real Madrid vs Manchester City', sport: 'football', marketType: '1X2', selection: '2', odd: 2.90 },
-      { bookmaker: 'Pinnacle', eventName: 'Real Madrid vs Manchester City', sport: 'football', marketType: '1X2', selection: '2', odd: 2.70 },
-
-      // 2. Carlos Alcaraz vs Jannik Sinner (Tennis 2-Way Moneyline - Arbitrage ~3.45%)
-      { bookmaker: 'Pinnacle', eventName: 'Carlos Alcaraz vs Jannik Sinner', sport: 'tennis', marketType: 'MONEYLINE_2WAY', selection: '1', odd: 2.14 },
-      { bookmaker: 'Bet365', eventName: 'Carlos Alcaraz vs Jannik Sinner', sport: 'tennis', marketType: 'MONEYLINE_2WAY', selection: '1', odd: 1.95 },
-      { bookmaker: 'Betfair', eventName: 'Carlos Alcaraz vs Jannik Sinner', sport: 'tennis', marketType: 'MONEYLINE_2WAY', selection: '2', odd: 2.08 },
-      { bookmaker: 'Bwin', eventName: 'Carlos Alcaraz vs Jannik Sinner', sport: 'tennis', marketType: 'MONEYLINE_2WAY', selection: '2', odd: 1.90 },
-
-      // 3. Boston Celtics vs LA Lakers (Basketball 2-Way Moneyline - Arbitrage ~2.78%)
-      { bookmaker: '1xBet', eventName: 'Boston Celtics vs LA Lakers', sport: 'basketball', marketType: 'MONEYLINE_2WAY', selection: '1', odd: 1.62 },
-      { bookmaker: 'Pinnacle', eventName: 'Boston Celtics vs LA Lakers', sport: 'basketball', marketType: 'MONEYLINE_2WAY', selection: '1', odd: 1.55 },
-      { bookmaker: 'Bet365', eventName: 'Boston Celtics vs LA Lakers', sport: 'basketball', marketType: 'MONEYLINE_2WAY', selection: '2', odd: 2.85 },
-      { bookmaker: 'Betfair', eventName: 'Boston Celtics vs LA Lakers', sport: 'basketball', marketType: 'MONEYLINE_2WAY', selection: '2', odd: 2.65 },
-
-      // 4. Bayern Munich vs Arsenal (Football Over/Under 2.5 - Arbitrage ~1.95%)
-      { bookmaker: 'Pinnacle', eventName: 'Bayern Munich vs Arsenal (Goals)', sport: 'football', marketType: 'OVER_UNDER_2_5', selection: 'OVER', odd: 2.10 },
-      { bookmaker: 'Betfair', eventName: 'Bayern Munich vs Arsenal (Goals)', sport: 'football', marketType: 'OVER_UNDER_2_5', selection: 'UNDER', odd: 2.04 },
-    ];
-
-    const result = this.analyzeOdds(sampleOdds, totalStake);
+  public getLiveOpportunities(totalStake = 1000): SurebetOpportunity[] {
+    if (this.liveOddsStore.length === 0) {
+      return [];
+    }
+    const result = this.analyzeOdds(this.liveOddsStore, totalStake);
     return result.opportunities;
   }
 

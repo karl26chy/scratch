@@ -1,4 +1,4 @@
-export type SportType = 'football' | 'tennis' | 'basketball' | 'baseball' | 'esports' | 'other';
+export type SportType = 'football' | 'tennis' | 'basketball' | 'table_tennis';
 
 export type MarketType = '1X2' | 'MONEYLINE_2WAY' | 'OVER_UNDER_2_5' | 'BOTH_TEAMS_SCORE';
 

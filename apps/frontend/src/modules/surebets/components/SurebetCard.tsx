@@ -37,6 +37,8 @@ export const SurebetCard: React.FC<SurebetCardProps> = ({ opportunity }) => {
         return '🎾 Tenis';
       case 'basketball':
         return '🏀 Baloncesto';
+      case 'table_tennis':
+        return '🏓 Tenis de Mesa';
       default:
         return '🏆 Deportes';
     }

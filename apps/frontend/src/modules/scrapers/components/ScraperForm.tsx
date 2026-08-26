@@ -9,29 +9,39 @@ interface ScraperFormProps {
 }
 
 const PRESET_BOOKMAKERS = [
-  'https://bot.sannysoft.com',
-  'https://example.com',
   'https://pinnacle.com/es/sports/football',
+  'https://pinnacle.com/es/sports/tennis',
   'https://bet365.com/#/IP/B1',
   'https://betfair.es/exchange/plus/football',
-  'https://1xbet.com/es/line/football',
+  'https://1xbet.com/es/line/basketball',
+  'https://1xbet.com/es/line/table-tennis',
   'https://sports.williamhill.es/betting/es-es/futbol',
+];
+
+const SPORT_PRESETS = [
+  { label: '⚽ Fútbol', url: 'https://pinnacle.com/es/sports/football' },
+  { label: '🎾 Tenis', url: 'https://pinnacle.com/es/sports/tennis' },
+  { label: '🏀 Baloncesto', url: 'https://1xbet.com/es/line/basketball' },
+  { label: '🏓 Tenis de Mesa', url: 'https://1xbet.com/es/line/table-tennis' },
 ];
 
 export const ScraperForm: React.FC<ScraperFormProps> = ({ onSubmit, isLoading }) => {
   const [urls, setUrls] = useState<string[]>([
-    'https://bot.sannysoft.com',
-    'https://example.com',
+    'https://pinnacle.com/es/sports/football',
+    'https://pinnacle.com/es/sports/tennis',
+    'https://1xbet.com/es/line/table-tennis',
+    'https://1xbet.com/es/line/basketball',
   ]);
   const [newUrlInput, setNewUrlInput] = useState('');
   const [useProxy, setUseProxy] = useState(true);
   const [captureScreenshot, setCaptureScreenshot] = useState(true);
 
-  const handleAddUrl = () => {
-    const trimmed = newUrlInput.trim();
+  const handleAddUrl = (customUrl?: string) => {
+    const target = customUrl || newUrlInput;
+    const trimmed = target.trim();
     if (trimmed && !urls.includes(trimmed)) {
       setUrls([...urls, trimmed]);
-      setNewUrlInput('');
+      if (!customUrl) setNewUrlInput('');
     }
   };
 
@@ -56,12 +66,12 @@ export const ScraperForm: React.FC<ScraperFormProps> = ({ onSubmit, isLoading })
 
   return (
     <Card
-      title="Consola de Scraping Concurrente para Casas de Apuestas"
-      subtitle="Extracción masiva multi-hilo con aislamiento estricto de contextos y bypass anti-bot automatizado"
+      title="Consola de Scraping Concurrente (4 Deportes Principales)"
+      subtitle="Extracción masiva multi-hilo enfocada en Fútbol, Tenis, Baloncesto y Tenis de Mesa con bypass anti-bot"
       icon={<Shield size={18} />}
     >
       <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-        {/* Top Info Banner */}
+        {/* Top Info Banner with Sport Quick Add Buttons */}
         <div
           style={{
             display: 'flex',
@@ -78,30 +88,52 @@ export const ScraperForm: React.FC<ScraperFormProps> = ({ onSubmit, isLoading })
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.8rem', color: '#38bdf8' }}>
             <Zap size={15} />
             <span>
-              <strong>Evasión Stealth Automática:</strong> Spoofing WebGL, Canvas Noise, enmascaramiento CDP y latencias gaussianas activadas por defecto.
+              <strong>Optimización a 4 Deportes:</strong> Extracción prioritaria en Fútbol, Tenis, Baloncesto y Tenis de Mesa para ahorro de ancho de banda y latencia.
             </span>
           </div>
 
-          <button
-            type="button"
-            onClick={handleLoad7Bookmakers}
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '0.4rem',
-              background: 'rgba(56, 189, 248, 0.1)',
-              border: '1px solid rgba(56, 189, 248, 0.3)',
-              color: '#38bdf8',
-              padding: '0.35rem 0.75rem',
-              borderRadius: 'var(--radius-sm)',
-              fontSize: '0.75rem',
-              fontWeight: 700,
-              cursor: 'pointer',
-            }}
-          >
-            <Layers size={13} />
-            Cargar 7 Casas de Apuestas (Multi-Hilo)
-          </button>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', flexWrap: 'wrap' }}>
+            {SPORT_PRESETS.map((preset, idx) => (
+              <button
+                key={idx}
+                type="button"
+                onClick={() => handleAddUrl(preset.url)}
+                style={{
+                  background: 'rgba(255, 255, 255, 0.04)',
+                  border: '1px solid rgba(255, 255, 255, 0.1)',
+                  color: 'var(--text-secondary)',
+                  padding: '0.25rem 0.6rem',
+                  borderRadius: 'var(--radius-sm)',
+                  fontSize: '0.75rem',
+                  cursor: 'pointer',
+                  fontWeight: 600,
+                }}
+              >
+                + {preset.label}
+              </button>
+            ))}
+
+            <button
+              type="button"
+              onClick={handleLoad7Bookmakers}
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.35rem',
+                background: 'rgba(56, 189, 248, 0.12)',
+                border: '1px solid rgba(56, 189, 248, 0.3)',
+                color: '#38bdf8',
+                padding: '0.3rem 0.7rem',
+                borderRadius: 'var(--radius-sm)',
+                fontSize: '0.75rem',
+                fontWeight: 700,
+                cursor: 'pointer',
+              }}
+            >
+              <Layers size={13} />
+              Cargar 7 Casas de Apuestas
+            </button>
+          </div>
         </div>
 
         {/* URLs Management List */}
@@ -141,7 +173,7 @@ export const ScraperForm: React.FC<ScraperFormProps> = ({ onSubmit, isLoading })
                     handleAddUrl();
                   }
                 }}
-                placeholder="https://casa-de-apuestas.com/futbol"
+                placeholder="https://casa-de-apuestas.com/sports/table-tennis"
                 style={{
                   width: '100%',
                   padding: '0.65rem 1rem 0.65rem 2.5rem',
@@ -157,7 +189,7 @@ export const ScraperForm: React.FC<ScraperFormProps> = ({ onSubmit, isLoading })
             </div>
             <button
               type="button"
-              onClick={handleAddUrl}
+              onClick={() => handleAddUrl()}
               style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -250,7 +282,7 @@ export const ScraperForm: React.FC<ScraperFormProps> = ({ onSubmit, isLoading })
           </div>
         </div>
 
-        {/* Focused Toggles */}
+        {/* Focused Toggles (Default True) */}
         <div
           style={{
             display: 'flex',
@@ -308,12 +340,12 @@ export const ScraperForm: React.FC<ScraperFormProps> = ({ onSubmit, isLoading })
           {isLoading ? (
             <>
               <Loader2 size={18} className="animate-spin" style={{ animation: 'spin 1s linear infinite' }} />
-              Extrayendo de {urls.length} Casas de Apuestas en Paralelo (Multi-Hilo)...
+              Extrayendo Cuotas de {urls.length} Casas de Apuestas (Multi-Hilo)...
             </>
           ) : (
             <>
               <Play size={18} />
-              Lanzar Scraping Masivo Concurrente ({urls.length} Sitios en Paralelo)
+              Lanzar Scraping Concurrente ({urls.length} Casas de Apuestas en Paralelo)
             </>
           )}
         </button>

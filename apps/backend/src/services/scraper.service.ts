@@ -148,6 +148,12 @@ export class ScraperService {
       const oddsExtraction = await ResilientSelectorEngine.extractSportsOdds(page);
       const bookmakerOdds = await ResilientSelectorEngine.extractBookmakerOdds(page);
 
+      // Ingest live real scraped odds into the Surebet arbitrage engine
+      if (bookmakerOdds && bookmakerOdds.length > 0) {
+        const { SurebetCalculatorService } = await import('./surebet-calculator.service.js');
+        SurebetCalculatorService.getInstance().addScrapedOdds(bookmakerOdds);
+      }
+
       extractedData.sportsOdds = oddsExtraction.data;
       extractedData.bookmakerOdds = bookmakerOdds;
       extractedData.oddsCount = oddsExtraction.itemsCount;

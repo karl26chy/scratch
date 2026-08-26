@@ -1,117 +1,97 @@
-# 🛡️ Stealth Scraper Monorepo Architecture
+# Scraper & Surebet Engine (Monorepo)
 
-Arquitectura monorepo completa de grado de producción para web scraping automatizado con evasión avanzada de sistemas antibot (**Cloudflare Turnstile, Datadome, Akamai, PerimeterX**).
-
----
-
-## 🏗️ Arquitectura del Sistema
-
-```mermaid
-graph TD
-    Client[Navegador / Usuario] -->|Puerto 3000| FE[Frontend: React + Vite TS]
-    FE -->|REST API / Puerto 4000| BE[Backend: Express TS]
-    
-    subgraph Backend Layered Architecture
-        BE --> Presentation[Capas de Presentación: Controllers & Routes]
-        Presentation --> Services[Capas de Servicios: Scraper & Evasion Logic]
-        Services --> Infrastructure[Capas de Infraestructura: Browser Pool, Proxies, Fingerprints]
-    end
-
-    subgraph Infrastructure Core
-        Infrastructure --> Playwright[Playwright Extra + Stealth Plugin]
-        Infrastructure --> FingerprintEngine[Spoofing de WebGL, Canvas, Audio, Navigator]
-        Infrastructure --> ProxyPool[Rotador de Proxies Residenciales]
-    end
-
-    Playwright -->|Navegación Headless Evasiva| TargetWeb[Sitios Web Protegidos / Desafiados]
-```
+Sistema modular en Node.js + Express + TypeScript (Backend) y React 18 + Vite + TypeScript (Frontend) diseñado para la extracción concurrente y masiva de cuotas en casas de apuestas deportivas con arquitectura de evasión anti-bot multicapa y cálculo matemático de arbitraje deportivo (*Surebets*).
 
 ---
 
-## 📁 Estructura del Monorepo
+## 🚀 Requisitos Previos
 
-```
-stealth-scraper-monorepo/
-├── docker-compose.yml              # Orquestación de Frontend (3000) y Backend (4000)
-├── package.json                    # Monorepo con Workspaces npm
-├── .gitignore
-├── .dockerignore
-├── README.md
-├── apps/
-│   ├── backend/                    # Node.js + Express + TypeScript (Layered Architecture)
-│   │   ├── Dockerfile              # Optimizado con dependencias de Chromium / Playwright
-│   │   ├── package.json
-│   │   ├── tsconfig.json
-│   │   └── src/
-│   │       ├── domain/             # Tipos e interfaces de dominio
-│   │       ├── infrastructure/     # Playwright Stealth Factory, Browser Pool, Proxies, Fingerprints
-│   │       ├── services/           # Lógica de scraping y emulación humana (EvasionService)
-│   │       ├── presentation/       # Controladores Express, Rutas, Middlewares
-│   │       └── index.ts            # Entrypoint del servidor
-│   │
-│   └── frontend/                   # React + Vite + TypeScript (Horizontal Modular)
-│       ├── Dockerfile              # Contenedor Node dev/prod
-│       ├── package.json
-│       ├── vite.config.ts
-│       ├── tsconfig.json
-│       └── src/
-│           ├── modules/
-│           │   ├── dashboard/      # Telemetría en tiempo real, tasas de bypass, métricas
-│           │   └── scrapers/       # Consola de ejecución y visualizador de payloads/snapshots
-│           ├── shared/             # Componentes base, hooks y utilidades compartidas
-│           ├── App.tsx
-│           └── main.tsx
-```
+* **Node.js** (Versión 18 o superior recomendada, probado en v24.x)
+* **npm** (v9+) o yarn
 
 ---
 
-## 🚀 Puesta en Marcha Rápida
+## 📦 Instalación y Configuración
 
-### Opción 1: Con Docker Compose (Recomendado)
-
-Levanta todo el ecosistema (Frontend + Backend + Navegadores Playwright) en un solo comando:
-
-```bash
-docker compose up --build
-```
-
-- **Frontend Console:** [http://localhost:3000](http://localhost:3000)
-- **Backend API & Telemetry:** [http://localhost:4000/api/v1/health](http://localhost:4000/api/v1/health)
-
----
-
-### Opción 2: Ejecución Local
-
-1. **Instalar dependencias:**
+1. Clona el repositorio e instala las dependencias en la raíz del monorepo:
    ```bash
+   git clone https://github.com/tu-usuario/scraper.git
+   cd scraper
    npm install
    ```
 
-2. **Instalar binarios de Playwright en el backend:**
+2. Instala los binarios del navegador Chromium para Playwright:
    ```bash
-   npx --workspace=@stealth-scraper/backend playwright install chromium
-   ```
-
-3. **Ejecutar ambos entornos en desarrollo:**
-   ```bash
-   npm run dev
+   npx playwright install chromium
    ```
 
 ---
 
-## 🛡️ Técnicas de Evasión Integradas
+## 🛠️ Ejecución del Proyecto
 
-1. **Inyección en Tiempo de Inicialización (`addInitScript`)**:
-   - Ocultamiento de `navigator.webdriver`.
-   - Mock de `window.chrome` y plugins de navegador reales.
-   - Enmascaramiento de `hardwareConcurrency`, `deviceMemory` y `platform`.
-2. **Generación Coherente de Huellas Digitales (`FingerprintGenerator`)**:
-   - Rotación sincronizada de User-Agent con Client Hints (`Sec-Ch-Ua`, `Sec-Ch-Ua-Platform`).
-   - Mock de WebGL Vendor/Renderer (NVIDIA, AMD, Apple M-series).
-3. **Comportamiento Humano Emulado (`EvasionService`)**:
-   - Curvas de movimiento de ratón naturales con jitter y aceleración.
-   - Desplazamiento (scrolling) por inercia aleatoria.
-   - Variabilidad temporal en pausas y tiempos de reacción (Human Delay).
-4. **Gestión de Recursos y Aislamiento (`BrowserPool`)**:
-   - Reutilización inteligente de instancias y aislamiento estricto de contextos (`BrowserContext`) para evitar la fuga de cookies y huellas de sesión.
-   - Rotación y control de salud de proxies residenciales.
+### Modo Desarrollo (Frontend + Backend simultáneo)
+```bash
+npm run dev
+```
+* **Frontend UI**: [http://localhost:3000](http://localhost:3000)
+* **Backend API**: [http://localhost:4000](http://localhost:4000)
+* **Health Check**: [http://localhost:4000/api/v1/health](http://localhost:4000/api/v1/health)
+
+### Compilación y Build de Producción
+```bash
+npm run build
+```
+
+---
+
+## 🏛️ Arquitectura del Sistema
+
+```
+scratch/
+├── apps/
+│   ├── backend/
+│   │   └── src/
+│   │       ├── domain/types/               # DTOs de Scraping, Surebets y Proxies
+│   │       ├── infrastructure/
+│   │       │   ├── browser/                # Playwright Stealth, Browser Pool & Context Isolation
+│   │       │   ├── fingerprints/           # Generador de huellas (WebGL, Canvas, User-Agents)
+│   │       │   ├── proxies/                # Rotador de proxies residenciales con Sticky Sessions
+│   │       │   └── selectors/              # Resilient Selector Engine & Detección de Anomalías DOM
+│   │       ├── services/
+│   │       │   ├── evasion.service.ts      # Curvas de Bézier, scroll humano y detección anti-bot
+│   │       │   ├── scraper.service.ts      # Scraping masivo multi-hilo con Promise.all
+│   │       │   ├── surebet-calculator.service.ts # Motor matemático de arbitraje (TIP < 1.0)
+│   │       │   └── stochastic.utils.ts     # Distribuciones Gaussianas Box-Muller
+│   │       └── presentation/
+│   │           ├── controllers/            # Controladores API (Scraper, Surebets)
+│   │           └── routes/                 # Endpoints REST (/api/scrape, /api/surebets)
+│   │
+│   └── frontend/
+│       └── src/
+│           ├── modules/
+│           │   ├── dashboard/              # Telemetría de evasión y métricas del pool
+│           │   ├── scrapers/               # Consola multi-hilo de scraping para casas de apuestas
+│           │   └── surebets/               # Feed en tiempo real y analizador manual de arbitraje
+│           └── shared/                     # Componentes atómicos (Header, Sidebar, Card, Badge)
+```
+
+---
+
+## 🧠 Características Principales
+
+1. **Evasión Anti-Bot Automatizada y Nivel Paranoico:**
+   * Enmascaramiento completo de `navigator.webdriver` y propiedades prototype.
+   * Spoofing de WebGL Vendor/Renderer, Canvas Noise y AudioContext.
+   * Limpieza de descriptores internos de automatización CDP (`cdc_*`).
+   * Aislamiento estricto de contextos efímeros (`browser.newContext`) por tarea o hilo.
+
+2. **Scraping Masivo Concurrente (Multi-Hilo):**
+   * Procesamiento en paralelo de al menos 7 casas de apuestas en simultáneo mediante `Promise.all`.
+   * Rotación dinámica de proxies residenciales con failover reactivo y cuarentena de 5 minutos ante desafíos Cloudflare/Datadome.
+   * Extracción automática de cuotas decimales y mercados usando selectores estables del DOM.
+
+3. **Módulo de Arbitraje Deportivo y Surebets:**
+   * Cálculo matemático de Probabilidad Implícita Total ($\text{TIP} = \sum \frac{1}{\text{cuota}_i}$).
+   * Detección de condición de Surebet ($\text{TIP} < 1.0$) y optimización de capital (*Stakes*).
+   * Calculadora interactiva de *Bankroll* con retorno financiero garantizado libre de riesgo.
+   * Estado inicial limpio basado exclusivamente en datos reales capturados o ingresados por el usuario.

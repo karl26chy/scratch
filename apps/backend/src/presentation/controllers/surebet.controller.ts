@@ -5,7 +5,7 @@ import { SurebetCalculatorService } from '../../services/surebet-calculator.serv
 const BookmakerOddSchema = z.object({
   bookmaker: z.string().min(1, 'El nombre de la casa de apuestas es obligatorio'),
   eventName: z.string().min(1, 'El nombre del evento es obligatorio'),
-  sport: z.enum(['football', 'tennis', 'basketball', 'baseball', 'esports', 'other']).default('football'),
+  sport: z.enum(['football', 'tennis', 'basketball', 'table_tennis']).default('football'),
   marketType: z.enum(['1X2', 'MONEYLINE_2WAY', 'OVER_UNDER_2_5', 'BOTH_TEAMS_SCORE']).default('1X2'),
   selection: z.string().min(1, 'La selección es obligatoria'),
   odd: z.number().positive('La cuota debe ser un número positivo mayor a 1.0'),
@@ -19,7 +19,7 @@ const AnalyzeSurebetsSchema = z.object({
 });
 
 export class SurebetController {
-  private surebetService = new SurebetCalculatorService();
+  private surebetService = SurebetCalculatorService.getInstance();
 
   /**
    * POST /api/surebets/analyze or POST /api/v1/surebets/analyze
@@ -28,10 +28,9 @@ export class SurebetController {
     try {
       const validated = AnalyzeSurebetsSchema.parse(req.body);
 
-      // If user passed custom odds, analyze them; otherwise use active seed pool
       let odds = validated.oddsData;
       if (!odds || odds.length === 0) {
-        const liveOpps = this.surebetService.getLiveSeededOpportunities(validated.totalStake);
+        const liveOpps = this.surebetService.getLiveOpportunities(validated.totalStake);
         res.status(200).json({
           success: true,
           data: {
@@ -65,7 +64,7 @@ export class SurebetController {
    */
   public getLiveOpportunities = (req: Request, res: Response): void => {
     const totalStake = parseFloat(req.query.totalStake as string) || 1000;
-    const opportunities = this.surebetService.getLiveSeededOpportunities(totalStake);
+    const opportunities = this.surebetService.getLiveOpportunities(totalStake);
 
     res.status(200).json({
       success: true,
