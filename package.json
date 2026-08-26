@@ -1,0 +1,36 @@
+{
+  "name": "stealth-scraper-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Enterprise-grade web scraping monorepo with advanced evasion & stealth architecture",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:backend": "npm run dev --workspace=@stealth-scraper/backend",
+    "dev:frontend": "npm run dev --workspace=@stealth-scraper/frontend",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "build": "npm run build --workspaces",
+    "docker:up": "docker compose up --build",
+    "docker:down": "docker compose down",
+    "clean": "rimraf apps/*/dist apps/*/node_modules node_modules"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "rimraf": "^5.0.7",
+    "typescript": "^5.4.5"
+  },
+  "keywords": [
+    "web-scraping",
+    "stealth",
+    "evasion",
+    "playwright",
+    "monorepo",
+    "antibot-bypass",
+    "express",
+    "react",
+    "vite"
+  ],
+  "author": "Antigravity Senior Software Architect",
+  "license": "MIT"
+}
