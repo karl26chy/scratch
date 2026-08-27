@@ -13,7 +13,8 @@
     "verify:proxy:json": "tsx src/scripts/verify-proxy.ts --json",
     "test:single": "tsx src/scripts/run-single-test.ts",
     "test:single:disable": "tsx src/scripts/disable-single-test.ts",
-    "test:single:enable": "echo 'Configura SINGLE_TEST_MODE=true y ALLOW_DIRECT_IP=true en .env'"
+    "test:single:enable": "echo 'Configura SINGLE_TEST_MODE=true y ALLOW_DIRECT_IP=true en .env'",
+    "clear-cache": "powershell -Command \"Remove-Item -Recurse -Force node_modules/.vite,dist -ErrorAction SilentlyContinue; Write-Host '✅ clear-cache'\""
   },
   "dependencies": {
     "cors": "^2.8.5",

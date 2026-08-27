@@ -13,7 +13,8 @@
     "build": "npm run build --workspaces",
     "docker:up": "docker compose up --build",
     "docker:down": "docker compose down",
-    "clean": "rimraf apps/*/dist apps/*/node_modules node_modules"
+    "clean": "rimraf apps/*/dist apps/*/node_modules node_modules",
+    "clear-cache": "powershell -Command \"Remove-Item -Recurse -Force apps/frontend/node_modules/.vite,apps/backend/node_modules/.vite,apps/frontend/dist,apps/backend/dist -ErrorAction SilentlyContinue; Write-Host '✅ Caché limpiada correctamente'\""
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
