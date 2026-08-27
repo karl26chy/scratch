@@ -10,7 +10,10 @@
     "start": "node dist/index.js",
     "lint": "tsc --noEmit",
     "verify:proxy": "tsx src/scripts/verify-proxy.ts",
-    "verify:proxy:json": "tsx src/scripts/verify-proxy.ts --json"
+    "verify:proxy:json": "tsx src/scripts/verify-proxy.ts --json",
+    "test:single": "tsx src/scripts/run-single-test.ts",
+    "test:single:disable": "tsx src/scripts/disable-single-test.ts",
+    "test:single:enable": "echo 'Configura SINGLE_TEST_MODE=true y ALLOW_DIRECT_IP=true en .env'"
   },
   "dependencies": {
     "cors": "^2.8.5",

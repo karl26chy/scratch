@@ -5,6 +5,7 @@ import { FingerprintGenerator } from '../infrastructure/fingerprints/fingerprint
 import { ProxyRotator } from '../infrastructure/proxies/proxy-rotator.js';
 import { ResilientSelectorEngine } from '../infrastructure/selectors/resilient-selector.engine.js';
 import { EvasionService } from './evasion.service.js';
+import { SingleTestService } from './single-test.service.js';
 import { env } from '../infrastructure/config/environment.js';
 import { BrowserContext, Page } from 'playwright';
 
@@ -76,6 +77,48 @@ export class ScraperService {
     const startTime = Date.now();
     const targetUrl = request.url!;
     const stealthLevel = 'paranoid'; // Always apply maximum evasion profile natively
+
+    // ⚠️ MODO PRUEBA ÚNICA - BLOQUEO DE SEGURIDAD EXTREMO
+    if (env.singleTest.enabled && env.singleTest.allowDirectIP) {
+      console.warn('⚠️ MODO PRUEBA ÚNICA ACTIVADO - USANDO IP DOMÉSTICA');
+      const testService = SingleTestService.getInstance();
+      try {
+        const result = await testService.executeSingleTest(targetUrl);
+        if (!result.success) {
+          throw new Error('Prueba única fallida');
+        }
+        if (result.executionCount >= env.singleTest.maxExecutions) {
+          console.log('🔴 LÍMITE DE PRUEBA ALCANZADO - DESACTIVANDO MODO');
+          env.singleTest.enabled = false;
+          process.env.SINGLE_TEST_MODE = 'false';
+        }
+        // Convertir resultado de SingleTest a ScrapeResultDto para compatibilidad
+        return {
+          id: `single_test_${Date.now()}`,
+          url: targetUrl,
+          status: 'SUCCESS',
+          statusCode: 200,
+          pageTitle: result.title || 'Prueba única completada',
+          htmlLength: 0,
+          extractedData: { singleTest: true, ip: result.ip, title: result.title },
+          stealthMetrics: {
+            stealthLevelApplied: 'paranoid',
+            fingerprintUsed: {},
+            proxyUsed: 'IP DOMÉSTICA DIRECTA (MODO PRUEBA ÚNICA)',
+            bypassedAntiBot: true,
+            durationMs: Date.now() - startTime,
+          },
+          createdAt: new Date().toISOString(),
+        };
+      } catch (err: any) {
+        // Si falla, desactivar igualmente si alcanzó límite y relanzar
+        if (testService.getExecutionCount() >= env.singleTest.maxExecutions) {
+          env.singleTest.enabled = false;
+          process.env.SINGLE_TEST_MODE = 'false';
+        }
+        throw err;
+      }
+    }
 
     // Proxy: respect PROXY_ENABLED env and request flag. Real proxies from env, no dummy-filter needed.
     const useProxy = request.useProxy !== false && env.proxy.enabled;

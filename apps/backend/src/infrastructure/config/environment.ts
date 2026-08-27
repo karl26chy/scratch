@@ -13,6 +13,13 @@ export interface ProxyConfig {
   testUrl: string;
 }
 
+export interface SingleTestConfig {
+  enabled: boolean;
+  allowDirectIP: boolean;
+  maxExecutions: number;
+  executionCount: number;
+}
+
 export interface AppConfig {
   port: number;
   nodeEnv: string;
@@ -22,6 +29,7 @@ export interface AppConfig {
   maxConcurrentBrowsers: number;
   browserTimeoutMs: number;
   proxy: ProxyConfig;
+  singleTest: SingleTestConfig;
 }
 
 export const env: AppConfig = {
@@ -40,5 +48,11 @@ export const env: AppConfig = {
     username: process.env.PROXY_USERNAME,
     password: process.env.PROXY_PASSWORD,
     testUrl: process.env.PROXY_TEST_URL || 'https://api.ipify.org?format=json',
+  },
+  singleTest: {
+    enabled: process.env.SINGLE_TEST_MODE === 'true',
+    allowDirectIP: process.env.ALLOW_DIRECT_IP === 'true',
+    maxExecutions: parseInt(process.env.MAX_TEST_EXECUTIONS || '1', 10),
+    executionCount: 0,
   },
 };
