@@ -1,5 +1,5 @@
 import { Browser } from 'playwright';
-import { PlaywrightStealthFactory } from './playwright-stealth.factory.js';
+import { PlaywrightStealthFactory, PlaywrightProxyConfig } from './playwright-stealth.factory.js';
 import { env } from '../config/environment.js';
 
 export class BrowserPool {
@@ -16,10 +16,10 @@ export class BrowserPool {
     return BrowserPool.instance;
   }
 
-  public async acquireBrowser(proxyServer?: string): Promise<Browser> {
+  public async acquireBrowser(proxy?: string | PlaywrightProxyConfig): Promise<Browser> {
     // If a custom proxy is required for this specific request, launch an isolated instance
-    if (proxyServer) {
-      return await PlaywrightStealthFactory.launchBrowser(proxyServer);
+    if (proxy) {
+      return await PlaywrightStealthFactory.launchBrowser(proxy);
     }
 
     if (!this.primaryBrowser || !this.primaryBrowser.isConnected()) {

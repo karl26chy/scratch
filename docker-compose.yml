@@ -16,6 +16,13 @@ services:
       - PLAYWRIGHT_BROWSERS_PATH=0
       - HEADLESS_MODE=true
       - DEFAULT_STEALTH_LEVEL=advanced
+      - PROXY_ENABLED=${PROXY_ENABLED:-false}
+      - PROXY_PROVIDER=${PROXY_PROVIDER:-webshare}
+      - PROXY_LIST_URL=${PROXY_LIST_URL:-}
+      - PROXY_USERNAME=${PROXY_USERNAME:-}
+      - PROXY_PASSWORD=${PROXY_PASSWORD:-}
+      - PROXY_API_KEY=${PROXY_API_KEY:-}
+      - PROXY_TEST_URL=${PROXY_TEST_URL:-https://api.ipify.org?format=json}
     ipc: host # Crucial for Chromium/Playwright to prevent shared memory crashes
     volumes:
       - ./apps/backend:/app/apps/backend

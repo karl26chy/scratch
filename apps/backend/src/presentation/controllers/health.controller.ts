@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import { BrowserPool } from '../../infrastructure/browser/browser-pool.js';
+import { ProxyRotator } from '../../infrastructure/proxies/proxy-rotator.js';
 import { env } from '../../infrastructure/config/environment.js';
 import { HealthCheckResponse } from '../../domain/types/scraper.types.js';
 
@@ -8,8 +9,9 @@ export class HealthController {
 
   public getHealth = (_req: Request, res: Response): void => {
     const stats = this.browserPool.getStats();
+    const proxyReport = ProxyRotator.getInstance().getHealthReport();
 
-    const response: HealthCheckResponse = {
+    const response: HealthCheckResponse & { proxy: ReturnType<ProxyRotator['getHealthReport']> } = {
       status: 'healthy',
       uptimeSeconds: Math.floor(process.uptime()),
       timestamp: new Date().toISOString(),
@@ -19,7 +21,8 @@ export class HealthController {
         maxCapacity: stats.maxCapacity,
         isHealthy: true,
       },
-    };
+      proxy: proxyReport,
+    } as any;
 
     res.status(200).json(response);
   };

@@ -7,11 +7,18 @@ import { env } from '../config/environment.js';
 // Apply the stealth evasion plugin to playwright-extra
 chromium.use(stealthPlugin());
 
+export interface PlaywrightProxyConfig {
+  server: string;
+  username?: string;
+  password?: string;
+}
+
 export class PlaywrightStealthFactory {
   /**
    * Launch a hardened Chromium browser instance with anti-automation flags
+   * Supports http/https/socks5 with optional username/password (Webshare, BrightData, etc.)
    */
-  public static async launchBrowser(proxyServer?: string): Promise<Browser> {
+  public static async launchBrowser(proxy?: string | PlaywrightProxyConfig): Promise<Browser> {
     const launchArgs = [
       '--no-sandbox',
       '--disable-setuid-sandbox',
@@ -28,23 +35,43 @@ export class PlaywrightStealthFactory {
       '--lang=es-ES,es,en-US,en',
     ];
 
+    const proxyConfig = PlaywrightStealthFactory.normalizeProxy(proxy);
+
     return await chromium.launch({
       headless: env.headlessMode,
       args: launchArgs,
-      proxy: proxyServer ? { server: proxyServer } : undefined,
+      proxy: proxyConfig,
     });
+  }
+
+  private static normalizeProxy(
+    proxy?: string | PlaywrightProxyConfig
+  ): { server: string; username?: string; password?: string } | undefined {
+    if (!proxy) return undefined;
+    if (typeof proxy === 'string') {
+      return { server: proxy };
+    }
+    if (proxy.server) {
+      const cfg: { server: string; username?: string; password?: string } = { server: proxy.server };
+      if (proxy.username) cfg.username = proxy.username;
+      if (proxy.password) cfg.password = proxy.password;
+      return cfg;
+    }
+    return undefined;
   }
 
   /**
    * Create an isolated browser context injected with spoofed fingerprints
    * Ensures 100% thread/task isolation to prevent cookie/cache contamination
+   * Proxy soporta http/socks5 + user:pass para residenciales rotativos
    */
   public static async createContext(
     browser: Browser,
     fingerprint: BrowserFingerprint,
     _stealthLevel: StealthLevel = 'paranoid',
-    proxyServer?: string
+    proxy?: string | PlaywrightProxyConfig
   ): Promise<BrowserContext> {
+    const proxyConfig = PlaywrightStealthFactory.normalizeProxy(proxy);
     const context = await browser.newContext({
       userAgent: fingerprint.userAgent,
       viewport: fingerprint.viewport,
@@ -55,7 +82,7 @@ export class PlaywrightStealthFactory {
       timezoneId: fingerprint.timezoneId,
       permissions: ['geolocation', 'notifications'],
       colorScheme: 'dark',
-      proxy: proxyServer ? { server: proxyServer } : undefined,
+      proxy: proxyConfig,
       extraHTTPHeaders: {
         'Accept-Language': fingerprint.locale,
         'Sec-Ch-Ua': '"Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"',

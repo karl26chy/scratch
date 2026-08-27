@@ -76,25 +76,30 @@ export class ScraperService {
     const startTime = Date.now();
     const targetUrl = request.url!;
     const stealthLevel = 'paranoid'; // Always apply maximum evasion profile natively
-    const fingerprint = FingerprintGenerator.generate(stealthLevel);
-    
-    // Check proxy: only attach real proxies if valid host, or fallback to clean socket
-    const useProxy = request.useProxy !== false;
-    let proxy = useProxy ? this.proxyRotator.getProxy(request.sessionId) : undefined;
-    
-    // If running in development without a live proxy tunnel, avoid ERR_PROXY_CONNECTION_FAILED on dummy hosts
-    const proxyServer = (proxy?.server && !proxy.server.includes('geonetwork.io') && !proxy.server.includes('example-proxy.io')) 
-      ? proxy.server 
-      : undefined;
 
-    // Acquire shared browser instance
+    // Proxy: respect PROXY_ENABLED env and request flag. Real proxies from env, no dummy-filter needed.
+    const useProxy = request.useProxy !== false && env.proxy.enabled;
+    let proxy = useProxy ? this.proxyRotator.getProxy(request.sessionId) : undefined;
+    const proxyConfig = proxy ? this.proxyRotator.getProxyServerWithAuth(proxy) : undefined;
+    const proxyServer = proxyConfig?.server;
+
+    // Rotación de User-Agent/fingerprint por petición, alineada con país del proxy para coherencia IP
+    const fingerprint = proxy?.country
+      ? FingerprintGenerator.generate(stealthLevel, proxy.country)
+      : FingerprintGenerator.generate(stealthLevel);
+
+    if (useProxy && !proxy) {
+      console.warn(`[ScraperService] PROXY_ENABLED=true pero no hay proxies disponibles -> usando IP directa para ${targetUrl}. Configura PROXY_LIST_URL.`);
+    }
+
+    // Acquire shared browser instance (proxy is isolated per context, not per browser)
     const browser = await this.browserPool.acquireBrowser();
     let context: BrowserContext | null = null;
     let page: Page | null = null;
 
     try {
       // 1. Create completely isolated ephemeral context per thread/task with its own proxy
-      context = await PlaywrightStealthFactory.createContext(browser, fingerprint, stealthLevel, proxyServer);
+      context = await PlaywrightStealthFactory.createContext(browser, fingerprint, stealthLevel, proxyConfig);
       page = await context.newPage();
 
       // 2. Inject anti-fingerprinting stealth evasion scripts before DOM scripts execute
@@ -105,9 +110,17 @@ export class ScraperService {
         waitUntil: 'domcontentloaded',
         timeout: request.timeoutMs || env.browserTimeoutMs,
       }).catch(async (navErr) => {
-        // Fallback retry on direct socket if proxy failed
-        if (proxyServer && navErr.message.includes('PROXY')) {
-          console.warn(`[ScraperService] Proxy ${proxyServer} failed. Retrying direct socket.`);
+        const msg: string = navErr?.message || '';
+        const isProxyError =
+          proxyConfig &&
+          (/PROXY|TUNNEL|ECONNREFUSED|ETIMEDOUT|ERR_PROXY|NS_ERROR_PROXY|proxy/i.test(msg) ||
+            msg.includes('407') || // Proxy Authentication Required
+            msg.includes('ERR_TUNNEL_CONNECTION_FAILED'));
+
+        if (isProxyError) {
+          const latency = Date.now() - startTime;
+          console.warn(`[ScraperService] Proxy ${proxyServer} failed (${msg.substring(0, 120)}). Marcando fallo y reintentando sin proxy.`);
+          if (proxy) this.proxyRotator.markProxyFailure(proxy.id, `Proxy error: ${msg.substring(0, 80)}`, latency);
           if (context) await context.close().catch(() => {});
           context = await PlaywrightStealthFactory.createContext(browser, fingerprint, stealthLevel);
           page = await context.newPage();
@@ -122,10 +135,8 @@ export class ScraperService {
 
       const statusCode = response?.status() || 200;
 
-      // 4. Human behavior emulation & stochastic pacing
-      await EvasionService.simulateOrganicMouseTrajectories(page);
-      await EvasionService.simulateNaturalSmoothScroll(page, 2);
-      await EvasionService.humanDelay(500, 150, 250);
+      // 4. Human behavior emulation avanzado & stochastic pacing (rotación per-request)
+      await EvasionService.simulateAdvancedHumanBehavior(page);
 
       // 5. Element wait if specified
       if (request.waitForSelector) {
@@ -134,14 +145,21 @@ export class ScraperService {
         }).catch(() => {});
       }
 
-      // 6. Inspect anti-bot barrier status
+      // 6. Inspect anti-bot barrier status + captcha detection
       const pageTitle = await page.title();
       const htmlContent = await page.content();
       const isBlocked = EvasionService.isAntibotChallenge(htmlContent, pageTitle, statusCode);
+      const captchaInfo = EvasionService.handleCaptchaDetected(htmlContent, proxy?.id);
+      if (captchaInfo.detected) {
+        // Se incluye en extractedData para métricas
+        console.warn(`[ScraperService] Captcha ${captchaInfo.type} en ${targetUrl} -> proxy ${proxy?.id} rotará`);
+      }
 
       // 7. Automatic Resilient Data & Sports Odds Extraction
       const extractedData: Record<string, unknown> = {
         title: pageTitle,
+        captchaDetected: captchaInfo.detected,
+        captchaType: captchaInfo.type,
       };
 
       // Automatically extract structured bookmaker odds and sports market items
@@ -174,16 +192,16 @@ export class ScraperService {
         screenshotBase64 = `data:image/jpeg;base64,${buffer.toString('base64')}`;
       }
 
-      // 9. Proxy Health and Failover evaluation
+      // 9. Proxy Health and Failover evaluation con métricas de rendimiento
+      const durationMs = Date.now() - startTime;
       if (proxy) {
-        if (isBlocked) {
-          this.proxyRotator.markProxyFailure(proxy.id, 'Barrera anti-bot detectada en casa de apuestas');
+        if (isBlocked || captchaInfo.detected) {
+          const reason = captchaInfo.detected ? `Captcha ${captchaInfo.type} detectado` : 'Barrera anti-bot detectada en casa de apuestas';
+          this.proxyRotator.markProxyFailure(proxy.id, reason, durationMs);
         } else {
-          this.proxyRotator.markProxySuccess(proxy.id);
+          this.proxyRotator.markProxySuccess(proxy.id, durationMs);
         }
       }
-
-      const durationMs = Date.now() - startTime;
       let finalStatus: 'SUCCESS' | 'BLOCKED' | 'DOM_STRUCTURE_CHANGED' = isBlocked ? 'BLOCKED' : 'SUCCESS';
       if (!isBlocked && domStructureAlert?.hasChanged) {
         finalStatus = 'DOM_STRUCTURE_CHANGED';

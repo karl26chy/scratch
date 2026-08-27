@@ -8,6 +8,8 @@ router.post('/run', controller.runScrape);
 router.post('/scrape', controller.runScrape);
 router.post('/batch', controller.runScrape);
 router.get('/proxies', controller.getProxies);
+router.get('/proxies/health', controller.getProxyHealth);
+router.post('/proxies/test', controller.testProxy);
 router.post('/proxies/rotate', controller.rotateProxy);
 
 export default router;
