@@ -7,6 +7,7 @@ const controller = new ScraperController();
 router.post('/run', controller.runScrape);
 router.post('/scrape', controller.runScrape);
 router.post('/batch', controller.runScrape);
+router.post('/scrape/custom', controller.scrapeWithCustomSelectors);
 router.get('/proxies', controller.getProxies);
 router.get('/proxies/health', controller.getProxyHealth);
 router.post('/proxies/test', controller.testProxy);

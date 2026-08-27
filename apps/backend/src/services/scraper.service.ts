@@ -281,6 +281,182 @@ export class ScraperService {
     }
   }
 
+  // ==================== SELECTORES PERSONALIZADOS (FRONTEND) ====================
+  public async scrapeWithCustomSelectors(request: {
+    url: string;
+    selectors: Record<string, string>;
+    useProxy?: boolean;
+    timeoutMs?: number;
+    sessionId?: string;
+  }): Promise<{
+    success: boolean;
+    url: string;
+    matches: any[];
+    totalMatches: number;
+    durationMs: number;
+    selectorsUsed: string[];
+    proxyUsed?: string;
+    timestamp: string;
+    error?: string;
+    captchaType?: string | null;
+  }> {
+    const { url, selectors, useProxy = true, timeoutMs, sessionId } = request;
+    const startTime = Date.now();
+
+    // Validar obligatorios
+    const required = ['events', 'homeTeam', 'awayTeam', 'oddsHome', 'oddsDraw', 'oddsAway'];
+    const missing = required.filter((k) => !selectors[k]);
+    if (missing.length > 0) {
+      throw new Error(`Faltan selectores obligatorios: ${missing.join(', ')}`);
+    }
+
+    const effectiveUseProxy = useProxy && env.proxy.enabled;
+    let proxy = effectiveUseProxy ? this.proxyRotator.getProxy(sessionId) : undefined;
+    const proxyConfig = proxy ? this.proxyRotator.getProxyServerWithAuth(proxy) : undefined;
+    const proxyServer = proxyConfig?.server;
+
+    const stealthLevel = 'paranoid' as const;
+    const fingerprint = proxy?.country
+      ? FingerprintGenerator.generate(stealthLevel, proxy.country)
+      : FingerprintGenerator.generate(stealthLevel);
+
+    const browser = await this.browserPool.acquireBrowser();
+    let context: BrowserContext | null = null;
+    let page: Page | null = null;
+
+    try {
+      context = await PlaywrightStealthFactory.createContext(browser, fingerprint, stealthLevel, proxyConfig);
+      page = await context.newPage();
+      await PlaywrightStealthFactory.applyInPageEvasions(page, fingerprint);
+
+      await page.goto(url, {
+        waitUntil: 'domcontentloaded',
+        timeout: timeoutMs || env.browserTimeoutMs,
+      });
+
+      const html = await page.content();
+      const title = await page.title();
+      const captchaInfo = EvasionService.handleCaptchaDetected(html, proxy?.id);
+      if (captchaInfo.detected) {
+        if (proxy) this.proxyRotator.markProxyFailure(proxy.id, `Captcha ${captchaInfo.type}`, Date.now() - startTime);
+        return {
+          success: false,
+          url,
+          matches: [],
+          totalMatches: 0,
+          durationMs: Date.now() - startTime,
+          selectorsUsed: Object.keys(selectors).filter((k) => selectors[k]),
+          proxyUsed: proxyServer,
+          timestamp: new Date().toISOString(),
+          error: `Captcha detectado: ${captchaInfo.type}`,
+          captchaType: captchaInfo.type,
+        };
+      }
+
+      await EvasionService.simulateAdvancedHumanBehavior(page);
+
+      const matches = await this.extractWithCustomSelectors(page, selectors);
+      const durationMs = Date.now() - startTime;
+      if (proxy) this.proxyRotator.markProxySuccess(proxy.id, durationMs);
+
+      return {
+        success: true,
+        url,
+        matches,
+        totalMatches: matches.length,
+        durationMs,
+        selectorsUsed: Object.keys(selectors).filter((k) => selectors[k]),
+        proxyUsed: proxyServer || 'Directo / Socket Limpio',
+        timestamp: new Date().toISOString(),
+      };
+    } catch (error: any) {
+      const durationMs = Date.now() - startTime;
+      if (proxy && error.message?.includes('PROXY')) {
+        this.proxyRotator.markProxyFailure(proxy.id, error.message, durationMs);
+      }
+      return {
+        success: false,
+        url,
+        matches: [],
+        totalMatches: 0,
+        durationMs,
+        selectorsUsed: Object.keys(selectors).filter((k) => selectors[k]),
+        proxyUsed: proxyServer,
+        timestamp: new Date().toISOString(),
+        error: error.message || 'Error en scraping custom',
+        captchaType: null,
+      };
+    } finally {
+      if (page) await page.close().catch(() => {});
+      if (context) await context.close().catch(() => {});
+      await this.browserPool.releaseBrowser(browser, false);
+    }
+  }
+
+  private async extractWithCustomSelectors(page: Page, selectors: Record<string, string>): Promise<any[]> {
+    const results: any[] = [];
+    try {
+      const eventElements = await page.$$(selectors.events);
+      if (eventElements.length === 0) return [];
+
+      for (const event of eventElements) {
+        try {
+          const getText = async (sel: string): Promise<string> => {
+            try {
+              const el = await event.$(sel);
+              if (el) {
+                const t = await el.textContent();
+                return t?.trim() || '';
+              }
+              return '';
+            } catch {
+              return '';
+            }
+          };
+          const getNumber = async (sel: string): Promise<number | null> => {
+            const text = await getText(sel);
+            if (!text) return null;
+            const cleaned = text.replace(',', '.').replace(/[^\d.\-]/g, '');
+            const num = parseFloat(cleaned);
+            return isNaN(num) ? null : num;
+          };
+
+          const match: any = {};
+          match.homeTeam = await getText(selectors.homeTeam);
+          match.awayTeam = await getText(selectors.awayTeam);
+          match.oddsHome = await getNumber(selectors.oddsHome);
+          match.oddsDraw = await getNumber(selectors.oddsDraw);
+          match.oddsAway = await getNumber(selectors.oddsAway);
+
+          if (selectors.matchTime) match.matchTime = await getText(selectors.matchTime);
+          if (selectors.leagueName) match.leagueName = await getText(selectors.leagueName);
+          if (selectors.matchStatus) match.matchStatus = await getText(selectors.matchStatus);
+          if (selectors.homeScore) match.homeScore = await getNumber(selectors.homeScore);
+          if (selectors.awayScore) match.awayScore = await getNumber(selectors.awayScore);
+          if (selectors.overOdds) match.overOdds = await getNumber(selectors.overOdds);
+          if (selectors.underOdds) match.underOdds = await getNumber(selectors.underOdds);
+          if (selectors.handicapHome) match.handicapHome = await getNumber(selectors.handicapHome);
+          if (selectors.handicapAway) match.handicapAway = await getNumber(selectors.handicapAway);
+          if (selectors.bothScoreYes) match.bothScoreYes = await getNumber(selectors.bothScoreYes);
+          if (selectors.bothScoreNo) match.bothScoreNo = await getNumber(selectors.bothScoreNo);
+
+          // Capturar cualquier selector extra dinámico
+          for (const [key, sel] of Object.entries(selectors)) {
+            if (['events', 'homeTeam', 'awayTeam', 'oddsHome', 'oddsDraw', 'oddsAway', 'matchTime', 'leagueName', 'matchStatus', 'homeScore', 'awayScore', 'overOdds', 'underOdds', 'handicapHome', 'handicapAway', 'bothScoreYes', 'bothScoreNo'].includes(key)) continue;
+            if (sel) match[key] = await getText(sel);
+          }
+
+          if (match.homeTeam || match.awayTeam) results.push(match);
+        } catch {
+          // continuar con siguiente evento
+        }
+      }
+    } catch (e) {
+      console.error('Error extractWithCustomSelectors', e);
+    }
+    return results;
+  }
+
   /**
    * Compatibility wrapper for single-URL calls
    */

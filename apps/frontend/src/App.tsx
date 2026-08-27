@@ -3,6 +3,7 @@ import { Header } from './shared/components/Header.js';
 import { Sidebar, NavTab } from './shared/components/Sidebar.js';
 import { DashboardPage } from './modules/dashboard/pages/DashboardPage.js';
 import { ScraperRunnerPage } from './modules/scrapers/pages/ScraperRunnerPage.js';
+import { SelectorConfigPage } from './modules/scrapers/pages/SelectorConfigPage.js';
 import { SurebetDashboardPage } from './modules/surebets/pages/SurebetDashboardPage.js';
 import { useDashboardMetrics } from './modules/dashboard/hooks/useDashboardMetrics.js';
 import { ScrapeResult } from './shared/types/common.types.js';
@@ -47,6 +48,8 @@ export const App: React.FC = () => {
               setActiveResults={setActiveResults}
             />
           )}
+
+          {currentTab === 'selector-config' && <SelectorConfigPage />}
 
           {currentTab === 'surebets' && <SurebetDashboardPage />}
         </main>

@@ -13,6 +13,14 @@ const ScrapeSchema = z.object({
   captureScreenshot: z.boolean().default(true),
 });
 
+const CustomScrapeSchema = z.object({
+  url: z.string().url('URL requerida'),
+  selectors: z.record(z.string()),
+  useProxy: z.boolean().optional().default(true),
+  timeoutMs: z.number().positive().max(120000).optional().default(30000),
+  sessionId: z.string().optional(),
+});
+
 export class ScraperController {
   private scraperService = new ScraperService();
   private proxyRotator = ProxyRotator.getInstance();
@@ -123,6 +131,54 @@ export class ScraperController {
               ? 'Todos los proxies en cooldown -> posible bloqueo masivo o fallo de red.'
               : `Pool operativo: ${report.available}/${report.total} disponibles vía ${report.provider}`,
     });
+  };
+
+  /**
+   * Scraping con selectores personalizados (frontend)
+   */
+  public scrapeWithCustomSelectors = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+      const parsed = CustomScrapeSchema.parse(req.body);
+      const { url, selectors, useProxy, timeoutMs, sessionId } = parsed;
+
+      const required = ['events', 'homeTeam', 'awayTeam', 'oddsHome', 'oddsDraw', 'oddsAway'];
+      const missing = required.filter((k) => !selectors[k]);
+      if (missing.length > 0) {
+        res.status(400).json({
+          status: 'error',
+          message: `Faltan selectores obligatorios: ${missing.join(', ')}`,
+          required,
+        });
+        return;
+      }
+
+      const result = await this.scraperService.scrapeWithCustomSelectors({
+        url,
+        selectors,
+        useProxy,
+        timeoutMs,
+        sessionId: sessionId || `custom_${Date.now()}`,
+      });
+
+      if (!result.success) {
+        res.status(result.captchaType ? 423 : 500).json({
+          status: result.captchaType ? 'captcha' : 'error',
+          ...result,
+        });
+        return;
+      }
+
+      res.status(200).json({
+        status: 'success',
+        ...result,
+      });
+    } catch (error: any) {
+      if (error.name === 'ZodError') {
+        res.status(400).json({ status: 'error', message: 'Validación fallida', errors: error.errors });
+        return;
+      }
+      next(error);
+    }
   };
 
   /**

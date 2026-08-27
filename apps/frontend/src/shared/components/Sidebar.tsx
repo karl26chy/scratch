@@ -1,7 +1,7 @@
 import React from 'react';
 import { LayoutDashboard, PlaySquare, TrendingUp, ShieldAlert, Network, Layers } from 'lucide-react';
 
-export type NavTab = 'dashboard' | 'scrapers' | 'surebets';
+export type NavTab = 'dashboard' | 'scrapers' | 'selector-config' | 'surebets';
 
 interface SidebarProps {
   currentTab: NavTab;
@@ -12,6 +12,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentTab, onSelectTab }) => 
   const items = [
     { id: 'dashboard' as NavTab, label: 'Telemetría de Evasión', icon: <LayoutDashboard size={18} /> },
     { id: 'scrapers' as NavTab, label: 'Consola de Scraping', icon: <PlaySquare size={18} /> },
+    { id: 'selector-config' as NavTab, label: 'Selectores Custom', icon: <Layers size={18} /> },
     { id: 'surebets' as NavTab, label: 'Arbitraje & Surebets', icon: <TrendingUp size={18} /> },
   ];
 
