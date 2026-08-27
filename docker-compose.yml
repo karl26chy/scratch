@@ -5,6 +5,7 @@ services:
     build:
       context: .
       dockerfile: apps/backend/Dockerfile
+    # Playwright base image: mcr.microsoft.com/playwright:v1.62.1-jammy (sync with apps/backend/package.json playwright@1.62.1)
     container_name: stealth-scraper-backend
     restart: unless-stopped
     ports:

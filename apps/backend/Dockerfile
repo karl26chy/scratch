@@ -1,5 +1,5 @@
 # Multi-stage Dockerfile for Playwright Evasion Backend
-FROM mcr.microsoft.com/playwright:v1.45.0-jammy AS base
+FROM mcr.microsoft.com/playwright:v1.62.1-jammy AS base
 
 WORKDIR /app
 
