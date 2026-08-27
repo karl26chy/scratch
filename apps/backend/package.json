@@ -15,7 +15,8 @@
     "test:single:disable": "tsx src/scripts/disable-single-test.ts",
     "test:single:enable": "echo 'Configura SINGLE_TEST_MODE=true y ALLOW_DIRECT_IP=true en .env'",
     "clear-cache": "powershell -Command \"Remove-Item -Recurse -Force node_modules/.vite,dist -ErrorAction SilentlyContinue; Write-Host '✅ clear-cache'\"",
-    "verify:playwright": "tsx src/scripts/verify-playwright.ts"
+    "verify:playwright": "tsx src/scripts/verify-playwright.ts",
+    "verify:docker": "tsx src/scripts/verify-docker-playwright.ts"
   },
   "dependencies": {
     "cors": "^2.8.5",

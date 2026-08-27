@@ -5,9 +5,7 @@ services:
     build:
       context: .
       dockerfile: apps/backend/Dockerfile
-    # Playwright base image: mcr.microsoft.com/playwright:v1.62.1-jammy (sync with apps/backend/package.json playwright@1.62.1)
-    container_name: stealth-scraper-backend
-    restart: unless-stopped
+    container_name: scraper-backend
     ports:
       - "4000:4000"
     environment:
@@ -15,8 +13,7 @@ services:
       - PORT=4000
       - FRONTEND_ORIGIN=http://localhost:3000
       - PLAYWRIGHT_BROWSERS_PATH=0
-      - HEADLESS_MODE=true
-      - DEFAULT_STEALTH_LEVEL=advanced
+      - HEADLESS_MODE=${HEADLESS_MODE:-false}
       - PROXY_ENABLED=${PROXY_ENABLED:-false}
       - PROXY_PROVIDER=${PROXY_PROVIDER:-webshare}
       - PROXY_LIST_URL=${PROXY_LIST_URL:-}
@@ -24,10 +21,15 @@ services:
       - PROXY_PASSWORD=${PROXY_PASSWORD:-}
       - PROXY_API_KEY=${PROXY_API_KEY:-}
       - PROXY_TEST_URL=${PROXY_TEST_URL:-https://api.ipify.org?format=json}
-    ipc: host # Crucial for Chromium/Playwright to prevent shared memory crashes
+      - SINGLE_TEST_MODE=${SINGLE_TEST_MODE:-false}
+      - ALLOW_DIRECT_IP=${ALLOW_DIRECT_IP:-false}
     volumes:
       - ./apps/backend:/app/apps/backend
       - /app/apps/backend/node_modules
+      - /app/node_modules
+    command: npm run dev
+    ipc: host
+    restart: unless-stopped
     networks:
       - scraper-network
 
@@ -35,19 +37,21 @@ services:
     build:
       context: .
       dockerfile: apps/frontend/Dockerfile
-    container_name: stealth-scraper-frontend
-    restart: unless-stopped
+    container_name: scraper-frontend
     ports:
       - "3000:3000"
     environment:
-      - VITE_API_URL=http://localhost:4000/api/v1
-    depends_on:
-      - backend
+      - NODE_ENV=development
+      - VITE_API_URL=http://localhost:4000/api
     volumes:
       - ./apps/frontend:/app/apps/frontend
       - /app/apps/frontend/node_modules
+    command: npm run dev
+    depends_on:
+      - backend
     networks:
       - scraper-network
+    restart: unless-stopped
 
 networks:
   scraper-network:
