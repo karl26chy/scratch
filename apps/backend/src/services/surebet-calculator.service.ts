@@ -6,6 +6,7 @@ import {
   MarketType,
   SportType,
 } from '../domain/types/surebet.types.js';
+import { OddsPersistenceService } from './odds-persistence.service.js';
 
 export class SurebetCalculatorService {
   private static instance: SurebetCalculatorService;
@@ -20,10 +21,19 @@ export class SurebetCalculatorService {
 
   /**
    * Adds newly scraped odds from live bookmaker missions into the active pipeline
+   * TTL: filtra odds con más de 2 minutos para no mezclar obsoletas
    */
   public addScrapedOdds(odds: BookmakerOdd[]): void {
     if (!odds || odds.length === 0) return;
-    this.liveOddsStore = [...odds, ...this.liveOddsStore].slice(0, 500); // retain latest 500 odds
+    const now = Date.now();
+    const twoMin = 2 * 60 * 1000;
+    // Filtrar existentes >2min y nuevos con timestamp
+    const freshExisting = this.liveOddsStore.filter((o) => {
+      if (!o.timestamp) return true;
+      return now - new Date(o.timestamp).getTime() < twoMin;
+    });
+    this.liveOddsStore = [...odds, ...freshExisting].slice(0, 500); // retain latest 500 fresh
+    console.log(`📊 [Surebet] addScrapedOdds: +${odds.length} => total ${this.liveOddsStore.length} (filtro 2min, antes ${freshExisting.length + odds.length})`);
   }
 
   /**
@@ -52,6 +62,14 @@ export class SurebetCalculatorService {
     totalStake: number = 1000,
     minProfitMargin: number = 0
   ): AnalyzeSurebetsResponseDto {
+    // TTL 5min: ignorar odds con más de 5 minutos para análisis
+    const fiveMin = 5 * 60 * 1000;
+    const now = Date.now();
+    const freshOdds = odds.filter((o) => {
+      if (!o.timestamp) return true;
+      return now - new Date(o.timestamp).getTime() < fiveMin;
+    });
+    odds = freshOdds;
     if (!odds || odds.length === 0) {
       return {
         success: true,
@@ -210,13 +228,35 @@ export class SurebetCalculatorService {
 
   /**
    * Return live calculated opportunities from real scraped data (starts empty [] if no data scraped yet)
+   * Ahora incluye persistencia (wplay + stake) para combinar ambas vistas
    */
   public getLiveOpportunities(totalStake = 1000): SurebetOpportunity[] {
-    if (this.liveOddsStore.length === 0) {
+    const persisted = OddsPersistenceService.getInstance().getAllOdds();
+    const combined = [...persisted, ...this.liveOddsStore];
+    // Deduplicar por bookmaker+event+selection
+    const seen = new Set<string>();
+    const deduped: BookmakerOdd[] = [];
+    for (const o of combined) {
+      const key = `${o.bookmaker}:${o.eventName}:${o.selection}:${o.marketType}`;
+      if (!seen.has(key)) {
+        seen.add(key);
+        deduped.push(o);
+      }
+    }
+    if (deduped.length === 0) {
       return [];
     }
-    const result = this.analyzeOdds(this.liveOddsStore, totalStake);
+    const result = this.analyzeOdds(deduped, totalStake);
     return result.opportunities;
+  }
+
+  public getPersistedStats(): { wplay: number; stake: number; total: number; timestamp: string; live: number } {
+    const stats = OddsPersistenceService.getInstance().getStats();
+    return { ...stats, live: this.liveOddsStore.length };
+  }
+
+  public getAllPersistedOdds(): BookmakerOdd[] {
+    return OddsPersistenceService.getInstance().getAllOdds();
   }
 
   private getRequiredSelectionsForMarket(marketType: MarketType): string[] {

@@ -115,6 +115,12 @@ export class ProxyRotator {
     // If it looks like a single http URL fetch endpoint (e.g. webshare API) and not CSV, we cannot synchronously fetch.
     // Detect CSV vs single URL: if contains comma or newline or space-separated hosts
     const hasMultiple = trimmed.includes(',') || trimmed.includes('\n') || trimmed.includes(' ');
+    // Detect API endpoint (Webshare / BrightData) vs single proxy
+    if (trimmed.includes('/api/') && (trimmed.includes('webshare') || trimmed.includes('brightdata') || trimmed.includes('oxylabs'))) {
+      // Es un endpoint API, no un proxy individual — se cargará vía reloadFromRemote() async
+      console.info('[ProxyRotator] PROXY_LIST_URL parece endpoint API, no proxy directo — se usará reloadFromRemote() con PROXY_API_KEY');
+      return [];
+    }
     // If single URL without comma and starts with http and contains no port-colon pattern after host, treat as fetch URL (async)
     // For sync path, we only parse if it's a list of proxy servers, not an API endpoint.
     if (!hasMultiple) {

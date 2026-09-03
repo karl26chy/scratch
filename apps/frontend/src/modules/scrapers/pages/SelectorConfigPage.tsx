@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card } from '../../../shared/components/Card.js';
 import { Badge } from '../../../shared/components/Badge.js';
+import { JsonTree } from '../../../shared/components/JsonTree.js';
+import { AdaptersApi } from '../../adapters/services/adaptersApi.js';
 
 interface SelectorConfig {
   events: string;
@@ -25,6 +27,14 @@ interface SelectorConfig {
 
 const API_BASE = 'http://localhost:4000/api';
 
+function extractHostname(value: string): string | null {
+  try {
+    return new URL(value).hostname;
+  } catch {
+    return null;
+  }
+}
+
 export const SelectorConfigPage: React.FC = () => {
   const [url, setUrl] = useState('');
   const [selectors, setSelectors] = useState<SelectorConfig>({
@@ -40,11 +50,80 @@ export const SelectorConfigPage: React.FC = () => {
   const [results, setResults] = useState<any>(null);
   const [error, setError] = useState<string | null>(null);
 
+  // Estado de adapter de red para el dominio ingresado — Tarea 1
+  const [hasAdapter, setHasAdapter] = useState(false);
+  const [netAdapter, setNetAdapter] = useState<{ hasAdapter: boolean; domain: string } | null>(null);
+  const [netLoading, setNetLoading] = useState(false);
+  const [netCapture, setNetCapture] = useState<any>(null);
+  const [netCaptureCount, setNetCaptureCount] = useState(0);
+  const [netError, setNetError] = useState<string | null>(null);
+  const [treeOpen, setTreeOpen] = useState(false);
+
+  // Verificar si la URL tiene adapter al cambiar (Tarea 1)
+  useEffect(() => {
+    let cancelled = false;
+    const checkAdapter = async () => {
+      if (url) {
+        try {
+          const hostname = new URL(url).hostname;
+          const response = await fetch(`/api/adapters?domain=${hostname}`);
+          const data = await response.json();
+          if (!cancelled) {
+            setHasAdapter(data.hasAdapter);
+            setNetAdapter({ hasAdapter: data.hasAdapter, domain: data.domain || hostname });
+          }
+        } catch (error) {
+          if (!cancelled) {
+            setHasAdapter(false);
+            setNetAdapter(null);
+          }
+        }
+      } else {
+        setHasAdapter(false);
+      }
+    };
+    // Mantener compatibilidad con AdaptersApi.check también
+    const host = extractHostname(url);
+    if (!host) {
+      setNetAdapter(null);
+      setHasAdapter(false);
+      return;
+    }
+    setNetLoading(true);
+    const t = setTimeout(async () => {
+      try {
+        const res = await AdaptersApi.check(host);
+        if (!cancelled) {
+          setNetAdapter({ hasAdapter: res.hasAdapter, domain: res.domain });
+          setHasAdapter(res.hasAdapter);
+        }
+      } catch {
+        if (!cancelled) {
+          setNetAdapter(null);
+          setHasAdapter(false);
+        }
+      } finally {
+        if (!cancelled) setNetLoading(false);
+      }
+      // También verificar con nuevo endpoint
+      checkAdapter();
+    }, 400);
+    return () => {
+      cancelled = true;
+      clearTimeout(t);
+    };
+  }, [url]);
+
   const updateSelector = (key: keyof SelectorConfig, value: string) => {
     setSelectors((prev) => ({ ...prev, [key]: value }));
   };
 
   const validateSelectors = (): boolean => {
+    // ✅ Si es Stake, permitir selectores vacíos (usa Network Interceptor)
+    if (url.includes('stake.com.co')) {
+      console.log('🇨🇴 Stake detectado - selectores vacíos permitidos');
+      return true;
+    }
     const required = ['events', 'homeTeam', 'awayTeam', 'oddsHome', 'oddsDraw', 'oddsAway'];
     const missing = required.filter((k) => !selectors[k as keyof SelectorConfig]);
     if (missing.length > 0) {
@@ -72,8 +151,22 @@ export const SelectorConfigPage: React.FC = () => {
         body: JSON.stringify({ url, selectors, useProxy, timeoutMs: 30000 }),
       });
       const data = await res.json();
-      if (data.status === 'success') {
-        setResults(data);
+      // Si hay matches, mostrarlos (prioridad network)
+      if (data.matches && data.matches.length > 0) {
+        setResults({
+          ...data,
+          source: data.source || 'dom',
+          oddsCount: data.oddsCount ?? data.matches.length,
+        });
+        setError(null);
+      } else if (data.status === 'success' && (data.matches || data.oddsCount !== undefined)) {
+        // Éxito pero sin matches — puede ser network con 0 odds
+        if (data.oddsCount === 0 && data.source === 'network') {
+          setError('No se encontraron cuotas en los datos de red');
+          setResults(data);
+        } else {
+          setResults(data);
+        }
       } else {
         setError(data.message || data.error || 'Error en el scraping');
       }
@@ -81,6 +174,26 @@ export const SelectorConfigPage: React.FC = () => {
       setError('Error de conexión con el servidor');
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleCaptureNetwork = async () => {
+    if (!url) {
+      setNetError('Por favor ingresa una URL');
+      return;
+    }
+    setNetLoading(true);
+    setNetError(null);
+    setNetCapture(null);
+    try {
+      const data = await AdaptersApi.capture(url);
+      setNetCapture(data.captured);
+      setNetCaptureCount(data.count);
+      setTreeOpen(true);
+    } catch (err: any) {
+      setNetError(err.message || 'Error al capturar el tráfico de red');
+    } finally {
+      setNetLoading(false);
     }
   };
 
@@ -114,6 +227,29 @@ export const SelectorConfigPage: React.FC = () => {
               }}
             />
           </div>
+
+          {hasAdapter ? (
+            <div className="bg-green-50 p-4 rounded-lg mb-4" style={{ background: 'rgba(34,197,94,0.1)', border: '1px solid rgba(34,197,94,0.3)', borderRadius: '8px', padding: '1rem', marginBottom: '1rem' }}>
+              <p className="text-green-700 font-semibold" style={{ color: '#15803d', fontWeight: 600, margin: 0 }}>
+                📡 Network Interceptor activo para este sitio
+              </p>
+              <p className="text-sm text-green-600" style={{ color: '#16a34a', fontSize: '0.85rem', margin: '0.25rem 0 0 0' }}>
+                Los selectores no son necesarios. Los datos se capturarán automáticamente.
+              </p>
+            </div>
+          ) : null}
+          {netAdapter?.hasAdapter && (
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+              <Badge variant="purple">🔌 Captura por red activa — selectores en fallback</Badge>
+            </div>
+          )}
+          {netAdapter && !netAdapter.hasAdapter && (
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+              <Badge variant="info">DOM fallback (sin adapter de red para {netAdapter.domain})</Badge>
+            </div>
+          )}
+          {netLoading && <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Consultando adapters…</span>}
+
           <label style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', cursor: 'pointer', fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
             <input type="checkbox" checked={useProxy} onChange={(e) => setUseProxy(e.target.checked)} />
             Usar Proxy
@@ -124,7 +260,12 @@ export const SelectorConfigPage: React.FC = () => {
 
       <div style={{ height: '1.2rem' }} />
 
-      <Card title="2. Configurar Selectores CSS" subtitle="Los selectores con * son obligatorios (mínimo 6)">
+      {hasAdapter ? (
+        <div className="bg-green-50 p-4 rounded-lg mb-4" style={{ background: 'rgba(34,197,94,0.1)', border: '1px solid rgba(34,197,94,0.3)', borderRadius: '8px', padding: '1rem', textAlign: 'center', color: '#15803d' }}>
+          📡 Network Interceptor activo — los selectores están ocultos porque este sitio usa captura automática.
+        </div>
+      ) : (
+        <Card title="2. Configurar Selectores CSS" subtitle="Los selectores con * son obligatorios (mínimo 6)">
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1rem' }}>
           <SelectorInput label="Contenedor de eventos *" description="Elemento que contiene cada partido completo" placeholder=".match-card, .event-row, div[data-match]" value={selectors.events} onChange={(v) => updateSelector('events', v)} required />
           <SelectorInput label="Equipo local *" description="Nombre del equipo que juega en casa" placeholder=".team-home, .home-team" value={selectors.homeTeam} onChange={(v) => updateSelector('homeTeam', v)} required />
@@ -146,6 +287,7 @@ export const SelectorConfigPage: React.FC = () => {
           <SelectorInput label="Ambos marcan No" description="Cuota Ambos marcan No" placeholder=".both-score-no" value={selectors.bothScoreNo || ''} onChange={(v) => updateSelector('bothScoreNo', v)} />
         </div>
       </Card>
+      )}
 
       <button
         onClick={handleScrape}
@@ -166,16 +308,62 @@ export const SelectorConfigPage: React.FC = () => {
         {loading ? '⏳ Ejecutando...' : '🚀 Ejecutar Scraping con Selectores'}
       </button>
 
+      {/* Captura de tráfico de red (modo debug vía backend) */}
+      <div style={{ height: '1.2rem' }} />
+      <Card title="3. Capturar tráfico de red" subtitle="Intercepta respuestas JSON de la API del sitio (modo debug)">
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+          <button
+            onClick={handleCaptureNetwork}
+            disabled={!url || netLoading}
+            style={{
+              padding: '0.7rem 1rem',
+              borderRadius: 'var(--radius-md)',
+              border: '1px solid rgba(6, 182, 212, 0.4)',
+              background: netLoading || !url ? 'rgba(6,182,212,0.15)' : 'rgba(6,182,212,0.25)',
+              color: '#22d3ee',
+              fontWeight: 700,
+              cursor: netLoading || !url ? 'not-allowed' : 'pointer',
+              fontSize: '0.9rem',
+              alignSelf: 'flex-start',
+            }}
+          >
+            {netLoading ? '⏳ Capturando...' : '🔌 Capturar tráfico de red'}
+          </button>
+
+          {netError && (
+            <div style={{ padding: '0.8rem 1rem', background: 'rgba(239,68,68,0.1)', border: '1px solid rgba(239,68,68,0.3)', borderRadius: 'var(--radius-md)', color: '#f87171', fontSize: '0.85rem' }}>{netError}</div>
+          )}
+
+          {netCapture && (
+            <div>
+              <button
+                onClick={() => setTreeOpen((o) => !o)}
+                style={{ background: 'transparent', border: 'none', color: 'var(--accent-secondary)', cursor: 'pointer', fontSize: '0.85rem', fontWeight: 600, marginBottom: '0.5rem' }}
+              >
+                {treeOpen ? '▼' : '▶'} Payloads capturados ({netCaptureCount})
+              </button>
+              {treeOpen && <JsonTree data={netCapture} />}
+            </div>
+          )}
+        </div>
+      </Card>
+
       {error && (
         <div style={{ marginTop: '1rem', padding: '1rem', background: 'rgba(239,68,68,0.1)', border: '1px solid rgba(239,68,68,0.3)', borderRadius: 'var(--radius-md)', color: '#f87171', fontSize: '0.85rem' }}>{error}</div>
       )}
 
       {results && (
         <div style={{ marginTop: '1.5rem' }}>
-          <Card title="📊 Resultados del Scraping" subtitle={`${results.totalMatches || results.matches?.length || 0} partidos en ${results.durationMs}ms`}>
-            <div style={{ marginBottom: '1rem', fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
+          <Card title="📊 Resultados del Scraping" subtitle={`${results.totalMatches || results.matches?.length || 0} partidos en ${results.durationMs}ms — Fuente: ${results.source || 'dom'} ${results.oddsCount !== undefined ? `· ${results.oddsCount} cuotas` : ''}`}>
+            <div style={{ marginBottom: '1rem', fontSize: '0.85rem', color: 'var(--text-secondary)', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
               <div><strong>URL:</strong> {results.url}</div>
-              <div><strong>Proxy:</strong> {results.proxyUsed || 'N/A'}</div>
+              <div style={{ display: 'flex', gap: '0.6rem', alignItems: 'center', flexWrap: 'wrap' }}>
+                <span><strong>Proxy:</strong> {results.proxyUsed || 'N/A'}</span>
+                <Badge variant={results.source === 'network' ? 'purple' : 'info'}>{results.source === 'network' ? '📡 Red (interceptor)' : '🔍 DOM'}</Badge>
+                {results.oddsCount !== undefined && <Badge variant="success">{results.oddsCount} cuotas</Badge>}
+                {results.bookmaker && <Badge variant="warning">{results.bookmaker}</Badge>}
+                {results.htmlSize && <span style={{ color: 'var(--text-muted)' }}>{results.htmlSize} bytes</span>}
+              </div>
             </div>
             {results.matches && results.matches.length > 0 ? (
               <div style={{ overflowX: 'auto' }}>

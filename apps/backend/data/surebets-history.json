@@ -1,0 +1,246 @@
+[
+  {
+    "timestamp": "2026-09-03T06:47:10.935Z",
+    "surebetsFoundCount": 0,
+    "highestProfitMargin": 0,
+    "opportunities": []
+  },
+  {
+    "timestamp": "2026-09-03T06:47:10.800Z",
+    "surebetsFoundCount": 0,
+    "highestProfitMargin": 0,
+    "opportunities": []
+  },
+  {
+    "timestamp": "2026-09-03T06:35:47.824Z",
+    "surebetsFoundCount": 0,
+    "highestProfitMargin": 0,
+    "opportunities": []
+  },
+  {
+    "timestamp": "2026-09-03T06:35:47.759Z",
+    "surebetsFoundCount": 0,
+    "highestProfitMargin": 0,
+    "opportunities": []
+  },
+  {
+    "timestamp": "2026-09-03T06:34:21.047Z",
+    "surebetsFoundCount": 0,
+    "highestProfitMargin": 0,
+    "opportunities": []
+  },
+  {
+    "timestamp": "2026-09-03T06:34:20.989Z",
+    "surebetsFoundCount": 0,
+    "highestProfitMargin": 0,
+    "opportunities": []
+  },
+  {
+    "timestamp": "2026-09-03T06:32:49.528Z",
+    "surebetsFoundCount": 0,
+    "highestProfitMargin": 0,
+    "opportunities": []
+  },
+  {
+    "timestamp": "2026-09-03T06:32:49.489Z",
+    "surebetsFoundCount": 0,
+    "highestProfitMargin": 0,
+    "opportunities": []
+  },
+  {
+    "timestamp": "2026-09-03T06:30:06.221Z",
+    "surebetsFoundCount": 1,
+    "highestProfitMargin": 10.37,
+    "opportunities": [
+      {
+        "id": "sb_1788417006214_ocv3d",
+        "eventName": "Real Madrid Vs Barcelona",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 2.8,
+            "stakePercentage": 39.42,
+            "recommendedStake": 394.19,
+            "expectedPayout": 1103.73
+          },
+          {
+            "selection": "X",
+            "bookmaker": "Wplay",
+            "odd": 3.5,
+            "stakePercentage": 31.54,
+            "recommendedStake": 315.35,
+            "expectedPayout": 1103.73
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Wplay",
+            "odd": 3.8,
+            "stakePercentage": 29.05,
+            "recommendedStake": 290.46,
+            "expectedPayout": 1103.75
+          }
+        ],
+        "totalImpliedProbability": 0.906,
+        "isSurebet": true,
+        "profitMarginPercentage": 10.37,
+        "totalInvestment": 1000,
+        "guaranteedPayout": 1103.73,
+        "guaranteedProfit": 103.73,
+        "detectedAt": "2026-09-03T06:30:06.214Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-03T06:27:28.826Z",
+    "surebetsFoundCount": 1,
+    "highestProfitMargin": 10.37,
+    "opportunities": [
+      {
+        "id": "sb_1788416848815_ovduc",
+        "eventName": "Real Madrid Vs Barcelona",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 2.8,
+            "stakePercentage": 39.42,
+            "recommendedStake": 394.19,
+            "expectedPayout": 1103.73
+          },
+          {
+            "selection": "X",
+            "bookmaker": "Wplay",
+            "odd": 3.5,
+            "stakePercentage": 31.54,
+            "recommendedStake": 315.35,
+            "expectedPayout": 1103.73
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Wplay",
+            "odd": 3.8,
+            "stakePercentage": 29.05,
+            "recommendedStake": 290.46,
+            "expectedPayout": 1103.75
+          }
+        ],
+        "totalImpliedProbability": 0.906,
+        "isSurebet": true,
+        "profitMarginPercentage": 10.37,
+        "totalInvestment": 1000,
+        "guaranteedPayout": 1103.73,
+        "guaranteedProfit": 103.73,
+        "detectedAt": "2026-09-03T06:27:28.815Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-03T06:27:28.773Z",
+    "surebetsFoundCount": 1,
+    "highestProfitMargin": 10.37,
+    "opportunities": [
+      {
+        "id": "sb_1788416848763_wmowa",
+        "eventName": "Real Madrid Vs Barcelona",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 2.8,
+            "stakePercentage": 39.42,
+            "recommendedStake": 394.19,
+            "expectedPayout": 1103.73
+          },
+          {
+            "selection": "X",
+            "bookmaker": "Wplay",
+            "odd": 3.5,
+            "stakePercentage": 31.54,
+            "recommendedStake": 315.35,
+            "expectedPayout": 1103.73
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Wplay",
+            "odd": 3.8,
+            "stakePercentage": 29.05,
+            "recommendedStake": 290.46,
+            "expectedPayout": 1103.75
+          }
+        ],
+        "totalImpliedProbability": 0.906,
+        "isSurebet": true,
+        "profitMarginPercentage": 10.37,
+        "totalInvestment": 1000,
+        "guaranteedPayout": 1103.73,
+        "guaranteedProfit": 103.73,
+        "detectedAt": "2026-09-03T06:27:28.763Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-03T06:25:52.693Z",
+    "surebetsFoundCount": 1,
+    "highestProfitMargin": 10.37,
+    "opportunities": [
+      {
+        "id": "sb_1788416752686_zwa3h",
+        "eventName": "Real Madrid Vs Barcelona",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 2.8,
+            "stakePercentage": 39.42,
+            "recommendedStake": 394.19,
+            "expectedPayout": 1103.73
+          },
+          {
+            "selection": "X",
+            "bookmaker": "Wplay",
+            "odd": 3.5,
+            "stakePercentage": 31.54,
+            "recommendedStake": 315.35,
+            "expectedPayout": 1103.73
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Wplay",
+            "odd": 3.8,
+            "stakePercentage": 29.05,
+            "recommendedStake": 290.46,
+            "expectedPayout": 1103.75
+          }
+        ],
+        "totalImpliedProbability": 0.906,
+        "isSurebet": true,
+        "profitMarginPercentage": 10.37,
+        "totalInvestment": 1000,
+        "guaranteedPayout": 1103.73,
+        "guaranteedProfit": 103.73,
+        "detectedAt": "2026-09-03T06:25:52.686Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-03T06:25:42.035Z",
+    "surebetsFoundCount": 0,
+    "highestProfitMargin": 0,
+    "opportunities": []
+  },
+  {
+    "timestamp": "2026-09-03T06:25:32.188Z",
+    "surebetsFoundCount": 0,
+    "highestProfitMargin": 0,
+    "opportunities": []
+  }
+]

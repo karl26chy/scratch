@@ -4,7 +4,9 @@ import { Sidebar, NavTab } from './shared/components/Sidebar.js';
 import { DashboardPage } from './modules/dashboard/pages/DashboardPage.js';
 import { ScraperRunnerPage } from './modules/scrapers/pages/ScraperRunnerPage.js';
 import { SelectorConfigPage } from './modules/scrapers/pages/SelectorConfigPage.js';
+import { AdaptersPage } from './modules/adapters/pages/AdaptersPage.js';
 import { SurebetDashboardPage } from './modules/surebets/pages/SurebetDashboardPage.js';
+import SurebetPage from './modules/surebets/pages/SurebetPage.js';
 import { useDashboardMetrics } from './modules/dashboard/hooks/useDashboardMetrics.js';
 import { ScrapeResult } from './shared/types/common.types.js';
 
@@ -51,7 +53,14 @@ export const App: React.FC = () => {
 
           {currentTab === 'selector-config' && <SelectorConfigPage />}
 
-          {currentTab === 'surebets' && <SurebetDashboardPage />}
+          {currentTab === 'adapters' && <AdaptersPage />}
+
+          {currentTab === 'surebets' && (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+              <SurebetPage />
+              <SurebetDashboardPage />
+            </div>
+          )}
         </main>
       </div>
     </div>

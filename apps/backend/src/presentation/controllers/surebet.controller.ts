@@ -1,6 +1,9 @@
 import { Request, Response, NextFunction } from 'express';
+import * as fs from 'fs';
+import * as path from 'path';
 import { z } from 'zod';
 import { SurebetCalculatorService } from '../../services/surebet-calculator.service.js';
+import { OddsPersistenceService } from '../../services/odds-persistence.service.js';
 
 const BookmakerOddSchema = z.object({
   bookmaker: z.string().min(1, 'El nombre de la casa de apuestas es obligatorio'),
@@ -75,4 +78,82 @@ export class SurebetController {
       },
     });
   };
+
+  /**
+   * GET /api/surebets/calculate — Tarea 2: calcula surebets desde persistencia (wplay+stake)
+   */
+  public calculate = (req: Request, res: Response): void => {
+    const totalStake = parseFloat(req.query.totalStake as string) || 1000;
+    const minProfit = parseFloat(req.query.minProfit as string) || 0;
+    const persisted = this.surebetService.getAllPersistedOdds();
+    const result = this.surebetService.analyzeOdds(persisted, totalStake, minProfit);
+    // Guardar histórico
+    this.saveHistory(result);
+    const stats = OddsPersistenceService.getInstance().getStats();
+    res.status(200).json({
+      success: true,
+      data: {
+        ...result,
+        stats,
+        sources: { wplay: stats.wplay, stake: stats.stake, total: stats.total },
+      },
+    });
+  };
+
+  /**
+   * GET /api/surebets/history — histórico
+   */
+  public history = (_req: Request, res: Response): void => {
+    const historyFile = path.resolve(process.cwd(), 'data/surebets-history.json');
+    if (!fs.existsSync(historyFile)) {
+      res.status(200).json({ success: true, data: [] });
+      return;
+    }
+    try {
+      const raw = fs.readFileSync(historyFile, 'utf-8');
+      const data = JSON.parse(raw);
+      res.status(200).json({ success: true, data });
+    } catch {
+      res.status(200).json({ success: true, data: [] });
+    }
+  };
+
+  /**
+   * POST /api/surebets/refresh — fuerza recálculo
+   */
+  public refresh = (req: Request, res: Response): void => {
+    const totalStake = parseFloat((req.body?.totalStake as string) || (req.query.totalStake as string)) || 1000;
+    const result = this.surebetService.getLiveOpportunities(totalStake);
+    // También calcular con persistencia
+    const persisted = this.surebetService.getAllPersistedOdds();
+    const calc = this.surebetService.analyzeOdds(persisted, totalStake);
+    this.saveHistory(calc);
+    res.status(200).json({
+      success: true,
+      data: {
+        opportunities: result,
+        totalCount: result.length,
+        persistedCalc: calc,
+        timestamp: new Date().toISOString(),
+      },
+    });
+  };
+
+  private saveHistory(result: any): void {
+    try {
+      const historyFile = path.resolve(process.cwd(), 'data/surebets-history.json');
+      const dir = path.dirname(historyFile);
+      if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+      let history: any[] = [];
+      if (fs.existsSync(historyFile)) {
+        try {
+          history = JSON.parse(fs.readFileSync(historyFile, 'utf-8'));
+          if (!Array.isArray(history)) history = [];
+        } catch {}
+      }
+      history.unshift({ timestamp: new Date().toISOString(), surebetsFoundCount: result.surebetsFoundCount, highestProfitMargin: result.highestProfitMargin, opportunities: result.opportunities.slice(0, 5) });
+      if (history.length > 50) history = history.slice(0, 50);
+      fs.writeFileSync(historyFile, JSON.stringify(history, null, 2), 'utf-8');
+    } catch {}
+  }
 }

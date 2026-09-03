@@ -1,6 +1,9 @@
 import { createServer } from './presentation/server.js';
 import { env } from './infrastructure/config/environment.js';
 import { BrowserPool } from './infrastructure/browser/browser-pool.js';
+import { registerAllAdapters } from './infrastructure/network/adapters/index.js';
+
+registerAllAdapters();
 
 const app = createServer();
 

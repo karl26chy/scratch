@@ -47,6 +47,7 @@ const LOCALES = [
 ];
 
 const COUNTRY_LOCALE_MAP: Record<string, { locale: string; timezone: string }> = {
+  CO: { locale: 'es-CO,es;q=0.9,en;q=0.8', timezone: 'America/Bogota' },
   US: { locale: 'en-US,en;q=0.9', timezone: 'America/New_York' },
   ES: { locale: 'es-ES,es;q=0.9,en;q=0.8', timezone: 'Europe/Madrid' },
   DE: { locale: 'de-DE,de;q=0.9,en;q=0.8', timezone: 'Europe/Berlin' },

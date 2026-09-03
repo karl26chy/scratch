@@ -27,6 +27,7 @@ export const ScraperForm: React.FC<ScraperFormProps> = ({ onSubmit, isLoading })
   const [urlInput, setUrlInput] = useState('');
   const [useProxy, setUseProxy] = useState(true);
   const [captureScreenshot, setCaptureScreenshot] = useState(true);
+  const [bookmaker, setBookmaker] = useState('');
 
   /**
    * Parses single or multiple URLs separated by newlines, commas, or spaces
@@ -82,10 +83,22 @@ export const ScraperForm: React.FC<ScraperFormProps> = ({ onSubmit, isLoading })
 
     if (targetsToSubmit.length === 0) return;
 
+    // Tarea 1: Forzar selectores vacíos para Stake para usar interceptor (evita DOM 102)
+    // El payload correcto para /api/run debe incluir selectors vacíos
+    // const payload = {
+    //   urls: [{
+    //     url: targetsToSubmit[0],
+    //     bookmaker: bookmaker || 'Stake',
+    //     useProxy: useProxy,
+    //     captureScreenshot: captureScreenshot,
+    //     selectors: { events: '', homeTeam: '', awayTeam: '', oddsHome: '', oddsDraw: '', oddsAway: '' }
+    //   }]
+    // };
     await onSubmit({
       urls: targetsToSubmit,
       useProxy,
       captureScreenshot,
+      bookmaker: bookmaker.trim() || undefined,
     });
   };
 
@@ -325,6 +338,37 @@ export const ScraperForm: React.FC<ScraperFormProps> = ({ onSubmit, isLoading })
               No hay URLs en la cola. Ingresa tus URLs personalizadas en el campo superior o carga la plantilla.
             </div>
           )}
+        </div>
+
+        {/* Nombre de la casa (bookmaker) — definido por el usuario, se cablea al extractor */}
+        <div>
+          <label
+            style={{
+              display: 'block',
+              fontSize: '0.8rem',
+              fontWeight: 600,
+              color: 'var(--text-secondary)',
+              marginBottom: '0.4rem',
+            }}
+          >
+            Nombre de la casa (Bookmaker) — se usará como origen de las cuotas
+          </label>
+          <input
+            type="text"
+            value={bookmaker}
+            onChange={(e) => setBookmaker(e.target.value)}
+            placeholder="Ej. Wplay, Bet365, Pinnacle"
+            style={{
+              width: '100%',
+              padding: '0.7rem 1rem',
+              backgroundColor: 'rgba(255, 255, 255, 0.03)',
+              border: '1px solid var(--border-color)',
+              borderRadius: 'var(--radius-md)',
+              color: 'var(--text-primary)',
+              fontSize: '0.85rem',
+              outline: 'none',
+            }}
+          />
         </div>
 
         {/* Toggles (Default True) */}

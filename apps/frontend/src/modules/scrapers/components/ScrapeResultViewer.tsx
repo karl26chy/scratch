@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CheckCircle, AlertTriangle, Fingerprint, Image, Trophy } from 'lucide-react';
+import { CheckCircle, AlertTriangle, Fingerprint, Image, Trophy, Network, Code } from 'lucide-react';
 import { Card } from '../../../shared/components/Card.js';
 import { Badge } from '../../../shared/components/Badge.js';
 import { ScrapeResult } from '../../../shared/types/common.types.js';
@@ -17,6 +17,7 @@ export const ScrapeResultViewer: React.FC<ScrapeResultViewerProps> = ({ results 
   const activeResult = results[selectedIndex] || results[0];
   const isSuccess = activeResult.status === 'SUCCESS';
   const isDomAlert = activeResult.status === 'DOM_STRUCTURE_CHANGED';
+  const source = activeResult.source;
 
   const sportsOdds = (activeResult.extractedData?.sportsOdds || activeResult.extractedData?.bookmakerOdds) as any[] | undefined;
 
@@ -40,27 +41,39 @@ export const ScrapeResultViewer: React.FC<ScrapeResultViewerProps> = ({ results 
               const resSuccess = res.status === 'SUCCESS';
               const isSelected = selectedIndex === idx;
               return (
-                <button
-                  key={res.id || idx}
-                  onClick={() => setSelectedIndex(idx)}
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '0.4rem',
-                    padding: '0.5rem 0.85rem',
-                    borderRadius: 'var(--radius-md)',
-                    border: isSelected ? '1px solid var(--accent-primary)' : '1px solid rgba(255,255,255,0.06)',
-                    background: isSelected ? 'rgba(99, 102, 241, 0.15)' : 'rgba(255,255,255,0.02)',
-                    color: isSelected ? '#fff' : 'var(--text-secondary)',
-                    fontWeight: 600,
-                    fontSize: '0.8rem',
-                    cursor: 'pointer',
-                    whiteSpace: 'nowrap',
-                  }}
-                >
-                  <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: resSuccess ? 'var(--accent-success)' : 'var(--accent-danger)' }} />
-                  Hilo #{idx + 1}: {truncateString(res.pageTitle || res.url, 22)}
-                </button>
+                 <button
+                   key={res.id || idx}
+                   onClick={() => setSelectedIndex(idx)}
+                   style={{
+                     display: 'flex',
+                     alignItems: 'center',
+                     gap: '0.4rem',
+                     padding: '0.5rem 0.85rem',
+                     borderRadius: 'var(--radius-md)',
+                     border: isSelected ? '1px solid var(--accent-primary)' : '1px solid rgba(255,255,255,0.06)',
+                     background: isSelected ? 'rgba(99, 102, 241, 0.15)' : 'rgba(255,255,255,0.02)',
+                     color: isSelected ? '#fff' : 'var(--text-secondary)',
+                     fontWeight: 600,
+                     fontSize: '0.8rem',
+                     cursor: 'pointer',
+                     whiteSpace: 'nowrap',
+                   }}
+                 >
+                   <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: resSuccess ? 'var(--accent-success)' : 'var(--accent-danger)' }} />
+                   Hilo #{idx + 1}: {truncateString(res.pageTitle || res.url, 22)}
+                   <span
+                     style={{
+                       fontSize: '0.65rem',
+                       fontWeight: 700,
+                       padding: '0.05rem 0.4rem',
+                       borderRadius: '9999px',
+                       color: res.source === 'network' ? '#818cf8' : '#22d3ee',
+                       border: `1px solid ${res.source === 'network' ? 'rgba(99,102,241,0.4)' : 'rgba(6,182,212,0.4)'}`,
+                     }}
+                   >
+                     {res.source === 'network' ? 'RED' : res.source === 'dom' ? 'DOM' : 'N/A'}
+                   </span>
+                 </button>
               );
             })}
           </div>
@@ -72,12 +85,20 @@ export const ScrapeResultViewer: React.FC<ScrapeResultViewerProps> = ({ results 
         title={`Reporte de Extracción: ${activeResult.pageTitle || 'Casa de Apuestas'}`}
         subtitle={`URL: ${activeResult.url} • Sesión: ${activeResult.id}`}
         action={
-          <Badge
-            variant={isSuccess ? 'success' : isDomAlert ? 'warning' : 'danger'}
-            icon={isSuccess ? <CheckCircle size={14} /> : <AlertTriangle size={14} />}
-          >
-            {isSuccess ? 'ÉXITO (100% BYPASS)' : isDomAlert ? 'ALERTA DOM' : 'BLOQUEADO'} (HTTP {activeResult.statusCode || 200})
-          </Badge>
+          <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+            <Badge
+              variant={source === 'network' ? 'purple' : 'info'}
+              icon={source === 'network' ? <Network size={14} /> : <Code size={14} />}
+            >
+              {source === 'network' ? 'RED' : source === 'dom' ? 'DOM' : 'N/A'}
+            </Badge>
+            <Badge
+              variant={isSuccess ? 'success' : isDomAlert ? 'warning' : 'danger'}
+              icon={isSuccess ? <CheckCircle size={14} /> : <AlertTriangle size={14} />}
+            >
+              {isSuccess ? 'ÉXITO (100% BYPASS)' : isDomAlert ? 'ALERTA DOM' : 'BLOQUEADO'} (HTTP {activeResult.statusCode || 200})
+            </Badge>
+          </span>
         }
       >
         {/* KPI Grid */}

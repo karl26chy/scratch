@@ -1,0 +1,6919 @@
+{
+  "wplay": [
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Ningbo Waves vs Shenyang Seagulls",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Ningbo Waves",
+      "odd": 1.95,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Ningbo Waves vs Shenyang Seagulls",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Shenyang Seagulls",
+      "odd": 1.769,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "América de Cali vs Alianza FC",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "América de Cali",
+      "odd": 1.36,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "América de Cali vs Alianza FC",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 4.75,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "América de Cali vs Alianza FC",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Alianza FC",
+      "odd": 10.25,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Deportivo Pereira vs Independiente Medellin",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Deportivo Pereira",
+      "odd": 5.25,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Deportivo Pereira vs Independiente Medellin",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.75,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Deportivo Pereira vs Independiente Medellin",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Independiente Medellin",
+      "odd": 1.72,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Boyaca Chico FC vs Once Caldas",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Boyaca Chico FC",
+      "odd": 3.8,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Boyaca Chico FC vs Once Caldas",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.35,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Boyaca Chico FC vs Once Caldas",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Once Caldas",
+      "odd": 2,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Independiente Santa Fe vs Fortaleza FC",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Independiente Santa Fe",
+      "odd": 1.59,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Independiente Santa Fe vs Fortaleza FC",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.75,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Independiente Santa Fe vs Fortaleza FC",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Fortaleza FC",
+      "odd": 6,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "CD Junior vs Jaguares De Córdoba",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "CD Junior",
+      "odd": 1.4,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "CD Junior vs Jaguares De Córdoba",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 4.3,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "CD Junior vs Jaguares De Córdoba",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Jaguares De Córdoba",
+      "odd": 9,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Ipswich Town vs Liverpool",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Ipswich Town",
+      "odd": 5.7,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Ipswich Town vs Liverpool",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 4.6,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Ipswich Town vs Liverpool",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Liverpool",
+      "odd": 1.55,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Newcastle vs Bournemouth",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Newcastle",
+      "odd": 2.18,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Newcastle vs Bournemouth",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.65,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Newcastle vs Bournemouth",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Bournemouth",
+      "odd": 3.05,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Manchester City vs Coventry",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Manchester City",
+      "odd": 1.17,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Manchester City vs Coventry",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 7.3,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Manchester City vs Coventry",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Coventry",
+      "odd": 14.5,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Nottingham Forest vs Tottenham",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Nottingham Forest",
+      "odd": 2.54,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Nottingham Forest vs Tottenham",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.35,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Nottingham Forest vs Tottenham",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Tottenham",
+      "odd": 2.72,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Brighton vs Leeds United",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Brighton",
+      "odd": 1.9,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Brighton vs Leeds United",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.6,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Brighton vs Leeds United",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Leeds United",
+      "odd": 3.9,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Brentford vs Sunderland",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Brentford",
+      "odd": 1.58,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Brentford vs Sunderland",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.9,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Brentford vs Sunderland",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Sunderland",
+      "odd": 5.9,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Fulham vs Crystal Palace",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Fulham",
+      "odd": 2.28,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Fulham vs Crystal Palace",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.35,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Fulham vs Crystal Palace",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Crystal Palace",
+      "odd": 3.1,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Hull City vs Aston Villa",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Hull City",
+      "odd": 4,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Hull City vs Aston Villa",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.65,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Hull City vs Aston Villa",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Aston Villa",
+      "odd": 1.86,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Everton vs Manchester United",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Everton",
+      "odd": 3.1,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Everton vs Manchester United",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.55,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Everton vs Manchester United",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Manchester United",
+      "odd": 2.2,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Arsenal vs Chelsea",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Arsenal",
+      "odd": 1.7,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Arsenal vs Chelsea",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.75,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Arsenal vs Chelsea",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Chelsea",
+      "odd": 4.8,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Aston Villa vs Nottingham Forest",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Aston Villa",
+      "odd": 1.91,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Aston Villa vs Nottingham Forest",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.55,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Aston Villa vs Nottingham Forest",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Nottingham Forest",
+      "odd": 3.9,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Liverpool vs Fulham",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Liverpool",
+      "odd": 1.43,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Liverpool vs Fulham",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 4.8,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Liverpool vs Fulham",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Fulham",
+      "odd": 6.5,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Chelsea vs Hull City",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Chelsea",
+      "odd": 1.24,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Chelsea vs Hull City",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 6.2,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Chelsea vs Hull City",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Hull City",
+      "odd": 11,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Crystal Palace vs Ipswich Town",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Crystal Palace",
+      "odd": 1.88,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Crystal Palace vs Ipswich Town",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.6,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Crystal Palace vs Ipswich Town",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Ipswich Town",
+      "odd": 4,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Bournemouth vs Brentford",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Bournemouth",
+      "odd": 2.56,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Bournemouth vs Brentford",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.55,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Bournemouth vs Brentford",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Brentford",
+      "odd": 2.56,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Tottenham vs Everton",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Tottenham",
+      "odd": 1.98,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Tottenham vs Everton",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.5,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Tottenham vs Everton",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Everton",
+      "odd": 3.7,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Sunderland vs Arsenal",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Sunderland",
+      "odd": 6.6,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Sunderland vs Arsenal",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 4,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Sunderland vs Arsenal",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Arsenal",
+      "odd": 1.51,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Coventry vs Brighton",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Coventry",
+      "odd": 4.45,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Coventry vs Brighton",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.8,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Coventry vs Brighton",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Brighton",
+      "odd": 1.75,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Manchester United vs Manchester City",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Manchester United",
+      "odd": 3.05,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Manchester United vs Manchester City",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.8,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Manchester United vs Manchester City",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Manchester City",
+      "odd": 2.14,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Leeds United vs Newcastle",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Leeds United",
+      "odd": 2.45,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Leeds United vs Newcastle",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.5,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Leeds United vs Newcastle",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Newcastle",
+      "odd": 2.74,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Real Sociedad vs Celta de Vigo",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Real Sociedad",
+      "odd": 1.94,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Real Sociedad vs Celta de Vigo",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.65,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Real Sociedad vs Celta de Vigo",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Celta de Vigo",
+      "odd": 4,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Real Betis vs Real Madrid",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Real Betis",
+      "odd": 7.7,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Real Betis vs Real Madrid",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 5.4,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Real Betis vs Real Madrid",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Real Madrid",
+      "odd": 1.38,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Athletic Bilbao vs Atlético Madrid",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Athletic Bilbao",
+      "odd": 2.95,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Athletic Bilbao vs Atlético Madrid",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.4,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Athletic Bilbao vs Atlético Madrid",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Atlético Madrid",
+      "odd": 2.34,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Rayo Vallecano vs Racing Santander",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Rayo Vallecano",
+      "odd": 2.26,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Rayo Vallecano vs Racing Santander",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.45,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Rayo Vallecano vs Racing Santander",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Racing Santander",
+      "odd": 3.05,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Villarreal vs Deportivo La Coruna",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Villarreal",
+      "odd": 1.49,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Villarreal vs Deportivo La Coruna",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 4.33,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Villarreal vs Deportivo La Coruna",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Deportivo La Coruna",
+      "odd": 6.25,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Valencia vs Barcelona",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Valencia",
+      "odd": 9,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Valencia vs Barcelona",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 5.5,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Valencia vs Barcelona",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Barcelona",
+      "odd": 1.3,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "CD Alaves vs Osasuna",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "CD Alaves",
+      "odd": 2.24,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "CD Alaves vs Osasuna",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.1,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "CD Alaves vs Osasuna",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Osasuna",
+      "odd": 3.45,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Malaga vs Levante",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Malaga",
+      "odd": 2.46,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Malaga vs Levante",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.2,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Malaga vs Levante",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Levante",
+      "odd": 2.92,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Espanyol vs Sevilla",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Espanyol",
+      "odd": 2.28,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Espanyol vs Sevilla",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.1,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Espanyol vs Sevilla",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Sevilla",
+      "odd": 3.35,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Getafe vs Celta de Vigo",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Getafe",
+      "odd": 2.48,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Getafe vs Celta de Vigo",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 2.92,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Getafe vs Celta de Vigo",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Celta de Vigo",
+      "odd": 3.2,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Elche vs Real Sociedad",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Elche",
+      "odd": 2.96,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Elche vs Real Sociedad",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.4,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Elche vs Real Sociedad",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Real Sociedad",
+      "odd": 2.34,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Racing Santander vs CD Alaves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Racing Santander",
+      "odd": 2.48,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Racing Santander vs CD Alaves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.45,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Racing Santander vs CD Alaves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "CD Alaves",
+      "odd": 2.74,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Athletic Bilbao vs Elche",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Athletic Bilbao",
+      "odd": 1.65,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Athletic Bilbao vs Elche",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.9,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Athletic Bilbao vs Elche",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Elche",
+      "odd": 5,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Celta de Vigo vs Malaga",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Celta de Vigo",
+      "odd": 1.71,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Celta de Vigo vs Malaga",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.55,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Celta de Vigo vs Malaga",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Malaga",
+      "odd": 5.1,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Getafe vs Deportivo La Coruna",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Getafe",
+      "odd": 2.15,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Getafe vs Deportivo La Coruna",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 2.92,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Getafe vs Deportivo La Coruna",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Deportivo La Coruna",
+      "odd": 3.95,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Osasuna vs Espanyol",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Osasuna",
+      "odd": 1.91,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Osasuna vs Espanyol",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.4,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Osasuna vs Espanyol",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Espanyol",
+      "odd": 4.1,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Levante vs Barcelona",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Levante",
+      "odd": 9.3,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Levante vs Barcelona",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 6,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Levante vs Barcelona",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Barcelona",
+      "odd": 1.27,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Real Sociedad vs Atlético Madrid",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Real Sociedad",
+      "odd": 3.05,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Real Sociedad vs Atlético Madrid",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.6,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Real Sociedad vs Atlético Madrid",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Atlético Madrid",
+      "odd": 2.18,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Sevilla vs Valencia",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Sevilla",
+      "odd": 2.32,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Sevilla vs Valencia",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.15,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Sevilla vs Valencia",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Valencia",
+      "odd": 3.2,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Real Madrid vs Rayo Vallecano",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Real Madrid",
+      "odd": 1.14,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Real Madrid vs Rayo Vallecano",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 8,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Real Madrid vs Rayo Vallecano",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Rayo Vallecano",
+      "odd": 17.5,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Villarreal vs Real Betis",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Villarreal",
+      "odd": 1.91,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Villarreal vs Real Betis",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.8,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Villarreal vs Real Betis",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Real Betis",
+      "odd": 3.65,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Génova vs Como",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Génova",
+      "odd": 5.1,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Génova vs Como",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.35,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Génova vs Como",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Como",
+      "odd": 1.84,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Fiorentina vs Torino",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Fiorentina",
+      "odd": 1.91,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Fiorentina vs Torino",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.3,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Fiorentina vs Torino",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Torino",
+      "odd": 4.2,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Inter vs Napoles",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Inter",
+      "odd": 1.66,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Inter vs Napoles",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.7,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Inter vs Napoles",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Napoles",
+      "odd": 5.4,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Roma vs Atalanta",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Roma",
+      "odd": 1.72,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Roma vs Atalanta",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.65,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Roma vs Atalanta",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Atalanta",
+      "odd": 4.85,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Frosinone vs Venezia",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Frosinone",
+      "odd": 2.72,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Frosinone vs Venezia",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.4,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Frosinone vs Venezia",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Venezia",
+      "odd": 2.52,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Parma vs Monza",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Parma",
+      "odd": 2.36,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Parma vs Monza",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.15,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Parma vs Monza",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Monza",
+      "odd": 3.15,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Bologna vs Sassuolo",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Bologna",
+      "odd": 2,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Bologna vs Sassuolo",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.35,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Bologna vs Sassuolo",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Sassuolo",
+      "odd": 3.8,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Juventus vs AC Milán",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Juventus",
+      "odd": 2.14,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Juventus vs AC Milán",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.3,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Juventus vs AC Milán",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "AC Milán",
+      "odd": 3.45,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Cagliari vs Lecce",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Cagliari",
+      "odd": 1.96,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Cagliari vs Lecce",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.25,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Cagliari vs Lecce",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Lecce",
+      "odd": 4.1,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Udinese vs Lazio",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Udinese",
+      "odd": 2.86,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Udinese vs Lazio",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.1,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Udinese vs Lazio",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Lazio",
+      "odd": 2.56,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Venezia vs Fiorentina",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Venezia",
+      "odd": 2.7,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Venezia vs Fiorentina",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.4,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Venezia vs Fiorentina",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Fiorentina",
+      "odd": 2.54,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Génova vs Frosinone",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Génova",
+      "odd": 1.76,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Génova vs Frosinone",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.55,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Génova vs Frosinone",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Frosinone",
+      "odd": 4.85,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Lazio vs AC Milán",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Lazio",
+      "odd": 3.2,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Lazio vs AC Milán",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.2,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Lazio vs AC Milán",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "AC Milán",
+      "odd": 2.3,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Atalanta vs Cagliari",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Atalanta",
+      "odd": 1.5,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Atalanta vs Cagliari",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 4.1,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Atalanta vs Cagliari",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Cagliari",
+      "odd": 6.6,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Lecce vs Monza",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Lecce",
+      "odd": 2.22,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Lecce vs Monza",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.25,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Lecce vs Monza",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Monza",
+      "odd": 3.3,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Napoles vs Bologna",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Napoles",
+      "odd": 1.63,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Napoles vs Bologna",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.8,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Napoles vs Bologna",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Bologna",
+      "odd": 5.4,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Sassuolo vs Juventus",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Sassuolo",
+      "odd": 5.9,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Sassuolo vs Juventus",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.9,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Sassuolo vs Juventus",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Juventus",
+      "odd": 1.58,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Como vs Parma",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Como",
+      "odd": 1.31,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Como vs Parma",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 4.75,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Como vs Parma",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Parma",
+      "odd": 11.5,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Torino vs Roma",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Torino",
+      "odd": 5.6,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Torino vs Roma",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.6,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Torino vs Roma",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Roma",
+      "odd": 1.66,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Inter vs Udinese",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Inter",
+      "odd": 1.3,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Inter vs Udinese",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 5.1,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Inter vs Udinese",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Udinese",
+      "odd": 10.75,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Stuttgart vs Cologne",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Stuttgart",
+      "odd": 1.53,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Stuttgart vs Cologne",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 5.3,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Stuttgart vs Cologne",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Cologne",
+      "odd": 5.1,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Bayer Leverkusen vs Union Berlin",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Bayer Leverkusen",
+      "odd": 1.43,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Bayer Leverkusen vs Union Berlin",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 4.8,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Bayer Leverkusen vs Union Berlin",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Union Berlin",
+      "odd": 6.5,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Borussia Monchengladbach vs SV Elversberg",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Borussia Monchengladbach",
+      "odd": 1.83,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Borussia Monchengladbach vs SV Elversberg",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.85,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Borussia Monchengladbach vs SV Elversberg",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "SV Elversberg",
+      "odd": 3.95,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Hoffenheim vs Borussia Dortmund",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Hoffenheim",
+      "odd": 2.94,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Hoffenheim vs Borussia Dortmund",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.9,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Hoffenheim vs Borussia Dortmund",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Borussia Dortmund",
+      "odd": 2.16,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Werder Bremen vs RB Leipzig",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Werder Bremen",
+      "odd": 4.1,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Werder Bremen vs RB Leipzig",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.95,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Werder Bremen vs RB Leipzig",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "RB Leipzig",
+      "odd": 1.78,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Paderborn vs Freiburg",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Paderborn",
+      "odd": 3.4,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Paderborn vs Freiburg",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.65,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Paderborn vs Freiburg",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Freiburg",
+      "odd": 2.02,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Schalke 04 vs Bayern Munich",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Schalke 04",
+      "odd": 12.5,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Schalke 04 vs Bayern Munich",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 7.9,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Schalke 04 vs Bayern Munich",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Bayern Munich",
+      "odd": 1.17,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Hamburger SV vs Mainz 05",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Hamburger SV",
+      "odd": 2.72,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Hamburger SV vs Mainz 05",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.55,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Hamburger SV vs Mainz 05",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Mainz 05",
+      "odd": 2.44,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Eintracht Frankfurt vs Augsburg",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Eintracht Frankfurt",
+      "odd": 1.91,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Eintracht Frankfurt vs Augsburg",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 4,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Eintracht Frankfurt vs Augsburg",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Augsburg",
+      "odd": 3.5,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Union Berlin vs Schalke 04",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Union Berlin",
+      "odd": 2.02,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Union Berlin vs Schalke 04",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.75,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Union Berlin vs Schalke 04",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Schalke 04",
+      "odd": 3.35,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Hoffenheim vs Stuttgart",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Hoffenheim",
+      "odd": 2.38,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Hoffenheim vs Stuttgart",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.85,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Hoffenheim vs Stuttgart",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Stuttgart",
+      "odd": 2.64,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Borussia Dortmund vs Paderborn",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Borussia Dortmund",
+      "odd": 1.24,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Borussia Dortmund vs Paderborn",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 6.4,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Borussia Dortmund vs Paderborn",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Paderborn",
+      "odd": 10.25,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Augsburg vs Bayer Leverkusen",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Augsburg",
+      "odd": 4.45,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Augsburg vs Bayer Leverkusen",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 4.33,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Augsburg vs Bayer Leverkusen",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Bayer Leverkusen",
+      "odd": 1.66,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Freiburg vs Borussia Monchengladbach",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Freiburg",
+      "odd": 1.91,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Freiburg vs Borussia Monchengladbach",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.8,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Freiburg vs Borussia Monchengladbach",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Borussia Monchengladbach",
+      "odd": 3.65,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Mainz 05 vs Eintracht Frankfurt",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Mainz 05",
+      "odd": 2.1,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Mainz 05 vs Eintracht Frankfurt",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.8,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Mainz 05 vs Eintracht Frankfurt",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Eintracht Frankfurt",
+      "odd": 3.1,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Cologne vs Werder Bremen",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Cologne",
+      "odd": 2.02,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Cologne vs Werder Bremen",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.7,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Cologne vs Werder Bremen",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Werder Bremen",
+      "odd": 3.4,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "RB Leipzig vs Hamburger SV",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "RB Leipzig",
+      "odd": 1.32,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "RB Leipzig vs Hamburger SV",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 5.25,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "RB Leipzig vs Hamburger SV",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Hamburger SV",
+      "odd": 8.8,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "SV Elversberg vs Bayern Munich",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "SV Elversberg",
+      "odd": 17.5,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "SV Elversberg vs Bayern Munich",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 8.1,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "SV Elversberg vs Bayern Munich",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Bayern Munich",
+      "odd": 1.14,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Fluminense RJ vs Platense",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Fluminense RJ",
+      "odd": 1.46,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Fluminense RJ vs Platense",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.85,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Fluminense RJ vs Platense",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Platense",
+      "odd": 8.9,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Palmeiras SP vs LDU Quito",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Palmeiras SP",
+      "odd": 1.26,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Palmeiras SP vs LDU Quito",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 5,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Palmeiras SP vs LDU Quito",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "LDU Quito",
+      "odd": 15,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Estudiantes de La Plata vs Corinthians SP",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Estudiantes de La Plata",
+      "odd": 2.22,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Estudiantes de La Plata vs Corinthians SP",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 2.98,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Estudiantes de La Plata vs Corinthians SP",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Corinthians SP",
+      "odd": 3.65,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Independiente Del Valle vs Flamengo RJ",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Independiente Del Valle",
+      "odd": 2.82,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Independiente Del Valle vs Flamengo RJ",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.15,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Independiente Del Valle vs Flamengo RJ",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Flamengo RJ",
+      "odd": 2.6,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Independiente Santa Fe vs Vasco da Gama RJ",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Independiente Santa Fe",
+      "odd": 2.46,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Independiente Santa Fe vs Vasco da Gama RJ",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.2,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Independiente Santa Fe vs Vasco da Gama RJ",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Vasco da Gama RJ",
+      "odd": 2.9,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Boca Juniors vs Sao Paulo SP",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Boca Juniors",
+      "odd": 1.81,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Boca Juniors vs Sao Paulo SP",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.35,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Boca Juniors vs Sao Paulo SP",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Sao Paulo SP",
+      "odd": 4.8,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Santos SP vs Atletico MG",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Santos SP",
+      "odd": 2.18,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Santos SP vs Atletico MG",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.2,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Santos SP vs Atletico MG",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Atletico MG",
+      "odd": 3.45,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Club Sportivo Cienciano vs Montevideo City Torque",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Club Sportivo Cienciano",
+      "odd": 1.54,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Club Sportivo Cienciano vs Montevideo City Torque",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 4,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Club Sportivo Cienciano vs Montevideo City Torque",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Montevideo City Torque",
+      "odd": 6.2,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "AEK Athens vs LASK Linz",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "AEK Athens",
+      "odd": 1.71,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "AEK Athens vs LASK Linz",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.95,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "AEK Athens vs LASK Linz",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "LASK Linz",
+      "odd": 4.5,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Club Brugge vs Aston Villa",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Club Brugge",
+      "odd": 2.64,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Club Brugge vs Aston Villa",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.65,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Club Brugge vs Aston Villa",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Aston Villa",
+      "odd": 2.46,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Borussia Dortmund vs Villarreal",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Borussia Dortmund",
+      "odd": 1.76,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Borussia Dortmund vs Villarreal",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.95,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Borussia Dortmund vs Villarreal",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Villarreal",
+      "odd": 4.2,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "FC Porto vs Manchester City",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "FC Porto",
+      "odd": 4.4,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "FC Porto vs Manchester City",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.95,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "FC Porto vs Manchester City",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Manchester City",
+      "odd": 1.73,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Lille vs Real Betis",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Lille",
+      "odd": 2.2,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Lille vs Real Betis",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.6,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Lille vs Real Betis",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Real Betis",
+      "odd": 3.05,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Real Madrid vs Inter",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Real Madrid",
+      "odd": 1.58,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Real Madrid vs Inter",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 4.2,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Real Madrid vs Inter",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Inter",
+      "odd": 5.25,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Barcelona vs Feyenoord Rotterdam",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Barcelona",
+      "odd": 1.11,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Barcelona vs Feyenoord Rotterdam",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 8.9,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Barcelona vs Feyenoord Rotterdam",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Feyenoord Rotterdam",
+      "odd": 21,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Stuttgart vs Viking",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Stuttgart",
+      "odd": 1.22,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Stuttgart vs Viking",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 6.5,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Stuttgart vs Viking",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Viking",
+      "odd": 11.5,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Liverpool vs Atlético Madrid",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Liverpool",
+      "odd": 1.72,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Liverpool vs Atlético Madrid",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.9,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Liverpool vs Atlético Madrid",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Atlético Madrid",
+      "odd": 4.5,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "PSG vs Slovan Bratislava",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "PSG",
+      "odd": 1.04,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "PSG vs Slovan Bratislava",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 13,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "PSG vs Slovan Bratislava",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Slovan Bratislava",
+      "odd": 45,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Napoles vs Arsenal",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Napoles",
+      "odd": 4.2,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Napoles vs Arsenal",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.7,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Napoles vs Arsenal",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Arsenal",
+      "odd": 1.82,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Sporting De Lisboa vs Galatasaray",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Sporting De Lisboa",
+      "odd": 1.91,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Sporting De Lisboa vs Galatasaray",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.7,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Sporting De Lisboa vs Galatasaray",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Galatasaray",
+      "odd": 3.7,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Fenerbahce vs Roma",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Fenerbahce",
+      "odd": 2.52,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Fenerbahce vs Roma",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.4,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Fenerbahce vs Roma",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Roma",
+      "odd": 2.7,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "PSV Eindhoven vs Shakhtar Donetsk",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "PSV Eindhoven",
+      "odd": 1.43,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "PSV Eindhoven vs Shakhtar Donetsk",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 4.75,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "PSV Eindhoven vs Shakhtar Donetsk",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Shakhtar Donetsk",
+      "odd": 6.75,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Bayern Munich vs Bodo Glimt",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Bayern Munich",
+      "odd": 1.15,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Bayern Munich vs Bodo Glimt",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 8,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Bayern Munich vs Bodo Glimt",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Bodo Glimt",
+      "odd": 15,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Manchester United vs Sabah",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Manchester United",
+      "odd": 1.12,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Manchester United vs Sabah",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 8.75,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Manchester United vs Sabah",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Sabah",
+      "odd": 18.5,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Slavia Prague vs RC Lens",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Slavia Prague",
+      "odd": 2.66,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Slavia Prague vs RC Lens",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.45,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Slavia Prague vs RC Lens",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "RC Lens",
+      "odd": 2.52,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Como vs RB Leipzig",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Como",
+      "odd": 2.12,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Como vs RB Leipzig",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.6,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Como vs RB Leipzig",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "RB Leipzig",
+      "odd": 3.25,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "FC Ararat Armenia vs AC Sparta Prague",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "FC Ararat Armenia",
+      "odd": 4.8,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "FC Ararat Armenia vs AC Sparta Prague",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.9,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "FC Ararat Armenia vs AC Sparta Prague",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "AC Sparta Prague",
+      "odd": 1.67,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "AC Omonia Nicosia vs Celta de Vigo",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "AC Omonia Nicosia",
+      "odd": 4,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "AC Omonia Nicosia vs Celta de Vigo",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.65,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "AC Omonia Nicosia vs Celta de Vigo",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Celta de Vigo",
+      "odd": 1.86,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Sunderland vs AZ Alkmaar",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Sunderland",
+      "odd": 1.71,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Sunderland vs AZ Alkmaar",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.95,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Sunderland vs AZ Alkmaar",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "AZ Alkmaar",
+      "odd": 4.5,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Bayer Leverkusen vs NK Celje",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Bayer Leverkusen",
+      "odd": 1.18,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Bayer Leverkusen vs NK Celje",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 7,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Bayer Leverkusen vs NK Celje",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "NK Celje",
+      "odd": 14,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Olympiacos vs Jagiellonia Bialystok",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Olympiacos",
+      "odd": 1.36,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Olympiacos vs Jagiellonia Bialystok",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 4.75,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Olympiacos vs Jagiellonia Bialystok",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Jagiellonia Bialystok",
+      "odd": 8.7,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Anderlecht vs Lyon",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Anderlecht",
+      "odd": 3.8,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Anderlecht vs Lyon",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.65,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Anderlecht vs Lyon",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Lyon",
+      "odd": 1.91,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Sturm Graz vs Rennes",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Sturm Graz",
+      "odd": 3.5,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Sturm Graz vs Rennes",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.75,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Sturm Graz vs Rennes",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Rennes",
+      "odd": 1.98,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Hapoel Beer Sheva vs NK Dinamo Zagreb",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Hapoel Beer Sheva",
+      "odd": 3.5,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Hapoel Beer Sheva vs NK Dinamo Zagreb",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.7,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Hapoel Beer Sheva vs NK Dinamo Zagreb",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "NK Dinamo Zagreb",
+      "odd": 1.98,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "AC Milán vs Benfica",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "AC Milán",
+      "odd": 1.98,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "AC Milán vs Benfica",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.7,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "AC Milán vs Benfica",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Benfica",
+      "odd": 3.55,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "OFI Crete vs Hoffenheim",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "OFI Crete",
+      "odd": 7,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "OFI Crete vs Hoffenheim",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 4.5,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "OFI Crete vs Hoffenheim",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Hoffenheim",
+      "odd": 1.44,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Levski Sofia vs FC Salzburg",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Levski Sofia",
+      "odd": 2.7,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Levski Sofia vs FC Salzburg",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.6,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Levski Sofia vs FC Salzburg",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "FC Salzburg",
+      "odd": 2.44,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Crystal Palace vs Lech Poznan",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Crystal Palace",
+      "odd": 1.4,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Crystal Palace vs Lech Poznan",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 4.75,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Crystal Palace vs Lech Poznan",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Lech Poznan",
+      "odd": 7.3,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Besiktas vs Marseille",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Besiktas",
+      "odd": 2.22,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Besiktas vs Marseille",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.65,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Besiktas vs Marseille",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Marseille",
+      "odd": 2.98,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Celtic vs Ferencvarosi TC",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Celtic",
+      "odd": 1.68,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Celtic vs Ferencvarosi TC",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 4.2,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Celtic vs Ferencvarosi TC",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Ferencvarosi TC",
+      "odd": 4.45,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Real Sociedad vs Bournemouth",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Real Sociedad",
+      "odd": 2.66,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Real Sociedad vs Bournemouth",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.45,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Real Sociedad vs Bournemouth",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Bournemouth",
+      "odd": 2.52,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Lillestrom vs Torreense",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Lillestrom",
+      "odd": 1.52,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Lillestrom vs Torreense",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 4.4,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Lillestrom vs Torreense",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Torreense",
+      "odd": 5.8,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Juventus vs NEC Nijmegen",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Juventus",
+      "odd": 1.3,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Juventus vs NEC Nijmegen",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 5.4,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Juventus vs NEC Nijmegen",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "NEC Nijmegen",
+      "odd": 9.7,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Viktoria Plzen vs St. Gilloise",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Viktoria Plzen",
+      "odd": 2.48,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Viktoria Plzen vs St. Gilloise",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.4,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Viktoria Plzen vs St. Gilloise",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "St. Gilloise",
+      "odd": 2.76,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Real Sociedad vs Celta de Vigo",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Real Sociedad",
+      "odd": 1.94,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "América de Cali vs Alianza FC",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Alianza FC",
+      "odd": 10.25,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Real Betis vs Real Madrid",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Real Madrid",
+      "odd": 1.38,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Deportivo Pereira vs Independiente Medellin",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Deportivo Pereira",
+      "odd": 5.25,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Ipswich Town vs Liverpool",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Liverpool",
+      "odd": 1.55,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Papa C / Zheng B vs Charlton J / Wang A",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Papa C / Zheng B",
+      "odd": 4.5,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Papa C / Zheng B vs Charlton J / Wang A",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Charlton J / Wang A",
+      "odd": 1.166,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Zhejiang Lions vs Shanxi Loongs",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Shanxi Loongs\n(-19.5)",
+      "odd": 1.85,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Zhejiang Lions vs Shanxi Loongs",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Zhejiang Lions\n(+19.5)",
+      "odd": 1.8,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Farm Fresh Foxies Women vs Creamline Women",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Farm Fresh Foxies Women",
+      "odd": 2.75,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Farm Fresh Foxies Women vs Creamline Women",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Creamline Women",
+      "odd": 1.38,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Aimsaard B / Aimsaard N vs Tan P / Thinaah M",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Aimsaard B / Aimsaard N",
+      "odd": 1.95,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    },
+    {
+      "bookmaker": "Wplay",
+      "eventName": "Aimsaard B / Aimsaard N vs Tan P / Thinaah M",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Tan P / Thinaah M",
+      "odd": 1.727,
+      "timestamp": "2026-09-03T06:46:11.338Z"
+    }
+  ],
+  "stake": [
+    {
+      "bookmaker": "Stake",
+      "eventName": "Dinamo Moscow vs Akhmat Grozny",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Dinamo Moscow",
+      "odd": 1.72,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Dinamo Moscow vs Akhmat Grozny",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.8,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Dinamo Moscow vs Akhmat Grozny",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Akhmat Grozny",
+      "odd": 4.3,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Hibernian vs Hearts",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Hibernian",
+      "odd": 2.55,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Hibernian vs Hearts",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.45,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Hibernian vs Hearts",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Hearts",
+      "odd": 2.65,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "ES Setif vs ES Ben Aknoun",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "ES Setif",
+      "odd": 1.72,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "ES Setif vs ES Ben Aknoun",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.15,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "ES Setif vs ES Ben Aknoun",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "ES Ben Aknoun",
+      "odd": 4.75,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "JS El Biar vs Olympique Akbou",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "JS El Biar",
+      "odd": 2.1,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "JS El Biar vs Olympique Akbou",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 2.95,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "JS El Biar vs Olympique Akbou",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Olympique Akbou",
+      "odd": 3.35,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Banga vs Panevezys",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Banga",
+      "odd": 1.87,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Banga vs Panevezys",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.4,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Banga vs Panevezys",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Panevezys",
+      "odd": 4.5,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "FC Copenhagen vs FC Nordsjaelland",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "FC Copenhagen",
+      "odd": 2.1,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "FC Copenhagen vs FC Nordsjaelland",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.9,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "FC Copenhagen vs FC Nordsjaelland",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "FC Nordsjaelland",
+      "odd": 3,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Gremio vs Internacional RS",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Gremio",
+      "odd": 2.5,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Gremio vs Internacional RS",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 2.8,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Gremio vs Internacional RS",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Internacional RS",
+      "odd": 3.35,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Al Ahli Doha vs Qatar SC Doha",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Al Ahli Doha",
+      "odd": 2.25,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Al Ahli Doha vs Qatar SC Doha",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.55,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Al Ahli Doha vs Qatar SC Doha",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Qatar SC Doha",
+      "odd": 2.8,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Al Ahly Cairo vs Smouha",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Al Ahly Cairo",
+      "odd": 1.38,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Al Ahly Cairo vs Smouha",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 4.3,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Al Ahly Cairo vs Smouha",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Smouha",
+      "odd": 8.8,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Neom SC vs Al-Khaleej Saihat",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Neom SC",
+      "odd": 1.68,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Neom SC vs Al-Khaleej Saihat",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.8,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Neom SC vs Al-Khaleej Saihat",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Al-Khaleej Saihat",
+      "odd": 4.7,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Panathinaikos vs Niki Volou",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Panathinaikos",
+      "odd": 1.111,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Panathinaikos vs Niki Volou",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 7.65,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Panathinaikos vs Niki Volou",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Niki Volou",
+      "odd": 19.5,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Rouen vs Valenciennes",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Rouen",
+      "odd": 1.87,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Rouen vs Valenciennes",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.4,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Rouen vs Valenciennes",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Valenciennes",
+      "odd": 3.9,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Al Feiha vs Al Kholood",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Al Feiha",
+      "odd": 3,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Al Feiha vs Al Kholood",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.25,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Al Feiha vs Al Kholood",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Al Kholood",
+      "odd": 2.35,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Al Sailiya vs Al-Arabi Doha",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Al Sailiya",
+      "odd": 5.6,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Al Sailiya vs Al-Arabi Doha",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 4.45,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Al Sailiya vs Al-Arabi Doha",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Al-Arabi Doha",
+      "odd": 1.47,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Bodrumspor vs Esenler Erokspor",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Bodrumspor",
+      "odd": 2.65,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Bodrumspor vs Esenler Erokspor",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.15,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Bodrumspor vs Esenler Erokspor",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Esenler Erokspor",
+      "odd": 2.65,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Bursaspor vs Istanbulspor",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Bursaspor",
+      "odd": 1.42,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Bursaspor vs Istanbulspor",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 4.6,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Bursaspor vs Istanbulspor",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Istanbulspor",
+      "odd": 7,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Tepatitlán FC vs Dorados",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Tepatitlán FC",
+      "odd": 2.1,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Tepatitlán FC vs Dorados",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.5,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Tepatitlán FC vs Dorados",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Dorados",
+      "odd": 3.1,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Nautico vs Botafogo SP",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Nautico",
+      "odd": 1.97,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Nautico vs Botafogo SP",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.3,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Nautico vs Botafogo SP",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Botafogo SP",
+      "odd": 3.9,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Igdir Belediyespor vs Manisa FK",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Igdir Belediyespor",
+      "odd": 2.1,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Igdir Belediyespor vs Manisa FK",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.45,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Igdir Belediyespor vs Manisa FK",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Manisa FK",
+      "odd": 3.35,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Real Sociedad vs Celta Vigo",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Real Sociedad",
+      "odd": 1.93,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Real Sociedad vs Celta Vigo",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.65,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Real Sociedad vs Celta Vigo",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Celta Vigo",
+      "odd": 4.15,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Basel vs FC Sion",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Basel",
+      "odd": 2.6,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Basel vs FC Sion",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.6,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Basel vs FC Sion",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "FC Sion",
+      "odd": 2.5,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Lugano vs Servette",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Lugano",
+      "odd": 1.95,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Lugano vs Servette",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.8,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Lugano vs Servette",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Servette",
+      "odd": 3.5,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Toulouse vs Lille",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Toulouse",
+      "odd": 3.9,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Toulouse vs Lille",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.55,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Toulouse vs Lille",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Lille",
+      "odd": 2,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Rakow Czestochowa vs Gornik Zabrze",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Rakow Czestochowa",
+      "odd": 2.4,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Rakow Czestochowa vs Gornik Zabrze",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.45,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Rakow Czestochowa vs Gornik Zabrze",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Gornik Zabrze",
+      "odd": 2.85,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Gyor ETO vs Ferencvarosi",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Gyor ETO",
+      "odd": 4,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Gyor ETO vs Ferencvarosi",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.7,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Gyor ETO vs Ferencvarosi",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Ferencvarosi",
+      "odd": 1.77,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Palermo vs Mantova",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Palermo",
+      "odd": 1.63,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Palermo vs Mantova",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 4,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Palermo vs Mantova",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Mantova",
+      "odd": 5.3,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Cagliari vs Verona",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Cagliari",
+      "odd": 2,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Cagliari vs Verona",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.35,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Cagliari vs Verona",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Verona",
+      "odd": 3.85,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Hapoel Tel-Aviv vs Beitar Jerusalem",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Hapoel Tel-Aviv",
+      "odd": 2.4,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Hapoel Tel-Aviv vs Beitar Jerusalem",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.6,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Hapoel Tel-Aviv vs Beitar Jerusalem",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Beitar Jerusalem",
+      "odd": 2.55,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Universidad Catolica vs SD Aucas",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Universidad Catolica",
+      "odd": 1.9,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Universidad Catolica vs SD Aucas",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.45,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Universidad Catolica vs SD Aucas",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "SD Aucas",
+      "odd": 4.25,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Lech Poznan vs Jagiellonia Bialystok",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Lech Poznan",
+      "odd": 1.7,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Lech Poznan vs Jagiellonia Bialystok",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 4.2,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Lech Poznan vs Jagiellonia Bialystok",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Jagiellonia Bialystok",
+      "odd": 4.45,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "América de Cali vs Alianza Valledupar",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "América de Cali",
+      "odd": 1.38,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "América de Cali vs Alianza Valledupar",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 4.6,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "América de Cali vs Alianza Valledupar",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Alianza Valledupar",
+      "odd": 9.25,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Deportivo Pereira vs Independiente Medellín",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Deportivo Pereira",
+      "odd": 5,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Deportivo Pereira vs Independiente Medellín",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.65,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Deportivo Pereira vs Independiente Medellín",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Independiente Medellín",
+      "odd": 1.72,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Leones Del Norte vs Orense",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Leones Del Norte",
+      "odd": 2,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Leones Del Norte vs Orense",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.25,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Leones Del Norte vs Orense",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Orense",
+      "odd": 4,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Libertad Loja vs Emelec",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Libertad Loja",
+      "odd": 2.35,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Libertad Loja vs Emelec",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.2,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Libertad Loja vs Emelec",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Emelec",
+      "odd": 3.2,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Gent vs Oud-Heverle Leuven",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Gent",
+      "odd": 1.7,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Gent vs Oud-Heverle Leuven",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.85,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Gent vs Oud-Heverle Leuven",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Oud-Heverle Leuven",
+      "odd": 5,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Deportivo Recoleta vs Cerro Porteño",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Deportivo Recoleta",
+      "odd": 4.1,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Deportivo Recoleta vs Cerro Porteño",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.45,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Deportivo Recoleta vs Cerro Porteño",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Cerro Porteño",
+      "odd": 1.85,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "FC Bacau vs Universitatea Craiova CS",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "FC Bacau",
+      "odd": 8.4,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "FC Bacau vs Universitatea Craiova CS",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 4.75,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "FC Bacau vs Universitatea Craiova CS",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Universitatea Craiova CS",
+      "odd": 1.286,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Anderlecht vs KV Kortrijk",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Anderlecht",
+      "odd": 1.47,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Anderlecht vs KV Kortrijk",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 4.7,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Anderlecht vs KV Kortrijk",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "KV Kortrijk",
+      "odd": 6.45,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Vihren Sandanski vs Etar Veliko Tarnovo",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Vihren Sandanski",
+      "odd": 1.65,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Vihren Sandanski vs Etar Veliko Tarnovo",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.75,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Vihren Sandanski vs Etar Veliko Tarnovo",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Etar Veliko Tarnovo",
+      "odd": 4.2,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Lokomotiv Gorna Oryahovitsa vs Dobrudza 1919 Dobrich",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Lokomotiv Gorna Oryahovitsa",
+      "odd": 2.15,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Lokomotiv Gorna Oryahovitsa vs Dobrudza 1919 Dobrich",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.2,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Lokomotiv Gorna Oryahovitsa vs Dobrudza 1919 Dobrich",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Dobrudza 1919 Dobrich",
+      "odd": 3,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Beroe vs Montana 1921",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Beroe",
+      "odd": 2.4,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Beroe vs Montana 1921",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 2.95,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Beroe vs Montana 1921",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Montana 1921",
+      "odd": 2.75,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Alashkert vs FC Van",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Alashkert",
+      "odd": 1.18,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Alashkert vs FC Van",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 6.55,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Alashkert vs FC Van",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "FC Van",
+      "odd": 14.25,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Avondale FC vs Preston Lions",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Avondale FC",
+      "odd": 2.2,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Avondale FC vs Preston Lions",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.55,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Avondale FC vs Preston Lions",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Preston Lions",
+      "odd": 2.95,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "CSKA Sofia II vs Spartak Pleven",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "CSKA Sofia II",
+      "odd": 1.47,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "CSKA Sofia II vs Spartak Pleven",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.9,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "CSKA Sofia II vs Spartak Pleven",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Spartak Pleven",
+      "odd": 5.55,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Mjallby AIF vs Djurgarden",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Mjallby AIF",
+      "odd": 4.4,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Mjallby AIF vs Djurgarden",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 4.1,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Mjallby AIF vs Djurgarden",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Djurgarden",
+      "odd": 1.72,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Isloch Minsk vs BATE Borisov",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Isloch Minsk",
+      "odd": 1.53,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Isloch Minsk vs BATE Borisov",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.8,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Isloch Minsk vs BATE Borisov",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "BATE Borisov",
+      "odd": 6.25,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "AL Draih vs Al Qadsia SC",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "AL Draih",
+      "odd": 5.5,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "AL Draih vs Al Qadsia SC",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 4.6,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "AL Draih vs Al Qadsia SC",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Al Qadsia SC",
+      "odd": 1.49,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Novara vs Livorno",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Novara",
+      "odd": 2.3,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Novara vs Livorno",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.2,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Novara vs Livorno",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Livorno",
+      "odd": 2.95,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Manly United (U-20) vs Spirit (U-20)",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Manly United (U-20)",
+      "odd": 2.2,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Manly United (U-20) vs Spirit (U-20)",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 4,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Manly United (U-20) vs Spirit (U-20)",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Spirit (U-20)",
+      "odd": 2.65,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Thisted FC vs Sonderjyske",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Thisted FC",
+      "odd": 9.9,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Thisted FC vs Sonderjyske",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 5.75,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Thisted FC vs Sonderjyske",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Sonderjyske",
+      "odd": 1.25,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Haras El Hedoud vs El Entag El-Harby",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Haras El Hedoud",
+      "odd": 1.82,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Haras El Hedoud vs El Entag El-Harby",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.1,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Haras El Hedoud vs El Entag El-Harby",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "El Entag El-Harby",
+      "odd": 4.85,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "El Mansoura vs Kahraba Ismailia",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "El Mansoura",
+      "odd": 3.65,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "El Mansoura vs Kahraba Ismailia",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 2.95,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "El Mansoura vs Kahraba Ismailia",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Kahraba Ismailia",
+      "odd": 2.15,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "El Sekka El Hadid vs Kafr El Zaiyat",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "El Sekka El Hadid",
+      "odd": 3,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "El Sekka El Hadid vs Kafr El Zaiyat",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 2.5,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "El Sekka El Hadid vs Kafr El Zaiyat",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Kafr El Zaiyat",
+      "odd": 2.9,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "La Viena FC vs FC Team Cairo",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "La Viena FC",
+      "odd": 1.77,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "La Viena FC vs FC Team Cairo",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.1,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "La Viena FC vs FC Team Cairo",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "FC Team Cairo",
+      "odd": 5.25,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Dayrout vs We SC",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Dayrout",
+      "odd": 3.85,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Dayrout vs We SC",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 2.75,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Dayrout vs We SC",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "We SC",
+      "odd": 2.2,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Baladiyyat Al Mehalla vs Delta United",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Baladiyyat Al Mehalla",
+      "odd": 2.4,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Baladiyyat Al Mehalla vs Delta United",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 2.75,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Baladiyyat Al Mehalla vs Delta United",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Delta United",
+      "odd": 3.35,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Rentistas vs Plaza Colonia",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Rentistas",
+      "odd": 2.55,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Rentistas vs Plaza Colonia",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 2.9,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Rentistas vs Plaza Colonia",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Plaza Colonia",
+      "odd": 2.9,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "CA River Plate Montevideo vs Nacional de Montevideo",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "CA River Plate Montevideo",
+      "odd": 3.6,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "CA River Plate Montevideo vs Nacional de Montevideo",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.3,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "CA River Plate Montevideo vs Nacional de Montevideo",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Nacional de Montevideo",
+      "odd": 2,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Albion FC vs Progresso",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Albion FC",
+      "odd": 2.3,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Albion FC vs Progresso",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.1,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Albion FC vs Progresso",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Progresso",
+      "odd": 3.1,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Club Oriental vs Racing Montevideo",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Club Oriental",
+      "odd": 4.55,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Club Oriental vs Racing Montevideo",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.45,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Club Oriental vs Racing Montevideo",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Racing Montevideo",
+      "odd": 1.77,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Ellidi vs Hamar",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Ellidi",
+      "odd": 5,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Ellidi vs Hamar",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 5,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Ellidi vs Hamar",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Hamar",
+      "odd": 1.4,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "KF Hafnir vs Vaengir Jupiters",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "KF Hafnir",
+      "odd": 5.8,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "KF Hafnir vs Vaengir Jupiters",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 5.4,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "KF Hafnir vs Vaengir Jupiters",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Vaengir Jupiters",
+      "odd": 1.32,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Ulfarnir vs Alafoss",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Ulfarnir",
+      "odd": 1.63,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Ulfarnir vs Alafoss",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 4.6,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Ulfarnir vs Alafoss",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Alafoss",
+      "odd": 3.55,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "IH Hafnarfjordur vs KFR Hvolsvollur",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "IH Hafnarfjordur",
+      "odd": 4.15,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "IH Hafnarfjordur vs KFR Hvolsvollur",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 4.8,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "IH Hafnarfjordur vs KFR Hvolsvollur",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "KFR Hvolsvollur",
+      "odd": 1.5,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Cavalier vs Portmore United",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Cavalier",
+      "odd": 2.45,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Cavalier vs Portmore United",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.45,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Cavalier vs Portmore United",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Portmore United",
+      "odd": 2.6,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Cariari Pococi vs Pitbulls FC",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Cariari Pococi",
+      "odd": 1.95,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Cariari Pococi vs Pitbulls FC",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.5,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Cariari Pococi vs Pitbulls FC",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Pitbulls FC",
+      "odd": 3.2,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "South Melbourne vs Heidelberg Utd",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "South Melbourne",
+      "odd": 2.35,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "South Melbourne vs Heidelberg Utd",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.5,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "South Melbourne vs Heidelberg Utd",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Heidelberg Utd",
+      "odd": 2.7,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Internacional Palmira vs Real Soacha Cundinamarca",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Internacional Palmira",
+      "odd": 1.82,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Internacional Palmira vs Real Soacha Cundinamarca",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.55,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Internacional Palmira vs Real Soacha Cundinamarca",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Real Soacha Cundinamarca",
+      "odd": 4.25,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Slask Wroclaw vs Pogon Szczecin",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Slask Wroclaw",
+      "odd": 2.7,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Slask Wroclaw vs Pogon Szczecin",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.25,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Slask Wroclaw vs Pogon Szczecin",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Pogon Szczecin",
+      "odd": 2.5,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "GKS Tychy vs LKS Lodz",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "GKS Tychy",
+      "odd": 2.9,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "GKS Tychy vs LKS Lodz",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.4,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "GKS Tychy vs LKS Lodz",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "LKS Lodz",
+      "odd": 2.25,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Tauro Reserves vs UMECIT Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Tauro Reserves",
+      "odd": 2,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Tauro Reserves vs UMECIT Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.6,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Tauro Reserves vs UMECIT Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "UMECIT Reserves",
+      "odd": 3.3,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Avia Swidnik vs Wieczysta Krakow",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Avia Swidnik",
+      "odd": 5,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Avia Swidnik vs Wieczysta Krakow",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.9,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Avia Swidnik vs Wieczysta Krakow",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Wieczysta Krakow",
+      "odd": 1.6,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Cittadella vs Renate",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Cittadella",
+      "odd": 2.07,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Cittadella vs Renate",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.25,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Cittadella vs Renate",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Renate",
+      "odd": 3.5,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Trento vs Desenzano Calvina",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Trento",
+      "odd": 1.72,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Trento vs Desenzano Calvina",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.55,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Trento vs Desenzano Calvina",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Desenzano Calvina",
+      "odd": 4.6,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Nacional Potosi vs Real Tomayapo",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Nacional Potosi",
+      "odd": 1.35,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Nacional Potosi vs Real Tomayapo",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 4.9,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Nacional Potosi vs Real Tomayapo",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Real Tomayapo",
+      "odd": 7.75,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Rigas FS vs Riga FC",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Rigas FS",
+      "odd": 2.35,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Rigas FS vs Riga FC",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.3,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Rigas FS vs Riga FC",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Riga FC",
+      "odd": 2.6,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Agropecuario Reserves vs Temperley Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Agropecuario Reserves",
+      "odd": 5.15,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Agropecuario Reserves vs Temperley Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.55,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Agropecuario Reserves vs Temperley Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Temperley Reserves",
+      "odd": 1.571,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Estudiantes Caseros Reserves vs Almagro Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Estudiantes Caseros Reserves",
+      "odd": 1.75,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Estudiantes Caseros Reserves vs Almagro Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Estudiantes Caseros Reserves vs Almagro Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Almagro Reserves",
+      "odd": 4.75,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "All Boys Reserves vs Deportivo Moron Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "All Boys Reserves",
+      "odd": 1.82,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "All Boys Reserves vs Deportivo Moron Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.15,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "All Boys Reserves vs Deportivo Moron Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Deportivo Moron Reserves",
+      "odd": 4,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Almirante Brown Reserves vs CA Atlanta Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Almirante Brown Reserves",
+      "odd": 3.1,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Almirante Brown Reserves vs CA Atlanta Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.1,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Almirante Brown Reserves vs CA Atlanta Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "CA Atlanta Reserves",
+      "odd": 2.15,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Los Andes Reserves vs CSD Tristan Suarez Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Los Andes Reserves",
+      "odd": 3,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Los Andes Reserves vs CSD Tristan Suarez Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.2,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Los Andes Reserves vs CSD Tristan Suarez Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "CSD Tristan Suarez Reserves",
+      "odd": 2.1,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Estudiantes de Merida vs UCV",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Estudiantes de Merida",
+      "odd": 2.55,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Estudiantes de Merida vs UCV",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.15,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Estudiantes de Merida vs UCV",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "UCV",
+      "odd": 2.6,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Academia Puerto Cabello vs Deportivo La Guaira",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Academia Puerto Cabello",
+      "odd": 2.15,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Academia Puerto Cabello vs Deportivo La Guaira",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 2.95,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Academia Puerto Cabello vs Deportivo La Guaira",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Deportivo La Guaira",
+      "odd": 3.5,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Rayo Zuliano vs Carabobo",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Rayo Zuliano",
+      "odd": 7.55,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Rayo Zuliano vs Carabobo",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 4.1,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Rayo Zuliano vs Carabobo",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Carabobo",
+      "odd": 1.42,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Academia Anzoategui vs Monagas SC",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Academia Anzoategui",
+      "odd": 2.4,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Academia Anzoategui vs Monagas SC",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.25,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Academia Anzoategui vs Monagas SC",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Monagas SC",
+      "odd": 2.7,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "FK Mornar Bar vs Bokelj",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "FK Mornar Bar",
+      "odd": 1.5,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "FK Mornar Bar vs Bokelj",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.7,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "FK Mornar Bar vs Bokelj",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Bokelj",
+      "odd": 6.55,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Triglav (U-19) vs NK Radomlje (U-19)",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Triglav (U-19)",
+      "odd": 2.05,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Triglav (U-19) vs NK Radomlje (U-19)",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.75,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Triglav (U-19) vs NK Radomlje (U-19)",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "NK Radomlje (U-19)",
+      "odd": 2.8,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Managua FC vs Diriangen",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Managua FC",
+      "odd": 2.2,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Managua FC vs Diriangen",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.4,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Managua FC vs Diriangen",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Diriangen",
+      "odd": 3.1,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Matagalpa vs UNAN Managua",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Matagalpa",
+      "odd": 2.1,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Matagalpa vs UNAN Managua",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.4,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Matagalpa vs UNAN Managua",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "UNAN Managua",
+      "odd": 3.2,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "FK AGMK vs Xorazm Urganch",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "FK AGMK",
+      "odd": 1.55,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "FK AGMK vs Xorazm Urganch",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 4,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "FK AGMK vs Xorazm Urganch",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Xorazm Urganch",
+      "odd": 5.25,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Gimnasia Mendoza Reserves vs Rosario Central Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Gimnasia Mendoza Reserves",
+      "odd": 2.6,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Gimnasia Mendoza Reserves vs Rosario Central Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Gimnasia Mendoza Reserves vs Rosario Central Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Rosario Central Reserves",
+      "odd": 2.5,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Defensa Y Justicia Reserves vs Independiente Rivadavia Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Defensa Y Justicia Reserves",
+      "odd": 1.87,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Defensa Y Justicia Reserves vs Independiente Rivadavia Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.35,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Defensa Y Justicia Reserves vs Independiente Rivadavia Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Independiente Rivadavia Reserves",
+      "odd": 3.6,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Metropolitanos vs Trujillanos",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Metropolitanos",
+      "odd": 1.67,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Metropolitanos vs Trujillanos",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.45,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Metropolitanos vs Trujillanos",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Trujillanos",
+      "odd": 4.85,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Barracas Central Reserves vs Banfield Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Barracas Central Reserves",
+      "odd": 2.7,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Barracas Central Reserves vs Banfield Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 2.8,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Barracas Central Reserves vs Banfield Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Banfield Reserves",
+      "odd": 2.55,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Huracan Reserves vs Central Cordoba Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Huracan Reserves",
+      "odd": 1.75,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Huracan Reserves vs Central Cordoba Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.25,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Huracan Reserves vs Central Cordoba Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Central Cordoba Reserves",
+      "odd": 4.25,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Boca Juniors Reserves vs Quilmes Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Boca Juniors Reserves",
+      "odd": 1.4,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Boca Juniors Reserves vs Quilmes Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.8,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Boca Juniors Reserves vs Quilmes Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Quilmes Reserves",
+      "odd": 7.55,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Olimpia Tegucigalpa vs CA Platense",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Olimpia Tegucigalpa",
+      "odd": 1.32,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Olimpia Tegucigalpa vs CA Platense",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 4.65,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Olimpia Tegucigalpa vs CA Platense",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "CA Platense",
+      "odd": 9.1,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Argentino Quilmes Reserves vs Defensores Unidos Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Argentino Quilmes Reserves",
+      "odd": 1.93,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Argentino Quilmes Reserves vs Defensores Unidos Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.35,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Argentino Quilmes Reserves vs Defensores Unidos Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Defensores Unidos Reserves",
+      "odd": 3.45,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Deportivo Laferrere Reserves vs Deportivo Camioneros Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Deportivo Laferrere Reserves",
+      "odd": 5.15,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Deportivo Laferrere Reserves vs Deportivo Camioneros Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.5,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Deportivo Laferrere Reserves vs Deportivo Camioneros Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Deportivo Camioneros Reserves",
+      "odd": 1.571,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "General Lamadrid Reserves vs Berazategui Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "General Lamadrid Reserves",
+      "odd": 3.15,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "General Lamadrid Reserves vs Berazategui Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.45,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "General Lamadrid Reserves vs Berazategui Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Berazategui Reserves",
+      "odd": 1.97,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Deportivo Paraguayo Reserves vs Centro Espanol Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Deportivo Paraguayo Reserves",
+      "odd": 2.25,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Deportivo Paraguayo Reserves vs Centro Espanol Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.45,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Deportivo Paraguayo Reserves vs Centro Espanol Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Centro Espanol Reserves",
+      "odd": 2.6,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "JJ Urquiza Reserves vs Leandro N. Alem Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "JJ Urquiza Reserves",
+      "odd": 1.5,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "JJ Urquiza Reserves vs Leandro N. Alem Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.75,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "JJ Urquiza Reserves vs Leandro N. Alem Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Leandro N. Alem Reserves",
+      "odd": 5.4,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Al-Mosul vs Al-Zawraa",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Al-Mosul",
+      "odd": 3.9,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Al-Mosul vs Al-Zawraa",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.2,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Al-Mosul vs Al-Zawraa",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Al-Zawraa",
+      "odd": 1.95,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Al Kahrabaa vs Al Gharraf",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Al Kahrabaa",
+      "odd": 2.25,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Al Kahrabaa vs Al Gharraf",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.1,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Al Kahrabaa vs Al Gharraf",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Al Gharraf",
+      "odd": 3.2,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Duhok vs Al Quwa Al Jawiya",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Duhok",
+      "odd": 2.75,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Duhok vs Al Quwa Al Jawiya",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 2.95,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Duhok vs Al Quwa Al Jawiya",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Al Quwa Al Jawiya",
+      "odd": 2.65,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Sol de America vs General Caballero",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Sol de America",
+      "odd": 2.4,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Sol de America vs General Caballero",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.2,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Sol de America vs General Caballero",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "General Caballero",
+      "odd": 2.85,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Deportivo Capiata vs 3 de Noviembre",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Deportivo Capiata",
+      "odd": 2.1,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Deportivo Capiata vs 3 de Noviembre",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.3,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Deportivo Capiata vs 3 de Noviembre",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "3 de Noviembre",
+      "odd": 3.3,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "CA Vinotinto vs San Antonio",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "CA Vinotinto",
+      "odd": 1.82,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "CA Vinotinto vs San Antonio",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.3,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "CA Vinotinto vs San Antonio",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "San Antonio",
+      "odd": 4.35,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Diyala FC vs Al Karma",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Diyala FC",
+      "odd": 4.55,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Diyala FC vs Al Karma",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.4,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Diyala FC vs Al Karma",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Al Karma",
+      "odd": 1.77,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Deportivo Santo Domingo vs Cumbaya FC",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Deportivo Santo Domingo",
+      "odd": 2.25,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Deportivo Santo Domingo vs Cumbaya FC",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Deportivo Santo Domingo vs Cumbaya FC",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Cumbaya FC",
+      "odd": 3.35,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Fenix Reserves vs Juventud Unida Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Fenix Reserves",
+      "odd": 2.5,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Fenix Reserves vs Juventud Unida Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.5,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Fenix Reserves vs Juventud Unida Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Juventud Unida Reserves",
+      "odd": 2.3,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Argentino de Merlo Reserves vs San Martin Burzaco Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Argentino de Merlo Reserves",
+      "odd": 1.42,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Argentino de Merlo Reserves vs San Martin Burzaco Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 4,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Argentino de Merlo Reserves vs San Martin Burzaco Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "San Martin Burzaco Reserves",
+      "odd": 6,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Yupanqui Reserves vs Canuelas FC Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Yupanqui Reserves",
+      "odd": 2.6,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Yupanqui Reserves vs Canuelas FC Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.2,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Yupanqui Reserves vs Canuelas FC Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Canuelas FC Reserves",
+      "odd": 2.35,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Veraguas II vs Atletico Nacional Panama Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Veraguas II",
+      "odd": 2.25,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Veraguas II vs Atletico Nacional Panama Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.65,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Veraguas II vs Atletico Nacional Panama Reserves",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Atletico Nacional Panama Reserves",
+      "odd": 2.8,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "FAR Rabat vs Olympique de Safi",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "FAR Rabat",
+      "odd": 1.42,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "FAR Rabat vs Olympique de Safi",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.9,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "FAR Rabat vs Olympique de Safi",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Olympique de Safi",
+      "odd": 8.1,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Ittihad Tanger vs COD Meknes",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Ittihad Tanger",
+      "odd": 2.15,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Ittihad Tanger vs COD Meknes",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.15,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Ittihad Tanger vs COD Meknes",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "COD Meknes",
+      "odd": 3.25,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Levante vs Villarreal",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Levante",
+      "odd": 2.05,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Levante vs Villarreal",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.3,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Levante vs Villarreal",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Villarreal",
+      "odd": 3.3,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Al Baqaa vs Doqarah",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Al Baqaa",
+      "odd": 2.75,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Al Baqaa vs Doqarah",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.7,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Al Baqaa vs Doqarah",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Doqarah",
+      "odd": 2.25,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Don Orione vs Deportivo Guiraldes",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Don Orione",
+      "odd": 1.72,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Don Orione vs Deportivo Guiraldes",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.55,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Don Orione vs Deportivo Guiraldes",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Deportivo Guiraldes",
+      "odd": 4.65,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Fajr Sepasi vs Mes Shahr Babak",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Fajr Sepasi",
+      "odd": 2.07,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Fajr Sepasi vs Mes Shahr Babak",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 2.85,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Fajr Sepasi vs Mes Shahr Babak",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Mes Shahr Babak",
+      "odd": 4.35,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Baku Sporting FC vs FK Karvana",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Baku Sporting FC",
+      "odd": 2.85,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Baku Sporting FC vs FK Karvana",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.1,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Baku Sporting FC vs FK Karvana",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "FK Karvana",
+      "odd": 2.25,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Moik Baku vs FK Sahdag Qusar",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Moik Baku",
+      "odd": 2.25,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Moik Baku vs FK Sahdag Qusar",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.2,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Moik Baku vs FK Sahdag Qusar",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "FK Sahdag Qusar",
+      "odd": 2.8,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Khankendi vs Sabail",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Khankendi",
+      "odd": 3.4,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Khankendi vs Sabail",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Empate",
+      "odd": 3.35,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    },
+    {
+      "bookmaker": "Stake",
+      "eventName": "Khankendi vs Sabail",
+      "sport": "football",
+      "marketType": "1X2",
+      "selection": "Sabail",
+      "odd": 1.9,
+      "timestamp": "2026-09-03T06:47:03.958Z"
+    }
+  ],
+  "timestamp": "2026-09-03T06:47:03.983Z"
+}

@@ -45,12 +45,14 @@ export interface ScrapeRequest {
   captureScreenshot: boolean;
   waitForSelector?: string;
   timeoutMs?: number;
+  bookmaker?: string;
 }
 
 export interface ScrapeResult {
   id: string;
   url: string;
   status: 'SUCCESS' | 'BLOCKED' | 'ERROR' | 'DOM_STRUCTURE_CHANGED';
+  source?: 'network' | 'dom';
   statusCode?: number;
   pageTitle?: string;
   htmlLength: number;

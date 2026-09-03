@@ -5,7 +5,7 @@ const router = Router();
 const controller = new ScraperController();
 
 router.post('/run', controller.runScrape);
-router.post('/scrape', controller.runScrape);
+router.post('/scrape', controller.scrape); // ✅ Tarea 2: redirige a scrapeWithCustomSelectors para forzar interceptor
 router.post('/batch', controller.runScrape);
 router.post('/scrape/custom', controller.scrapeWithCustomSelectors);
 router.get('/proxies', controller.getProxies);

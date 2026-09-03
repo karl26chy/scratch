@@ -28,6 +28,7 @@ export interface AppConfig {
   defaultStealthLevel: StealthLevel;
   maxConcurrentBrowsers: number;
   browserTimeoutMs: number;
+  debugDumpHtml: boolean;
   proxy: ProxyConfig;
   singleTest: SingleTestConfig;
 }
@@ -40,6 +41,7 @@ export const env: AppConfig = {
   defaultStealthLevel: 'paranoid', // Maximum stealth evasion by default
   maxConcurrentBrowsers: parseInt(process.env.MAX_CONCURRENT_BROWSERS || '15', 10),
   browserTimeoutMs: parseInt(process.env.BROWSER_TIMEOUT_MS || '30000', 10),
+  debugDumpHtml: process.env.DEBUG_DUMP_HTML === 'true',
   proxy: {
     enabled: process.env.PROXY_ENABLED === 'true',
     provider: process.env.PROXY_PROVIDER || 'webshare',

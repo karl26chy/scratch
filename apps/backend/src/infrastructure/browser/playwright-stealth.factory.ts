@@ -72,14 +72,25 @@ export class PlaywrightStealthFactory {
     proxy?: string | PlaywrightProxyConfig
   ): Promise<BrowserContext> {
     const proxyConfig = PlaywrightStealthFactory.normalizeProxy(proxy);
+    // Playwright 'locale' expects a single BCP47 tag (e.g. 'es-CO'), not the full Accept-Language header
+    const primaryLocale = fingerprint.locale.split(',')[0].split(';')[0].trim() || 'es-CO';
+    // Map platform to valid Sec-Ch-Ua-Platform values (Windows / macOS / Linux)
+    const uaPlatform = fingerprint.platform.includes('Mac') ? 'macOS' : fingerprint.platform.includes('Linux') ? 'Linux' : 'Windows';
+    // 🇨🇴 Geolocalización CO para Stake (evita 406)
+    const isCO = fingerprint.timezoneId === 'America/Bogota' || fingerprint.locale.includes('es-CO');
+    const geolocation = isCO ? { latitude: 4.5709, longitude: -74.2973 } : undefined;
+    if (isCO) {
+      console.log(`🇨🇴 Contexto CO: geolocation ${geolocation?.latitude},${geolocation?.longitude} locale=${primaryLocale} tz=${fingerprint.timezoneId}`);
+    }
     const context = await browser.newContext({
       userAgent: fingerprint.userAgent,
       viewport: fingerprint.viewport,
       deviceScaleFactor: fingerprint.deviceScaleFactor,
       isMobile: fingerprint.isMobile,
       hasTouch: fingerprint.hasTouch,
-      locale: fingerprint.locale,
+      locale: primaryLocale,
       timezoneId: fingerprint.timezoneId,
+      geolocation,
       permissions: ['geolocation', 'notifications'],
       colorScheme: 'dark',
       proxy: proxyConfig,
@@ -87,12 +98,7 @@ export class PlaywrightStealthFactory {
         'Accept-Language': fingerprint.locale,
         'Sec-Ch-Ua': '"Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"',
         'Sec-Ch-Ua-Mobile': '?0',
-        'Sec-Ch-Ua-Platform': `"${fingerprint.platform}"`,
-        'Sec-Fetch-Dest': 'document',
-        'Sec-Fetch-Mode': 'navigate',
-        'Sec-Fetch-Site': 'none',
-        'Sec-Fetch-User': '?1',
-        'Upgrade-Insecure-Requests': '1',
+        'Sec-Ch-Ua-Platform': `"${uaPlatform}"`,
       },
     });
 

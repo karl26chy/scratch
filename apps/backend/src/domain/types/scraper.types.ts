@@ -45,12 +45,14 @@ export interface ScrapeRequestDto {
   };
   useProxy?: boolean;
   captureScreenshot?: boolean;
+  bookmaker?: string;
 }
 
 export interface ScrapeResultDto {
   id: string;
   url: string;
   status: 'SUCCESS' | 'BLOCKED' | 'ERROR' | 'DOM_STRUCTURE_CHANGED';
+  source: 'network' | 'dom';
   statusCode?: number;
   pageTitle?: string;
   htmlLength: number;
