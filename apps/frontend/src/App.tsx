@@ -4,6 +4,9 @@ import { Sidebar, NavTab } from './shared/components/Sidebar.js';
 import { DashboardPage } from './modules/dashboard/pages/DashboardPage.js';
 import { ScraperRunnerPage } from './modules/scrapers/pages/ScraperRunnerPage.js';
 import { SelectorConfigPage } from './modules/scrapers/pages/SelectorConfigPage.js';
+import { BetPlayPage } from './modules/scrapers/pages/BetPlayPage.js';
+import { StakePage } from './modules/scrapers/pages/StakePage.js';
+import { WplayPage } from './modules/scrapers/pages/WplayPage.js';
 import { AdaptersPage } from './modules/adapters/pages/AdaptersPage.js';
 import { SurebetDashboardPage } from './modules/surebets/pages/SurebetDashboardPage.js';
 import SurebetPage from './modules/surebets/pages/SurebetPage.js';
@@ -52,6 +55,12 @@ export const App: React.FC = () => {
           )}
 
           {currentTab === 'selector-config' && <SelectorConfigPage />}
+
+          {currentTab === 'betplay' && <BetPlayPage />}
+
+          {currentTab === 'stake' && <StakePage />}
+
+          {currentTab === 'wplay' && <WplayPage />}
 
           {currentTab === 'adapters' && <AdaptersPage />}
 

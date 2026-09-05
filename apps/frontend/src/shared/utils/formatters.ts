@@ -16,3 +16,17 @@ export function truncateString(str: string, maxLen = 45): string {
   if (!str) return '';
   return str.length > maxLen ? str.substring(0, maxLen) + '...' : str;
 }
+
+// El peso colombiano no usa centavos en la práctica — se formatea sin decimales
+// (ej. $1.000.000), como en las casas de apuestas que maneja esta app (Stake.com.co,
+// BetPlay, Wplay.co).
+const copFormatter = new Intl.NumberFormat('es-CO', {
+  style: 'currency',
+  currency: 'COP',
+  maximumFractionDigits: 0,
+});
+
+export function formatCOP(value: number): string {
+  if (isNaN(value)) return copFormatter.format(0);
+  return copFormatter.format(value);
+}

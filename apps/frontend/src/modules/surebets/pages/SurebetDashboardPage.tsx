@@ -16,22 +16,33 @@ import { SurebetOpportunity } from '../../../shared/types/common.types.js';
 
 export const SurebetDashboardPage: React.FC = () => {
   const [opportunities, setOpportunities] = useState<SurebetOpportunity[]>([]);
+  const [nearMisses, setNearMisses] = useState<SurebetOpportunity[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [selectedSport, setSelectedSport] = useState<string>('all');
   const [minProfit, setMinProfit] = useState<number>(0);
   const [viewMode, setViewMode] = useState<'feed' | 'calculator'>('feed');
 
   /**
-   * Asynchronously queries the backend API for live detected opportunities
+   * Asynchronously queries the backend API for live detected opportunities.
+   * Cuando no hay surebets rentables (lo normal la mayoría del tiempo), también
+   * trae los cruces reales entre casas más cercanos a serlo — así se ve que el
+   * motor está comparando cuotas de verdad, no que está roto/vacío sin razón.
    */
   const loadOpportunities = useCallback(async () => {
     setIsLoading(true);
     try {
-      const data = await SurebetApi.fetchLiveOpportunities(1000);
+      const data = await SurebetApi.fetchLiveOpportunities(1000000);
       setOpportunities(data || []);
+      if (!data || data.length === 0) {
+        const misses = await SurebetApi.fetchNearMisses(1000000, 5);
+        setNearMisses(misses);
+      } else {
+        setNearMisses([]);
+      }
     } catch (err) {
       console.error('Error al consultar oportunidades de surebets en vivo:', err);
       setOpportunities([]);
+      setNearMisses([]);
     } finally {
       setIsLoading(false);
     }
@@ -420,6 +431,39 @@ export const SurebetDashboardPage: React.FC = () => {
                   {isLoading ? 'Consultando Backend...' : 'Reintentar Consulta'}
                 </button>
               </div>
+
+              {nearMisses.length > 0 && (
+                <div style={{ marginTop: '2rem', textAlign: 'left', maxWidth: '640px', marginLeft: 'auto', marginRight: 'auto' }}>
+                  <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginBottom: '0.6rem', textAlign: 'center' }}>
+                    El motor SÍ está comparando cuotas reales entre casas — estos son los cruces más cercanos a ser rentables ahora mismo (margen negativo, todavía no es arbitraje):
+                  </p>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                    {nearMisses.map((nm) => (
+                      <div
+                        key={nm.id}
+                        style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'space-between',
+                          padding: '0.6rem 0.9rem',
+                          background: 'rgba(255,255,255,0.02)',
+                          border: '1px solid var(--border-color)',
+                          borderRadius: 'var(--radius-md)',
+                          fontSize: '0.8rem',
+                        }}
+                      >
+                        <span style={{ fontWeight: 600, color: 'var(--text-primary)' }}>{nm.eventName}</span>
+                        <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem' }}>
+                          {nm.outcomes.map((o) => `${o.bookmaker} ${o.selection}:${o.odd}`).join(' · ')}
+                        </span>
+                        <span style={{ fontWeight: 700, color: '#f59e0b', fontFamily: 'var(--font-mono)' }}>
+                          {nm.profitMarginPercentage.toFixed(2)}%
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           ) : (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>

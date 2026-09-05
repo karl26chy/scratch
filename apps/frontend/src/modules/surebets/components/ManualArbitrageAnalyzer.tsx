@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import { Sparkles, AlertCircle, CheckCircle2 } from 'lucide-react';
 import { Card } from '../../../shared/components/Card.js';
 import { MarketType } from '../../../shared/types/common.types.js';
+import { formatCOP } from '../../../shared/utils/formatters.js';
 
 export const ManualArbitrageAnalyzer: React.FC = () => {
   const [marketType, setMarketType] = useState<MarketType>('1X2');
-  const [bankroll, setBankroll] = useState<number>(1000);
+  const [bankroll, setBankroll] = useState<number>(1000000);
 
   // 3-way default values
   const [bookmaker1, setBookmaker1] = useState('Pinnacle');
@@ -99,11 +100,12 @@ export const ManualArbitrageAnalyzer: React.FC = () => {
 
           <div>
             <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 600, color: 'var(--text-secondary)', marginBottom: '0.35rem' }}>
-              Capital Total a Invertir ($)
+              Capital Total a Invertir (COP)
             </label>
             <input
               type="number"
-              min="10"
+              min="10000"
+              step="10000"
               value={bankroll}
               onChange={(e) => setBankroll(Math.max(1, parseFloat(e.target.value) || 0))}
               style={{
@@ -248,13 +250,13 @@ export const ManualArbitrageAnalyzer: React.FC = () => {
                   {stakes.map((s, idx) => (
                     <div key={idx} style={{ padding: '0.4rem', background: 'rgba(255,255,255,0.02)', borderRadius: 'var(--radius-sm)' }}>
                       <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', display: 'block' }}>Apostar en {s.bookmaker}:</span>
-                      <strong style={{ fontSize: '0.95rem', color: '#fff', fontFamily: 'var(--font-mono)' }}>${s.stake.toFixed(2)}</strong>
+                      <strong style={{ fontSize: '0.95rem', color: '#fff', fontFamily: 'var(--font-mono)' }}>{formatCOP(s.stake)}</strong>
                       <span style={{ fontSize: '0.7rem', color: '#38bdf8', display: 'block' }}>({s.percentage.toFixed(1)}%)</span>
                     </div>
                   ))}
                 </div>
                 <div style={{ marginTop: '0.6rem', textAlign: 'center', fontSize: '0.8rem', color: '#34d399', fontWeight: 700 }}>
-                  Retorno Garantizado: ${minPayout.toFixed(2)} (Ganancia Neta: +${netProfit.toFixed(2)})
+                  Retorno Garantizado: {formatCOP(minPayout)} (Ganancia Neta: +{formatCOP(netProfit)})
                 </div>
               </div>
             )}

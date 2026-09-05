@@ -636,8 +636,53 @@ export class ScraperService {
       await page.goto(url, { waitUntil: 'networkidle', timeout: timeoutMs || 30000 });
       await page.waitForTimeout(3000);
       await EvasionService.simulateAdvancedHumanBehavior(page);
-      const payloads = interceptor.getCaptured();
+      let payloads = interceptor.getCaptured();
       console.log(`📦 Payloads capturados: ${payloads.length}`);
+
+      // Stake: events-by-path.json?date=YYYY-MM-DD solo devuelve los eventos de ESE día
+      // (lo que capturamos al navegar son solo los ~40 de "hoy"). Se probaron varias
+      // fechas replicando el request (multi-día) pero el anti-bot devuelve 406 la mayoría
+      // de las veces para requests fuera del flujo natural de la página, aun compartiendo
+      // cookies/hidenseek/sesión. El hallazgo real: quitando el parámetro `date` por completo
+      // el mismo endpoint devuelve TODOS los eventos de fútbol futuros en una sola respuesta
+      // (~1500, igual al contador "Fútbol (1550)" del sidebar) — equivalente a lo que hace
+      // Kambi/BetPlay con /all/all.json. Un solo fetch adicional desde la pestaña basta.
+      const isStakeDomain = url.includes('stake.com.co') || effectiveAdapter === stakeKickerAdapter;
+      if (isStakeDomain) {
+        const hidenseekPayload = payloads.find((p: any) => typeof p.url === 'string' && p.url.includes('hidenseek='));
+        const hidenseekMatch = hidenseekPayload ? hidenseekPayload.url.match(/hidenseek=([^&]+)/) : null;
+        const hidenseek = hidenseekMatch ? decodeURIComponent(hidenseekMatch[1]) : '';
+        const endpointBase = hidenseekPayload ? hidenseekPayload.url.split('?')[0] : '';
+        if (hidenseek && endpointBase) {
+          console.log('📅 [Stake] Expandiendo cobertura: consultando TODOS los eventos futuros (sin filtro de fecha) desde la pestaña...');
+          // Se pasa como STRING (no como función serializada) porque tsx/esbuild inyecta
+          // un helper `__name` al transpilar que no existe en el contexto aislado del
+          // navegador, y page.evaluate(fn, args) revienta con "__name is not defined".
+          // Con un string, Playwright lo evalúa tal cual, sin pasar por Function.toString().
+          const evalCode = `(async () => {
+            const base = ${JSON.stringify(endpointBase)};
+            const hidenseek = ${JSON.stringify(hidenseek)};
+            try {
+              const res = await fetch(base + '?path=football&hidenseek=' + encodeURIComponent(hidenseek), { headers: { Accept: 'application/json' } });
+              if (res.status === 200) return { json: await res.json(), status: 200 };
+              return { json: null, status: res.status };
+            } catch (e) {
+              return { json: null, status: 0 };
+            }
+          })()`;
+          const result: { json: unknown; status: number } = await page.evaluate(evalCode);
+          if (result.status === 200 && result.json) {
+            payloads = [...payloads, { url: `${endpointBase}?path=football (all dates)`, json: result.json, timestamp: new Date().toISOString() }];
+            const allEventsCount = Array.isArray((result.json as any)?.events) ? (result.json as any).events.length : 0;
+            console.log(`📦 [Stake] Cobertura completa obtenida: ${allEventsCount} eventos futuros en total`);
+          } else {
+            console.warn(`⚠️ [Stake] Fetch sin filtro de fecha falló (status ${result.status}) — se mantiene solo el día capturado naturalmente`);
+          }
+        } else {
+          console.warn('⚠️ [Stake] No se capturó hidenseek en el payload inicial — se omite expansión de cobertura');
+        }
+      }
+
       let odds: BookmakerOdd[] = [];
       if (effectiveAdapter) {
         odds = effectiveAdapter.extract(payloads as any);
@@ -646,6 +691,19 @@ export class ScraperService {
         odds = stakeAdapter.extract(payloads as any);
       }
       console.log(`📊 Odds extraídas: ${odds.length}`);
+
+      // Alimentar el motor de Surebets + persistencia temporal (data/odds.json),
+      // igual que hacen los demás caminos de scraping. Antes esta ruta (la que
+      // realmente usan Selectores Custom / Scraping BetPlay / Scraping Stake vía
+      // adapter de red) devolvía los odds al frontend pero nunca los mandaba a
+      // Arbitraje & Surebets.
+      if (odds.length > 0) {
+        const { SurebetCalculatorService } = await import('./surebet-calculator.service.js');
+        SurebetCalculatorService.getInstance().addScrapedOdds(odds);
+        const persistBookmaker = odds[0]?.bookmaker || deriveBookmakerFromUrl(url) || 'Unknown';
+        OddsPersistenceService.getInstance().saveOddsForBookmaker(persistBookmaker, odds);
+      }
+
       await page.close().catch(() => {});
       await context.close().catch(() => {});
       await this.browserPool.releaseBrowser(browser, !!proxyConfig);
@@ -718,9 +776,12 @@ export class ScraperService {
       console.warn('⚠️ No se encontró adapter para esta URL, usando DOM fallback');
     }
 
-    // Validar obligatorios — Tarea 2: permitir vacíos para Stake (forzar interceptor)
+    // Validar obligatorios — permitir vacíos si el dominio tiene adapter de red registrado
+    // (fuerza interceptor en vez de selectores CSS). Stake se mantiene como fallback explícito
+    // por si el hostname exacto no matchea el registro (subdominios, etc.).
     const isStakeUrl = url.includes('stake.com.co');
-    if (isStakeUrl) {
+    const hasRegisteredAdapter = !!this.adapterRegistry.getForUrl(url);
+    if (isStakeUrl || hasRegisteredAdapter) {
       // Normalizar a vacíos para forzar red
       selectors = {
         events: selectors.events || '',
@@ -1237,8 +1298,20 @@ export class ScraperService {
   }
 
   private convertBookmakerOddsToMatches(odds: BookmakerOdd[]): any[] {
-    // Agrupar por eventName para construir matches con 1X2
-    const grouped = new Map<string, { homeTeam: string; awayTeam: string; oddsHome?: number; oddsDraw?: number; oddsAway?: number; eventName: string }>();
+    // Agrupar por eventName para construir matches con 1X2 + mercados adicionales
+    interface GroupedMatch {
+      homeTeam: string;
+      awayTeam: string;
+      eventName: string;
+      oddsHome?: number;
+      oddsDraw?: number;
+      oddsAway?: number;
+      bothScoreYes?: number;
+      bothScoreNo?: number;
+      overOdds?: number;
+      underOdds?: number;
+    }
+    const grouped = new Map<string, GroupedMatch>();
     for (const o of odds) {
       const eventName = o.eventName || 'Unknown';
       if (!grouped.has(eventName)) {
@@ -1247,14 +1320,25 @@ export class ScraperService {
           eventName,
           homeTeam: parts[0]?.trim() || 'Home',
           awayTeam: parts[1]?.trim() || 'Away',
-          oddsHome: undefined,
-          oddsDraw: undefined,
-          oddsAway: undefined,
         });
       }
       const g = grouped.get(eventName)!;
-      // Determinar tipo por selection
       const sel = (o.selection || '').toLowerCase();
+
+      // Mercados no-1X2: distinguir explícitamente por marketType para no contaminar
+      // las columnas 1X2 con odds de otros mercados (BTTS, Over/Under, etc.)
+      if (o.marketType === 'BOTH_TEAMS_SCORE') {
+        if (sel === 'si' || sel === 'sí' || sel === 'yes') g.bothScoreYes = o.odd;
+        else if (sel === 'no') g.bothScoreNo = o.odd;
+        continue;
+      }
+      if (o.marketType === 'OVER_UNDER_2_5') {
+        if (sel === 'over' || sel === 'más de' || sel === 'mas de') g.overOdds = o.odd;
+        else if (sel === 'under' || sel === 'menos de') g.underOdds = o.odd;
+        continue;
+      }
+
+      // Mercado 1X2 (o desconocido, por compatibilidad con adapters previos)
       const isDraw = sel.includes('empate') || sel === 'x' || sel === 'draw';
       const isHome = !isDraw && (sel === g.homeTeam.toLowerCase() || sel === '1' || sel === 'home');
       const isAway = !isDraw && (sel === g.awayTeam.toLowerCase() || sel === '2' || sel === 'away');
@@ -1276,6 +1360,10 @@ export class ScraperService {
       oddsHome: g.oddsHome ?? null,
       oddsDraw: g.oddsDraw ?? null,
       oddsAway: g.oddsAway ?? null,
+      bothScoreYes: g.bothScoreYes ?? null,
+      bothScoreNo: g.bothScoreNo ?? null,
+      overOdds: g.overOdds ?? null,
+      underOdds: g.underOdds ?? null,
       eventName: g.eventName,
       // Mantener compatibilidad con ResilientSelector
       matchTime: undefined,

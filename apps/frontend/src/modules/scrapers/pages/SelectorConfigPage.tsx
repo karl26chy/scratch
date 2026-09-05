@@ -62,27 +62,6 @@ export const SelectorConfigPage: React.FC = () => {
   // Verificar si la URL tiene adapter al cambiar (Tarea 1)
   useEffect(() => {
     let cancelled = false;
-    const checkAdapter = async () => {
-      if (url) {
-        try {
-          const hostname = new URL(url).hostname;
-          const response = await fetch(`/api/adapters?domain=${hostname}`);
-          const data = await response.json();
-          if (!cancelled) {
-            setHasAdapter(data.hasAdapter);
-            setNetAdapter({ hasAdapter: data.hasAdapter, domain: data.domain || hostname });
-          }
-        } catch (error) {
-          if (!cancelled) {
-            setHasAdapter(false);
-            setNetAdapter(null);
-          }
-        }
-      } else {
-        setHasAdapter(false);
-      }
-    };
-    // Mantener compatibilidad con AdaptersApi.check también
     const host = extractHostname(url);
     if (!host) {
       setNetAdapter(null);
@@ -105,8 +84,6 @@ export const SelectorConfigPage: React.FC = () => {
       } finally {
         if (!cancelled) setNetLoading(false);
       }
-      // También verificar con nuevo endpoint
-      checkAdapter();
     }, 400);
     return () => {
       cancelled = true;
@@ -119,9 +96,10 @@ export const SelectorConfigPage: React.FC = () => {
   };
 
   const validateSelectors = (): boolean => {
-    // ✅ Si es Stake, permitir selectores vacíos (usa Network Interceptor)
-    if (url.includes('stake.com.co')) {
-      console.log('🇨🇴 Stake detectado - selectores vacíos permitidos');
+    // ✅ Si el sitio tiene un adapter de red registrado (Stake, BetPlay, ...), permitir
+    // selectores vacíos — el backend usará el Network Interceptor en su lugar.
+    if (hasAdapter || url.includes('stake.com.co')) {
+      console.log('📡 Adapter de red detectado - selectores vacíos permitidos');
       return true;
     }
     const required = ['events', 'homeTeam', 'awayTeam', 'oddsHome', 'oddsDraw', 'oddsAway'];
@@ -367,30 +345,44 @@ export const SelectorConfigPage: React.FC = () => {
             </div>
             {results.matches && results.matches.length > 0 ? (
               <div style={{ overflowX: 'auto' }}>
-                <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.85rem' }}>
-                  <thead>
-                    <tr style={{ borderBottom: '1px solid var(--border-color)', color: 'var(--text-muted)', textAlign: 'left' }}>
-                      <th style={{ padding: '0.6rem' }}>Local</th>
-                      <th style={{ padding: '0.6rem' }}>Visitante</th>
-                      <th style={{ padding: '0.6rem' }}>1</th>
-                      <th style={{ padding: '0.6rem' }}>X</th>
-                      <th style={{ padding: '0.6rem' }}>2</th>
-                      <th style={{ padding: '0.6rem' }}>Liga</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {results.matches.map((m: any, i: number) => (
-                      <tr key={i} style={{ borderBottom: '1px solid rgba(255,255,255,0.04)' }}>
-                        <td style={{ padding: '0.6rem' }}>{m.homeTeam || '-'}</td>
-                        <td style={{ padding: '0.6rem' }}>{m.awayTeam || '-'}</td>
-                        <td style={{ padding: '0.6rem' }}>{m.oddsHome ?? '-'}</td>
-                        <td style={{ padding: '0.6rem' }}>{m.oddsDraw ?? '-'}</td>
-                        <td style={{ padding: '0.6rem' }}>{m.oddsAway ?? '-'}</td>
-                        <td style={{ padding: '0.6rem' }}>{m.leagueName || '-'}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+                {(() => {
+                  const hasBts = results.matches.some((m: any) => m.bothScoreYes != null || m.bothScoreNo != null);
+                  const hasOU = results.matches.some((m: any) => m.overOdds != null || m.underOdds != null);
+                  return (
+                    <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.85rem' }}>
+                      <thead>
+                        <tr style={{ borderBottom: '1px solid var(--border-color)', color: 'var(--text-muted)', textAlign: 'left' }}>
+                          <th style={{ padding: '0.6rem' }}>Local</th>
+                          <th style={{ padding: '0.6rem' }}>Visitante</th>
+                          <th style={{ padding: '0.6rem' }}>1</th>
+                          <th style={{ padding: '0.6rem' }}>X</th>
+                          <th style={{ padding: '0.6rem' }}>2</th>
+                          {hasBts && <th style={{ padding: '0.6rem' }}>BTTS Sí</th>}
+                          {hasBts && <th style={{ padding: '0.6rem' }}>BTTS No</th>}
+                          {hasOU && <th style={{ padding: '0.6rem' }}>Over 2.5</th>}
+                          {hasOU && <th style={{ padding: '0.6rem' }}>Under 2.5</th>}
+                          <th style={{ padding: '0.6rem' }}>Liga</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {results.matches.map((m: any, i: number) => (
+                          <tr key={i} style={{ borderBottom: '1px solid rgba(255,255,255,0.04)' }}>
+                            <td style={{ padding: '0.6rem' }}>{m.homeTeam || '-'}</td>
+                            <td style={{ padding: '0.6rem' }}>{m.awayTeam || '-'}</td>
+                            <td style={{ padding: '0.6rem' }}>{m.oddsHome ?? '-'}</td>
+                            <td style={{ padding: '0.6rem' }}>{m.oddsDraw ?? '-'}</td>
+                            <td style={{ padding: '0.6rem' }}>{m.oddsAway ?? '-'}</td>
+                            {hasBts && <td style={{ padding: '0.6rem' }}>{m.bothScoreYes ?? '-'}</td>}
+                            {hasBts && <td style={{ padding: '0.6rem' }}>{m.bothScoreNo ?? '-'}</td>}
+                            {hasOU && <td style={{ padding: '0.6rem' }}>{m.overOdds ?? '-'}</td>}
+                            {hasOU && <td style={{ padding: '0.6rem' }}>{m.underOdds ?? '-'}</td>}
+                            <td style={{ padding: '0.6rem' }}>{m.leagueName || '-'}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  );
+                })()}
               </div>
             ) : (
               <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>No se encontraron partidos con esos selectores. Revisa el contenedor `events` en DevTools.</p>

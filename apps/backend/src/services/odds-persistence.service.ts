@@ -2,9 +2,13 @@ import * as fs from 'fs';
 import * as path from 'path';
 import type { BookmakerOdd } from '../domain/types/surebet.types.js';
 
+// Bookmakers conocidos por nombre — cualquier otro se guarda dinámicamente
+// bajo su propio slug (derivado del nombre) en vez de perderse o mezclarse
+// incorrectamente con otra casa (bug previo: todo lo no reconocido cala como "wplay").
+const KNOWN_BOOKMAKERS = ['wplay', 'stake', 'betplay'] as const;
+
 interface PersistedOdds {
-  wplay: BookmakerOdd[];
-  stake: BookmakerOdd[];
+  books: Record<string, BookmakerOdd[]>;
   timestamp: string;
 }
 
@@ -15,6 +19,13 @@ function ensureDataDir(): void {
   if (!fs.existsSync(DATA_DIR)) {
     fs.mkdirSync(DATA_DIR, { recursive: true });
   }
+}
+
+function slugify(bookmaker: string): string {
+  const lower = bookmaker.trim().toLowerCase();
+  const known = KNOWN_BOOKMAKERS.find((k) => lower.includes(k));
+  if (known) return known;
+  return lower.replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || 'unknown';
 }
 
 export class OddsPersistenceService {
@@ -30,18 +41,23 @@ export class OddsPersistenceService {
   private loadRaw(): PersistedOdds {
     ensureDataDir();
     if (!fs.existsSync(DATA_FILE)) {
-      return { wplay: [], stake: [], timestamp: new Date().toISOString() };
+      return { books: {}, timestamp: new Date().toISOString() };
     }
     try {
       const raw = fs.readFileSync(DATA_FILE, 'utf-8');
-      const parsed = JSON.parse(raw) as PersistedOdds;
-      return {
-        wplay: Array.isArray(parsed.wplay) ? parsed.wplay : [],
-        stake: Array.isArray(parsed.stake) ? parsed.stake : [],
-        timestamp: parsed.timestamp || new Date().toISOString(),
-      };
+      const parsed = JSON.parse(raw) as any;
+      // Compatibilidad con el formato viejo { wplay: [...], stake: [...] }
+      if (parsed.books && typeof parsed.books === 'object') {
+        return { books: parsed.books, timestamp: parsed.timestamp || new Date().toISOString() };
+      }
+      const books: Record<string, BookmakerOdd[]> = {};
+      for (const key of Object.keys(parsed)) {
+        if (key === 'timestamp') continue;
+        if (Array.isArray(parsed[key])) books[key] = parsed[key];
+      }
+      return { books, timestamp: parsed.timestamp || new Date().toISOString() };
     } catch {
-      return { wplay: [], stake: [], timestamp: new Date().toISOString() };
+      return { books: {}, timestamp: new Date().toISOString() };
     }
   }
 
@@ -51,43 +67,29 @@ export class OddsPersistenceService {
   }
 
   public saveWplayOdds(odds: BookmakerOdd[]): void {
-    const current = this.loadRaw();
-    current.wplay = odds;
-    current.timestamp = new Date().toISOString();
-    this.saveRaw(current);
-    console.log(`💾 [OddsPersistence] Wplay guardado: ${odds.length} odds`);
+    this.saveOddsForSlug('wplay', odds);
   }
 
   public saveStakeOdds(odds: BookmakerOdd[]): void {
-    const current = this.loadRaw();
-    current.stake = odds;
-    current.timestamp = new Date().toISOString();
-    this.saveRaw(current);
-    console.log(`💾 [OddsPersistence] Stake guardado: ${odds.length} odds`);
+    this.saveOddsForSlug('stake', odds);
   }
 
   public saveOddsForBookmaker(bookmaker: string, odds: BookmakerOdd[]): void {
-    const lower = bookmaker.toLowerCase();
-    if (lower.includes('wplay')) {
-      this.saveWplayOdds(odds);
-    } else if (lower.includes('stake')) {
-      this.saveStakeOdds(odds);
-    } else {
-      // Fallback: detectar por URL si viene
-      this.saveGeneric(odds);
-    }
+    const slug = bookmaker ? slugify(bookmaker) : this.detectSlugFromSample(odds);
+    this.saveOddsForSlug(slug, odds);
   }
 
-  private saveGeneric(odds: BookmakerOdd[]): void {
-    if (odds.length === 0) return;
-    const sample = odds[0]?.bookmaker?.toLowerCase() || '';
-    if (sample.includes('wplay')) this.saveWplayOdds(odds);
-    else if (sample.includes('stake')) this.saveStakeOdds(odds);
-    else {
-      // Si no se puede detectar, guardar como wplay por defecto y log
-      console.warn('[OddsPersistence] Bookmaker no reconocido, guardando como wplay genérico');
-      this.saveWplayOdds(odds);
-    }
+  private detectSlugFromSample(odds: BookmakerOdd[]): string {
+    const sample = odds[0]?.bookmaker;
+    return sample ? slugify(sample) : 'unknown';
+  }
+
+  private saveOddsForSlug(slug: string, odds: BookmakerOdd[]): void {
+    const current = this.loadRaw();
+    current.books[slug] = odds;
+    current.timestamp = new Date().toISOString();
+    this.saveRaw(current);
+    console.log(`💾 [OddsPersistence] ${slug} guardado: ${odds.length} odds`);
   }
 
   public loadOdds(): PersistedOdds {
@@ -96,15 +98,29 @@ export class OddsPersistenceService {
 
   public getAllOdds(): BookmakerOdd[] {
     const data = this.loadRaw();
-    return [...data.wplay, ...data.stake];
+    return Object.values(data.books).flat();
   }
 
   public clear(): void {
-    this.saveRaw({ wplay: [], stake: [], timestamp: new Date().toISOString() });
+    this.saveRaw({ books: {}, timestamp: new Date().toISOString() });
   }
 
-  public getStats(): { wplay: number; stake: number; total: number; timestamp: string } {
+  public getStats(): { total: number; timestamp: string; byBookmaker: Record<string, number>; wplay: number; stake: number; betplay: number } {
     const data = this.loadRaw();
-    return { wplay: data.wplay.length, stake: data.stake.length, total: data.wplay.length + data.stake.length, timestamp: data.timestamp };
+    const byBookmaker: Record<string, number> = {};
+    let total = 0;
+    for (const [slug, list] of Object.entries(data.books)) {
+      byBookmaker[slug] = list.length;
+      total += list.length;
+    }
+    return {
+      total,
+      timestamp: data.timestamp,
+      byBookmaker,
+      // Compatibilidad con consumidores existentes (SurebetPage, surebet.controller)
+      wplay: byBookmaker.wplay || 0,
+      stake: byBookmaker.stake || 0,
+      betplay: byBookmaker.betplay || 0,
+    };
   }
 }

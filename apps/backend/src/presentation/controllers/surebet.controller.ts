@@ -16,7 +16,7 @@ const BookmakerOddSchema = z.object({
 });
 
 const AnalyzeSurebetsSchema = z.object({
-  totalStake: z.number().positive().default(1000),
+  totalStake: z.number().positive().default(1000000), // COP
   minProfitMargin: z.number().min(-10).default(0),
   oddsData: z.array(BookmakerOddSchema).optional(),
 });
@@ -95,7 +95,7 @@ export class SurebetController {
       data: {
         ...result,
         stats,
-        sources: { wplay: stats.wplay, stake: stats.stake, total: stats.total },
+        sources: { wplay: stats.wplay, stake: stats.stake, betplay: stats.betplay, total: stats.total, byBookmaker: stats.byBookmaker },
       },
     });
   };

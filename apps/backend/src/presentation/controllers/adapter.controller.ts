@@ -11,7 +11,8 @@ export class AdapterController {
   private registry = SiteAdapterRegistry.getInstance();
 
   // Tarea 4: Métodos específicos para /adapters y /adapters/check
-  public async checkAdapter(req: Request, res: Response): Promise<void> {
+  // Arrow functions: preservan `this` al pasarse como referencia directa a Express router.
+  public checkAdapter = async (req: Request, res: Response): Promise<void> => {
     try {
       const domain = (req.query.domain as string) || (req.query as any).domain;
       if (!domain) {
@@ -28,9 +29,9 @@ export class AdapterController {
     } catch (error: any) {
       res.status(500).json({ status: 'error', message: error.message });
     }
-  }
+  };
 
-  public async listAdapters(req: Request, res: Response): Promise<void> {
+  public listAdapters = async (req: Request, res: Response): Promise<void> => {
     try {
       // Compatibilidad: si viene ?domain=, hacer check
       const domain = (req.query.domain as string) || (req.query as any).domain;
@@ -50,7 +51,7 @@ export class AdapterController {
     } catch (error: any) {
       res.status(500).json({ status: 'error', message: error.message });
     }
-  }
+  };
 
   // Compatibilidad: GET /api/adapters?domain=x  (antiguo)
   public listOrCheckAdapters = (req: Request, res: Response): void => {
