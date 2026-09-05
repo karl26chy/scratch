@@ -2,6 +2,7 @@ import { Request, Response, NextFunction } from 'express';
 import { z } from 'zod';
 import { ScraperService } from '../../services/scraper.service.js';
 import { ProxyRotator } from '../../infrastructure/proxies/proxy-rotator.js';
+import { SiteAdapterRegistry } from '../../infrastructure/network/adapter-registry.js';
 
 const ScrapeSchema = z.object({
   url: z.string().url('Se requiere una URL válida').optional(),
@@ -38,6 +39,7 @@ const CustomScrapeSchema = z.object({
 export class ScraperController {
   private scraperService = new ScraperService();
   private proxyRotator = ProxyRotator.getInstance();
+  private adapterRegistry = SiteAdapterRegistry.getInstance();
 
   /**
     * Primary scraping endpoint supporting single or mass concurrent execution:
@@ -248,9 +250,10 @@ export class ScraperController {
         res.status(400).json({ status: 'error', message: 'URL requerida' });
         return;
       }
-      // ✅ Usar misma lógica que scrapeWithCustomSelectors — forzar vacíos para Stake
+      // ✅ Usar misma lógica que scrapeWithCustomSelectors — forzar vacíos para sitios con adapter de red
       const isStake = url.includes('stake.com.co');
-      const effectiveSelectors = isStake
+      const hasRegisteredAdapter = !!this.adapterRegistry.getForUrl(url);
+      const effectiveSelectors = isStake || hasRegisteredAdapter
         ? { events: '', homeTeam: '', awayTeam: '', oddsHome: '', oddsDraw: '', oddsAway: '' }
         : selectors && selectors.events && selectors.homeTeam
           ? selectors
@@ -290,9 +293,11 @@ export class ScraperController {
       const parsed = CustomScrapeSchema.parse(req.body);
       let { url, selectors, useProxy, timeoutMs, sessionId } = parsed;
 
-      // Tarea 2: Para Stake, permitir selectores vacíos (forzar interceptor)
+      // Permitir selectores vacíos (forzar interceptor de red) para Stake o cualquier
+      // dominio con adapter de red registrado (p.ej. BetPlay/Kambi)
       const isStake = url.includes('stake.com.co');
-      if (isStake) {
+      const hasRegisteredAdapter = !!this.adapterRegistry.getForUrl(url);
+      if (isStake || hasRegisteredAdapter) {
         // Normalizar a vacíos si no vienen
         selectors = {
           events: selectors.events || '',

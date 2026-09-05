@@ -108,7 +108,15 @@ async function fetchWithDate(dateStr: string, hidenseek: string = ''): Promise<C
   return [];
 }
 
-export const stakeKickerAdapter: SiteOddsAdapter & { fetchWithDate: typeof fetchWithDate; getHidenseek: typeof getHidenseek } = {
+// Nota: events-by-path.json está acotado a UN día por llamada (parámetro `date`).
+// La expansión a varios días se hace desde scraper.service.ts vía page.evaluate()
+// (fetch dentro de la pestaña), no aquí — un fetch de Node sin las cookies/huella
+// TLS de la sesión del navegador recibe 406 aunque se reenvíe el hidenseek correcto.
+
+export const stakeKickerAdapter: SiteOddsAdapter & {
+  fetchWithDate: typeof fetchWithDate;
+  getHidenseek: typeof getHidenseek;
+} = {
   domain: 'stake.com.co',
 
   // Patrones que deben coincidir con las URLs de la API interna de KickerTech
@@ -148,6 +156,8 @@ export const stakeKickerAdapter: SiteOddsAdapter & { fetchWithDate: typeof fetch
 
     const odds: BookmakerOdd[] = [];
     const now = new Date().toISOString();
+    // Evita duplicar el mismo evento si dos payloads de fechas distintas se solapan
+    const seenEventIds = new Set<unknown>();
     console.log(`📡 Extrayendo de ${payloads.length} payloads...`);
 
     for (const payload of payloads) {
@@ -197,6 +207,11 @@ export const stakeKickerAdapter: SiteOddsAdapter & { fetchWithDate: typeof fetch
 
       if (eventsArray.length > 0 && eventsArray[0]?.main_odds) {
         for (const ev of eventsArray) {
+          // Dedupe: el mismo evento puede repetirse si dos fechas consultadas se solapan
+          const evId = ev.id ?? ev.event_id ?? ev.short_id;
+          if (evId !== undefined && seenEventIds.has(evId)) continue;
+          if (evId !== undefined) seenEventIds.add(evId);
+
           // teams puede ser {home, away} o el evento ya trae homeTeam/awayTeam separados
           const homeTeam: string = ev.teams?.home ?? ev.home?.name ?? ev.homeTeam ?? ev.participants?.[0]?.name ?? 'Home';
           const awayTeam: string = ev.teams?.away ?? ev.away?.name ?? ev.awayTeam ?? ev.participants?.[1]?.name ?? 'Away';
@@ -230,11 +245,53 @@ export const stakeKickerAdapter: SiteOddsAdapter & { fetchWithDate: typeof fetch
             }
           }
 
+          // Mercado "Ambos Equipos Marcan" — main_odds.bothscore (ODD_FTB_BOTHTEAMSSCORE_YES/NO)
+          const bothscoreOdds = ev.main_odds?.bothscore;
+          if (bothscoreOdds && typeof bothscoreOdds === 'object') {
+            for (const key of Object.keys(bothscoreOdds)) {
+              const o: any = bothscoreOdds[key];
+              if (!o || typeof o.odd_value !== 'number') continue;
+              const isYes = o.odd_code === 'ODD_FTB_BOTHTEAMSSCORE_YES';
+              const isNo = o.odd_code === 'ODD_FTB_BOTHTEAMSSCORE_NO';
+              if (!isYes && !isNo) continue;
+              odds.push({
+                bookmaker: 'Stake',
+                eventName,
+                sport,
+                marketType: 'BOTH_TEAMS_SCORE',
+                selection: isYes ? 'SI' : 'NO',
+                odd: Number(o.odd_value),
+                timestamp: now,
+              });
+            }
+          }
+
+          // Mercado "Total de Goles" — main_odds.total, filtrado a la línea 2.5 (ODD_TTL_*_OVR/_UND, additional_value_raw===2.5)
+          const totalOdds = ev.main_odds?.total;
+          if (totalOdds && typeof totalOdds === 'object') {
+            for (const key of Object.keys(totalOdds)) {
+              const o: any = totalOdds[key];
+              if (!o || typeof o.odd_value !== 'number') continue;
+              if (Number(o.additional_value_raw) !== 2.5) continue;
+              const isOver = typeof o.odd_code === 'string' && o.odd_code.endsWith('_OVR');
+              const isUnder = typeof o.odd_code === 'string' && o.odd_code.endsWith('_UND');
+              if (!isOver && !isUnder) continue;
+              odds.push({
+                bookmaker: 'Stake',
+                eventName,
+                sport,
+                marketType: 'OVER_UNDER_2_5',
+                selection: isOver ? 'OVER' : 'UNDER',
+                odd: Number(o.odd_value),
+                timestamp: now,
+              });
+            }
+          }
+
           // Log Paso 2
           if (Object.keys(mainOdds || {}).length > 0) {
             console.log(`✅ Evento: ${homeTeam} vs ${awayTeam}`);
           }
-          // También mapear otros mercados si se requieren (bothscore, total) — opcional, por ahora solo 1X2 para surebets
         }
         continue;
       }

@@ -3,13 +3,14 @@ import { TrendingUp, ShieldCheck, Calculator } from 'lucide-react';
 import { Card } from '../../../shared/components/Card.js';
 import { Badge } from '../../../shared/components/Badge.js';
 import { SurebetOpportunity } from '../../../shared/types/common.types.js';
+import { formatCOP } from '../../../shared/utils/formatters.js';
 
 interface SurebetCardProps {
   opportunity: SurebetOpportunity;
 }
 
 export const SurebetCard: React.FC<SurebetCardProps> = ({ opportunity }) => {
-  const [bankroll, setBankroll] = useState<number>(opportunity.totalInvestment || 1000);
+  const [bankroll, setBankroll] = useState<number>(opportunity.totalInvestment || 1000000);
 
   // Recalculate dynamic stakes based on user-controlled bankroll
   const tip = opportunity.totalImpliedProbability;
@@ -167,17 +168,17 @@ export const SurebetCard: React.FC<SurebetCardProps> = ({ opportunity }) => {
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Capital Total:</span>
+            <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Capital Total (COP):</span>
             <div style={{ display: 'flex', alignItems: 'center', background: 'rgba(255, 255, 255, 0.05)', borderRadius: 'var(--radius-sm)', padding: '0.15rem 0.5rem' }}>
               <span style={{ color: 'var(--text-muted)', fontSize: '0.8rem', marginRight: '0.2rem' }}>$</span>
               <input
                 type="number"
-                min="10"
-                step="50"
+                min="10000"
+                step="10000"
                 value={bankroll}
                 onChange={(e) => setBankroll(Math.max(1, parseFloat(e.target.value) || 0))}
                 style={{
-                  width: '75px',
+                  width: '95px',
                   background: 'transparent',
                   border: 'none',
                   color: '#fff',
@@ -212,10 +213,10 @@ export const SurebetCard: React.FC<SurebetCardProps> = ({ opportunity }) => {
                   <td style={{ padding: '0.45rem 0.5rem', fontFamily: 'var(--font-mono)', color: 'var(--accent-primary)', fontWeight: 600 }}>{outcome.odd.toFixed(2)}</td>
                   <td style={{ padding: '0.45rem 0.5rem', color: 'var(--text-muted)' }}>{outcome.stakePercentage.toFixed(1)}%</td>
                   <td style={{ padding: '0.45rem 0.5rem', fontWeight: 700, color: 'var(--text-primary)', fontFamily: 'var(--font-mono)' }}>
-                    ${outcome.calculatedStake.toFixed(2)}
+                    {formatCOP(outcome.calculatedStake)}
                   </td>
                   <td style={{ padding: '0.45rem 0.5rem', textAlign: 'right', fontWeight: 600, color: '#34d399', fontFamily: 'var(--font-mono)' }}>
-                    ${outcome.calculatedPayout.toFixed(2)}
+                    {formatCOP(outcome.calculatedPayout)}
                   </td>
                 </tr>
               ))}
@@ -244,14 +245,14 @@ export const SurebetCard: React.FC<SurebetCardProps> = ({ opportunity }) => {
             <div>
               <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)' }}>Retorno Mínimo: </span>
               <span style={{ fontSize: '0.85rem', fontWeight: 700, fontFamily: 'var(--font-mono)', color: 'var(--text-primary)' }}>
-                ${minPayout.toFixed(2)}
+                {formatCOP(minPayout)}
               </span>
             </div>
 
             <div style={{ background: 'rgba(52, 211, 153, 0.1)', border: '1px solid rgba(52, 211, 153, 0.2)', padding: '0.2rem 0.6rem', borderRadius: 'var(--radius-sm)' }}>
               <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginRight: '0.3rem' }}>Ganancia Neta:</span>
               <span style={{ fontSize: '0.9rem', fontWeight: 800, fontFamily: 'var(--font-mono)', color: '#34d399' }}>
-                +${netProfit.toFixed(2)} (+{opportunity.profitMarginPercentage.toFixed(2)}%)
+                +{formatCOP(netProfit)} (+{opportunity.profitMarginPercentage.toFixed(2)}%)
               </span>
             </div>
           </div>
