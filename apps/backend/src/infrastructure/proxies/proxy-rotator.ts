@@ -469,7 +469,12 @@ export class ProxyRotator {
 
       // Proveedor: Webshare.io
       if (provider === 'webshare') {
-        const response = await fetch(listUrl || 'https://proxy.webshare.io/api/v2/proxy/list/?mode=direct&page=1&page_size=25', {
+        // Only use listUrl if it's actually a Webshare API endpoint, not a CSV of proxy IPs
+        const isWebshareApiUrl = listUrl && (listUrl.includes('webshare.io/api') || listUrl.startsWith('https://proxy.webshare'));
+        const webshareEndpoint = isWebshareApiUrl
+          ? listUrl
+          : 'https://proxy.webshare.io/api/v2/proxy/list/?mode=direct&page=1&page_size=25';
+        const response = await fetch(webshareEndpoint, {
           headers: { Authorization: `Token ${apiKey}` },
         });
         if (!response.ok) throw new Error(`Webshare HTTP ${response.status}`);

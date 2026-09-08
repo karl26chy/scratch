@@ -2,10 +2,23 @@ import { createServer } from './presentation/server.js';
 import { env } from './infrastructure/config/environment.js';
 import { BrowserPool } from './infrastructure/browser/browser-pool.js';
 import { registerAllAdapters } from './infrastructure/network/adapters/index.js';
+import { ProxyRotator } from './infrastructure/proxies/proxy-rotator.js';
 
 registerAllAdapters();
 
 const app = createServer();
+
+// Auto-reload proxies from Webshare API on startup (async, non-blocking)
+if (env.proxy.enabled && env.proxy.apiKey) {
+  ProxyRotator.getInstance().reloadFromRemote()
+    .then(() => {
+      const count = ProxyRotator.getInstance().getProxyCount();
+      console.log(`🌐 [ProxyRotator] Pool remoto cargado desde Webshare: ${count} proxies activos`);
+    })
+    .catch((err) => {
+      console.warn(`⚠️ [ProxyRotator] No se pudo recargar desde Webshare (usando lista estática del .env): ${err?.message}`);
+    });
+}
 
 const server = app.listen(env.port, () => {
   console.log(`=======================================================`);

@@ -11,6 +11,7 @@ import { SiteAdapterRegistry } from '../infrastructure/network/adapter-registry.
 import type { SiteOddsAdapter } from '../domain/types/site-adapter.js';
 import type { BookmakerOdd } from '../domain/types/surebet.types.js';
 import { stakeKickerAdapter } from '../infrastructure/network/adapters/stake-kicker.adapter.js';
+import { betplayKambiAdapter } from '../infrastructure/network/adapters/betplay-kambi.adapter.js';
 import { OddsPersistenceService } from './odds-persistence.service.js';
 import { EvasionService } from './evasion.service.js';
 import { SingleTestService } from './single-test.service.js';
@@ -837,6 +838,43 @@ export class ScraperService {
       fingerprint = proxy?.country
         ? FingerprintGenerator.generate(stealthLevel, proxy.country)
         : FingerprintGenerator.generate(stealthLevel);
+    }
+
+    // === BETPLAY: Fetch directo a la API de Kambi (sin Playwright) ===
+    // BetPlay bloquea cualquier navegador headless con reCAPTCHA incluso usando proxy.
+    // La API de Kambi es 100% pública (CORS abierto, sin auth). Hacemos el fetch
+    // directamente desde Node, evitando Playwright por completo para este dominio.
+    try {
+      const domain = new URL(url).hostname;
+      const isBetPlay = domain.includes('betplay.com.co');
+      if (isBetPlay) {
+        console.log(`⚡ [BetPlay] Usando fetchDirect() a la API Kambi (sin Playwright)`);
+        const directOdds = await betplayKambiAdapter.fetchDirect();
+        if (directOdds.length > 0) {
+          // Persistir en motor de Surebets y en disco
+          const { SurebetCalculatorService } = await import('./surebet-calculator.service.js');
+          SurebetCalculatorService.getInstance().addScrapedOdds(directOdds);
+          OddsPersistenceService.getInstance().saveOddsForBookmaker('BetPlay', directOdds);
+          console.log(`✅ [BetPlay] fetchDirect exitoso: ${directOdds.length} odds`);
+          return {
+            success: true,
+            url,
+            matches: this.convertBookmakerOddsToMatches(directOdds),
+            totalMatches: this.convertBookmakerOddsToMatches(directOdds).length,
+            durationMs: Date.now() - startTime,
+            selectorsUsed: [],
+            proxyUsed: 'Directo (Kambi API pública)',
+            timestamp: new Date().toISOString(),
+            source: 'network' as const,
+            oddsCount: directOdds.length,
+            htmlSize: 0,
+            bookmaker: 'BetPlay',
+          };
+        }
+        console.warn('⚠️ [BetPlay] fetchDirect no obtuvo odds, intentando con Playwright...');
+      }
+    } catch (e: any) {
+      console.warn('⚠️ [BetPlay] fetchDirect falló, intentando con Playwright:', e.message);
     }
 
     // Tarea 2: Si hay adapter o es Stake, usar Network Interceptor (ignorar selectors)

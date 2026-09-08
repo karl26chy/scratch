@@ -1,5 +1,1303 @@
 [
   {
+    "timestamp": "2026-09-08T03:58:10.000Z",
+    "surebetsFoundCount": 3,
+    "highestProfitMargin": 1.92,
+    "opportunities": [
+      {
+        "id": "sb_1788839889989_as4fc",
+        "eventName": "Atlas Reserves Vs Puerto Nuevo Reserves",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 2.85,
+            "stakePercentage": 35.76,
+            "recommendedStake": 357618.24,
+            "expectedPayout": 1019211.98
+          },
+          {
+            "selection": "X",
+            "bookmaker": "Stake",
+            "odd": 3.25,
+            "stakePercentage": 31.36,
+            "recommendedStake": 313603.69,
+            "expectedPayout": 1019211.99
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Stake",
+            "odd": 3.1,
+            "stakePercentage": 32.88,
+            "recommendedStake": 328778.07,
+            "expectedPayout": 1019212.02
+          }
+        ],
+        "totalImpliedProbability": 0.9812,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.92,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1019211.98,
+        "guaranteedProfit": 19211.98,
+        "detectedAt": "2026-09-08T03:58:09.989Z"
+      },
+      {
+        "id": "sb_1788839889981_xsamt",
+        "eventName": "Fluminense Rj Vs Platense",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 1.7,
+            "stakePercentage": 59.52,
+            "recommendedStake": 595238.1,
+            "expectedPayout": 1011904.77
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 3.75,
+            "stakePercentage": 26.98,
+            "recommendedStake": 269841.27,
+            "expectedPayout": 1011904.76
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 7.5,
+            "stakePercentage": 13.49,
+            "recommendedStake": 134920.63,
+            "expectedPayout": 1011904.73
+          }
+        ],
+        "totalImpliedProbability": 0.9882,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.19,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1011904.73,
+        "guaranteedProfit": 11904.73,
+        "detectedAt": "2026-09-08T03:58:09.981Z"
+      },
+      {
+        "id": "sb_1788839889989_46nhg",
+        "eventName": "Central Ballester Reserves Vs General Lamadrid Reserves",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 2.25,
+            "stakePercentage": 44.95,
+            "recommendedStake": 449529.83,
+            "expectedPayout": 1011442.12
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 3.7,
+            "stakePercentage": 27.34,
+            "recommendedStake": 273362.74,
+            "expectedPayout": 1011442.14
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 3.65,
+            "stakePercentage": 27.71,
+            "recommendedStake": 277107.43,
+            "expectedPayout": 1011442.12
+          }
+        ],
+        "totalImpliedProbability": 0.9887,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.14,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1011442.12,
+        "guaranteedProfit": 11442.12,
+        "detectedAt": "2026-09-08T03:58:09.989Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-08T03:58:09.863Z",
+    "surebetsFoundCount": 3,
+    "highestProfitMargin": 1.92,
+    "opportunities": [
+      {
+        "id": "sb_1788839889840_ox356",
+        "eventName": "Atlas Reserves Vs Puerto Nuevo Reserves",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 2.85,
+            "stakePercentage": 35.76,
+            "recommendedStake": 357618.24,
+            "expectedPayout": 1019211.98
+          },
+          {
+            "selection": "X",
+            "bookmaker": "Stake",
+            "odd": 3.25,
+            "stakePercentage": 31.36,
+            "recommendedStake": 313603.69,
+            "expectedPayout": 1019211.99
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Stake",
+            "odd": 3.1,
+            "stakePercentage": 32.88,
+            "recommendedStake": 328778.07,
+            "expectedPayout": 1019212.02
+          }
+        ],
+        "totalImpliedProbability": 0.9812,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.92,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1019211.98,
+        "guaranteedProfit": 19211.98,
+        "detectedAt": "2026-09-08T03:58:09.840Z"
+      },
+      {
+        "id": "sb_1788839889826_2ynsj",
+        "eventName": "Fluminense Rj Vs Platense",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 1.7,
+            "stakePercentage": 59.52,
+            "recommendedStake": 595238.1,
+            "expectedPayout": 1011904.77
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 3.75,
+            "stakePercentage": 26.98,
+            "recommendedStake": 269841.27,
+            "expectedPayout": 1011904.76
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 7.5,
+            "stakePercentage": 13.49,
+            "recommendedStake": 134920.63,
+            "expectedPayout": 1011904.73
+          }
+        ],
+        "totalImpliedProbability": 0.9882,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.19,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1011904.73,
+        "guaranteedProfit": 11904.73,
+        "detectedAt": "2026-09-08T03:58:09.827Z"
+      },
+      {
+        "id": "sb_1788839889840_xuj7g",
+        "eventName": "Central Ballester Reserves Vs General Lamadrid Reserves",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 2.25,
+            "stakePercentage": 44.95,
+            "recommendedStake": 449529.83,
+            "expectedPayout": 1011442.12
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 3.7,
+            "stakePercentage": 27.34,
+            "recommendedStake": 273362.74,
+            "expectedPayout": 1011442.14
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 3.65,
+            "stakePercentage": 27.71,
+            "recommendedStake": 277107.43,
+            "expectedPayout": 1011442.12
+          }
+        ],
+        "totalImpliedProbability": 0.9887,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.14,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1011442.12,
+        "guaranteedProfit": 11442.12,
+        "detectedAt": "2026-09-08T03:58:09.840Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-08T03:55:04.641Z",
+    "surebetsFoundCount": 3,
+    "highestProfitMargin": 2.42,
+    "opportunities": [
+      {
+        "id": "sb_1788839704615_0tfn5",
+        "eventName": "Fluminense Rj Vs Platense",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 1.7,
+            "stakePercentage": 60.25,
+            "recommendedStake": 602457.39,
+            "expectedPayout": 1024177.56
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 3.8,
+            "stakePercentage": 26.95,
+            "recommendedStake": 269520.41,
+            "expectedPayout": 1024177.56
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 8,
+            "stakePercentage": 12.8,
+            "recommendedStake": 128022.2,
+            "expectedPayout": 1024177.6
+          }
+        ],
+        "totalImpliedProbability": 0.9764,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.42,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1024177.56,
+        "guaranteedProfit": 24177.56,
+        "detectedAt": "2026-09-08T03:55:04.615Z"
+      },
+      {
+        "id": "sb_1788839704621_ro6vy",
+        "eventName": "Atlas Reserves Vs Puerto Nuevo Reserves",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 2.85,
+            "stakePercentage": 35.76,
+            "recommendedStake": 357618.24,
+            "expectedPayout": 1019211.98
+          },
+          {
+            "selection": "X",
+            "bookmaker": "Stake",
+            "odd": 3.25,
+            "stakePercentage": 31.36,
+            "recommendedStake": 313603.69,
+            "expectedPayout": 1019211.99
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Stake",
+            "odd": 3.1,
+            "stakePercentage": 32.88,
+            "recommendedStake": 328778.07,
+            "expectedPayout": 1019212.02
+          }
+        ],
+        "totalImpliedProbability": 0.9812,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.92,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1019211.98,
+        "guaranteedProfit": 19211.98,
+        "detectedAt": "2026-09-08T03:55:04.621Z"
+      },
+      {
+        "id": "sb_1788839704621_vtcm9",
+        "eventName": "Central Ballester Reserves Vs General Lamadrid Reserves",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 2.25,
+            "stakePercentage": 44.95,
+            "recommendedStake": 449529.83,
+            "expectedPayout": 1011442.12
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 3.7,
+            "stakePercentage": 27.34,
+            "recommendedStake": 273362.74,
+            "expectedPayout": 1011442.14
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 3.65,
+            "stakePercentage": 27.71,
+            "recommendedStake": 277107.43,
+            "expectedPayout": 1011442.12
+          }
+        ],
+        "totalImpliedProbability": 0.9887,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.14,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1011442.12,
+        "guaranteedProfit": 11442.12,
+        "detectedAt": "2026-09-08T03:55:04.621Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-08T03:55:04.497Z",
+    "surebetsFoundCount": 3,
+    "highestProfitMargin": 2.42,
+    "opportunities": [
+      {
+        "id": "sb_1788839704458_0d2m8",
+        "eventName": "Fluminense Rj Vs Platense",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 1.7,
+            "stakePercentage": 60.25,
+            "recommendedStake": 602457.39,
+            "expectedPayout": 1024177.56
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 3.8,
+            "stakePercentage": 26.95,
+            "recommendedStake": 269520.41,
+            "expectedPayout": 1024177.56
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 8,
+            "stakePercentage": 12.8,
+            "recommendedStake": 128022.2,
+            "expectedPayout": 1024177.6
+          }
+        ],
+        "totalImpliedProbability": 0.9764,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.42,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1024177.56,
+        "guaranteedProfit": 24177.56,
+        "detectedAt": "2026-09-08T03:55:04.458Z"
+      },
+      {
+        "id": "sb_1788839704487_xwvw2",
+        "eventName": "Atlas Reserves Vs Puerto Nuevo Reserves",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 2.85,
+            "stakePercentage": 35.76,
+            "recommendedStake": 357618.24,
+            "expectedPayout": 1019211.98
+          },
+          {
+            "selection": "X",
+            "bookmaker": "Stake",
+            "odd": 3.25,
+            "stakePercentage": 31.36,
+            "recommendedStake": 313603.69,
+            "expectedPayout": 1019211.99
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Stake",
+            "odd": 3.1,
+            "stakePercentage": 32.88,
+            "recommendedStake": 328778.07,
+            "expectedPayout": 1019212.02
+          }
+        ],
+        "totalImpliedProbability": 0.9812,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.92,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1019211.98,
+        "guaranteedProfit": 19211.98,
+        "detectedAt": "2026-09-08T03:55:04.487Z"
+      },
+      {
+        "id": "sb_1788839704487_tjiig",
+        "eventName": "Central Ballester Reserves Vs General Lamadrid Reserves",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 2.25,
+            "stakePercentage": 44.95,
+            "recommendedStake": 449529.83,
+            "expectedPayout": 1011442.12
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 3.7,
+            "stakePercentage": 27.34,
+            "recommendedStake": 273362.74,
+            "expectedPayout": 1011442.14
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 3.65,
+            "stakePercentage": 27.71,
+            "recommendedStake": 277107.43,
+            "expectedPayout": 1011442.12
+          }
+        ],
+        "totalImpliedProbability": 0.9887,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.14,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1011442.12,
+        "guaranteedProfit": 11442.12,
+        "detectedAt": "2026-09-08T03:55:04.487Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-08T03:52:39.577Z",
+    "surebetsFoundCount": 0,
+    "highestProfitMargin": 0,
+    "opportunities": []
+  },
+  {
+    "timestamp": "2026-09-08T02:25:03.518Z",
+    "surebetsFoundCount": 1,
+    "highestProfitMargin": 1.14,
+    "opportunities": [
+      {
+        "id": "sb_1788834303509_34608",
+        "eventName": "Central Ballester Reserves Vs General Lamadrid Reserves",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 2.25,
+            "stakePercentage": 44.95,
+            "recommendedStake": 449529.83,
+            "expectedPayout": 1011442.12
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 3.7,
+            "stakePercentage": 27.34,
+            "recommendedStake": 273362.74,
+            "expectedPayout": 1011442.14
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 3.65,
+            "stakePercentage": 27.71,
+            "recommendedStake": 277107.43,
+            "expectedPayout": 1011442.12
+          }
+        ],
+        "totalImpliedProbability": 0.9887,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.14,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1011442.12,
+        "guaranteedProfit": 11442.12,
+        "detectedAt": "2026-09-08T02:25:03.509Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-08T02:25:03.381Z",
+    "surebetsFoundCount": 1,
+    "highestProfitMargin": 1.14,
+    "opportunities": [
+      {
+        "id": "sb_1788834303358_famyp",
+        "eventName": "Central Ballester Reserves Vs General Lamadrid Reserves",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 2.25,
+            "stakePercentage": 44.95,
+            "recommendedStake": 449529.83,
+            "expectedPayout": 1011442.12
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 3.7,
+            "stakePercentage": 27.34,
+            "recommendedStake": 273362.74,
+            "expectedPayout": 1011442.14
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 3.65,
+            "stakePercentage": 27.71,
+            "recommendedStake": 277107.43,
+            "expectedPayout": 1011442.12
+          }
+        ],
+        "totalImpliedProbability": 0.9887,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.14,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1011442.12,
+        "guaranteedProfit": 11442.12,
+        "detectedAt": "2026-09-08T02:25:03.358Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-08T02:20:39.957Z",
+    "surebetsFoundCount": 2,
+    "highestProfitMargin": 34.47,
+    "opportunities": [
+      {
+        "id": "sb_1788834039941_6xpai",
+        "eventName": "Umecit Vs Ca Independiente De La Chorrera",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 9.25,
+            "stakePercentage": 14.54,
+            "recommendedStake": 145.37,
+            "expectedPayout": 1344.67
+          },
+          {
+            "selection": "X",
+            "bookmaker": "Wplay",
+            "odd": 3.25,
+            "stakePercentage": 41.37,
+            "recommendedStake": 413.75,
+            "expectedPayout": 1344.69
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 3.05,
+            "stakePercentage": 44.09,
+            "recommendedStake": 440.88,
+            "expectedPayout": 1344.68
+          }
+        ],
+        "totalImpliedProbability": 0.7437,
+        "isSurebet": true,
+        "profitMarginPercentage": 34.47,
+        "totalInvestment": 1000,
+        "guaranteedPayout": 1344.67,
+        "guaranteedProfit": 344.67,
+        "detectedAt": "2026-09-08T02:20:39.941Z"
+      },
+      {
+        "id": "sb_1788834039949_m99z0",
+        "eventName": "Central Ballester Reserves Vs General Lamadrid Reserves",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 2.25,
+            "stakePercentage": 44.95,
+            "recommendedStake": 449.53,
+            "expectedPayout": 1011.44
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 3.7,
+            "stakePercentage": 27.34,
+            "recommendedStake": 273.36,
+            "expectedPayout": 1011.43
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 3.65,
+            "stakePercentage": 27.71,
+            "recommendedStake": 277.11,
+            "expectedPayout": 1011.45
+          }
+        ],
+        "totalImpliedProbability": 0.9887,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.14,
+        "totalInvestment": 1000,
+        "guaranteedPayout": 1011.43,
+        "guaranteedProfit": 11.43,
+        "detectedAt": "2026-09-08T02:20:39.949Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-08T02:20:34.232Z",
+    "surebetsFoundCount": 2,
+    "highestProfitMargin": 34.47,
+    "opportunities": [
+      {
+        "id": "sb_1788834034212_3uimh",
+        "eventName": "Umecit Vs Ca Independiente De La Chorrera",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 9.25,
+            "stakePercentage": 14.54,
+            "recommendedStake": 145371.22,
+            "expectedPayout": 1344683.79
+          },
+          {
+            "selection": "X",
+            "bookmaker": "Wplay",
+            "odd": 3.25,
+            "stakePercentage": 41.37,
+            "recommendedStake": 413748.85,
+            "expectedPayout": 1344683.76
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 3.05,
+            "stakePercentage": 44.09,
+            "recommendedStake": 440879.93,
+            "expectedPayout": 1344683.79
+          }
+        ],
+        "totalImpliedProbability": 0.7437,
+        "isSurebet": true,
+        "profitMarginPercentage": 34.47,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1344683.76,
+        "guaranteedProfit": 344683.76,
+        "detectedAt": "2026-09-08T02:20:34.212Z"
+      },
+      {
+        "id": "sb_1788834034221_ocpwn",
+        "eventName": "Central Ballester Reserves Vs General Lamadrid Reserves",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 2.25,
+            "stakePercentage": 44.95,
+            "recommendedStake": 449529.83,
+            "expectedPayout": 1011442.12
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 3.7,
+            "stakePercentage": 27.34,
+            "recommendedStake": 273362.74,
+            "expectedPayout": 1011442.14
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 3.65,
+            "stakePercentage": 27.71,
+            "recommendedStake": 277107.43,
+            "expectedPayout": 1011442.12
+          }
+        ],
+        "totalImpliedProbability": 0.9887,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.14,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1011442.12,
+        "guaranteedProfit": 11442.12,
+        "detectedAt": "2026-09-08T02:20:34.221Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-08T02:15:37.999Z",
+    "surebetsFoundCount": 2,
+    "highestProfitMargin": 34.47,
+    "opportunities": [
+      {
+        "id": "sb_1788833737971_paxek",
+        "eventName": "Umecit Vs Ca Independiente De La Chorrera",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 9.25,
+            "stakePercentage": 14.54,
+            "recommendedStake": 145371.22,
+            "expectedPayout": 1344683.79
+          },
+          {
+            "selection": "X",
+            "bookmaker": "Wplay",
+            "odd": 3.25,
+            "stakePercentage": 41.37,
+            "recommendedStake": 413748.85,
+            "expectedPayout": 1344683.76
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 3.05,
+            "stakePercentage": 44.09,
+            "recommendedStake": 440879.93,
+            "expectedPayout": 1344683.79
+          }
+        ],
+        "totalImpliedProbability": 0.7437,
+        "isSurebet": true,
+        "profitMarginPercentage": 34.47,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1344683.76,
+        "guaranteedProfit": 344683.76,
+        "detectedAt": "2026-09-08T02:15:37.971Z"
+      },
+      {
+        "id": "sb_1788833737983_rpobm",
+        "eventName": "Central Ballester Reserves Vs General Lamadrid Reserves",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 2.25,
+            "stakePercentage": 44.95,
+            "recommendedStake": 449529.83,
+            "expectedPayout": 1011442.12
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 3.7,
+            "stakePercentage": 27.34,
+            "recommendedStake": 273362.74,
+            "expectedPayout": 1011442.14
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 3.65,
+            "stakePercentage": 27.71,
+            "recommendedStake": 277107.43,
+            "expectedPayout": 1011442.12
+          }
+        ],
+        "totalImpliedProbability": 0.9887,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.14,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1011442.12,
+        "guaranteedProfit": 11442.12,
+        "detectedAt": "2026-09-08T02:15:37.983Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-08T02:15:37.860Z",
+    "surebetsFoundCount": 2,
+    "highestProfitMargin": 34.47,
+    "opportunities": [
+      {
+        "id": "sb_1788833737844_etdjb",
+        "eventName": "Umecit Vs Ca Independiente De La Chorrera",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 9.25,
+            "stakePercentage": 14.54,
+            "recommendedStake": 145371.22,
+            "expectedPayout": 1344683.79
+          },
+          {
+            "selection": "X",
+            "bookmaker": "Wplay",
+            "odd": 3.25,
+            "stakePercentage": 41.37,
+            "recommendedStake": 413748.85,
+            "expectedPayout": 1344683.76
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 3.05,
+            "stakePercentage": 44.09,
+            "recommendedStake": 440879.93,
+            "expectedPayout": 1344683.79
+          }
+        ],
+        "totalImpliedProbability": 0.7437,
+        "isSurebet": true,
+        "profitMarginPercentage": 34.47,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1344683.76,
+        "guaranteedProfit": 344683.76,
+        "detectedAt": "2026-09-08T02:15:37.844Z"
+      },
+      {
+        "id": "sb_1788833737851_l2sf4",
+        "eventName": "Central Ballester Reserves Vs General Lamadrid Reserves",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 2.25,
+            "stakePercentage": 44.95,
+            "recommendedStake": 449529.83,
+            "expectedPayout": 1011442.12
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 3.7,
+            "stakePercentage": 27.34,
+            "recommendedStake": 273362.74,
+            "expectedPayout": 1011442.14
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 3.65,
+            "stakePercentage": 27.71,
+            "recommendedStake": 277107.43,
+            "expectedPayout": 1011442.12
+          }
+        ],
+        "totalImpliedProbability": 0.9887,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.14,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1011442.12,
+        "guaranteedProfit": 11442.12,
+        "detectedAt": "2026-09-08T02:15:37.851Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-08T02:04:57.169Z",
+    "surebetsFoundCount": 2,
+    "highestProfitMargin": 26.86,
+    "opportunities": [
+      {
+        "id": "sb_1788833097147_6181x",
+        "eventName": "Umecit Vs Ca Independiente De La Chorrera",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 7.2,
+            "stakePercentage": 17.62,
+            "recommendedStake": 176.19,
+            "expectedPayout": 1268.57
+          },
+          {
+            "selection": "X",
+            "bookmaker": "Wplay",
+            "odd": 3.35,
+            "stakePercentage": 37.87,
+            "recommendedStake": 378.69,
+            "expectedPayout": 1268.61
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 2.85,
+            "stakePercentage": 44.51,
+            "recommendedStake": 445.12,
+            "expectedPayout": 1268.59
+          }
+        ],
+        "totalImpliedProbability": 0.7883,
+        "isSurebet": true,
+        "profitMarginPercentage": 26.86,
+        "totalInvestment": 1000,
+        "guaranteedPayout": 1268.57,
+        "guaranteedProfit": 268.57,
+        "detectedAt": "2026-09-08T02:04:57.147Z"
+      },
+      {
+        "id": "sb_1788833097157_x32j5",
+        "eventName": "Central Ballester Reserves Vs General Lamadrid Reserves",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 2.25,
+            "stakePercentage": 44.95,
+            "recommendedStake": 449.53,
+            "expectedPayout": 1011.44
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 3.7,
+            "stakePercentage": 27.34,
+            "recommendedStake": 273.36,
+            "expectedPayout": 1011.43
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 3.65,
+            "stakePercentage": 27.71,
+            "recommendedStake": 277.11,
+            "expectedPayout": 1011.45
+          }
+        ],
+        "totalImpliedProbability": 0.9887,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.14,
+        "totalInvestment": 1000,
+        "guaranteedPayout": 1011.43,
+        "guaranteedProfit": 11.43,
+        "detectedAt": "2026-09-08T02:04:57.157Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-08T02:04:55.493Z",
+    "surebetsFoundCount": 2,
+    "highestProfitMargin": 26.86,
+    "opportunities": [
+      {
+        "id": "sb_1788833095478_sojet",
+        "eventName": "Umecit Vs Ca Independiente De La Chorrera",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 7.2,
+            "stakePercentage": 17.62,
+            "recommendedStake": 176.19,
+            "expectedPayout": 1268.57
+          },
+          {
+            "selection": "X",
+            "bookmaker": "Wplay",
+            "odd": 3.35,
+            "stakePercentage": 37.87,
+            "recommendedStake": 378.69,
+            "expectedPayout": 1268.61
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 2.85,
+            "stakePercentage": 44.51,
+            "recommendedStake": 445.12,
+            "expectedPayout": 1268.59
+          }
+        ],
+        "totalImpliedProbability": 0.7883,
+        "isSurebet": true,
+        "profitMarginPercentage": 26.86,
+        "totalInvestment": 1000,
+        "guaranteedPayout": 1268.57,
+        "guaranteedProfit": 268.57,
+        "detectedAt": "2026-09-08T02:04:55.478Z"
+      },
+      {
+        "id": "sb_1788833095484_ombbh",
+        "eventName": "Central Ballester Reserves Vs General Lamadrid Reserves",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 2.25,
+            "stakePercentage": 44.95,
+            "recommendedStake": 449.53,
+            "expectedPayout": 1011.44
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 3.7,
+            "stakePercentage": 27.34,
+            "recommendedStake": 273.36,
+            "expectedPayout": 1011.43
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 3.65,
+            "stakePercentage": 27.71,
+            "recommendedStake": 277.11,
+            "expectedPayout": 1011.45
+          }
+        ],
+        "totalImpliedProbability": 0.9887,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.14,
+        "totalInvestment": 1000,
+        "guaranteedPayout": 1011.43,
+        "guaranteedProfit": 11.43,
+        "detectedAt": "2026-09-08T02:04:55.484Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-08T02:04:15.907Z",
+    "surebetsFoundCount": 2,
+    "highestProfitMargin": 26.86,
+    "opportunities": [
+      {
+        "id": "sb_1788833055878_bdy8k",
+        "eventName": "Umecit Vs Ca Independiente De La Chorrera",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 7.2,
+            "stakePercentage": 17.62,
+            "recommendedStake": 176193.77,
+            "expectedPayout": 1268595.14
+          },
+          {
+            "selection": "X",
+            "bookmaker": "Wplay",
+            "odd": 3.35,
+            "stakePercentage": 37.87,
+            "recommendedStake": 378685.12,
+            "expectedPayout": 1268595.15
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 2.85,
+            "stakePercentage": 44.51,
+            "recommendedStake": 445121.11,
+            "expectedPayout": 1268595.16
+          }
+        ],
+        "totalImpliedProbability": 0.7883,
+        "isSurebet": true,
+        "profitMarginPercentage": 26.86,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1268595.14,
+        "guaranteedProfit": 268595.14,
+        "detectedAt": "2026-09-08T02:04:15.878Z"
+      },
+      {
+        "id": "sb_1788833055896_9tzwm",
+        "eventName": "Central Ballester Reserves Vs General Lamadrid Reserves",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 2.25,
+            "stakePercentage": 44.95,
+            "recommendedStake": 449529.83,
+            "expectedPayout": 1011442.12
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 3.7,
+            "stakePercentage": 27.34,
+            "recommendedStake": 273362.74,
+            "expectedPayout": 1011442.14
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 3.65,
+            "stakePercentage": 27.71,
+            "recommendedStake": 277107.43,
+            "expectedPayout": 1011442.12
+          }
+        ],
+        "totalImpliedProbability": 0.9887,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.14,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1011442.12,
+        "guaranteedProfit": 11442.12,
+        "detectedAt": "2026-09-08T02:04:15.896Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-08T02:04:15.758Z",
+    "surebetsFoundCount": 2,
+    "highestProfitMargin": 26.86,
+    "opportunities": [
+      {
+        "id": "sb_1788833055737_l536y",
+        "eventName": "Umecit Vs Ca Independiente De La Chorrera",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 7.2,
+            "stakePercentage": 17.62,
+            "recommendedStake": 176193.77,
+            "expectedPayout": 1268595.14
+          },
+          {
+            "selection": "X",
+            "bookmaker": "Wplay",
+            "odd": 3.35,
+            "stakePercentage": 37.87,
+            "recommendedStake": 378685.12,
+            "expectedPayout": 1268595.15
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 2.85,
+            "stakePercentage": 44.51,
+            "recommendedStake": 445121.11,
+            "expectedPayout": 1268595.16
+          }
+        ],
+        "totalImpliedProbability": 0.7883,
+        "isSurebet": true,
+        "profitMarginPercentage": 26.86,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1268595.14,
+        "guaranteedProfit": 268595.14,
+        "detectedAt": "2026-09-08T02:04:15.737Z"
+      },
+      {
+        "id": "sb_1788833055747_5vzhd",
+        "eventName": "Central Ballester Reserves Vs General Lamadrid Reserves",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 2.25,
+            "stakePercentage": 44.95,
+            "recommendedStake": 449529.83,
+            "expectedPayout": 1011442.12
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 3.7,
+            "stakePercentage": 27.34,
+            "recommendedStake": 273362.74,
+            "expectedPayout": 1011442.14
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 3.65,
+            "stakePercentage": 27.71,
+            "recommendedStake": 277107.43,
+            "expectedPayout": 1011442.12
+          }
+        ],
+        "totalImpliedProbability": 0.9887,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.14,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1011442.12,
+        "guaranteedProfit": 11442.12,
+        "detectedAt": "2026-09-08T02:04:15.747Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-08T01:39:36.422Z",
+    "surebetsFoundCount": 0,
+    "highestProfitMargin": 0,
+    "opportunities": []
+  },
+  {
+    "timestamp": "2026-09-08T01:39:36.378Z",
+    "surebetsFoundCount": 0,
+    "highestProfitMargin": 0,
+    "opportunities": []
+  },
+  {
+    "timestamp": "2026-09-08T01:39:36.273Z",
+    "surebetsFoundCount": 0,
+    "highestProfitMargin": 0,
+    "opportunities": []
+  },
+  {
+    "timestamp": "2026-09-08T01:39:36.172Z",
+    "surebetsFoundCount": 0,
+    "highestProfitMargin": 0,
+    "opportunities": []
+  },
+  {
     "timestamp": "2026-09-03T06:47:10.935Z",
     "surebetsFoundCount": 0,
     "highestProfitMargin": 0,
