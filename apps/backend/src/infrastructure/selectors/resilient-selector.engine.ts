@@ -35,6 +35,8 @@ export class ResilientSelectorEngine {
       combined.includes('table-tennis') ||
       combined.includes('table tennis') ||
       combined.includes('tenis de mesa') ||
+      combined.includes('tenis-de-mesa') ||
+      combined.includes('/tabl/') ||
       combined.includes('ping pong') ||
       combined.includes('ping-pong') ||
       combined.includes('tt-cup') ||
@@ -190,83 +192,90 @@ export class ResilientSelectorEngine {
             const oddValue = parseFloat(oddRaw.replace(',', '.'));
             if (isNaN(oddValue) || oddValue <= 1.0) continue;
 
-            // Selección: primer <span> del botón sin clase "price" que NO contenga
-            // a su vez spans de precio (evita capturar el wrapper que envuelve las cuotas)
-            const allLabelSpans = el.querySelectorAll('span:not([class*="price"])');
-            let labelEl = null;
-            for (let k = 0; k < allLabelSpans.length; k++) {
-              const s = allLabelSpans[k];
-              const hasPriceDescendant = s.querySelector('[class*="price"]');
-              const t = s.textContent ? s.textContent.trim() : '';
-              if (!hasPriceDescendant && t.length > 0 && /[a-zA-ZÀ-ÿ]/.test(t)) {
-                labelEl = s;
-                break;
+            // Detección estructural de empate en Wplay:
+            const isDrawBtn =
+              !!el.querySelector('.seln-draw-label') ||
+              el.classList.contains('seln-draw') ||
+              /^(empate|draw|x)$/i.test((el.getAttribute('title') || '').trim());
+            let selection = isDrawBtn ? 'Empate' : '';
+
+            if (!selection) {
+              // Selección: primer <span> del botón sin clase "price" que NO contenga spans de precio
+              const allLabelSpans = el.querySelectorAll('span:not([class*="price"])');
+              let labelEl = null;
+              for (let k = 0; k < allLabelSpans.length; k++) {
+                const s = allLabelSpans[k];
+                const hasPriceDescendant = s.querySelector('[class*="price"]');
+                const t = s.textContent ? s.textContent.trim() : '';
+                if (!hasPriceDescendant && t.length > 0 && /[a-zA-ZÀ-ÿ]/.test(t)) {
+                  labelEl = s;
+                  break;
+                }
               }
+              selection = labelEl && labelEl.textContent ? labelEl.textContent.trim() : '';
+              if (!selection) selection = el.getAttribute('title') ? (el.getAttribute('title') || '').trim() : `Option-${matches.length + 1}`;
             }
-            let selection = labelEl && labelEl.textContent ? labelEl.textContent.trim() : '';
-            if (!selection) selection = el.getAttribute('title') ? (el.getAttribute('title') || '').trim() : `Option-${matches.length + 1}`;
 
             // marketName: intentar inferir de data-market-name en el DOM; si no, genérico
             const closestMarket = el.closest('[data-market-name]');
             const marketName = closestMarket ? (closestMarket.getAttribute('data-market-name') || 'Match Winner') : 'Match Winner';
 
-            // eventName: subir por ancestros hasta encontrar el nombre del partido
+            // eventName: resolución robusta y local para evitar capturar partidos de cabecera
             let rawEventName = '';
-            // 1) Live/inplay: h6 dentro de .expander
-            const expander = el.closest('.expander');
-            if (expander) {
-              const h6 = expander.querySelector('h6');
-              if (h6) rawEventName = (h6.getAttribute('title') || h6.textContent || '').trim();
-            }
-            // 2) Pre-match listado: buscar span.ev-name subiendo por ancestros
-            if (!rawEventName) {
-              let cur = el.parentElement;
-              for (let d = 0; cur && d < 10; d++) {
-                const evEl = cur.querySelector('span.ev-name');
-                if (evEl && evEl.textContent) {
-                  const t = evEl.textContent.trim();
-                  if (t.length > 3) { rawEventName = t; break; }
-                }
-                const h6b = cur.querySelector('h6');
-                if (h6b) {
-                  const t2 = (h6b.getAttribute('title') || h6b.textContent || '').trim();
-                  if (t2) { rawEventName = t2; break; }
-                }
-                cur = cur.parentElement;
+
+            // 1) Si el botón tiene clase ev-(\d+), buscar el link correspondiente a ese ID específico
+            const evClassMatch = el.className ? el.className.match(/\bev-(\d+)\b/) : null;
+            const specificEvId = evClassMatch ? evClassMatch[1] : null;
+            if (specificEvId) {
+              const specificLink = document.querySelector(`a[href*="/es/e/${specificEvId}/"]`);
+              if (specificLink) {
+                const href = specificLink.getAttribute('href') || '';
+                const parts = href.split('/').filter(Boolean);
+                let slug = parts[parts.length - 1] || '';
+                try { slug = decodeURIComponent(slug); } catch {}
+                let name = slug.replace(/-v-/g, ' vs ').replace(/-/g, ' ');
+                name = name.replace(/\s+/g, ' ').trim();
+                name = name.replace(/\s+v\s+/g, ' vs ');
+                if (name.length > 3 && /[a-zA-Z]/.test(name)) rawEventName = name;
               }
             }
-            // 3) Fallback team-score: buscar en ancestros el par de div.team-score
+
+            // 2) Live/inplay: h6 dentro de .expander
             if (!rawEventName) {
-              let cur3 = el.parentElement;
-              for (let d = 0; cur3 && d < 10; d++) {
-                const teamScores = cur3.querySelectorAll('div.team-score');
-                if (teamScores.length >= 2) {
-                  const home = teamScores[0].textContent ? teamScores[0].textContent.replace(/\d+/g, '').trim() : '';
-                  const away = teamScores[1].textContent ? teamScores[1].textContent.replace(/\d+/g, '').trim() : '';
-                  if (home && away) { rawEventName = `${home} v ${away}`; break; }
-                }
-                cur3 = cur3.parentElement;
+              const expander = el.closest('.expander');
+              if (expander) {
+                const h6 = expander.querySelector('h6');
+                if (h6) rawEventName = (h6.getAttribute('title') || h6.textContent || '').trim();
               }
             }
-            // 4) Fallback href slug (/es/e/<id>/<slug>) — pre-match FOOT list usa el slug del link
-            if (!rawEventName) {
-              let cur4 = el.parentElement;
-              for (let d = 0; cur4 && d < 10; d++) {
-                const a = cur4.querySelector('a[href*="/es/e/"]');
+
+            // 3) Contenedor local del evento (máximo nivel de fila: .ev, [data-ev_id], .event-row, .mkt, tr)
+            // IMPORTANTE: acotado a este contenedor local para no subir al header global de la página
+            const eventContainer = el.closest('.ev, [data-ev_id], .event-row, .mkt, tr');
+            if (!rawEventName && eventContainer) {
+              const evEl = eventContainer.querySelector('span.ev-name');
+              if (evEl && evEl.textContent && evEl.textContent.trim().length > 3) {
+                rawEventName = evEl.textContent.trim();
+              }
+              if (!rawEventName) {
+                const h6b = eventContainer.querySelector('h6');
+                if (h6b) rawEventName = (h6b.getAttribute('title') || h6b.textContent || '').trim();
+              }
+              if (!rawEventName) {
+                const a = eventContainer.querySelector('a[href*="/es/e/"]');
                 if (a) {
                   const href = a.getAttribute('href') || '';
                   const parts = href.split('/').filter(Boolean);
                   let slug = parts[parts.length - 1] || '';
                   try { slug = decodeURIComponent(slug); } catch {}
-                  // slug es "CD-Junior-v-Independiente-Santa-Fe" -> "CD Junior vs Independiente Santa Fe"
                   let name = slug.replace(/-v-/g, ' vs ').replace(/-/g, ' ');
                   name = name.replace(/\s+/g, ' ').trim();
                   name = name.replace(/\s+v\s+/g, ' vs ');
-                  if (name.length > 3 && /[a-zA-Z]/.test(name)) { rawEventName = name; break; }
+                  if (name.length > 3 && /[a-zA-Z]/.test(name)) rawEventName = name;
                 }
-                cur4 = cur4.parentElement;
               }
             }
+
             if (!rawEventName) {
               const fb = el.closest('[data-ev_id], .ev');
               if (fb) rawEventName = (fb.getAttribute('title') || '').trim();
@@ -376,21 +385,32 @@ export class ResilientSelectorEngine {
     const fallbackEventName = title.replace(/[-|].*$/, '').trim() || 'Evento Deportivo';
     const sport = this.classifySport(title, pageUrl);
     const result = await this.extractSportsOdds(page, defaultBookmaker);
-
     if (!result.data || result.data.length === 0) return [];
 
+    // Identificar eventos que tienen opción de empate (inequívocamente fútbol)
+    const eventsWithDraw = new Set<string>();
+    for (const item of result.data) {
+      const sel = (item.selection || '').toLowerCase().trim();
+      if (sel.includes('empate') || sel === 'x' || sel === 'draw') {
+        if (item.eventName) eventsWithDraw.add(item.eventName);
+      }
+    }
+
     return result.data.map((item) => {
+      const isFootballByDraw = item.eventName ? eventsWithDraw.has(item.eventName) : false;
+      const effectiveSport: SportType = isFootballByDraw ? 'football' : sport;
       let marketType: MarketType = '1X2';
+
       if (item.marketName.includes('Over') || item.marketName.includes('Under')) {
         marketType = 'OVER_UNDER_2_5';
-      } else if (sport === 'tennis' || sport === 'basketball' || sport === 'table_tennis') {
+      } else if (effectiveSport === 'tennis' || effectiveSport === 'basketball' || effectiveSport === 'table_tennis') {
         marketType = 'MONEYLINE_2WAY';
       }
 
       return {
         bookmaker: item.bookmaker || defaultBookmaker,
         eventName: item.eventName || fallbackEventName,
-        sport,
+        sport: effectiveSport,
         marketType,
         selection: item.selection,
         odd: item.oddValue,

@@ -217,11 +217,25 @@ export const stakeKickerAdapter: SiteOddsAdapter & {
           const awayTeam: string = ev.teams?.away ?? ev.away?.name ?? ev.awayTeam ?? ev.participants?.[1]?.name ?? 'Away';
           const eventName = homeTeam && awayTeam ? `${homeTeam} vs ${awayTeam}` : ev.eventName ?? ev.name ?? `${homeTeam} vs ${awayTeam}`;
 
-          // Solo mapear si es football (sport_id 2 o sport_name football) — pero por ahora mapear todo como football para 1X2
-          const sport: any = ev.sport_name === 'tennis' ? 'tennis' : ev.sport_name === 'basketball' ? 'basketball' : 'football';
+          // Metadato informativo del deporte
+          const pathParam = typeof url === 'string' ? (url.match(/[?&]path=([^&]+)/)?.[1] || '') : '';
+          const rawSport = (ev.sport_name || ev.sport?.name || ev.sport_slug || pathParam || '').toLowerCase();
+          const sport: any = rawSport.includes('table') || rawSport.includes('mesa')
+            ? 'table_tennis'
+            : rawSport.includes('tennis') || rawSport === 'tenis'
+              ? 'tennis'
+              : rawSport.includes('basket') || rawSport.includes('baloncesto')
+                ? 'basketball'
+                : 'football';
 
-          // Mercado 1X2 está en main_odds.main con keys ODD_S1 (1), ODD_SX (X), ODD_S2 (2)
+          // Clasificación estructural por mercado: presencia real de cuota de empate ('ODD_SX' o 'X')
+          // Si tiene empate → 1X2 (3 vías). Si no tiene empate (tenis, basket, tenis de mesa, etc.) → MONEYLINE_2WAY (2 vías).
           const mainOdds = ev.main_odds?.main;
+          const hasDraw = mainOdds && typeof mainOdds === 'object'
+            ? Object.values(mainOdds).some((o: any) => o && typeof o.odd_value === 'number' && (o.odd_code === 'ODD_SX' || o.name === 'X'))
+            : false;
+          const marketType = hasDraw ? '1X2' : 'MONEYLINE_2WAY';
+
           if (mainOdds && typeof mainOdds === 'object') {
             for (const key of Object.keys(mainOdds)) {
               const o: any = mainOdds[key];
@@ -237,7 +251,7 @@ export const stakeKickerAdapter: SiteOddsAdapter & {
                 bookmaker: 'Stake',
                 eventName,
                 sport,
-                marketType: '1X2',
+                marketType,
                 selection,
                 odd: Number(o.odd_value),
                 timestamp: now,

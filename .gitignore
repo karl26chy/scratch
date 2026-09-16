@@ -15,3 +15,14 @@ lerna-debug.log*
 coverage/
 .playwright/
 debug/
+
+# Temporary test & debug artifacts in root
+check_*.mjs
+inspect_*.ts
+inspect_*.mjs
+test_*.ts
+test_*.json
+payload_*.json
+result_*.json
+stake_test_payload.json
+/data/

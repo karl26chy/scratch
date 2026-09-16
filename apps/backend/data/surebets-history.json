@@ -1,1544 +1,3351 @@
 [
   {
-    "timestamp": "2026-09-08T03:58:10.000Z",
-    "surebetsFoundCount": 3,
-    "highestProfitMargin": 1.92,
+    "timestamp": "2026-09-16T23:24:34.554Z",
+    "surebetsFoundCount": 1,
+    "highestProfitMargin": 2.27,
     "opportunities": [
       {
-        "id": "sb_1788839889989_as4fc",
-        "eventName": "Atlas Reserves Vs Puerto Nuevo Reserves",
+        "id": "sb_1789601074541_qt6qa",
+        "eventName": "Westchester Sc Vs Richmond Kickers",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 1.25,
+            "stakePercentage": 81.82,
+            "recommendedStake": 818181.82,
+            "expectedPayout": 1022727.27
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 9,
+            "stakePercentage": 11.36,
+            "recommendedStake": 113636.36,
+            "expectedPayout": 1022727.24
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 15,
+            "stakePercentage": 6.82,
+            "recommendedStake": 68181.82,
+            "expectedPayout": 1022727.3
+          }
+        ],
+        "totalImpliedProbability": 0.9778,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.27,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1022727.24,
+        "guaranteedProfit": 22727.24,
+        "detectedAt": "2026-09-16T23:24:34.541Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-16T23:24:34.205Z",
+    "surebetsFoundCount": 1,
+    "highestProfitMargin": 2.27,
+    "opportunities": [
+      {
+        "id": "sb_1789601074187_umd57",
+        "eventName": "Westchester Sc Vs Richmond Kickers",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 1.25,
+            "stakePercentage": 81.82,
+            "recommendedStake": 818181.82,
+            "expectedPayout": 1022727.27
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 9,
+            "stakePercentage": 11.36,
+            "recommendedStake": 113636.36,
+            "expectedPayout": 1022727.24
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 15,
+            "stakePercentage": 6.82,
+            "recommendedStake": 68181.82,
+            "expectedPayout": 1022727.3
+          }
+        ],
+        "totalImpliedProbability": 0.9778,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.27,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1022727.24,
+        "guaranteedProfit": 22727.24,
+        "detectedAt": "2026-09-16T23:24:34.187Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-16T23:23:44.677Z",
+    "surebetsFoundCount": 1,
+    "highestProfitMargin": 2.27,
+    "opportunities": [
+      {
+        "id": "sb_1789601024665_1p5km",
+        "eventName": "Westchester Sc Vs Richmond Kickers",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 1.25,
+            "stakePercentage": 81.82,
+            "recommendedStake": 818181.82,
+            "expectedPayout": 1022727.27
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 9,
+            "stakePercentage": 11.36,
+            "recommendedStake": 113636.36,
+            "expectedPayout": 1022727.24
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 15,
+            "stakePercentage": 6.82,
+            "recommendedStake": 68181.82,
+            "expectedPayout": 1022727.3
+          }
+        ],
+        "totalImpliedProbability": 0.9778,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.27,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1022727.24,
+        "guaranteedProfit": 22727.24,
+        "detectedAt": "2026-09-16T23:23:44.665Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-16T23:23:44.283Z",
+    "surebetsFoundCount": 1,
+    "highestProfitMargin": 2.27,
+    "opportunities": [
+      {
+        "id": "sb_1789601024269_96zg4",
+        "eventName": "Westchester Sc Vs Richmond Kickers",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 1.25,
+            "stakePercentage": 81.82,
+            "recommendedStake": 818181.82,
+            "expectedPayout": 1022727.27
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 9,
+            "stakePercentage": 11.36,
+            "recommendedStake": 113636.36,
+            "expectedPayout": 1022727.24
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 15,
+            "stakePercentage": 6.82,
+            "recommendedStake": 68181.82,
+            "expectedPayout": 1022727.3
+          }
+        ],
+        "totalImpliedProbability": 0.9778,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.27,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1022727.24,
+        "guaranteedProfit": 22727.24,
+        "detectedAt": "2026-09-16T23:23:44.269Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-16T23:21:22.888Z",
+    "surebetsFoundCount": 0,
+    "highestProfitMargin": -1.38,
+    "opportunities": [
+      {
+        "id": "sb_1789600882869_66fl1",
+        "eventName": "Malaga Vs Villarreal",
         "sport": "football",
         "marketType": "1X2",
         "outcomes": [
           {
             "selection": "1",
             "bookmaker": "BetPlay",
-            "odd": 2.85,
-            "stakePercentage": 35.76,
-            "recommendedStake": 357618.24,
-            "expectedPayout": 1019211.98
+            "odd": 4,
+            "stakePercentage": 24.65,
+            "recommendedStake": 246542.37,
+            "expectedPayout": 986169.48
           },
           {
             "selection": "X",
-            "bookmaker": "Stake",
-            "odd": 3.25,
-            "stakePercentage": 31.36,
-            "recommendedStake": 313603.69,
-            "expectedPayout": 1019211.99
+            "bookmaker": "Wplay",
+            "odd": 3.9,
+            "stakePercentage": 25.29,
+            "recommendedStake": 252863.97,
+            "expectedPayout": 986169.48
           },
           {
             "selection": "2",
-            "bookmaker": "Stake",
+            "bookmaker": "BetPlay",
+            "odd": 1.97,
+            "stakePercentage": 50.06,
+            "recommendedStake": 500593.66,
+            "expectedPayout": 986169.51
+          }
+        ],
+        "totalImpliedProbability": 1.014,
+        "isSurebet": false,
+        "profitMarginPercentage": -1.38,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 986169.48,
+        "guaranteedProfit": -13830.52,
+        "detectedAt": "2026-09-16T23:21:22.869Z"
+      },
+      {
+        "id": "sb_1789600882869_e2k7u",
+        "eventName": "Internacional De Bogota Vs Atlético Nacional",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 6.25,
+            "stakePercentage": 15.75,
+            "recommendedStake": 157470.92,
+            "expectedPayout": 984193.25
+          },
+          {
+            "selection": "X",
+            "bookmaker": "Wplay",
+            "odd": 4,
+            "stakePercentage": 24.6,
+            "recommendedStake": 246048.31,
+            "expectedPayout": 984193.24
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.65,
+            "stakePercentage": 59.65,
+            "recommendedStake": 596480.77,
+            "expectedPayout": 984193.27
+          }
+        ],
+        "totalImpliedProbability": 1.0161,
+        "isSurebet": false,
+        "profitMarginPercentage": -1.58,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 984193.24,
+        "guaranteedProfit": -15806.76,
+        "detectedAt": "2026-09-16T23:21:22.869Z"
+      },
+      {
+        "id": "sb_1789600882869_6srfn",
+        "eventName": "Real Betis Vs Getafe",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 1.68,
+            "stakePercentage": 58.42,
+            "recommendedStake": 584189.45,
+            "expectedPayout": 981438.28
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 3.85,
+            "stakePercentage": 25.49,
+            "recommendedStake": 254919.03,
+            "expectedPayout": 981438.27
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 6.1,
+            "stakePercentage": 16.09,
+            "recommendedStake": 160891.52,
+            "expectedPayout": 981438.27
+          }
+        ],
+        "totalImpliedProbability": 1.0189,
+        "isSurebet": false,
+        "profitMarginPercentage": -1.86,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 981438.27,
+        "guaranteedProfit": -18561.73,
+        "detectedAt": "2026-09-16T23:21:22.869Z"
+      },
+      {
+        "id": "sb_1789600882870_a2tdh",
+        "eventName": "Lillestrom Vs Torreense",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 1.53,
+            "stakePercentage": 64.05,
+            "recommendedStake": 640546.15,
+            "expectedPayout": 980035.61
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 4.75,
+            "stakePercentage": 20.63,
+            "recommendedStake": 206323.29,
+            "expectedPayout": 980035.63
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 6.4,
+            "stakePercentage": 15.31,
+            "recommendedStake": 153130.56,
+            "expectedPayout": 980035.58
+          }
+        ],
+        "totalImpliedProbability": 1.0204,
+        "isSurebet": false,
+        "profitMarginPercentage": -2,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 980035.58,
+        "guaranteedProfit": -19964.42,
+        "detectedAt": "2026-09-16T23:21:22.870Z"
+      },
+      {
+        "id": "sb_1789600882870_qsobs",
+        "eventName": "Real Sociedad Vs Bournemouth",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
             "odd": 3.1,
-            "stakePercentage": 32.88,
-            "recommendedStake": 328778.07,
-            "expectedPayout": 1019212.02
+            "stakePercentage": 31.56,
+            "recommendedStake": 315625.69,
+            "expectedPayout": 978439.64
+          },
+          {
+            "selection": "X",
+            "bookmaker": "Wplay",
+            "odd": 3.7,
+            "stakePercentage": 26.44,
+            "recommendedStake": 264443.14,
+            "expectedPayout": 978439.62
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 2.33,
+            "stakePercentage": 41.99,
+            "recommendedStake": 419931.17,
+            "expectedPayout": 978439.63
           }
         ],
-        "totalImpliedProbability": 0.9812,
-        "isSurebet": true,
-        "profitMarginPercentage": 1.92,
+        "totalImpliedProbability": 1.022,
+        "isSurebet": false,
+        "profitMarginPercentage": -2.16,
         "totalInvestment": 1000000,
-        "guaranteedPayout": 1019211.98,
-        "guaranteedProfit": 19211.98,
-        "detectedAt": "2026-09-08T03:58:09.989Z"
+        "guaranteedPayout": 978439.62,
+        "guaranteedProfit": -21560.38,
+        "detectedAt": "2026-09-16T23:21:22.870Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-16T23:21:22.583Z",
+    "surebetsFoundCount": 0,
+    "highestProfitMargin": -1.38,
+    "opportunities": [
+      {
+        "id": "sb_1789600882567_fqt79",
+        "eventName": "Malaga Vs Villarreal",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 4,
+            "stakePercentage": 24.65,
+            "recommendedStake": 246542.37,
+            "expectedPayout": 986169.48
+          },
+          {
+            "selection": "X",
+            "bookmaker": "Wplay",
+            "odd": 3.9,
+            "stakePercentage": 25.29,
+            "recommendedStake": 252863.97,
+            "expectedPayout": 986169.48
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.97,
+            "stakePercentage": 50.06,
+            "recommendedStake": 500593.66,
+            "expectedPayout": 986169.51
+          }
+        ],
+        "totalImpliedProbability": 1.014,
+        "isSurebet": false,
+        "profitMarginPercentage": -1.38,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 986169.48,
+        "guaranteedProfit": -13830.52,
+        "detectedAt": "2026-09-16T23:21:22.567Z"
       },
       {
-        "id": "sb_1788839889981_xsamt",
-        "eventName": "Fluminense Rj Vs Platense",
+        "id": "sb_1789600882566_259q2",
+        "eventName": "Internacional De Bogota Vs Atlético Nacional",
         "sport": "football",
         "marketType": "1X2",
         "outcomes": [
           {
             "selection": "1",
             "bookmaker": "Wplay",
-            "odd": 1.7,
-            "stakePercentage": 59.52,
-            "recommendedStake": 595238.1,
-            "expectedPayout": 1011904.77
+            "odd": 6.25,
+            "stakePercentage": 15.75,
+            "recommendedStake": 157470.92,
+            "expectedPayout": 984193.25
           },
           {
             "selection": "X",
-            "bookmaker": "BetPlay",
-            "odd": 3.75,
-            "stakePercentage": 26.98,
-            "recommendedStake": 269841.27,
-            "expectedPayout": 1011904.76
+            "bookmaker": "Wplay",
+            "odd": 4,
+            "stakePercentage": 24.6,
+            "recommendedStake": 246048.31,
+            "expectedPayout": 984193.24
           },
           {
             "selection": "2",
             "bookmaker": "BetPlay",
-            "odd": 7.5,
-            "stakePercentage": 13.49,
-            "recommendedStake": 134920.63,
-            "expectedPayout": 1011904.73
+            "odd": 1.65,
+            "stakePercentage": 59.65,
+            "recommendedStake": 596480.77,
+            "expectedPayout": 984193.27
           }
         ],
-        "totalImpliedProbability": 0.9882,
-        "isSurebet": true,
-        "profitMarginPercentage": 1.19,
+        "totalImpliedProbability": 1.0161,
+        "isSurebet": false,
+        "profitMarginPercentage": -1.58,
         "totalInvestment": 1000000,
-        "guaranteedPayout": 1011904.73,
-        "guaranteedProfit": 11904.73,
-        "detectedAt": "2026-09-08T03:58:09.981Z"
+        "guaranteedPayout": 984193.24,
+        "guaranteedProfit": -15806.76,
+        "detectedAt": "2026-09-16T23:21:22.566Z"
       },
       {
-        "id": "sb_1788839889989_46nhg",
-        "eventName": "Central Ballester Reserves Vs General Lamadrid Reserves",
+        "id": "sb_1789600882567_v2zpi",
+        "eventName": "Real Betis Vs Getafe",
         "sport": "football",
         "marketType": "1X2",
         "outcomes": [
           {
             "selection": "1",
-            "bookmaker": "Stake",
-            "odd": 2.25,
-            "stakePercentage": 44.95,
-            "recommendedStake": 449529.83,
-            "expectedPayout": 1011442.12
+            "bookmaker": "Wplay",
+            "odd": 1.68,
+            "stakePercentage": 58.42,
+            "recommendedStake": 584189.45,
+            "expectedPayout": 981438.28
           },
           {
             "selection": "X",
             "bookmaker": "BetPlay",
-            "odd": 3.7,
-            "stakePercentage": 27.34,
-            "recommendedStake": 273362.74,
-            "expectedPayout": 1011442.14
+            "odd": 3.85,
+            "stakePercentage": 25.49,
+            "recommendedStake": 254919.03,
+            "expectedPayout": 981438.27
           },
           {
             "selection": "2",
             "bookmaker": "BetPlay",
-            "odd": 3.65,
-            "stakePercentage": 27.71,
-            "recommendedStake": 277107.43,
-            "expectedPayout": 1011442.12
+            "odd": 6.1,
+            "stakePercentage": 16.09,
+            "recommendedStake": 160891.52,
+            "expectedPayout": 981438.27
           }
         ],
-        "totalImpliedProbability": 0.9887,
-        "isSurebet": true,
-        "profitMarginPercentage": 1.14,
+        "totalImpliedProbability": 1.0189,
+        "isSurebet": false,
+        "profitMarginPercentage": -1.86,
         "totalInvestment": 1000000,
-        "guaranteedPayout": 1011442.12,
-        "guaranteedProfit": 11442.12,
-        "detectedAt": "2026-09-08T03:58:09.989Z"
-      }
-    ]
-  },
-  {
-    "timestamp": "2026-09-08T03:58:09.863Z",
-    "surebetsFoundCount": 3,
-    "highestProfitMargin": 1.92,
-    "opportunities": [
+        "guaranteedPayout": 981438.27,
+        "guaranteedProfit": -18561.73,
+        "detectedAt": "2026-09-16T23:21:22.567Z"
+      },
       {
-        "id": "sb_1788839889840_ox356",
-        "eventName": "Atlas Reserves Vs Puerto Nuevo Reserves",
+        "id": "sb_1789600882567_rhdd7",
+        "eventName": "Lillestrom Vs Torreense",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 1.53,
+            "stakePercentage": 64.05,
+            "recommendedStake": 640546.15,
+            "expectedPayout": 980035.61
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 4.75,
+            "stakePercentage": 20.63,
+            "recommendedStake": 206323.29,
+            "expectedPayout": 980035.63
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 6.4,
+            "stakePercentage": 15.31,
+            "recommendedStake": 153130.56,
+            "expectedPayout": 980035.58
+          }
+        ],
+        "totalImpliedProbability": 1.0204,
+        "isSurebet": false,
+        "profitMarginPercentage": -2,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 980035.58,
+        "guaranteedProfit": -19964.42,
+        "detectedAt": "2026-09-16T23:21:22.567Z"
+      },
+      {
+        "id": "sb_1789600882567_l9ziu",
+        "eventName": "Real Sociedad Vs Bournemouth",
         "sport": "football",
         "marketType": "1X2",
         "outcomes": [
           {
             "selection": "1",
             "bookmaker": "BetPlay",
-            "odd": 2.85,
-            "stakePercentage": 35.76,
-            "recommendedStake": 357618.24,
-            "expectedPayout": 1019211.98
-          },
-          {
-            "selection": "X",
-            "bookmaker": "Stake",
-            "odd": 3.25,
-            "stakePercentage": 31.36,
-            "recommendedStake": 313603.69,
-            "expectedPayout": 1019211.99
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Stake",
             "odd": 3.1,
-            "stakePercentage": 32.88,
-            "recommendedStake": 328778.07,
-            "expectedPayout": 1019212.02
-          }
-        ],
-        "totalImpliedProbability": 0.9812,
-        "isSurebet": true,
-        "profitMarginPercentage": 1.92,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1019211.98,
-        "guaranteedProfit": 19211.98,
-        "detectedAt": "2026-09-08T03:58:09.840Z"
-      },
-      {
-        "id": "sb_1788839889826_2ynsj",
-        "eventName": "Fluminense Rj Vs Platense",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
+            "stakePercentage": 31.56,
+            "recommendedStake": 315625.69,
+            "expectedPayout": 978439.64
+          },
           {
-            "selection": "1",
+            "selection": "X",
             "bookmaker": "Wplay",
-            "odd": 1.7,
-            "stakePercentage": 59.52,
-            "recommendedStake": 595238.1,
-            "expectedPayout": 1011904.77
-          },
-          {
-            "selection": "X",
-            "bookmaker": "BetPlay",
-            "odd": 3.75,
-            "stakePercentage": 26.98,
-            "recommendedStake": 269841.27,
-            "expectedPayout": 1011904.76
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
-            "odd": 7.5,
-            "stakePercentage": 13.49,
-            "recommendedStake": 134920.63,
-            "expectedPayout": 1011904.73
-          }
-        ],
-        "totalImpliedProbability": 0.9882,
-        "isSurebet": true,
-        "profitMarginPercentage": 1.19,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1011904.73,
-        "guaranteedProfit": 11904.73,
-        "detectedAt": "2026-09-08T03:58:09.827Z"
-      },
-      {
-        "id": "sb_1788839889840_xuj7g",
-        "eventName": "Central Ballester Reserves Vs General Lamadrid Reserves",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Stake",
-            "odd": 2.25,
-            "stakePercentage": 44.95,
-            "recommendedStake": 449529.83,
-            "expectedPayout": 1011442.12
-          },
-          {
-            "selection": "X",
-            "bookmaker": "BetPlay",
             "odd": 3.7,
-            "stakePercentage": 27.34,
-            "recommendedStake": 273362.74,
-            "expectedPayout": 1011442.14
+            "stakePercentage": 26.44,
+            "recommendedStake": 264443.14,
+            "expectedPayout": 978439.62
           },
           {
             "selection": "2",
             "bookmaker": "BetPlay",
-            "odd": 3.65,
-            "stakePercentage": 27.71,
-            "recommendedStake": 277107.43,
-            "expectedPayout": 1011442.12
+            "odd": 2.33,
+            "stakePercentage": 41.99,
+            "recommendedStake": 419931.17,
+            "expectedPayout": 978439.63
           }
         ],
-        "totalImpliedProbability": 0.9887,
-        "isSurebet": true,
-        "profitMarginPercentage": 1.14,
+        "totalImpliedProbability": 1.022,
+        "isSurebet": false,
+        "profitMarginPercentage": -2.16,
         "totalInvestment": 1000000,
-        "guaranteedPayout": 1011442.12,
-        "guaranteedProfit": 11442.12,
-        "detectedAt": "2026-09-08T03:58:09.840Z"
+        "guaranteedPayout": 978439.62,
+        "guaranteedProfit": -21560.38,
+        "detectedAt": "2026-09-16T23:21:22.567Z"
       }
     ]
   },
   {
-    "timestamp": "2026-09-08T03:55:04.641Z",
-    "surebetsFoundCount": 3,
-    "highestProfitMargin": 2.42,
-    "opportunities": [
-      {
-        "id": "sb_1788839704615_0tfn5",
-        "eventName": "Fluminense Rj Vs Platense",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Wplay",
-            "odd": 1.7,
-            "stakePercentage": 60.25,
-            "recommendedStake": 602457.39,
-            "expectedPayout": 1024177.56
-          },
-          {
-            "selection": "X",
-            "bookmaker": "BetPlay",
-            "odd": 3.8,
-            "stakePercentage": 26.95,
-            "recommendedStake": 269520.41,
-            "expectedPayout": 1024177.56
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
-            "odd": 8,
-            "stakePercentage": 12.8,
-            "recommendedStake": 128022.2,
-            "expectedPayout": 1024177.6
-          }
-        ],
-        "totalImpliedProbability": 0.9764,
-        "isSurebet": true,
-        "profitMarginPercentage": 2.42,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1024177.56,
-        "guaranteedProfit": 24177.56,
-        "detectedAt": "2026-09-08T03:55:04.615Z"
-      },
-      {
-        "id": "sb_1788839704621_ro6vy",
-        "eventName": "Atlas Reserves Vs Puerto Nuevo Reserves",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "BetPlay",
-            "odd": 2.85,
-            "stakePercentage": 35.76,
-            "recommendedStake": 357618.24,
-            "expectedPayout": 1019211.98
-          },
-          {
-            "selection": "X",
-            "bookmaker": "Stake",
-            "odd": 3.25,
-            "stakePercentage": 31.36,
-            "recommendedStake": 313603.69,
-            "expectedPayout": 1019211.99
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Stake",
-            "odd": 3.1,
-            "stakePercentage": 32.88,
-            "recommendedStake": 328778.07,
-            "expectedPayout": 1019212.02
-          }
-        ],
-        "totalImpliedProbability": 0.9812,
-        "isSurebet": true,
-        "profitMarginPercentage": 1.92,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1019211.98,
-        "guaranteedProfit": 19211.98,
-        "detectedAt": "2026-09-08T03:55:04.621Z"
-      },
-      {
-        "id": "sb_1788839704621_vtcm9",
-        "eventName": "Central Ballester Reserves Vs General Lamadrid Reserves",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Stake",
-            "odd": 2.25,
-            "stakePercentage": 44.95,
-            "recommendedStake": 449529.83,
-            "expectedPayout": 1011442.12
-          },
-          {
-            "selection": "X",
-            "bookmaker": "BetPlay",
-            "odd": 3.7,
-            "stakePercentage": 27.34,
-            "recommendedStake": 273362.74,
-            "expectedPayout": 1011442.14
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
-            "odd": 3.65,
-            "stakePercentage": 27.71,
-            "recommendedStake": 277107.43,
-            "expectedPayout": 1011442.12
-          }
-        ],
-        "totalImpliedProbability": 0.9887,
-        "isSurebet": true,
-        "profitMarginPercentage": 1.14,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1011442.12,
-        "guaranteedProfit": 11442.12,
-        "detectedAt": "2026-09-08T03:55:04.621Z"
-      }
-    ]
-  },
-  {
-    "timestamp": "2026-09-08T03:55:04.497Z",
-    "surebetsFoundCount": 3,
-    "highestProfitMargin": 2.42,
-    "opportunities": [
-      {
-        "id": "sb_1788839704458_0d2m8",
-        "eventName": "Fluminense Rj Vs Platense",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Wplay",
-            "odd": 1.7,
-            "stakePercentage": 60.25,
-            "recommendedStake": 602457.39,
-            "expectedPayout": 1024177.56
-          },
-          {
-            "selection": "X",
-            "bookmaker": "BetPlay",
-            "odd": 3.8,
-            "stakePercentage": 26.95,
-            "recommendedStake": 269520.41,
-            "expectedPayout": 1024177.56
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
-            "odd": 8,
-            "stakePercentage": 12.8,
-            "recommendedStake": 128022.2,
-            "expectedPayout": 1024177.6
-          }
-        ],
-        "totalImpliedProbability": 0.9764,
-        "isSurebet": true,
-        "profitMarginPercentage": 2.42,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1024177.56,
-        "guaranteedProfit": 24177.56,
-        "detectedAt": "2026-09-08T03:55:04.458Z"
-      },
-      {
-        "id": "sb_1788839704487_xwvw2",
-        "eventName": "Atlas Reserves Vs Puerto Nuevo Reserves",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "BetPlay",
-            "odd": 2.85,
-            "stakePercentage": 35.76,
-            "recommendedStake": 357618.24,
-            "expectedPayout": 1019211.98
-          },
-          {
-            "selection": "X",
-            "bookmaker": "Stake",
-            "odd": 3.25,
-            "stakePercentage": 31.36,
-            "recommendedStake": 313603.69,
-            "expectedPayout": 1019211.99
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Stake",
-            "odd": 3.1,
-            "stakePercentage": 32.88,
-            "recommendedStake": 328778.07,
-            "expectedPayout": 1019212.02
-          }
-        ],
-        "totalImpliedProbability": 0.9812,
-        "isSurebet": true,
-        "profitMarginPercentage": 1.92,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1019211.98,
-        "guaranteedProfit": 19211.98,
-        "detectedAt": "2026-09-08T03:55:04.487Z"
-      },
-      {
-        "id": "sb_1788839704487_tjiig",
-        "eventName": "Central Ballester Reserves Vs General Lamadrid Reserves",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Stake",
-            "odd": 2.25,
-            "stakePercentage": 44.95,
-            "recommendedStake": 449529.83,
-            "expectedPayout": 1011442.12
-          },
-          {
-            "selection": "X",
-            "bookmaker": "BetPlay",
-            "odd": 3.7,
-            "stakePercentage": 27.34,
-            "recommendedStake": 273362.74,
-            "expectedPayout": 1011442.14
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
-            "odd": 3.65,
-            "stakePercentage": 27.71,
-            "recommendedStake": 277107.43,
-            "expectedPayout": 1011442.12
-          }
-        ],
-        "totalImpliedProbability": 0.9887,
-        "isSurebet": true,
-        "profitMarginPercentage": 1.14,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1011442.12,
-        "guaranteedProfit": 11442.12,
-        "detectedAt": "2026-09-08T03:55:04.487Z"
-      }
-    ]
-  },
-  {
-    "timestamp": "2026-09-08T03:52:39.577Z",
+    "timestamp": "2026-09-16T23:21:21.918Z",
     "surebetsFoundCount": 0,
     "highestProfitMargin": 0,
     "opportunities": []
   },
   {
-    "timestamp": "2026-09-08T02:25:03.518Z",
+    "timestamp": "2026-09-16T23:21:21.610Z",
+    "surebetsFoundCount": 0,
+    "highestProfitMargin": 0,
+    "opportunities": []
+  },
+  {
+    "timestamp": "2026-09-16T23:21:18.147Z",
+    "surebetsFoundCount": 0,
+    "highestProfitMargin": 0,
+    "opportunities": []
+  },
+  {
+    "timestamp": "2026-09-16T23:18:50.972Z",
     "surebetsFoundCount": 1,
-    "highestProfitMargin": 1.14,
+    "highestProfitMargin": 23.72,
     "opportunities": [
       {
-        "id": "sb_1788834303509_34608",
-        "eventName": "Central Ballester Reserves Vs General Lamadrid Reserves",
+        "id": "sb_1789600730959_v2ly1",
+        "eventName": "Monagas Sc Vs Zamora Fc",
         "sport": "football",
         "marketType": "1X2",
         "outcomes": [
           {
             "selection": "1",
-            "bookmaker": "Stake",
-            "odd": 2.25,
-            "stakePercentage": 44.95,
-            "recommendedStake": 449529.83,
-            "expectedPayout": 1011442.12
+            "bookmaker": "Wplay",
+            "odd": 1.9,
+            "stakePercentage": 65.12,
+            "recommendedStake": 651162.79,
+            "expectedPayout": 1237209.3
           },
           {
             "selection": "X",
             "bookmaker": "BetPlay",
-            "odd": 3.7,
-            "stakePercentage": 27.34,
-            "recommendedStake": 273362.74,
-            "expectedPayout": 1011442.14
+            "odd": 4.75,
+            "stakePercentage": 26.05,
+            "recommendedStake": 260465.12,
+            "expectedPayout": 1237209.32
           },
           {
             "selection": "2",
             "bookmaker": "BetPlay",
-            "odd": 3.65,
-            "stakePercentage": 27.71,
-            "recommendedStake": 277107.43,
-            "expectedPayout": 1011442.12
+            "odd": 14,
+            "stakePercentage": 8.84,
+            "recommendedStake": 88372.09,
+            "expectedPayout": 1237209.26
           }
         ],
-        "totalImpliedProbability": 0.9887,
+        "totalImpliedProbability": 0.8083,
         "isSurebet": true,
-        "profitMarginPercentage": 1.14,
+        "profitMarginPercentage": 23.72,
         "totalInvestment": 1000000,
-        "guaranteedPayout": 1011442.12,
-        "guaranteedProfit": 11442.12,
-        "detectedAt": "2026-09-08T02:25:03.509Z"
+        "guaranteedPayout": 1237209.26,
+        "guaranteedProfit": 237209.26,
+        "detectedAt": "2026-09-16T23:18:50.959Z"
       }
     ]
   },
   {
-    "timestamp": "2026-09-08T02:25:03.381Z",
+    "timestamp": "2026-09-16T23:18:50.678Z",
     "surebetsFoundCount": 1,
-    "highestProfitMargin": 1.14,
+    "highestProfitMargin": 23.72,
     "opportunities": [
       {
-        "id": "sb_1788834303358_famyp",
-        "eventName": "Central Ballester Reserves Vs General Lamadrid Reserves",
+        "id": "sb_1789600730665_jbmsu",
+        "eventName": "Monagas Sc Vs Zamora Fc",
         "sport": "football",
         "marketType": "1X2",
         "outcomes": [
           {
             "selection": "1",
-            "bookmaker": "Stake",
-            "odd": 2.25,
-            "stakePercentage": 44.95,
-            "recommendedStake": 449529.83,
-            "expectedPayout": 1011442.12
+            "bookmaker": "Wplay",
+            "odd": 1.9,
+            "stakePercentage": 65.12,
+            "recommendedStake": 651162.79,
+            "expectedPayout": 1237209.3
           },
           {
             "selection": "X",
             "bookmaker": "BetPlay",
-            "odd": 3.7,
-            "stakePercentage": 27.34,
-            "recommendedStake": 273362.74,
-            "expectedPayout": 1011442.14
+            "odd": 4.75,
+            "stakePercentage": 26.05,
+            "recommendedStake": 260465.12,
+            "expectedPayout": 1237209.32
           },
           {
             "selection": "2",
             "bookmaker": "BetPlay",
-            "odd": 3.65,
-            "stakePercentage": 27.71,
-            "recommendedStake": 277107.43,
-            "expectedPayout": 1011442.12
+            "odd": 14,
+            "stakePercentage": 8.84,
+            "recommendedStake": 88372.09,
+            "expectedPayout": 1237209.26
           }
         ],
-        "totalImpliedProbability": 0.9887,
+        "totalImpliedProbability": 0.8083,
         "isSurebet": true,
-        "profitMarginPercentage": 1.14,
+        "profitMarginPercentage": 23.72,
         "totalInvestment": 1000000,
-        "guaranteedPayout": 1011442.12,
-        "guaranteedProfit": 11442.12,
-        "detectedAt": "2026-09-08T02:25:03.358Z"
+        "guaranteedPayout": 1237209.26,
+        "guaranteedProfit": 237209.26,
+        "detectedAt": "2026-09-16T23:18:50.665Z"
       }
     ]
   },
   {
-    "timestamp": "2026-09-08T02:20:39.957Z",
+    "timestamp": "2026-09-16T23:18:17.108Z",
+    "surebetsFoundCount": 1,
+    "highestProfitMargin": 23.72,
+    "opportunities": [
+      {
+        "id": "sb_1789600697090_nl02q",
+        "eventName": "Monagas Sc Vs Zamora Fc",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 1.9,
+            "stakePercentage": 65.12,
+            "recommendedStake": 651162.79,
+            "expectedPayout": 1237209.3
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 4.75,
+            "stakePercentage": 26.05,
+            "recommendedStake": 260465.12,
+            "expectedPayout": 1237209.32
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 14,
+            "stakePercentage": 8.84,
+            "recommendedStake": 88372.09,
+            "expectedPayout": 1237209.26
+          }
+        ],
+        "totalImpliedProbability": 0.8083,
+        "isSurebet": true,
+        "profitMarginPercentage": 23.72,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1237209.26,
+        "guaranteedProfit": 237209.26,
+        "detectedAt": "2026-09-16T23:18:17.090Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-16T23:18:16.706Z",
+    "surebetsFoundCount": 1,
+    "highestProfitMargin": 23.72,
+    "opportunities": [
+      {
+        "id": "sb_1789600696690_fhvrg",
+        "eventName": "Monagas Sc Vs Zamora Fc",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 1.9,
+            "stakePercentage": 65.12,
+            "recommendedStake": 651162.79,
+            "expectedPayout": 1237209.3
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 4.75,
+            "stakePercentage": 26.05,
+            "recommendedStake": 260465.12,
+            "expectedPayout": 1237209.32
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 14,
+            "stakePercentage": 8.84,
+            "recommendedStake": 88372.09,
+            "expectedPayout": 1237209.26
+          }
+        ],
+        "totalImpliedProbability": 0.8083,
+        "isSurebet": true,
+        "profitMarginPercentage": 23.72,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1237209.26,
+        "guaranteedProfit": 237209.26,
+        "detectedAt": "2026-09-16T23:18:16.690Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-16T23:17:31.712Z",
+    "surebetsFoundCount": 1,
+    "highestProfitMargin": 23.72,
+    "opportunities": [
+      {
+        "id": "sb_1789600651696_oo3vl",
+        "eventName": "Monagas Sc Vs Zamora Fc",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 1.9,
+            "stakePercentage": 65.12,
+            "recommendedStake": 651162.79,
+            "expectedPayout": 1237209.3
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 4.75,
+            "stakePercentage": 26.05,
+            "recommendedStake": 260465.12,
+            "expectedPayout": 1237209.32
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 14,
+            "stakePercentage": 8.84,
+            "recommendedStake": 88372.09,
+            "expectedPayout": 1237209.26
+          }
+        ],
+        "totalImpliedProbability": 0.8083,
+        "isSurebet": true,
+        "profitMarginPercentage": 23.72,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1237209.26,
+        "guaranteedProfit": 237209.26,
+        "detectedAt": "2026-09-16T23:17:31.696Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-16T23:17:31.421Z",
+    "surebetsFoundCount": 1,
+    "highestProfitMargin": 23.72,
+    "opportunities": [
+      {
+        "id": "sb_1789600651406_2p3xb",
+        "eventName": "Monagas Sc Vs Zamora Fc",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 1.9,
+            "stakePercentage": 65.12,
+            "recommendedStake": 651162.79,
+            "expectedPayout": 1237209.3
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 4.75,
+            "stakePercentage": 26.05,
+            "recommendedStake": 260465.12,
+            "expectedPayout": 1237209.32
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 14,
+            "stakePercentage": 8.84,
+            "recommendedStake": 88372.09,
+            "expectedPayout": 1237209.26
+          }
+        ],
+        "totalImpliedProbability": 0.8083,
+        "isSurebet": true,
+        "profitMarginPercentage": 23.72,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1237209.26,
+        "guaranteedProfit": 237209.26,
+        "detectedAt": "2026-09-16T23:17:31.406Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-16T23:17:28.081Z",
+    "surebetsFoundCount": 1,
+    "highestProfitMargin": 23.72,
+    "opportunities": [
+      {
+        "id": "sb_1789600648059_2x0pp",
+        "eventName": "Monagas Sc Vs Zamora Fc",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 1.9,
+            "stakePercentage": 65.12,
+            "recommendedStake": 651162.79,
+            "expectedPayout": 1237209.3
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 4.75,
+            "stakePercentage": 26.05,
+            "recommendedStake": 260465.12,
+            "expectedPayout": 1237209.32
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 14,
+            "stakePercentage": 8.84,
+            "recommendedStake": 88372.09,
+            "expectedPayout": 1237209.26
+          }
+        ],
+        "totalImpliedProbability": 0.8083,
+        "isSurebet": true,
+        "profitMarginPercentage": 23.72,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1237209.26,
+        "guaranteedProfit": 237209.26,
+        "detectedAt": "2026-09-16T23:17:28.059Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-16T23:16:51.267Z",
+    "surebetsFoundCount": 0,
+    "highestProfitMargin": 0,
+    "opportunities": []
+  },
+  {
+    "timestamp": "2026-09-16T23:16:51.153Z",
+    "surebetsFoundCount": 0,
+    "highestProfitMargin": 0,
+    "opportunities": []
+  },
+  {
+    "timestamp": "2026-09-16T23:16:50.856Z",
+    "surebetsFoundCount": 0,
+    "highestProfitMargin": 0,
+    "opportunities": []
+  },
+  {
+    "timestamp": "2026-09-16T23:16:50.739Z",
+    "surebetsFoundCount": 0,
+    "highestProfitMargin": 0,
+    "opportunities": []
+  },
+  {
+    "timestamp": "2026-09-11T05:00:28.309Z",
     "surebetsFoundCount": 2,
-    "highestProfitMargin": 34.47,
+    "highestProfitMargin": 0.68,
     "opportunities": [
       {
-        "id": "sb_1788834039941_6xpai",
-        "eventName": "Umecit Vs Ca Independiente De La Chorrera",
+        "id": "sb_1789102828299_5j97z",
+        "eventName": "Boca Juniors Vs Central Cordoba",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 1.45,
+            "stakePercentage": 69.44,
+            "recommendedStake": 694358.34,
+            "expectedPayout": 1006819.59
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 4.8,
+            "stakePercentage": 20.98,
+            "recommendedStake": 209754.08,
+            "expectedPayout": 1006819.58
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 10.5,
+            "stakePercentage": 9.59,
+            "recommendedStake": 95887.58,
+            "expectedPayout": 1006819.59
+          }
+        ],
+        "totalImpliedProbability": 0.9932,
+        "isSurebet": true,
+        "profitMarginPercentage": 0.68,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1006819.58,
+        "guaranteedProfit": 6819.58,
+        "detectedAt": "2026-09-11T05:00:28.299Z"
+      },
+      {
+        "id": "sb_1789102828296_z8xwq",
+        "eventName": "Sevilla Vs Valencia",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 2.1,
+            "stakePercentage": 47.81,
+            "recommendedStake": 478114.48,
+            "expectedPayout": 1004040.41
+          },
+          {
+            "selection": "X",
+            "bookmaker": "Wplay",
+            "odd": 3.55,
+            "stakePercentage": 28.28,
+            "recommendedStake": 282828.28,
+            "expectedPayout": 1004040.39
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Wplay",
+            "odd": 4.2,
+            "stakePercentage": 23.91,
+            "recommendedStake": 239057.24,
+            "expectedPayout": 1004040.41
+          }
+        ],
+        "totalImpliedProbability": 0.996,
+        "isSurebet": true,
+        "profitMarginPercentage": 0.4,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1004040.39,
+        "guaranteedProfit": 4040.39,
+        "detectedAt": "2026-09-11T05:00:28.296Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-11T05:00:24.773Z",
+    "surebetsFoundCount": 2,
+    "highestProfitMargin": 0.68,
+    "opportunities": [
+      {
+        "id": "sb_1789102824761_0mbjq",
+        "eventName": "Boca Juniors Vs Central Cordoba",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 1.45,
+            "stakePercentage": 69.44,
+            "recommendedStake": 694358.34,
+            "expectedPayout": 1006819.59
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 4.8,
+            "stakePercentage": 20.98,
+            "recommendedStake": 209754.08,
+            "expectedPayout": 1006819.58
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 10.5,
+            "stakePercentage": 9.59,
+            "recommendedStake": 95887.58,
+            "expectedPayout": 1006819.59
+          }
+        ],
+        "totalImpliedProbability": 0.9932,
+        "isSurebet": true,
+        "profitMarginPercentage": 0.68,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1006819.58,
+        "guaranteedProfit": 6819.58,
+        "detectedAt": "2026-09-11T05:00:24.761Z"
+      },
+      {
+        "id": "sb_1789102824758_lney8",
+        "eventName": "Sevilla Vs Valencia",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 2.1,
+            "stakePercentage": 47.81,
+            "recommendedStake": 478114.48,
+            "expectedPayout": 1004040.41
+          },
+          {
+            "selection": "X",
+            "bookmaker": "Wplay",
+            "odd": 3.55,
+            "stakePercentage": 28.28,
+            "recommendedStake": 282828.28,
+            "expectedPayout": 1004040.39
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Wplay",
+            "odd": 4.2,
+            "stakePercentage": 23.91,
+            "recommendedStake": 239057.24,
+            "expectedPayout": 1004040.41
+          }
+        ],
+        "totalImpliedProbability": 0.996,
+        "isSurebet": true,
+        "profitMarginPercentage": 0.4,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1004040.39,
+        "guaranteedProfit": 4040.39,
+        "detectedAt": "2026-09-11T05:00:24.758Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-11T04:56:29.873Z",
+    "surebetsFoundCount": 1,
+    "highestProfitMargin": 1.56,
+    "opportunities": [
+      {
+        "id": "sb_1789102589848_22u77",
+        "eventName": "Olympiacos Vs Crvena Zvezda",
+        "sport": "basketball",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 1.35,
+            "stakePercentage": 75.23,
+            "recommendedStake": 752293.58,
+            "expectedPayout": 1015596.33
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Stake",
+            "odd": 4.1,
+            "stakePercentage": 24.77,
+            "recommendedStake": 247706.42,
+            "expectedPayout": 1015596.32
+          }
+        ],
+        "totalImpliedProbability": 0.9846,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.56,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1015596.32,
+        "guaranteedProfit": 15596.32,
+        "detectedAt": "2026-09-11T04:56:29.848Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-11T04:56:29.046Z",
+    "surebetsFoundCount": 1,
+    "highestProfitMargin": 1.56,
+    "opportunities": [
+      {
+        "id": "sb_1789102589031_5s0p3",
+        "eventName": "Olympiacos Vs Crvena Zvezda",
+        "sport": "basketball",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 1.35,
+            "stakePercentage": 75.23,
+            "recommendedStake": 752293.58,
+            "expectedPayout": 1015596.33
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Stake",
+            "odd": 4.1,
+            "stakePercentage": 24.77,
+            "recommendedStake": 247706.42,
+            "expectedPayout": 1015596.32
+          }
+        ],
+        "totalImpliedProbability": 0.9846,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.56,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1015596.32,
+        "guaranteedProfit": 15596.32,
+        "detectedAt": "2026-09-11T04:56:29.031Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-11T04:52:37.991Z",
+    "surebetsFoundCount": 0,
+    "highestProfitMargin": -2.45,
+    "opportunities": [
+      {
+        "id": "sb_1789102357984_i3a2s",
+        "eventName": "Frances Tiafoe Vs Ben Shelton",
+        "sport": "tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 3.45,
+            "stakePercentage": 28.27,
+            "recommendedStake": 282744.28,
+            "expectedPayout": 975467.77
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.36,
+            "stakePercentage": 71.73,
+            "recommendedStake": 717255.72,
+            "expectedPayout": 975467.78
+          }
+        ],
+        "totalImpliedProbability": 1.0251,
+        "isSurebet": false,
+        "profitMarginPercentage": -2.45,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 975467.77,
+        "guaranteedProfit": -24532.23,
+        "detectedAt": "2026-09-11T04:52:37.984Z"
+      },
+      {
+        "id": "sb_1789102357983_aflsz",
+        "eventName": "Anastasiya Sobolieva Vs Noma Noha Akugue",
+        "sport": "tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 1.68,
+            "stakePercentage": 57.79,
+            "recommendedStake": 577889.45,
+            "expectedPayout": 970854.28
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Stake",
+            "odd": 2.3,
+            "stakePercentage": 42.21,
+            "recommendedStake": 422110.55,
+            "expectedPayout": 970854.26
+          }
+        ],
+        "totalImpliedProbability": 1.03,
+        "isSurebet": false,
+        "profitMarginPercentage": -2.91,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 970854.26,
+        "guaranteedProfit": -29145.74,
+        "detectedAt": "2026-09-11T04:52:37.983Z"
+      },
+      {
+        "id": "sb_1789102357984_dyv2x",
+        "eventName": "Wozuko Mdlulwa Vs Iva Marinkovic",
+        "sport": "tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 3,
+            "stakePercentage": 32.28,
+            "recommendedStake": 322799.1,
+            "expectedPayout": 968397.3
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.43,
+            "stakePercentage": 67.72,
+            "recommendedStake": 677200.9,
+            "expectedPayout": 968397.29
+          }
+        ],
+        "totalImpliedProbability": 1.0326,
+        "isSurebet": false,
+        "profitMarginPercentage": -3.16,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 968397.29,
+        "guaranteedProfit": -31602.71,
+        "detectedAt": "2026-09-11T04:52:37.984Z"
+      },
+      {
+        "id": "sb_1789102357984_x9etk",
+        "eventName": "Matilde Jorge Vs Katie Swan",
+        "sport": "tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 3.45,
+            "stakePercentage": 27.97,
+            "recommendedStake": 279749.48,
+            "expectedPayout": 965135.71
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Stake",
+            "odd": 1.34,
+            "stakePercentage": 72.03,
+            "recommendedStake": 720250.52,
+            "expectedPayout": 965135.7
+          }
+        ],
+        "totalImpliedProbability": 1.0361,
+        "isSurebet": false,
+        "profitMarginPercentage": -3.49,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 965135.7,
+        "guaranteedProfit": -34864.3,
+        "detectedAt": "2026-09-11T04:52:37.984Z"
+      },
+      {
+        "id": "sb_1789102357984_ngdql",
+        "eventName": "Alexander Zverev Vs Karen Khachanov",
+        "sport": "tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 1.21,
+            "stakePercentage": 79.53,
+            "recommendedStake": 795262.27,
+            "expectedPayout": 962267.35
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Stake",
+            "odd": 4.7,
+            "stakePercentage": 20.47,
+            "recommendedStake": 204737.73,
+            "expectedPayout": 962267.33
+          }
+        ],
+        "totalImpliedProbability": 1.0392,
+        "isSurebet": false,
+        "profitMarginPercentage": -3.77,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 962267.33,
+        "guaranteedProfit": -37732.67,
+        "detectedAt": "2026-09-11T04:52:37.984Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-11T04:51:53.053Z",
+    "surebetsFoundCount": 0,
+    "highestProfitMargin": -2.45,
+    "opportunities": [
+      {
+        "id": "sb_1789102313044_lcv3h",
+        "eventName": "Frances Tiafoe Vs Ben Shelton",
+        "sport": "tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 3.45,
+            "stakePercentage": 28.27,
+            "recommendedStake": 282.74,
+            "expectedPayout": 975.45
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.36,
+            "stakePercentage": 71.73,
+            "recommendedStake": 717.26,
+            "expectedPayout": 975.47
+          }
+        ],
+        "totalImpliedProbability": 1.0251,
+        "isSurebet": false,
+        "profitMarginPercentage": -2.45,
+        "totalInvestment": 1000,
+        "guaranteedPayout": 975.45,
+        "guaranteedProfit": -24.55,
+        "detectedAt": "2026-09-11T04:51:53.044Z"
+      },
+      {
+        "id": "sb_1789102313042_8mv7i",
+        "eventName": "Anastasiya Sobolieva Vs Noma Noha Akugue",
+        "sport": "tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 1.68,
+            "stakePercentage": 57.79,
+            "recommendedStake": 577.89,
+            "expectedPayout": 970.86
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Stake",
+            "odd": 2.3,
+            "stakePercentage": 42.21,
+            "recommendedStake": 422.11,
+            "expectedPayout": 970.85
+          }
+        ],
+        "totalImpliedProbability": 1.03,
+        "isSurebet": false,
+        "profitMarginPercentage": -2.91,
+        "totalInvestment": 1000,
+        "guaranteedPayout": 970.85,
+        "guaranteedProfit": -29.15,
+        "detectedAt": "2026-09-11T04:51:53.042Z"
+      },
+      {
+        "id": "sb_1789102313044_gon0c",
+        "eventName": "Wozuko Mdlulwa Vs Iva Marinkovic",
+        "sport": "tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 3,
+            "stakePercentage": 32.28,
+            "recommendedStake": 322.8,
+            "expectedPayout": 968.4
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.43,
+            "stakePercentage": 67.72,
+            "recommendedStake": 677.2,
+            "expectedPayout": 968.4
+          }
+        ],
+        "totalImpliedProbability": 1.0326,
+        "isSurebet": false,
+        "profitMarginPercentage": -3.16,
+        "totalInvestment": 1000,
+        "guaranteedPayout": 968.4,
+        "guaranteedProfit": -31.6,
+        "detectedAt": "2026-09-11T04:51:53.044Z"
+      },
+      {
+        "id": "sb_1789102313044_xn1ih",
+        "eventName": "Matilde Jorge Vs Katie Swan",
+        "sport": "tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 3.45,
+            "stakePercentage": 27.97,
+            "recommendedStake": 279.75,
+            "expectedPayout": 965.14
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Stake",
+            "odd": 1.34,
+            "stakePercentage": 72.03,
+            "recommendedStake": 720.25,
+            "expectedPayout": 965.14
+          }
+        ],
+        "totalImpliedProbability": 1.0361,
+        "isSurebet": false,
+        "profitMarginPercentage": -3.49,
+        "totalInvestment": 1000,
+        "guaranteedPayout": 965.14,
+        "guaranteedProfit": -34.86,
+        "detectedAt": "2026-09-11T04:51:53.044Z"
+      },
+      {
+        "id": "sb_1789102313044_dengf",
+        "eventName": "Alexander Zverev Vs Karen Khachanov",
+        "sport": "tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 1.21,
+            "stakePercentage": 79.53,
+            "recommendedStake": 795.26,
+            "expectedPayout": 962.26
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Stake",
+            "odd": 4.7,
+            "stakePercentage": 20.47,
+            "recommendedStake": 204.74,
+            "expectedPayout": 962.28
+          }
+        ],
+        "totalImpliedProbability": 1.0392,
+        "isSurebet": false,
+        "profitMarginPercentage": -3.77,
+        "totalInvestment": 1000,
+        "guaranteedPayout": 962.26,
+        "guaranteedProfit": -37.74,
+        "detectedAt": "2026-09-11T04:51:53.044Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-11T04:36:27.819Z",
+    "surebetsFoundCount": 1,
+    "highestProfitMargin": 0.4,
+    "opportunities": [
+      {
+        "id": "sb_1789101387810_9zvpv",
+        "eventName": "Sevilla Vs Valencia",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 2.1,
+            "stakePercentage": 47.81,
+            "recommendedStake": 478114.48,
+            "expectedPayout": 1004040.41
+          },
+          {
+            "selection": "X",
+            "bookmaker": "Wplay",
+            "odd": 3.55,
+            "stakePercentage": 28.28,
+            "recommendedStake": 282828.28,
+            "expectedPayout": 1004040.39
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Wplay",
+            "odd": 4.2,
+            "stakePercentage": 23.91,
+            "recommendedStake": 239057.24,
+            "expectedPayout": 1004040.41
+          }
+        ],
+        "totalImpliedProbability": 0.996,
+        "isSurebet": true,
+        "profitMarginPercentage": 0.4,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1004040.39,
+        "guaranteedProfit": 4040.39,
+        "detectedAt": "2026-09-11T04:36:27.810Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-11T04:36:26.770Z",
+    "surebetsFoundCount": 1,
+    "highestProfitMargin": 0.4,
+    "opportunities": [
+      {
+        "id": "sb_1789101386759_fc7c3",
+        "eventName": "Sevilla Vs Valencia",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 2.1,
+            "stakePercentage": 47.81,
+            "recommendedStake": 478114.48,
+            "expectedPayout": 1004040.41
+          },
+          {
+            "selection": "X",
+            "bookmaker": "Wplay",
+            "odd": 3.55,
+            "stakePercentage": 28.28,
+            "recommendedStake": 282828.28,
+            "expectedPayout": 1004040.39
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Wplay",
+            "odd": 4.2,
+            "stakePercentage": 23.91,
+            "recommendedStake": 239057.24,
+            "expectedPayout": 1004040.41
+          }
+        ],
+        "totalImpliedProbability": 0.996,
+        "isSurebet": true,
+        "profitMarginPercentage": 0.4,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1004040.39,
+        "guaranteedProfit": 4040.39,
+        "detectedAt": "2026-09-11T04:36:26.759Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-11T04:36:15.929Z",
+    "surebetsFoundCount": 1,
+    "highestProfitMargin": 0.4,
+    "opportunities": [
+      {
+        "id": "sb_1789101375921_f0rrd",
+        "eventName": "Sevilla Vs Valencia",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 2.1,
+            "stakePercentage": 47.81,
+            "recommendedStake": 478114.48,
+            "expectedPayout": 1004040.41
+          },
+          {
+            "selection": "X",
+            "bookmaker": "Wplay",
+            "odd": 3.55,
+            "stakePercentage": 28.28,
+            "recommendedStake": 282828.28,
+            "expectedPayout": 1004040.39
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Wplay",
+            "odd": 4.2,
+            "stakePercentage": 23.91,
+            "recommendedStake": 239057.24,
+            "expectedPayout": 1004040.41
+          }
+        ],
+        "totalImpliedProbability": 0.996,
+        "isSurebet": true,
+        "profitMarginPercentage": 0.4,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1004040.39,
+        "guaranteedProfit": 4040.39,
+        "detectedAt": "2026-09-11T04:36:15.921Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-11T04:36:14.930Z",
+    "surebetsFoundCount": 1,
+    "highestProfitMargin": 0.4,
+    "opportunities": [
+      {
+        "id": "sb_1789101374919_f6oys",
+        "eventName": "Sevilla Vs Valencia",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 2.1,
+            "stakePercentage": 47.81,
+            "recommendedStake": 478114.48,
+            "expectedPayout": 1004040.41
+          },
+          {
+            "selection": "X",
+            "bookmaker": "Wplay",
+            "odd": 3.55,
+            "stakePercentage": 28.28,
+            "recommendedStake": 282828.28,
+            "expectedPayout": 1004040.39
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Wplay",
+            "odd": 4.2,
+            "stakePercentage": 23.91,
+            "recommendedStake": 239057.24,
+            "expectedPayout": 1004040.41
+          }
+        ],
+        "totalImpliedProbability": 0.996,
+        "isSurebet": true,
+        "profitMarginPercentage": 0.4,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1004040.39,
+        "guaranteedProfit": 4040.39,
+        "detectedAt": "2026-09-11T04:36:14.919Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-11T04:34:50.613Z",
+    "surebetsFoundCount": 1,
+    "highestProfitMargin": 0.4,
+    "opportunities": [
+      {
+        "id": "sb_1789101290600_s4bym",
+        "eventName": "Sevilla Vs Valencia",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 2.1,
+            "stakePercentage": 47.81,
+            "recommendedStake": 478.11,
+            "expectedPayout": 1004.03
+          },
+          {
+            "selection": "X",
+            "bookmaker": "Wplay",
+            "odd": 3.55,
+            "stakePercentage": 28.28,
+            "recommendedStake": 282.83,
+            "expectedPayout": 1004.05
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Wplay",
+            "odd": 4.2,
+            "stakePercentage": 23.91,
+            "recommendedStake": 239.06,
+            "expectedPayout": 1004.05
+          }
+        ],
+        "totalImpliedProbability": 0.996,
+        "isSurebet": true,
+        "profitMarginPercentage": 0.4,
+        "totalInvestment": 1000,
+        "guaranteedPayout": 1004.03,
+        "guaranteedProfit": 4.03,
+        "detectedAt": "2026-09-11T04:34:50.601Z"
+      },
+      {
+        "id": "sb_1789101290602_y9d5t",
+        "eventName": "Frances Tiafoe Vs Ben Shelton",
+        "sport": "tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 3.45,
+            "stakePercentage": 28.27,
+            "recommendedStake": 282.74,
+            "expectedPayout": 975.45
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.36,
+            "stakePercentage": 71.73,
+            "recommendedStake": 717.26,
+            "expectedPayout": 975.47
+          }
+        ],
+        "totalImpliedProbability": 1.0251,
+        "isSurebet": false,
+        "profitMarginPercentage": -2.45,
+        "totalInvestment": 1000,
+        "guaranteedPayout": 975.45,
+        "guaranteedProfit": -24.55,
+        "detectedAt": "2026-09-11T04:34:50.602Z"
+      },
+      {
+        "id": "sb_1789101290602_0g0se",
+        "eventName": "Anastasiya Sobolieva Vs Noma Noha Akugue",
+        "sport": "tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 1.68,
+            "stakePercentage": 57.79,
+            "recommendedStake": 577.89,
+            "expectedPayout": 970.86
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Stake",
+            "odd": 2.3,
+            "stakePercentage": 42.21,
+            "recommendedStake": 422.11,
+            "expectedPayout": 970.85
+          }
+        ],
+        "totalImpliedProbability": 1.03,
+        "isSurebet": false,
+        "profitMarginPercentage": -2.91,
+        "totalInvestment": 1000,
+        "guaranteedPayout": 970.85,
+        "guaranteedProfit": -29.15,
+        "detectedAt": "2026-09-11T04:34:50.602Z"
+      },
+      {
+        "id": "sb_1789101290603_4p5id",
+        "eventName": "Wozuko Mdlulwa Vs Iva Marinkovic",
+        "sport": "tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 3,
+            "stakePercentage": 32.28,
+            "recommendedStake": 322.8,
+            "expectedPayout": 968.4
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.43,
+            "stakePercentage": 67.72,
+            "recommendedStake": 677.2,
+            "expectedPayout": 968.4
+          }
+        ],
+        "totalImpliedProbability": 1.0326,
+        "isSurebet": false,
+        "profitMarginPercentage": -3.16,
+        "totalInvestment": 1000,
+        "guaranteedPayout": 968.4,
+        "guaranteedProfit": -31.6,
+        "detectedAt": "2026-09-11T04:34:50.603Z"
+      },
+      {
+        "id": "sb_1789101290601_zbvnd",
+        "eventName": "Venezia Vs Fiorentina",
         "sport": "football",
         "marketType": "1X2",
         "outcomes": [
           {
             "selection": "1",
             "bookmaker": "Wplay",
-            "odd": 9.25,
-            "stakePercentage": 14.54,
-            "recommendedStake": 145.37,
-            "expectedPayout": 1344.67
-          },
-          {
-            "selection": "X",
-            "bookmaker": "Wplay",
-            "odd": 3.25,
-            "stakePercentage": 41.37,
-            "recommendedStake": 413.75,
-            "expectedPayout": 1344.69
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
             "odd": 3.05,
-            "stakePercentage": 44.09,
-            "recommendedStake": 440.88,
-            "expectedPayout": 1344.68
-          }
-        ],
-        "totalImpliedProbability": 0.7437,
-        "isSurebet": true,
-        "profitMarginPercentage": 34.47,
-        "totalInvestment": 1000,
-        "guaranteedPayout": 1344.67,
-        "guaranteedProfit": 344.67,
-        "detectedAt": "2026-09-08T02:20:39.941Z"
-      },
-      {
-        "id": "sb_1788834039949_m99z0",
-        "eventName": "Central Ballester Reserves Vs General Lamadrid Reserves",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Stake",
-            "odd": 2.25,
-            "stakePercentage": 44.95,
-            "recommendedStake": 449.53,
-            "expectedPayout": 1011.44
+            "stakePercentage": 31.72,
+            "recommendedStake": 317.16,
+            "expectedPayout": 967.34
           },
           {
             "selection": "X",
             "bookmaker": "BetPlay",
-            "odd": 3.7,
-            "stakePercentage": 27.34,
-            "recommendedStake": 273.36,
-            "expectedPayout": 1011.43
+            "odd": 3.5,
+            "stakePercentage": 27.64,
+            "recommendedStake": 276.39,
+            "expectedPayout": 967.37
           },
           {
             "selection": "2",
             "bookmaker": "BetPlay",
-            "odd": 3.65,
-            "stakePercentage": 27.71,
-            "recommendedStake": 277.11,
-            "expectedPayout": 1011.45
+            "odd": 2.38,
+            "stakePercentage": 40.64,
+            "recommendedStake": 406.45,
+            "expectedPayout": 967.35
           }
         ],
-        "totalImpliedProbability": 0.9887,
-        "isSurebet": true,
-        "profitMarginPercentage": 1.14,
+        "totalImpliedProbability": 1.0338,
+        "isSurebet": false,
+        "profitMarginPercentage": -3.26,
         "totalInvestment": 1000,
-        "guaranteedPayout": 1011.43,
-        "guaranteedProfit": 11.43,
-        "detectedAt": "2026-09-08T02:20:39.949Z"
+        "guaranteedPayout": 967.34,
+        "guaranteedProfit": -32.66,
+        "detectedAt": "2026-09-11T04:34:50.601Z"
       }
     ]
   },
   {
-    "timestamp": "2026-09-08T02:20:34.232Z",
-    "surebetsFoundCount": 2,
-    "highestProfitMargin": 34.47,
+    "timestamp": "2026-09-11T04:26:55.179Z",
+    "surebetsFoundCount": 1,
+    "highestProfitMargin": 0.4,
     "opportunities": [
       {
-        "id": "sb_1788834034212_3uimh",
-        "eventName": "Umecit Vs Ca Independiente De La Chorrera",
+        "id": "sb_1789100815168_k76r7",
+        "eventName": "Sevilla Vs Valencia",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 2.1,
+            "stakePercentage": 47.81,
+            "recommendedStake": 478114.48,
+            "expectedPayout": 1004040.41
+          },
+          {
+            "selection": "X",
+            "bookmaker": "Wplay",
+            "odd": 3.55,
+            "stakePercentage": 28.28,
+            "recommendedStake": 282828.28,
+            "expectedPayout": 1004040.39
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Wplay",
+            "odd": 4.2,
+            "stakePercentage": 23.91,
+            "recommendedStake": 239057.24,
+            "expectedPayout": 1004040.41
+          }
+        ],
+        "totalImpliedProbability": 0.996,
+        "isSurebet": true,
+        "profitMarginPercentage": 0.4,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1004040.39,
+        "guaranteedProfit": 4040.39,
+        "detectedAt": "2026-09-11T04:26:55.168Z"
+      },
+      {
+        "id": "sb_1789100815170_rr7km",
+        "eventName": "Frances Tiafoe Vs Ben Shelton",
+        "sport": "tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 3.45,
+            "stakePercentage": 28.27,
+            "recommendedStake": 282744.28,
+            "expectedPayout": 975467.77
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.36,
+            "stakePercentage": 71.73,
+            "recommendedStake": 717255.72,
+            "expectedPayout": 975467.78
+          }
+        ],
+        "totalImpliedProbability": 1.0251,
+        "isSurebet": false,
+        "profitMarginPercentage": -2.45,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 975467.77,
+        "guaranteedProfit": -24532.23,
+        "detectedAt": "2026-09-11T04:26:55.170Z"
+      },
+      {
+        "id": "sb_1789100815170_nud3s",
+        "eventName": "Anastasiya Sobolieva Vs Noma Noha Akugue",
+        "sport": "tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 1.68,
+            "stakePercentage": 57.79,
+            "recommendedStake": 577889.45,
+            "expectedPayout": 970854.28
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Stake",
+            "odd": 2.3,
+            "stakePercentage": 42.21,
+            "recommendedStake": 422110.55,
+            "expectedPayout": 970854.26
+          }
+        ],
+        "totalImpliedProbability": 1.03,
+        "isSurebet": false,
+        "profitMarginPercentage": -2.91,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 970854.26,
+        "guaranteedProfit": -29145.74,
+        "detectedAt": "2026-09-11T04:26:55.170Z"
+      },
+      {
+        "id": "sb_1789100815171_3je67",
+        "eventName": "Wozuko Mdlulwa Vs Iva Marinkovic",
+        "sport": "tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 3,
+            "stakePercentage": 32.28,
+            "recommendedStake": 322799.1,
+            "expectedPayout": 968397.3
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.43,
+            "stakePercentage": 67.72,
+            "recommendedStake": 677200.9,
+            "expectedPayout": 968397.29
+          }
+        ],
+        "totalImpliedProbability": 1.0326,
+        "isSurebet": false,
+        "profitMarginPercentage": -3.16,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 968397.29,
+        "guaranteedProfit": -31602.71,
+        "detectedAt": "2026-09-11T04:26:55.171Z"
+      },
+      {
+        "id": "sb_1789100815169_024zi",
+        "eventName": "Venezia Vs Fiorentina",
         "sport": "football",
         "marketType": "1X2",
         "outcomes": [
           {
             "selection": "1",
             "bookmaker": "Wplay",
-            "odd": 9.25,
-            "stakePercentage": 14.54,
-            "recommendedStake": 145371.22,
-            "expectedPayout": 1344683.79
-          },
-          {
-            "selection": "X",
-            "bookmaker": "Wplay",
-            "odd": 3.25,
-            "stakePercentage": 41.37,
-            "recommendedStake": 413748.85,
-            "expectedPayout": 1344683.76
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
             "odd": 3.05,
-            "stakePercentage": 44.09,
-            "recommendedStake": 440879.93,
-            "expectedPayout": 1344683.79
-          }
-        ],
-        "totalImpliedProbability": 0.7437,
-        "isSurebet": true,
-        "profitMarginPercentage": 34.47,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1344683.76,
-        "guaranteedProfit": 344683.76,
-        "detectedAt": "2026-09-08T02:20:34.212Z"
-      },
-      {
-        "id": "sb_1788834034221_ocpwn",
-        "eventName": "Central Ballester Reserves Vs General Lamadrid Reserves",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Stake",
-            "odd": 2.25,
-            "stakePercentage": 44.95,
-            "recommendedStake": 449529.83,
-            "expectedPayout": 1011442.12
+            "stakePercentage": 31.72,
+            "recommendedStake": 317164.18,
+            "expectedPayout": 967350.75
           },
           {
             "selection": "X",
             "bookmaker": "BetPlay",
-            "odd": 3.7,
-            "stakePercentage": 27.34,
-            "recommendedStake": 273362.74,
-            "expectedPayout": 1011442.14
+            "odd": 3.5,
+            "stakePercentage": 27.64,
+            "recommendedStake": 276385.93,
+            "expectedPayout": 967350.76
           },
           {
             "selection": "2",
             "bookmaker": "BetPlay",
-            "odd": 3.65,
-            "stakePercentage": 27.71,
-            "recommendedStake": 277107.43,
-            "expectedPayout": 1011442.12
+            "odd": 2.38,
+            "stakePercentage": 40.64,
+            "recommendedStake": 406449.89,
+            "expectedPayout": 967350.74
           }
         ],
-        "totalImpliedProbability": 0.9887,
-        "isSurebet": true,
-        "profitMarginPercentage": 1.14,
+        "totalImpliedProbability": 1.0338,
+        "isSurebet": false,
+        "profitMarginPercentage": -3.26,
         "totalInvestment": 1000000,
-        "guaranteedPayout": 1011442.12,
-        "guaranteedProfit": 11442.12,
-        "detectedAt": "2026-09-08T02:20:34.221Z"
+        "guaranteedPayout": 967350.74,
+        "guaranteedProfit": -32649.26,
+        "detectedAt": "2026-09-11T04:26:55.169Z"
       }
     ]
   },
   {
-    "timestamp": "2026-09-08T02:15:37.999Z",
-    "surebetsFoundCount": 2,
-    "highestProfitMargin": 34.47,
+    "timestamp": "2026-09-11T04:25:54.057Z",
+    "surebetsFoundCount": 1,
+    "highestProfitMargin": 0.4,
     "opportunities": [
       {
-        "id": "sb_1788833737971_paxek",
-        "eventName": "Umecit Vs Ca Independiente De La Chorrera",
+        "id": "sb_1789100754047_k33h7",
+        "eventName": "Sevilla Vs Valencia",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 2.1,
+            "stakePercentage": 47.81,
+            "recommendedStake": 478.11,
+            "expectedPayout": 1004.03
+          },
+          {
+            "selection": "X",
+            "bookmaker": "Wplay",
+            "odd": 3.55,
+            "stakePercentage": 28.28,
+            "recommendedStake": 282.83,
+            "expectedPayout": 1004.05
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Wplay",
+            "odd": 4.2,
+            "stakePercentage": 23.91,
+            "recommendedStake": 239.06,
+            "expectedPayout": 1004.05
+          }
+        ],
+        "totalImpliedProbability": 0.996,
+        "isSurebet": true,
+        "profitMarginPercentage": 0.4,
+        "totalInvestment": 1000,
+        "guaranteedPayout": 1004.03,
+        "guaranteedProfit": 4.03,
+        "detectedAt": "2026-09-11T04:25:54.047Z"
+      },
+      {
+        "id": "sb_1789100754048_ql3fi",
+        "eventName": "Frances Tiafoe Vs Ben Shelton",
+        "sport": "tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 3.45,
+            "stakePercentage": 28.27,
+            "recommendedStake": 282.74,
+            "expectedPayout": 975.45
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.36,
+            "stakePercentage": 71.73,
+            "recommendedStake": 717.26,
+            "expectedPayout": 975.47
+          }
+        ],
+        "totalImpliedProbability": 1.0251,
+        "isSurebet": false,
+        "profitMarginPercentage": -2.45,
+        "totalInvestment": 1000,
+        "guaranteedPayout": 975.45,
+        "guaranteedProfit": -24.55,
+        "detectedAt": "2026-09-11T04:25:54.048Z"
+      },
+      {
+        "id": "sb_1789100754048_tvacy",
+        "eventName": "Anastasiya Sobolieva Vs Noma Noha Akugue",
+        "sport": "tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 1.68,
+            "stakePercentage": 57.79,
+            "recommendedStake": 577.89,
+            "expectedPayout": 970.86
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Stake",
+            "odd": 2.3,
+            "stakePercentage": 42.21,
+            "recommendedStake": 422.11,
+            "expectedPayout": 970.85
+          }
+        ],
+        "totalImpliedProbability": 1.03,
+        "isSurebet": false,
+        "profitMarginPercentage": -2.91,
+        "totalInvestment": 1000,
+        "guaranteedPayout": 970.85,
+        "guaranteedProfit": -29.15,
+        "detectedAt": "2026-09-11T04:25:54.048Z"
+      },
+      {
+        "id": "sb_1789100754048_smu9h",
+        "eventName": "Wozuko Mdlulwa Vs Iva Marinkovic",
+        "sport": "tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 3,
+            "stakePercentage": 32.28,
+            "recommendedStake": 322.8,
+            "expectedPayout": 968.4
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.43,
+            "stakePercentage": 67.72,
+            "recommendedStake": 677.2,
+            "expectedPayout": 968.4
+          }
+        ],
+        "totalImpliedProbability": 1.0326,
+        "isSurebet": false,
+        "profitMarginPercentage": -3.16,
+        "totalInvestment": 1000,
+        "guaranteedPayout": 968.4,
+        "guaranteedProfit": -31.6,
+        "detectedAt": "2026-09-11T04:25:54.048Z"
+      },
+      {
+        "id": "sb_1789100754047_qn2f3",
+        "eventName": "Venezia Vs Fiorentina",
         "sport": "football",
         "marketType": "1X2",
         "outcomes": [
           {
             "selection": "1",
             "bookmaker": "Wplay",
-            "odd": 9.25,
-            "stakePercentage": 14.54,
-            "recommendedStake": 145371.22,
-            "expectedPayout": 1344683.79
-          },
-          {
-            "selection": "X",
-            "bookmaker": "Wplay",
-            "odd": 3.25,
-            "stakePercentage": 41.37,
-            "recommendedStake": 413748.85,
-            "expectedPayout": 1344683.76
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
             "odd": 3.05,
-            "stakePercentage": 44.09,
-            "recommendedStake": 440879.93,
-            "expectedPayout": 1344683.79
-          }
-        ],
-        "totalImpliedProbability": 0.7437,
-        "isSurebet": true,
-        "profitMarginPercentage": 34.47,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1344683.76,
-        "guaranteedProfit": 344683.76,
-        "detectedAt": "2026-09-08T02:15:37.971Z"
-      },
-      {
-        "id": "sb_1788833737983_rpobm",
-        "eventName": "Central Ballester Reserves Vs General Lamadrid Reserves",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Stake",
-            "odd": 2.25,
-            "stakePercentage": 44.95,
-            "recommendedStake": 449529.83,
-            "expectedPayout": 1011442.12
+            "stakePercentage": 31.72,
+            "recommendedStake": 317.16,
+            "expectedPayout": 967.34
           },
           {
             "selection": "X",
             "bookmaker": "BetPlay",
-            "odd": 3.7,
-            "stakePercentage": 27.34,
-            "recommendedStake": 273362.74,
-            "expectedPayout": 1011442.14
+            "odd": 3.5,
+            "stakePercentage": 27.64,
+            "recommendedStake": 276.39,
+            "expectedPayout": 967.37
           },
           {
             "selection": "2",
             "bookmaker": "BetPlay",
-            "odd": 3.65,
-            "stakePercentage": 27.71,
-            "recommendedStake": 277107.43,
-            "expectedPayout": 1011442.12
+            "odd": 2.38,
+            "stakePercentage": 40.64,
+            "recommendedStake": 406.45,
+            "expectedPayout": 967.35
           }
         ],
-        "totalImpliedProbability": 0.9887,
-        "isSurebet": true,
-        "profitMarginPercentage": 1.14,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1011442.12,
-        "guaranteedProfit": 11442.12,
-        "detectedAt": "2026-09-08T02:15:37.983Z"
+        "totalImpliedProbability": 1.0338,
+        "isSurebet": false,
+        "profitMarginPercentage": -3.26,
+        "totalInvestment": 1000,
+        "guaranteedPayout": 967.34,
+        "guaranteedProfit": -32.66,
+        "detectedAt": "2026-09-11T04:25:54.047Z"
       }
     ]
   },
   {
-    "timestamp": "2026-09-08T02:15:37.860Z",
-    "surebetsFoundCount": 2,
-    "highestProfitMargin": 34.47,
+    "timestamp": "2026-09-11T04:25:44.489Z",
+    "surebetsFoundCount": 1,
+    "highestProfitMargin": 0.4,
     "opportunities": [
       {
-        "id": "sb_1788833737844_etdjb",
-        "eventName": "Umecit Vs Ca Independiente De La Chorrera",
+        "id": "sb_1789100744479_1h2v8",
+        "eventName": "Sevilla Vs Valencia",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 2.1,
+            "stakePercentage": 47.81,
+            "recommendedStake": 478.11,
+            "expectedPayout": 1004.03
+          },
+          {
+            "selection": "X",
+            "bookmaker": "Wplay",
+            "odd": 3.55,
+            "stakePercentage": 28.28,
+            "recommendedStake": 282.83,
+            "expectedPayout": 1004.05
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Wplay",
+            "odd": 4.2,
+            "stakePercentage": 23.91,
+            "recommendedStake": 239.06,
+            "expectedPayout": 1004.05
+          }
+        ],
+        "totalImpliedProbability": 0.996,
+        "isSurebet": true,
+        "profitMarginPercentage": 0.4,
+        "totalInvestment": 1000,
+        "guaranteedPayout": 1004.03,
+        "guaranteedProfit": 4.03,
+        "detectedAt": "2026-09-11T04:25:44.479Z"
+      },
+      {
+        "id": "sb_1789100744480_6iueu",
+        "eventName": "Frances Tiafoe Vs Ben Shelton",
+        "sport": "tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 3.45,
+            "stakePercentage": 28.27,
+            "recommendedStake": 282.74,
+            "expectedPayout": 975.45
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.36,
+            "stakePercentage": 71.73,
+            "recommendedStake": 717.26,
+            "expectedPayout": 975.47
+          }
+        ],
+        "totalImpliedProbability": 1.0251,
+        "isSurebet": false,
+        "profitMarginPercentage": -2.45,
+        "totalInvestment": 1000,
+        "guaranteedPayout": 975.45,
+        "guaranteedProfit": -24.55,
+        "detectedAt": "2026-09-11T04:25:44.480Z"
+      },
+      {
+        "id": "sb_1789100744480_aq9sg",
+        "eventName": "Anastasiya Sobolieva Vs Noma Noha Akugue",
+        "sport": "tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 1.68,
+            "stakePercentage": 57.79,
+            "recommendedStake": 577.89,
+            "expectedPayout": 970.86
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Stake",
+            "odd": 2.3,
+            "stakePercentage": 42.21,
+            "recommendedStake": 422.11,
+            "expectedPayout": 970.85
+          }
+        ],
+        "totalImpliedProbability": 1.03,
+        "isSurebet": false,
+        "profitMarginPercentage": -2.91,
+        "totalInvestment": 1000,
+        "guaranteedPayout": 970.85,
+        "guaranteedProfit": -29.15,
+        "detectedAt": "2026-09-11T04:25:44.480Z"
+      },
+      {
+        "id": "sb_1789100744481_9ay9t",
+        "eventName": "Wozuko Mdlulwa Vs Iva Marinkovic",
+        "sport": "tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 3,
+            "stakePercentage": 32.28,
+            "recommendedStake": 322.8,
+            "expectedPayout": 968.4
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.43,
+            "stakePercentage": 67.72,
+            "recommendedStake": 677.2,
+            "expectedPayout": 968.4
+          }
+        ],
+        "totalImpliedProbability": 1.0326,
+        "isSurebet": false,
+        "profitMarginPercentage": -3.16,
+        "totalInvestment": 1000,
+        "guaranteedPayout": 968.4,
+        "guaranteedProfit": -31.6,
+        "detectedAt": "2026-09-11T04:25:44.481Z"
+      },
+      {
+        "id": "sb_1789100744479_rnl4i",
+        "eventName": "Venezia Vs Fiorentina",
         "sport": "football",
         "marketType": "1X2",
         "outcomes": [
           {
             "selection": "1",
             "bookmaker": "Wplay",
-            "odd": 9.25,
-            "stakePercentage": 14.54,
-            "recommendedStake": 145371.22,
-            "expectedPayout": 1344683.79
-          },
-          {
-            "selection": "X",
-            "bookmaker": "Wplay",
-            "odd": 3.25,
-            "stakePercentage": 41.37,
-            "recommendedStake": 413748.85,
-            "expectedPayout": 1344683.76
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
             "odd": 3.05,
-            "stakePercentage": 44.09,
-            "recommendedStake": 440879.93,
-            "expectedPayout": 1344683.79
-          }
-        ],
-        "totalImpliedProbability": 0.7437,
-        "isSurebet": true,
-        "profitMarginPercentage": 34.47,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1344683.76,
-        "guaranteedProfit": 344683.76,
-        "detectedAt": "2026-09-08T02:15:37.844Z"
-      },
-      {
-        "id": "sb_1788833737851_l2sf4",
-        "eventName": "Central Ballester Reserves Vs General Lamadrid Reserves",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Stake",
-            "odd": 2.25,
-            "stakePercentage": 44.95,
-            "recommendedStake": 449529.83,
-            "expectedPayout": 1011442.12
+            "stakePercentage": 31.72,
+            "recommendedStake": 317.16,
+            "expectedPayout": 967.34
           },
           {
             "selection": "X",
             "bookmaker": "BetPlay",
-            "odd": 3.7,
-            "stakePercentage": 27.34,
-            "recommendedStake": 273362.74,
-            "expectedPayout": 1011442.14
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
-            "odd": 3.65,
-            "stakePercentage": 27.71,
-            "recommendedStake": 277107.43,
-            "expectedPayout": 1011442.12
-          }
-        ],
-        "totalImpliedProbability": 0.9887,
-        "isSurebet": true,
-        "profitMarginPercentage": 1.14,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1011442.12,
-        "guaranteedProfit": 11442.12,
-        "detectedAt": "2026-09-08T02:15:37.851Z"
-      }
-    ]
-  },
-  {
-    "timestamp": "2026-09-08T02:04:57.169Z",
-    "surebetsFoundCount": 2,
-    "highestProfitMargin": 26.86,
-    "opportunities": [
-      {
-        "id": "sb_1788833097147_6181x",
-        "eventName": "Umecit Vs Ca Independiente De La Chorrera",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Wplay",
-            "odd": 7.2,
-            "stakePercentage": 17.62,
-            "recommendedStake": 176.19,
-            "expectedPayout": 1268.57
-          },
-          {
-            "selection": "X",
-            "bookmaker": "Wplay",
-            "odd": 3.35,
-            "stakePercentage": 37.87,
-            "recommendedStake": 378.69,
-            "expectedPayout": 1268.61
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
-            "odd": 2.85,
-            "stakePercentage": 44.51,
-            "recommendedStake": 445.12,
-            "expectedPayout": 1268.59
-          }
-        ],
-        "totalImpliedProbability": 0.7883,
-        "isSurebet": true,
-        "profitMarginPercentage": 26.86,
-        "totalInvestment": 1000,
-        "guaranteedPayout": 1268.57,
-        "guaranteedProfit": 268.57,
-        "detectedAt": "2026-09-08T02:04:57.147Z"
-      },
-      {
-        "id": "sb_1788833097157_x32j5",
-        "eventName": "Central Ballester Reserves Vs General Lamadrid Reserves",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Stake",
-            "odd": 2.25,
-            "stakePercentage": 44.95,
-            "recommendedStake": 449.53,
-            "expectedPayout": 1011.44
-          },
-          {
-            "selection": "X",
-            "bookmaker": "BetPlay",
-            "odd": 3.7,
-            "stakePercentage": 27.34,
-            "recommendedStake": 273.36,
-            "expectedPayout": 1011.43
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
-            "odd": 3.65,
-            "stakePercentage": 27.71,
-            "recommendedStake": 277.11,
-            "expectedPayout": 1011.45
-          }
-        ],
-        "totalImpliedProbability": 0.9887,
-        "isSurebet": true,
-        "profitMarginPercentage": 1.14,
-        "totalInvestment": 1000,
-        "guaranteedPayout": 1011.43,
-        "guaranteedProfit": 11.43,
-        "detectedAt": "2026-09-08T02:04:57.157Z"
-      }
-    ]
-  },
-  {
-    "timestamp": "2026-09-08T02:04:55.493Z",
-    "surebetsFoundCount": 2,
-    "highestProfitMargin": 26.86,
-    "opportunities": [
-      {
-        "id": "sb_1788833095478_sojet",
-        "eventName": "Umecit Vs Ca Independiente De La Chorrera",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Wplay",
-            "odd": 7.2,
-            "stakePercentage": 17.62,
-            "recommendedStake": 176.19,
-            "expectedPayout": 1268.57
-          },
-          {
-            "selection": "X",
-            "bookmaker": "Wplay",
-            "odd": 3.35,
-            "stakePercentage": 37.87,
-            "recommendedStake": 378.69,
-            "expectedPayout": 1268.61
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
-            "odd": 2.85,
-            "stakePercentage": 44.51,
-            "recommendedStake": 445.12,
-            "expectedPayout": 1268.59
-          }
-        ],
-        "totalImpliedProbability": 0.7883,
-        "isSurebet": true,
-        "profitMarginPercentage": 26.86,
-        "totalInvestment": 1000,
-        "guaranteedPayout": 1268.57,
-        "guaranteedProfit": 268.57,
-        "detectedAt": "2026-09-08T02:04:55.478Z"
-      },
-      {
-        "id": "sb_1788833095484_ombbh",
-        "eventName": "Central Ballester Reserves Vs General Lamadrid Reserves",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Stake",
-            "odd": 2.25,
-            "stakePercentage": 44.95,
-            "recommendedStake": 449.53,
-            "expectedPayout": 1011.44
-          },
-          {
-            "selection": "X",
-            "bookmaker": "BetPlay",
-            "odd": 3.7,
-            "stakePercentage": 27.34,
-            "recommendedStake": 273.36,
-            "expectedPayout": 1011.43
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
-            "odd": 3.65,
-            "stakePercentage": 27.71,
-            "recommendedStake": 277.11,
-            "expectedPayout": 1011.45
-          }
-        ],
-        "totalImpliedProbability": 0.9887,
-        "isSurebet": true,
-        "profitMarginPercentage": 1.14,
-        "totalInvestment": 1000,
-        "guaranteedPayout": 1011.43,
-        "guaranteedProfit": 11.43,
-        "detectedAt": "2026-09-08T02:04:55.484Z"
-      }
-    ]
-  },
-  {
-    "timestamp": "2026-09-08T02:04:15.907Z",
-    "surebetsFoundCount": 2,
-    "highestProfitMargin": 26.86,
-    "opportunities": [
-      {
-        "id": "sb_1788833055878_bdy8k",
-        "eventName": "Umecit Vs Ca Independiente De La Chorrera",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Wplay",
-            "odd": 7.2,
-            "stakePercentage": 17.62,
-            "recommendedStake": 176193.77,
-            "expectedPayout": 1268595.14
-          },
-          {
-            "selection": "X",
-            "bookmaker": "Wplay",
-            "odd": 3.35,
-            "stakePercentage": 37.87,
-            "recommendedStake": 378685.12,
-            "expectedPayout": 1268595.15
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
-            "odd": 2.85,
-            "stakePercentage": 44.51,
-            "recommendedStake": 445121.11,
-            "expectedPayout": 1268595.16
-          }
-        ],
-        "totalImpliedProbability": 0.7883,
-        "isSurebet": true,
-        "profitMarginPercentage": 26.86,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1268595.14,
-        "guaranteedProfit": 268595.14,
-        "detectedAt": "2026-09-08T02:04:15.878Z"
-      },
-      {
-        "id": "sb_1788833055896_9tzwm",
-        "eventName": "Central Ballester Reserves Vs General Lamadrid Reserves",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Stake",
-            "odd": 2.25,
-            "stakePercentage": 44.95,
-            "recommendedStake": 449529.83,
-            "expectedPayout": 1011442.12
-          },
-          {
-            "selection": "X",
-            "bookmaker": "BetPlay",
-            "odd": 3.7,
-            "stakePercentage": 27.34,
-            "recommendedStake": 273362.74,
-            "expectedPayout": 1011442.14
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
-            "odd": 3.65,
-            "stakePercentage": 27.71,
-            "recommendedStake": 277107.43,
-            "expectedPayout": 1011442.12
-          }
-        ],
-        "totalImpliedProbability": 0.9887,
-        "isSurebet": true,
-        "profitMarginPercentage": 1.14,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1011442.12,
-        "guaranteedProfit": 11442.12,
-        "detectedAt": "2026-09-08T02:04:15.896Z"
-      }
-    ]
-  },
-  {
-    "timestamp": "2026-09-08T02:04:15.758Z",
-    "surebetsFoundCount": 2,
-    "highestProfitMargin": 26.86,
-    "opportunities": [
-      {
-        "id": "sb_1788833055737_l536y",
-        "eventName": "Umecit Vs Ca Independiente De La Chorrera",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Wplay",
-            "odd": 7.2,
-            "stakePercentage": 17.62,
-            "recommendedStake": 176193.77,
-            "expectedPayout": 1268595.14
-          },
-          {
-            "selection": "X",
-            "bookmaker": "Wplay",
-            "odd": 3.35,
-            "stakePercentage": 37.87,
-            "recommendedStake": 378685.12,
-            "expectedPayout": 1268595.15
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
-            "odd": 2.85,
-            "stakePercentage": 44.51,
-            "recommendedStake": 445121.11,
-            "expectedPayout": 1268595.16
-          }
-        ],
-        "totalImpliedProbability": 0.7883,
-        "isSurebet": true,
-        "profitMarginPercentage": 26.86,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1268595.14,
-        "guaranteedProfit": 268595.14,
-        "detectedAt": "2026-09-08T02:04:15.737Z"
-      },
-      {
-        "id": "sb_1788833055747_5vzhd",
-        "eventName": "Central Ballester Reserves Vs General Lamadrid Reserves",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Stake",
-            "odd": 2.25,
-            "stakePercentage": 44.95,
-            "recommendedStake": 449529.83,
-            "expectedPayout": 1011442.12
-          },
-          {
-            "selection": "X",
-            "bookmaker": "BetPlay",
-            "odd": 3.7,
-            "stakePercentage": 27.34,
-            "recommendedStake": 273362.74,
-            "expectedPayout": 1011442.14
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
-            "odd": 3.65,
-            "stakePercentage": 27.71,
-            "recommendedStake": 277107.43,
-            "expectedPayout": 1011442.12
-          }
-        ],
-        "totalImpliedProbability": 0.9887,
-        "isSurebet": true,
-        "profitMarginPercentage": 1.14,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1011442.12,
-        "guaranteedProfit": 11442.12,
-        "detectedAt": "2026-09-08T02:04:15.747Z"
-      }
-    ]
-  },
-  {
-    "timestamp": "2026-09-08T01:39:36.422Z",
-    "surebetsFoundCount": 0,
-    "highestProfitMargin": 0,
-    "opportunities": []
-  },
-  {
-    "timestamp": "2026-09-08T01:39:36.378Z",
-    "surebetsFoundCount": 0,
-    "highestProfitMargin": 0,
-    "opportunities": []
-  },
-  {
-    "timestamp": "2026-09-08T01:39:36.273Z",
-    "surebetsFoundCount": 0,
-    "highestProfitMargin": 0,
-    "opportunities": []
-  },
-  {
-    "timestamp": "2026-09-08T01:39:36.172Z",
-    "surebetsFoundCount": 0,
-    "highestProfitMargin": 0,
-    "opportunities": []
-  },
-  {
-    "timestamp": "2026-09-03T06:47:10.935Z",
-    "surebetsFoundCount": 0,
-    "highestProfitMargin": 0,
-    "opportunities": []
-  },
-  {
-    "timestamp": "2026-09-03T06:47:10.800Z",
-    "surebetsFoundCount": 0,
-    "highestProfitMargin": 0,
-    "opportunities": []
-  },
-  {
-    "timestamp": "2026-09-03T06:35:47.824Z",
-    "surebetsFoundCount": 0,
-    "highestProfitMargin": 0,
-    "opportunities": []
-  },
-  {
-    "timestamp": "2026-09-03T06:35:47.759Z",
-    "surebetsFoundCount": 0,
-    "highestProfitMargin": 0,
-    "opportunities": []
-  },
-  {
-    "timestamp": "2026-09-03T06:34:21.047Z",
-    "surebetsFoundCount": 0,
-    "highestProfitMargin": 0,
-    "opportunities": []
-  },
-  {
-    "timestamp": "2026-09-03T06:34:20.989Z",
-    "surebetsFoundCount": 0,
-    "highestProfitMargin": 0,
-    "opportunities": []
-  },
-  {
-    "timestamp": "2026-09-03T06:32:49.528Z",
-    "surebetsFoundCount": 0,
-    "highestProfitMargin": 0,
-    "opportunities": []
-  },
-  {
-    "timestamp": "2026-09-03T06:32:49.489Z",
-    "surebetsFoundCount": 0,
-    "highestProfitMargin": 0,
-    "opportunities": []
-  },
-  {
-    "timestamp": "2026-09-03T06:30:06.221Z",
-    "surebetsFoundCount": 1,
-    "highestProfitMargin": 10.37,
-    "opportunities": [
-      {
-        "id": "sb_1788417006214_ocv3d",
-        "eventName": "Real Madrid Vs Barcelona",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Stake",
-            "odd": 2.8,
-            "stakePercentage": 39.42,
-            "recommendedStake": 394.19,
-            "expectedPayout": 1103.73
-          },
-          {
-            "selection": "X",
-            "bookmaker": "Wplay",
             "odd": 3.5,
-            "stakePercentage": 31.54,
-            "recommendedStake": 315.35,
-            "expectedPayout": 1103.73
+            "stakePercentage": 27.64,
+            "recommendedStake": 276.39,
+            "expectedPayout": 967.37
           },
           {
             "selection": "2",
-            "bookmaker": "Wplay",
-            "odd": 3.8,
-            "stakePercentage": 29.05,
-            "recommendedStake": 290.46,
-            "expectedPayout": 1103.75
+            "bookmaker": "BetPlay",
+            "odd": 2.38,
+            "stakePercentage": 40.64,
+            "recommendedStake": 406.45,
+            "expectedPayout": 967.35
           }
         ],
-        "totalImpliedProbability": 0.906,
-        "isSurebet": true,
-        "profitMarginPercentage": 10.37,
+        "totalImpliedProbability": 1.0338,
+        "isSurebet": false,
+        "profitMarginPercentage": -3.26,
         "totalInvestment": 1000,
-        "guaranteedPayout": 1103.73,
-        "guaranteedProfit": 103.73,
-        "detectedAt": "2026-09-03T06:30:06.214Z"
+        "guaranteedPayout": 967.34,
+        "guaranteedProfit": -32.66,
+        "detectedAt": "2026-09-11T04:25:44.479Z"
       }
     ]
   },
   {
-    "timestamp": "2026-09-03T06:27:28.826Z",
+    "timestamp": "2026-09-11T04:21:49.968Z",
     "surebetsFoundCount": 1,
-    "highestProfitMargin": 10.37,
+    "highestProfitMargin": 0.4,
     "opportunities": [
       {
-        "id": "sb_1788416848815_ovduc",
-        "eventName": "Real Madrid Vs Barcelona",
+        "id": "sb_1789100509958_tf7en",
+        "eventName": "Sevilla Vs Valencia",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 2.1,
+            "stakePercentage": 47.81,
+            "recommendedStake": 478114.48,
+            "expectedPayout": 1004040.41
+          },
+          {
+            "selection": "X",
+            "bookmaker": "Wplay",
+            "odd": 3.55,
+            "stakePercentage": 28.28,
+            "recommendedStake": 282828.28,
+            "expectedPayout": 1004040.39
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Wplay",
+            "odd": 4.2,
+            "stakePercentage": 23.91,
+            "recommendedStake": 239057.24,
+            "expectedPayout": 1004040.41
+          }
+        ],
+        "totalImpliedProbability": 0.996,
+        "isSurebet": true,
+        "profitMarginPercentage": 0.4,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1004040.39,
+        "guaranteedProfit": 4040.39,
+        "detectedAt": "2026-09-11T04:21:49.958Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-11T04:21:49.514Z",
+    "surebetsFoundCount": 1,
+    "highestProfitMargin": 0.4,
+    "opportunities": [
+      {
+        "id": "sb_1789100509503_rs70q",
+        "eventName": "Sevilla Vs Valencia",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 2.1,
+            "stakePercentage": 47.81,
+            "recommendedStake": 478114.48,
+            "expectedPayout": 1004040.41
+          },
+          {
+            "selection": "X",
+            "bookmaker": "Wplay",
+            "odd": 3.55,
+            "stakePercentage": 28.28,
+            "recommendedStake": 282828.28,
+            "expectedPayout": 1004040.39
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Wplay",
+            "odd": 4.2,
+            "stakePercentage": 23.91,
+            "recommendedStake": 239057.24,
+            "expectedPayout": 1004040.41
+          }
+        ],
+        "totalImpliedProbability": 0.996,
+        "isSurebet": true,
+        "profitMarginPercentage": 0.4,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1004040.39,
+        "guaranteedProfit": 4040.39,
+        "detectedAt": "2026-09-11T04:21:49.503Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-11T04:17:19.634Z",
+    "surebetsFoundCount": 2,
+    "highestProfitMargin": 1.56,
+    "opportunities": [
+      {
+        "id": "sb_1789100239625_fueir",
+        "eventName": "Boca Juniors Vs Central Cordoba",
         "sport": "football",
         "marketType": "1X2",
         "outcomes": [
           {
             "selection": "1",
             "bookmaker": "Stake",
-            "odd": 2.8,
-            "stakePercentage": 39.42,
-            "recommendedStake": 394.19,
-            "expectedPayout": 1103.73
+            "odd": 1.45,
+            "stakePercentage": 70.04,
+            "recommendedStake": 700409.33,
+            "expectedPayout": 1015593.53
           },
           {
             "selection": "X",
-            "bookmaker": "Wplay",
-            "odd": 3.5,
-            "stakePercentage": 31.54,
-            "recommendedStake": 315.35,
-            "expectedPayout": 1103.73
+            "bookmaker": "BetPlay",
+            "odd": 4.9,
+            "stakePercentage": 20.73,
+            "recommendedStake": 207263.99,
+            "expectedPayout": 1015593.55
           },
           {
             "selection": "2",
-            "bookmaker": "Wplay",
-            "odd": 3.8,
-            "stakePercentage": 29.05,
-            "recommendedStake": 290.46,
-            "expectedPayout": 1103.75
+            "bookmaker": "BetPlay",
+            "odd": 11,
+            "stakePercentage": 9.23,
+            "recommendedStake": 92326.68,
+            "expectedPayout": 1015593.48
           }
         ],
-        "totalImpliedProbability": 0.906,
+        "totalImpliedProbability": 0.9846,
         "isSurebet": true,
-        "profitMarginPercentage": 10.37,
-        "totalInvestment": 1000,
-        "guaranteedPayout": 1103.73,
-        "guaranteedProfit": 103.73,
-        "detectedAt": "2026-09-03T06:27:28.815Z"
-      }
-    ]
-  },
-  {
-    "timestamp": "2026-09-03T06:27:28.773Z",
-    "surebetsFoundCount": 1,
-    "highestProfitMargin": 10.37,
-    "opportunities": [
+        "profitMarginPercentage": 1.56,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1015593.48,
+        "guaranteedProfit": 15593.48,
+        "detectedAt": "2026-09-11T04:17:19.625Z"
+      },
       {
-        "id": "sb_1788416848763_wmowa",
-        "eventName": "Real Madrid Vs Barcelona",
+        "id": "sb_1789100239624_2l9zf",
+        "eventName": "Sevilla Vs Valencia",
         "sport": "football",
         "marketType": "1X2",
         "outcomes": [
           {
             "selection": "1",
             "bookmaker": "Stake",
-            "odd": 2.8,
-            "stakePercentage": 39.42,
-            "recommendedStake": 394.19,
-            "expectedPayout": 1103.73
+            "odd": 2.1,
+            "stakePercentage": 47.81,
+            "recommendedStake": 478114.48,
+            "expectedPayout": 1004040.41
           },
           {
             "selection": "X",
             "bookmaker": "Wplay",
-            "odd": 3.5,
-            "stakePercentage": 31.54,
-            "recommendedStake": 315.35,
-            "expectedPayout": 1103.73
+            "odd": 3.55,
+            "stakePercentage": 28.28,
+            "recommendedStake": 282828.28,
+            "expectedPayout": 1004040.39
           },
           {
             "selection": "2",
             "bookmaker": "Wplay",
-            "odd": 3.8,
-            "stakePercentage": 29.05,
-            "recommendedStake": 290.46,
-            "expectedPayout": 1103.75
+            "odd": 4.2,
+            "stakePercentage": 23.91,
+            "recommendedStake": 239057.24,
+            "expectedPayout": 1004040.41
           }
         ],
-        "totalImpliedProbability": 0.906,
+        "totalImpliedProbability": 0.996,
         "isSurebet": true,
-        "profitMarginPercentage": 10.37,
-        "totalInvestment": 1000,
-        "guaranteedPayout": 1103.73,
-        "guaranteedProfit": 103.73,
-        "detectedAt": "2026-09-03T06:27:28.763Z"
+        "profitMarginPercentage": 0.4,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1004040.39,
+        "guaranteedProfit": 4040.39,
+        "detectedAt": "2026-09-11T04:17:19.624Z"
       }
     ]
   },
   {
-    "timestamp": "2026-09-03T06:25:52.693Z",
-    "surebetsFoundCount": 1,
-    "highestProfitMargin": 10.37,
+    "timestamp": "2026-09-11T04:17:16.788Z",
+    "surebetsFoundCount": 2,
+    "highestProfitMargin": 1.56,
     "opportunities": [
       {
-        "id": "sb_1788416752686_zwa3h",
-        "eventName": "Real Madrid Vs Barcelona",
+        "id": "sb_1789100236778_97h0z",
+        "eventName": "Boca Juniors Vs Central Cordoba",
         "sport": "football",
         "marketType": "1X2",
         "outcomes": [
           {
             "selection": "1",
             "bookmaker": "Stake",
-            "odd": 2.8,
-            "stakePercentage": 39.42,
-            "recommendedStake": 394.19,
-            "expectedPayout": 1103.73
+            "odd": 1.45,
+            "stakePercentage": 70.04,
+            "recommendedStake": 700409.33,
+            "expectedPayout": 1015593.53
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 4.9,
+            "stakePercentage": 20.73,
+            "recommendedStake": 207263.99,
+            "expectedPayout": 1015593.55
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 11,
+            "stakePercentage": 9.23,
+            "recommendedStake": 92326.68,
+            "expectedPayout": 1015593.48
+          }
+        ],
+        "totalImpliedProbability": 0.9846,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.56,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1015593.48,
+        "guaranteedProfit": 15593.48,
+        "detectedAt": "2026-09-11T04:17:16.778Z"
+      },
+      {
+        "id": "sb_1789100236777_cl2mx",
+        "eventName": "Sevilla Vs Valencia",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 2.1,
+            "stakePercentage": 47.81,
+            "recommendedStake": 478114.48,
+            "expectedPayout": 1004040.41
           },
           {
             "selection": "X",
             "bookmaker": "Wplay",
-            "odd": 3.5,
-            "stakePercentage": 31.54,
-            "recommendedStake": 315.35,
-            "expectedPayout": 1103.73
+            "odd": 3.55,
+            "stakePercentage": 28.28,
+            "recommendedStake": 282828.28,
+            "expectedPayout": 1004040.39
           },
           {
             "selection": "2",
             "bookmaker": "Wplay",
-            "odd": 3.8,
-            "stakePercentage": 29.05,
-            "recommendedStake": 290.46,
-            "expectedPayout": 1103.75
+            "odd": 4.2,
+            "stakePercentage": 23.91,
+            "recommendedStake": 239057.24,
+            "expectedPayout": 1004040.41
           }
         ],
-        "totalImpliedProbability": 0.906,
+        "totalImpliedProbability": 0.996,
         "isSurebet": true,
-        "profitMarginPercentage": 10.37,
-        "totalInvestment": 1000,
-        "guaranteedPayout": 1103.73,
-        "guaranteedProfit": 103.73,
-        "detectedAt": "2026-09-03T06:25:52.686Z"
+        "profitMarginPercentage": 0.4,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1004040.39,
+        "guaranteedProfit": 4040.39,
+        "detectedAt": "2026-09-11T04:17:16.777Z"
       }
     ]
   },
   {
-    "timestamp": "2026-09-03T06:25:42.035Z",
-    "surebetsFoundCount": 0,
-    "highestProfitMargin": 0,
-    "opportunities": []
+    "timestamp": "2026-09-11T04:16:10.490Z",
+    "surebetsFoundCount": 2,
+    "highestProfitMargin": 1.56,
+    "opportunities": [
+      {
+        "id": "sb_1789100170476_ka9oj",
+        "eventName": "Boca Juniors Vs Central Cordoba",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 1.45,
+            "stakePercentage": 70.04,
+            "recommendedStake": 700409.33,
+            "expectedPayout": 1015593.53
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 4.9,
+            "stakePercentage": 20.73,
+            "recommendedStake": 207263.99,
+            "expectedPayout": 1015593.55
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 11,
+            "stakePercentage": 9.23,
+            "recommendedStake": 92326.68,
+            "expectedPayout": 1015593.48
+          }
+        ],
+        "totalImpliedProbability": 0.9846,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.56,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1015593.48,
+        "guaranteedProfit": 15593.48,
+        "detectedAt": "2026-09-11T04:16:10.476Z"
+      },
+      {
+        "id": "sb_1789100170475_7wb0r",
+        "eventName": "Sevilla Vs Valencia",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 2.1,
+            "stakePercentage": 47.81,
+            "recommendedStake": 478114.48,
+            "expectedPayout": 1004040.41
+          },
+          {
+            "selection": "X",
+            "bookmaker": "Wplay",
+            "odd": 3.55,
+            "stakePercentage": 28.28,
+            "recommendedStake": 282828.28,
+            "expectedPayout": 1004040.39
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Wplay",
+            "odd": 4.2,
+            "stakePercentage": 23.91,
+            "recommendedStake": 239057.24,
+            "expectedPayout": 1004040.41
+          }
+        ],
+        "totalImpliedProbability": 0.996,
+        "isSurebet": true,
+        "profitMarginPercentage": 0.4,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1004040.39,
+        "guaranteedProfit": 4040.39,
+        "detectedAt": "2026-09-11T04:16:10.475Z"
+      }
+    ]
   },
   {
-    "timestamp": "2026-09-03T06:25:32.188Z",
-    "surebetsFoundCount": 0,
-    "highestProfitMargin": 0,
-    "opportunities": []
+    "timestamp": "2026-09-11T04:16:07.660Z",
+    "surebetsFoundCount": 2,
+    "highestProfitMargin": 1.56,
+    "opportunities": [
+      {
+        "id": "sb_1789100167648_tg23r",
+        "eventName": "Boca Juniors Vs Central Cordoba",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 1.45,
+            "stakePercentage": 70.04,
+            "recommendedStake": 700409.33,
+            "expectedPayout": 1015593.53
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 4.9,
+            "stakePercentage": 20.73,
+            "recommendedStake": 207263.99,
+            "expectedPayout": 1015593.55
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 11,
+            "stakePercentage": 9.23,
+            "recommendedStake": 92326.68,
+            "expectedPayout": 1015593.48
+          }
+        ],
+        "totalImpliedProbability": 0.9846,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.56,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1015593.48,
+        "guaranteedProfit": 15593.48,
+        "detectedAt": "2026-09-11T04:16:07.648Z"
+      },
+      {
+        "id": "sb_1789100167647_gihob",
+        "eventName": "Sevilla Vs Valencia",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 2.1,
+            "stakePercentage": 47.81,
+            "recommendedStake": 478114.48,
+            "expectedPayout": 1004040.41
+          },
+          {
+            "selection": "X",
+            "bookmaker": "Wplay",
+            "odd": 3.55,
+            "stakePercentage": 28.28,
+            "recommendedStake": 282828.28,
+            "expectedPayout": 1004040.39
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Wplay",
+            "odd": 4.2,
+            "stakePercentage": 23.91,
+            "recommendedStake": 239057.24,
+            "expectedPayout": 1004040.41
+          }
+        ],
+        "totalImpliedProbability": 0.996,
+        "isSurebet": true,
+        "profitMarginPercentage": 0.4,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1004040.39,
+        "guaranteedProfit": 4040.39,
+        "detectedAt": "2026-09-11T04:16:07.647Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-11T04:15:46.913Z",
+    "surebetsFoundCount": 1,
+    "highestProfitMargin": 1.56,
+    "opportunities": [
+      {
+        "id": "sb_1789100146901_pkdnz",
+        "eventName": "Boca Juniors Vs Central Cordoba",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 1.45,
+            "stakePercentage": 70.04,
+            "recommendedStake": 700409.33,
+            "expectedPayout": 1015593.53
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 4.9,
+            "stakePercentage": 20.73,
+            "recommendedStake": 207263.99,
+            "expectedPayout": 1015593.55
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 11,
+            "stakePercentage": 9.23,
+            "recommendedStake": 92326.68,
+            "expectedPayout": 1015593.48
+          }
+        ],
+        "totalImpliedProbability": 0.9846,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.56,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1015593.48,
+        "guaranteedProfit": 15593.48,
+        "detectedAt": "2026-09-11T04:15:46.901Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-11T04:15:44.669Z",
+    "surebetsFoundCount": 1,
+    "highestProfitMargin": 1.56,
+    "opportunities": [
+      {
+        "id": "sb_1789100144652_vt7p7",
+        "eventName": "Boca Juniors Vs Central Cordoba",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 1.45,
+            "stakePercentage": 70.04,
+            "recommendedStake": 700409.33,
+            "expectedPayout": 1015593.53
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 4.9,
+            "stakePercentage": 20.73,
+            "recommendedStake": 207263.99,
+            "expectedPayout": 1015593.55
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 11,
+            "stakePercentage": 9.23,
+            "recommendedStake": 92326.68,
+            "expectedPayout": 1015593.48
+          }
+        ],
+        "totalImpliedProbability": 0.9846,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.56,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1015593.48,
+        "guaranteedProfit": 15593.48,
+        "detectedAt": "2026-09-11T04:15:44.652Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-11T02:55:45.482Z",
+    "surebetsFoundCount": 1,
+    "highestProfitMargin": 1.56,
+    "opportunities": [
+      {
+        "id": "sb_1789095345474_j7tto",
+        "eventName": "Boca Juniors Vs Central Cordoba",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 1.45,
+            "stakePercentage": 70.04,
+            "recommendedStake": 700409.33,
+            "expectedPayout": 1015593.53
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 4.9,
+            "stakePercentage": 20.73,
+            "recommendedStake": 207263.99,
+            "expectedPayout": 1015593.55
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 11,
+            "stakePercentage": 9.23,
+            "recommendedStake": 92326.68,
+            "expectedPayout": 1015593.48
+          }
+        ],
+        "totalImpliedProbability": 0.9846,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.56,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1015593.48,
+        "guaranteedProfit": 15593.48,
+        "detectedAt": "2026-09-11T02:55:45.474Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-11T02:55:42.811Z",
+    "surebetsFoundCount": 1,
+    "highestProfitMargin": 1.56,
+    "opportunities": [
+      {
+        "id": "sb_1789095342802_ueys6",
+        "eventName": "Boca Juniors Vs Central Cordoba",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 1.45,
+            "stakePercentage": 70.04,
+            "recommendedStake": 700409.33,
+            "expectedPayout": 1015593.53
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 4.9,
+            "stakePercentage": 20.73,
+            "recommendedStake": 207263.99,
+            "expectedPayout": 1015593.55
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 11,
+            "stakePercentage": 9.23,
+            "recommendedStake": 92326.68,
+            "expectedPayout": 1015593.48
+          }
+        ],
+        "totalImpliedProbability": 0.9846,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.56,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1015593.48,
+        "guaranteedProfit": 15593.48,
+        "detectedAt": "2026-09-11T02:55:42.802Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-11T02:53:40.018Z",
+    "surebetsFoundCount": 1,
+    "highestProfitMargin": 1.56,
+    "opportunities": [
+      {
+        "id": "sb_1789095220010_z3tys",
+        "eventName": "Boca Juniors Vs Central Cordoba",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 1.45,
+            "stakePercentage": 70.04,
+            "recommendedStake": 700409.33,
+            "expectedPayout": 1015593.53
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 4.9,
+            "stakePercentage": 20.73,
+            "recommendedStake": 207263.99,
+            "expectedPayout": 1015593.55
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 11,
+            "stakePercentage": 9.23,
+            "recommendedStake": 92326.68,
+            "expectedPayout": 1015593.48
+          }
+        ],
+        "totalImpliedProbability": 0.9846,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.56,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1015593.48,
+        "guaranteedProfit": 15593.48,
+        "detectedAt": "2026-09-11T02:53:40.010Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-11T02:53:37.390Z",
+    "surebetsFoundCount": 1,
+    "highestProfitMargin": 1.56,
+    "opportunities": [
+      {
+        "id": "sb_1789095217381_emr9g",
+        "eventName": "Boca Juniors Vs Central Cordoba",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 1.45,
+            "stakePercentage": 70.04,
+            "recommendedStake": 700409.33,
+            "expectedPayout": 1015593.53
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 4.9,
+            "stakePercentage": 20.73,
+            "recommendedStake": 207263.99,
+            "expectedPayout": 1015593.55
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 11,
+            "stakePercentage": 9.23,
+            "recommendedStake": 92326.68,
+            "expectedPayout": 1015593.48
+          }
+        ],
+        "totalImpliedProbability": 0.9846,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.56,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1015593.48,
+        "guaranteedProfit": 15593.48,
+        "detectedAt": "2026-09-11T02:53:37.381Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-11T02:47:06.881Z",
+    "surebetsFoundCount": 1,
+    "highestProfitMargin": 1.56,
+    "opportunities": [
+      {
+        "id": "sb_1789094826870_cv09d",
+        "eventName": "Boca Juniors Vs Central Cordoba",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 1.45,
+            "stakePercentage": 70.04,
+            "recommendedStake": 700409.33,
+            "expectedPayout": 1015593.53
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 4.9,
+            "stakePercentage": 20.73,
+            "recommendedStake": 207263.99,
+            "expectedPayout": 1015593.55
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 11,
+            "stakePercentage": 9.23,
+            "recommendedStake": 92326.68,
+            "expectedPayout": 1015593.48
+          }
+        ],
+        "totalImpliedProbability": 0.9846,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.56,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1015593.48,
+        "guaranteedProfit": 15593.48,
+        "detectedAt": "2026-09-11T02:47:06.870Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-11T02:47:04.609Z",
+    "surebetsFoundCount": 1,
+    "highestProfitMargin": 1.56,
+    "opportunities": [
+      {
+        "id": "sb_1789094824601_mc96i",
+        "eventName": "Boca Juniors Vs Central Cordoba",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 1.45,
+            "stakePercentage": 70.04,
+            "recommendedStake": 700409.33,
+            "expectedPayout": 1015593.53
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 4.9,
+            "stakePercentage": 20.73,
+            "recommendedStake": 207263.99,
+            "expectedPayout": 1015593.55
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 11,
+            "stakePercentage": 9.23,
+            "recommendedStake": 92326.68,
+            "expectedPayout": 1015593.48
+          }
+        ],
+        "totalImpliedProbability": 0.9846,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.56,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1015593.48,
+        "guaranteedProfit": 15593.48,
+        "detectedAt": "2026-09-11T02:47:04.601Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-11T02:46:57.492Z",
+    "surebetsFoundCount": 1,
+    "highestProfitMargin": 1.56,
+    "opportunities": [
+      {
+        "id": "sb_1789094817484_vuerl",
+        "eventName": "Boca Juniors Vs Central Cordoba",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 1.45,
+            "stakePercentage": 70.04,
+            "recommendedStake": 700409.33,
+            "expectedPayout": 1015593.53
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 4.9,
+            "stakePercentage": 20.73,
+            "recommendedStake": 207263.99,
+            "expectedPayout": 1015593.55
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 11,
+            "stakePercentage": 9.23,
+            "recommendedStake": 92326.68,
+            "expectedPayout": 1015593.48
+          }
+        ],
+        "totalImpliedProbability": 0.9846,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.56,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1015593.48,
+        "guaranteedProfit": 15593.48,
+        "detectedAt": "2026-09-11T02:46:57.484Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-11T02:46:34.370Z",
+    "surebetsFoundCount": 2,
+    "highestProfitMargin": 1.56,
+    "opportunities": [
+      {
+        "id": "sb_1789094794361_5gs06",
+        "eventName": "Boca Juniors Vs Central Cordoba",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Stake",
+            "odd": 1.45,
+            "stakePercentage": 70.04,
+            "recommendedStake": 700409.33,
+            "expectedPayout": 1015593.53
+          },
+          {
+            "selection": "X",
+            "bookmaker": "BetPlay",
+            "odd": 4.9,
+            "stakePercentage": 20.73,
+            "recommendedStake": 207263.99,
+            "expectedPayout": 1015593.55
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 11,
+            "stakePercentage": 9.23,
+            "recommendedStake": 92326.68,
+            "expectedPayout": 1015593.48
+          }
+        ],
+        "totalImpliedProbability": 0.9846,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.56,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1015593.48,
+        "guaranteedProfit": 15593.48,
+        "detectedAt": "2026-09-11T02:46:34.361Z"
+      },
+      {
+        "id": "sb_1789094794360_382ii",
+        "eventName": "Bolivar Vs Club Independiente Petrolero",
+        "sport": "football",
+        "marketType": "1X2",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 17,
+            "stakePercentage": 5.96,
+            "recommendedStake": 59648.23,
+            "expectedPayout": 1014019.91
+          },
+          {
+            "selection": "X",
+            "bookmaker": "Wplay",
+            "odd": 1.125,
+            "stakePercentage": 90.14,
+            "recommendedStake": 901351.01,
+            "expectedPayout": 1014019.89
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 26,
+            "stakePercentage": 3.9,
+            "recommendedStake": 39000.76,
+            "expectedPayout": 1014019.76
+          }
+        ],
+        "totalImpliedProbability": 0.9862,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.4,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1014019.76,
+        "guaranteedProfit": 14019.76,
+        "detectedAt": "2026-09-11T02:46:34.360Z"
+      }
+    ]
   }
 ]

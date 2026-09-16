@@ -7,6 +7,7 @@ import {
   SportType,
 } from '../domain/types/surebet.types.js';
 import { OddsPersistenceService } from './odds-persistence.service.js';
+import { distance } from 'fastest-levenshtein';
 
 export class SurebetCalculatorService {
   private static instance: SurebetCalculatorService;
@@ -84,21 +85,45 @@ export class SurebetCalculatorService {
       };
     }
 
-    // 1. Group odds by eventName (normalizado entre casas) y marketType.
+    // 1. Group odds by eventName (normalizado entre casas) y marketType usando fuzzy matching.
     // Cada casa nombra el mismo partido distinto (acentos, sufijos de club como
-    // "FC"/"AFC", variantes de la ciudad — ej. "Avondale FC vs Preston Lions" en
-    // una casa vs "Avondale Heights FC vs Preston Lions FC" en otra). Comparar
-    // por string exacto casi nunca cruza dos casas para el mismo partido real.
+    // "FC"/"AFC", abreviaciones — ej. "Real Ma." vs "Real Madrid"). Un match exacto
+    // casi nunca cruza dos casas para el mismo partido real.
+    // Solución: Levenshtein similarity >= 0.80 entre las partes normalizadas del evento.
+    // La key incluye sport para que partidos distintos (fútbol vs basketball) no colisionen.
     const eventMarketMap = new Map<string, { originalName: string; odds: BookmakerOdd[] }>();
 
     for (const odd of odds) {
       if (!odd.odd || isNaN(odd.odd) || odd.odd <= 1.0) continue;
-      const key = `${this.normalizeEventKey(odd.eventName)}:::${odd.marketType}`;
-      const existing = eventMarketMap.get(key);
-      if (existing) {
-        existing.odds.push(odd);
+
+      const newEventPart = this.normalizeEventKey(odd.eventName);
+      const newMarketPart = odd.marketType;
+      const newSportPart = odd.sport || 'football';
+      const newKey = `${newEventPart}:::${newMarketPart}:::${newSportPart}`;
+
+      // O(n·m): buscar un grupo existente con mismo marketType+sport cuyo
+      // nombre normalizado sea difusamente similar al del odd actual.
+      let foundKey: string | null = null;
+      for (const [existingKey] of eventMarketMap) {
+        const [existingEventPart, existingMarketPart, existingSportPart] = existingKey.split(':::');
+        if (existingMarketPart !== newMarketPart) continue;
+        if (existingSportPart !== newSportPart) continue;
+        const areSimilar =
+          newSportPart === 'table_tennis'
+            ? this.tableTennisEventsMatch(newEventPart, existingEventPart)
+            : this.eventNamesAreSimilar(newEventPart, existingEventPart);
+        if (areSimilar) {
+          foundKey = existingKey;
+          break;
+        }
+      }
+
+      if (foundKey) {
+        eventMarketMap.get(foundKey)!.odds.push(odd);
       } else {
-        eventMarketMap.set(key, { originalName: odd.eventName, odds: [odd] });
+        // originalName: nombre humano del PRIMER odd del grupo.
+        // Es lo que el usuario verá al final (nunca la clave interna con '|').
+        eventMarketMap.set(newKey, { originalName: odd.eventName, odds: [odd] });
       }
     }
 
@@ -106,9 +131,10 @@ export class SurebetCalculatorService {
 
     // 2. Process each event market to find optimal cross-bookmaker combinations
     for (const [key, { originalName, odds: groupOdds }] of eventMarketMap.entries()) {
-      const marketTypeStr = key.split(':::')[1];
-      const marketType = marketTypeStr as MarketType;
-      const sport = groupOdds[0]?.sport || 'football';
+      // Key tiene 3 partes: eventPart:::marketType:::sport
+      const keyParts = key.split(':::');
+      const marketType = keyParts[1] as MarketType;
+      const sport = (keyParts[2] as SportType) || groupOdds[0]?.sport || 'football';
 
       const opportunity = this.calculateOpportunityForMarket(
         groupOdds,
@@ -118,7 +144,7 @@ export class SurebetCalculatorService {
         totalStake
       );
 
-      if (opportunity && opportunity.profitMarginPercentage >= minProfitMargin) {
+      if (opportunity && (minProfitMargin < 0 || opportunity.isSurebet) && opportunity.profitMarginPercentage >= minProfitMargin) {
         opportunities.push(opportunity);
       }
     }
@@ -181,7 +207,11 @@ export class SurebetCalculatorService {
       totalImpliedProbability += 1 / best.odd;
     }
 
-    // Condition of Arbitrage: TIP < 1.0 (or TIP < 100%)
+    // Condition of Arbitrage: TIP < 1.0 (or TIP < 100%) and at least 2 distinct bookmakers
+    const distinctBookmakers = new Set(selectedBestOdds.map((o) => o.bookmaker.trim().toLowerCase())).size;
+    if (distinctBookmakers < 2) {
+      return null;
+    }
     const isSurebet = totalImpliedProbability < 1.0;
 
     // Profit Margin (%) = ((1 / TIP) - 1) * 100
@@ -282,6 +312,77 @@ export class SurebetCalculatorService {
       default:
         return ['1', '2'];
     }
+  }
+
+  /**
+   * Compara dos claves de evento normalizadas (salida de normalizeEventKey, con '|')
+   * usando similitud de Levenshtein. Threshold 0.80: captura abreviaciones comunes
+   * ("Real Ma." ≈ "Real Madrid") sin colapsar equipos distintos.
+   *
+   * Si la clave tiene dos partes ("local|visitante"), compara home con home
+   * y away con away POR SEPARADO para no confundir equipos entre sí.
+   */
+  private eventNamesAreSimilar(a: string, b: string, threshold = 0.80): boolean {
+    if (a === b) return true;
+    const partsA = a.split('|');
+    const partsB = b.split('|');
+    if (partsA.length === 2 && partsB.length === 2) {
+      const simHome = this.levenshteinSimilarity(partsA[0], partsB[0]);
+      const simAway = this.levenshteinSimilarity(partsA[1], partsB[1]);
+      return simHome >= threshold && simAway >= threshold;
+    }
+    return this.levenshteinSimilarity(a, b) >= threshold;
+  }
+
+  private levenshteinSimilarity(s1: string, s2: string): number {
+    if (s1 === s2) return 1.0;
+    const maxLen = Math.max(s1.length, s2.length);
+    if (maxLen === 0) return 1.0;
+    return 1.0 - distance(s1, s2) / maxLen;
+  }
+
+  /**
+   * Emparejamiento especializado para Tenis de Mesa:
+   * Maneja el caso de casas que publican 'Apellido Inicial.' (ej. Stake: 'Urbaniec R.')
+   * frente a casas que publican 'Nombre Apellido' (ej. BetPlay: 'Radim Urbaniec').
+   */
+  private tableTennisPlayersMatch(p1: string, p2: string): boolean {
+    if (p1 === p2) return true;
+    if (this.levenshteinSimilarity(p1, p2) >= 0.80) return true;
+
+    const tokens1 = p1.toLowerCase().split(/\s+/).filter(Boolean);
+    const tokens2 = p2.toLowerCase().split(/\s+/).filter(Boolean);
+    if (tokens1.length === 0 || tokens2.length === 0) return false;
+
+    // Identificar el apellido como el token más largo (ej. 'urbaniec' vs 'r'/'radim')
+    const surname1 = tokens1.reduce((a, b) => (b.length > a.length ? b : a), '');
+    const surname2 = tokens2.reduce((a, b) => (b.length > a.length ? b : a), '');
+    if (this.levenshteinSimilarity(surname1, surname2) < 0.85) return false;
+
+    const rem1 = tokens1.filter((t) => t !== surname1);
+    const rem2 = tokens2.filter((t) => t !== surname2);
+    if (rem1.length === 0 || rem2.length === 0) return true;
+
+    // Verificar si la inicial de uno es prefijo del nombre de pila del otro
+    for (const r1 of rem1) {
+      for (const r2 of rem2) {
+        if (r1.startsWith(r2) || r2.startsWith(r1)) return true;
+      }
+    }
+    return false;
+  }
+
+  private tableTennisEventsMatch(ev1: string, ev2: string): boolean {
+    const parts1 = ev1.split('|');
+    const parts2 = ev2.split('|');
+    if (parts1.length !== 2 || parts2.length !== 2) {
+      return this.levenshteinSimilarity(ev1, ev2) >= 0.80;
+    }
+    // Mantener estricto el orden Home vs Home y Away vs Away
+    return (
+      this.tableTennisPlayersMatch(parts1[0], parts2[0]) &&
+      this.tableTennisPlayersMatch(parts1[1], parts2[1])
+    );
   }
 
   /**

@@ -86,7 +86,17 @@ export class SurebetController {
     const totalStake = parseFloat(req.query.totalStake as string) || 1000;
     const minProfit = parseFloat(req.query.minProfit as string) || 0;
     const persisted = this.surebetService.getAllPersistedOdds();
-    const result = this.surebetService.analyzeOdds(persisted, totalStake, minProfit);
+    // Deduplicar idéntico a getLiveOpportunities por bookmaker+eventName+selection+marketType
+    const seen = new Set<string>();
+    const deduped: typeof persisted = [];
+    for (const o of persisted) {
+      const key = `${o.bookmaker}:${o.eventName}:${o.selection}:${o.marketType}`;
+      if (!seen.has(key)) {
+        seen.add(key);
+        deduped.push(o);
+      }
+    }
+    const result = this.surebetService.analyzeOdds(deduped, totalStake, minProfit);
     // Guardar histórico
     this.saveHistory(result);
     const stats = OddsPersistenceService.getInstance().getStats();

@@ -28,13 +28,18 @@ const ScrapeSchema = z.object({
   bookmaker: z.string().optional(),
 });
 
-const CustomScrapeSchema = z.object({
-  url: z.string().url('URL requerida'),
-  selectors: z.record(z.string()),
-  useProxy: z.boolean().optional().default(true),
-  timeoutMs: z.number().positive().max(120000).optional().default(30000),
-  sessionId: z.string().optional(),
-});
+const CustomScrapeSchema = z
+  .object({
+    url: z.string().url('URL requerida').optional(),
+    urls: z.array(z.string().url('Cada elemento debe ser una URL válida')).min(1).max(10).optional(),
+    selectors: z.record(z.string()),
+    useProxy: z.boolean().optional().default(true),
+    timeoutMs: z.number().positive().max(120000).optional().default(30000),
+    sessionId: z.string().optional(),
+  })
+  .refine((data) => !!data.url || (!!data.urls && data.urls.length > 0), {
+    message: 'Debe ingresar al menos una URL en el campo "url" o una lista en "urls"',
+  });
 
 export class ScraperController {
   private scraperService = new ScraperService();
@@ -291,14 +296,51 @@ export class ScraperController {
   public scrapeWithCustomSelectors = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const parsed = CustomScrapeSchema.parse(req.body);
-      let { url, selectors, useProxy, timeoutMs, sessionId } = parsed;
+      let { url, urls, selectors, useProxy, timeoutMs, sessionId } = parsed;
 
-      // Permitir selectores vacíos (forzar interceptor de red) para Stake o cualquier
-      // dominio con adapter de red registrado (p.ej. BetPlay/Kambi)
-      const isStake = url.includes('stake.com.co');
-      const hasRegisteredAdapter = !!this.adapterRegistry.getForUrl(url);
-      if (isStake || hasRegisteredAdapter) {
-        // Normalizar a vacíos si no vienen
+      const rawTargets: string[] = urls && urls.length > 0 ? urls : url ? [url] : [];
+      if (rawTargets.length === 0) {
+        res.status(400).json({ status: 'error', message: 'Debe ingresar al menos una URL en "url" o una lista en "urls"' });
+        return;
+      }
+      if (rawTargets.length > 10) {
+        res.status(400).json({ status: 'error', message: 'Máximo 10 URLs permitidas por scrape' });
+        return;
+      }
+
+      // Validar que todas las URLs compartan el mismo dominio base
+      let primaryHost = '';
+      try {
+        primaryHost = new URL(rawTargets[0]).hostname.toLowerCase();
+      } catch {
+        res.status(400).json({ status: 'error', message: `URL inválida: ${rawTargets[0]}` });
+        return;
+      }
+
+      for (const u of rawTargets) {
+        try {
+          const h = new URL(u).hostname.toLowerCase();
+          const normH = h.replace(/^www\./, '');
+          const normPrimary = primaryHost.replace(/^www\./, '');
+          if (normH !== normPrimary) {
+            res.status(400).json({
+              status: 'error',
+              message: `Todas las URLs deben pertenecer al mismo dominio. Se detectó '${h}' pero la primera URL es de '${primaryHost}'.`,
+            });
+            return;
+          }
+        } catch {
+          res.status(400).json({ status: 'error', message: `URL inválida detectada en el batch: ${u}` });
+          return;
+        }
+      }
+
+      const primaryUrl = rawTargets[0];
+      const isStake = primaryHost.includes('stake.com.co');
+      const isBetPlay = primaryHost.includes('betplay.com.co');
+      const isWplay = primaryHost.includes('wplay.co');
+      const hasRegisteredAdapter = !!this.adapterRegistry.getForUrl(primaryUrl);
+      if (isStake || isBetPlay || isWplay || hasRegisteredAdapter) {
         selectors = {
           events: selectors.events || '',
           homeTeam: selectors.homeTeam || '',
@@ -321,7 +363,8 @@ export class ScraperController {
       }
 
       const result = await this.scraperService.scrapeWithCustomSelectors({
-        url,
+        url: primaryUrl,
+        urls: rawTargets,
         selectors,
         useProxy,
         timeoutMs,
@@ -338,18 +381,23 @@ export class ScraperController {
 
       // Asegurar que la respuesta incluye los odds (network o dom) para el frontend
       res.status(200).json({
-        status: 'success',
+        status: (result.failedUrls && result.failedUrls.length > 0) ? 'partial_success' : 'success',
         source: result.source || 'dom',
         oddsCount: result.oddsCount ?? result.totalMatches ?? 0,
         matches: result.matches || [],
         totalMatches: result.totalMatches,
         durationMs: result.durationMs || 0,
         htmlSize: result.htmlSize || 0,
-        bookmaker: result.bookmaker || new URL(url).hostname,
+        bookmaker: result.bookmaker || primaryHost,
         proxyUsed: result.proxyUsed,
         selectorsUsed: result.selectorsUsed,
         timestamp: result.timestamp,
         url: result.url,
+        urls: result.urls || rawTargets,
+        // Fix 3C: nunca inventar URLs exitosas — solo las que tuvieron payloads reales.
+        // El fallback [result.url] anterior enmascaraba fallos silenciosos del proxy.
+        successfulUrls: result.successfulUrls ?? [],
+        failedUrls: result.failedUrls || [],
       });
     } catch (error: any) {
       if (error.name === 'ZodError') {

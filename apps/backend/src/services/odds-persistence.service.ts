@@ -75,6 +75,10 @@ export class OddsPersistenceService {
   }
 
   public saveOddsForBookmaker(bookmaker: string, odds: BookmakerOdd[]): void {
+    if (!odds || odds.length === 0) {
+      console.warn(`⚠️ [OddsPersistence] Intento de guardar 0 cuotas para '${bookmaker}'. Se conserva intacto el archivo en disco.`);
+      return;
+    }
     const slug = bookmaker ? slugify(bookmaker) : this.detectSlugFromSample(odds);
     this.saveOddsForSlug(slug, odds);
   }
