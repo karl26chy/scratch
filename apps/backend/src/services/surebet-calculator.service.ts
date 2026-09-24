@@ -10,6 +10,15 @@ import { OddsPersistenceService } from './odds-persistence.service.js';
 import { distance } from 'fastest-levenshtein';
 
 export class SurebetCalculatorService {
+  /** Una cuota por encima de esta proporción de la mediana (3+ casas) se considera un valor atípico. */
+  private static readonly MAX_ODD_OVER_MEDIAN = 1.5;
+  /** Las cuotas guardadas con más antigüedad que esto se ignoran en el cálculo. */
+  public static readonly ODDS_TTL_MS = 60 * 60 * 1000;
+  /** Tolerancia entre horas de inicio para considerar que dos cuotas son del MISMO partido. */
+  private static readonly MAX_START_DIFF_MS = 45 * 60 * 1000;
+  /** Diferencia máxima de antigüedad entre las patas de un surebet. */
+  private static readonly MAX_LEG_SKEW_MS = 15 * 60 * 1000;
+
   private static instance: SurebetCalculatorService;
   private liveOddsStore: BookmakerOdd[] = [];
 
@@ -67,7 +76,7 @@ export class SurebetCalculatorService {
     // (botón "Scrapear Todas las Casas" o los módulos dedicados), no continuo, así
     // que una ventana de 5 minutos descartaba casi siempre el último scrape para
     // cuando el usuario llegaba a revisar el feed de oportunidades.
-    const ttlMs = 60 * 60 * 1000;
+    const ttlMs = SurebetCalculatorService.ODDS_TTL_MS;
     const now = Date.now();
     const freshOdds = odds.filter((o) => {
       if (!o.timestamp) return true;
@@ -91,56 +100,78 @@ export class SurebetCalculatorService {
     // casi nunca cruza dos casas para el mismo partido real.
     // Solución: Levenshtein similarity >= 0.80 entre las partes normalizadas del evento.
     // La key incluye sport para que partidos distintos (fútbol vs basketball) no colisionen.
-    const eventMarketMap = new Map<string, { originalName: string; odds: BookmakerOdd[] }>();
+    // Un grupo = un partido + mercado + deporte. Índices para no recorrer todos los grupos por cada cuota
+    // (antes O(cuotas × grupos) con split + Levenshtein):
+    //  - groupsBySlot: grupos separados por mercado+deporte (solo se comparan grupos comparables).
+    //  - groupsByName: búsqueda directa por nombre normalizado exacto.
+    // Semántica: gana el PRIMER grupo (en orden de creación) con nombre similar Y hora de inicio compatible.
+    // La hora evita mezclar revanchas del mismo día entre los mismos rivales (habitual en tenis de mesa): dos
+    // cuotas con hora conocida y más de MAX_START_DIFF_MS de diferencia son partidos distintos. Si alguna de las
+    // dos no trae hora (p. ej. Wplay en vivo), se compara solo por nombre, como antes.
+    interface MatchGroup {
+      eventPart: string;
+      marketType: MarketType;
+      sport: SportType;
+      originalName: string;
+      start: number | null;
+      odds: BookmakerOdd[];
+    }
+    const groups: MatchGroup[] = [];
+    const groupsBySlot = new Map<string, MatchGroup[]>();
+    const groupsByName = new Map<string, MatchGroup[]>();
+    const startsCompatible = (a: number | null, b: number | null): boolean =>
+      a === null || b === null || Math.abs(a - b) <= SurebetCalculatorService.MAX_START_DIFF_MS;
 
     for (const odd of odds) {
       if (!odd.odd || isNaN(odd.odd) || odd.odd <= 1.0) continue;
 
-      const newEventPart = this.normalizeEventKey(odd.eventName);
-      const newMarketPart = odd.marketType;
-      const newSportPart = odd.sport || 'football';
-      const newKey = `${newEventPart}:::${newMarketPart}:::${newSportPart}`;
+      const eventPart = this.normalizeEventKey(odd.eventName);
+      const marketType = odd.marketType;
+      const sport = (odd.sport || 'football') as SportType;
+      const slotKey = `${marketType}:::${sport}`;
+      const nameKey = `${slotKey}:::${eventPart}`;
+      const parsedStart = odd.startTime ? new Date(odd.startTime).getTime() : NaN;
+      const start = isNaN(parsedStart) ? null : parsedStart;
 
-      // O(n·m): buscar un grupo existente con mismo marketType+sport cuyo
-      // nombre normalizado sea difusamente similar al del odd actual.
-      let foundKey: string | null = null;
-      for (const [existingKey] of eventMarketMap) {
-        const [existingEventPart, existingMarketPart, existingSportPart] = existingKey.split(':::');
-        if (existingMarketPart !== newMarketPart) continue;
-        if (existingSportPart !== newSportPart) continue;
-        const areSimilar =
-          newSportPart === 'table_tennis'
-            ? this.tableTennisEventsMatch(newEventPart, existingEventPart)
-            : this.eventNamesAreSimilar(newEventPart, existingEventPart);
-        if (areSimilar) {
-          foundKey = existingKey;
-          break;
+      let group: MatchGroup | undefined = groupsByName.get(nameKey)?.find((g) => startsCompatible(g.start, start));
+      if (!group) {
+        for (const candidate of groupsBySlot.get(slotKey) || []) {
+          const similar =
+            sport === 'table_tennis'
+              ? this.tableTennisEventsMatch(eventPart, candidate.eventPart)
+              : this.eventNamesAreSimilar(eventPart, candidate.eventPart);
+          if (similar && startsCompatible(candidate.start, start)) {
+            group = candidate;
+            break;
+          }
         }
       }
 
-      if (foundKey) {
-        eventMarketMap.get(foundKey)!.odds.push(odd);
+      if (group) {
+        group.odds.push(odd);
+        if (group.start === null && start !== null) group.start = start;
       } else {
-        // originalName: nombre humano del PRIMER odd del grupo.
-        // Es lo que el usuario verá al final (nunca la clave interna con '|').
-        eventMarketMap.set(newKey, { originalName: odd.eventName, odds: [odd] });
+        // originalName: nombre humano del PRIMER odd del grupo (es lo que verá el usuario, nunca la clave interna).
+        const created: MatchGroup = { eventPart, marketType, sport, originalName: odd.eventName, start, odds: [odd] };
+        groups.push(created);
+        const slot = groupsBySlot.get(slotKey);
+        if (slot) slot.push(created);
+        else groupsBySlot.set(slotKey, [created]);
+        const named = groupsByName.get(nameKey);
+        if (named) named.push(created);
+        else groupsByName.set(nameKey, [created]);
       }
     }
 
     const opportunities: SurebetOpportunity[] = [];
 
     // 2. Process each event market to find optimal cross-bookmaker combinations
-    for (const [key, { originalName, odds: groupOdds }] of eventMarketMap.entries()) {
-      // Key tiene 3 partes: eventPart:::marketType:::sport
-      const keyParts = key.split(':::');
-      const marketType = keyParts[1] as MarketType;
-      const sport = (keyParts[2] as SportType) || groupOdds[0]?.sport || 'football';
-
+    for (const group of groups) {
       const opportunity = this.calculateOpportunityForMarket(
-        groupOdds,
-        originalName,
-        marketType,
-        sport,
+        group.odds,
+        group.originalName,
+        group.marketType,
+        group.sport,
         totalStake
       );
 
@@ -158,7 +189,7 @@ export class SurebetCalculatorService {
     return {
       success: true,
       opportunities,
-      analyzedEventsCount: eventMarketMap.size,
+      analyzedEventsCount: groups.length,
       surebetsFoundCount,
       highestProfitMargin: parseFloat(highestProfitMargin.toFixed(2)),
       timestamp: new Date().toISOString(),
@@ -178,16 +209,42 @@ export class SurebetCalculatorService {
     const requiredSelections = this.getRequiredSelectionsForMarket(marketType);
     if (!requiredSelections || requiredSelections.length === 0) return null;
 
-    // Find highest decimal odd available across bookmakers for each selection
-    const bestOddsPerSelection = new Map<string, BookmakerOdd>();
-
+    // Cuotas por selección y por casa.
+    const oddsBySelection = new Map<string, Map<string, BookmakerOdd[]>>();
     for (const odd of odds) {
       const normalizedSel = this.resolveSelectionLabel(odd);
       if (!requiredSelections.includes(normalizedSel)) continue;
+      const house = odd.bookmaker.trim().toLowerCase();
+      let byHouse = oddsBySelection.get(normalizedSel);
+      if (!byHouse) oddsBySelection.set(normalizedSel, (byHouse = new Map()));
+      const list = byHouse.get(house);
+      if (list) list.push({ ...odd, selection: normalizedSel });
+      else byHouse.set(house, [{ ...odd, selection: normalizedSel }]);
+    }
 
-      const currentBest = bestOddsPerSelection.get(normalizedSel);
-      if (!currentBest || odd.odd > currentBest.odd) {
-        bestOddsPerSelection.set(normalizedSel, { ...odd, selection: normalizedSel });
+    // Mejor cuota por selección, con dos defensas contra datos contaminados (falsos surebets):
+    //  1) Contradicción: si una casa trae cuotas DISTINTAS para la misma selección del mismo partido, es que
+    //     se mezclaron mercados (hándicap, sets, totales...) y no se sabe cuál es el principal → se descarta esa casa.
+    //  2) Consenso: con 3+ casas, una cuota más de MAX_ODD_OVER_MEDIAN veces la mediana es casi seguro de otro
+    //     mercado, de un partido distinto o desactualizada → se descarta. (Tope holgado: entre casas reales hay
+    //     diferencias de hasta ~30 % en ligas de poca liquidez, como el tenis de mesa.)
+    const bestOddsPerSelection = new Map<string, BookmakerOdd>();
+    for (const [sel, byHouse] of oddsBySelection) {
+      const consistent: BookmakerOdd[] = [];
+      for (const list of byHouse.values()) {
+        if (new Set(list.map((o) => o.odd)).size > 1) continue; // regla 1
+        consistent.push(list[0]);
+      }
+      let candidates = consistent;
+      if (consistent.length >= 3) {
+        const sorted = consistent.map((o) => o.odd).sort((a, b) => a - b);
+        const mid = Math.floor(sorted.length / 2);
+        const median = sorted.length % 2 ? sorted[mid] : (sorted[mid - 1] + sorted[mid]) / 2;
+        candidates = consistent.filter((o) => o.odd <= median * SurebetCalculatorService.MAX_ODD_OVER_MEDIAN); // regla 2
+      }
+      for (const o of candidates) {
+        const currentBest = bestOddsPerSelection.get(sel);
+        if (!currentBest || o.odd > currentBest.odd) bestOddsPerSelection.set(sel, o);
       }
     }
 
@@ -210,6 +267,13 @@ export class SurebetCalculatorService {
     // Condition of Arbitrage: TIP < 1.0 (or TIP < 100%) and at least 2 distinct bookmakers
     const distinctBookmakers = new Set(selectedBestOdds.map((o) => o.bookmaker.trim().toLowerCase())).size;
     if (distinctBookmakers < 2) {
+      return null;
+    }
+
+    // 3) Frescura: las cuotas de un surebet deben ser de momentos cercanos; combinar una cuota de hace 40 min
+    //    con otra de hace 1 min (sobre todo en vivo) genera arbitrajes que ya no existen.
+    const stamps = selectedBestOdds.map((o) => (o.timestamp ? new Date(o.timestamp).getTime() : NaN)).filter((t) => !isNaN(t));
+    if (stamps.length === selectedBestOdds.length && Math.max(...stamps) - Math.min(...stamps) > SurebetCalculatorService.MAX_LEG_SKEW_MS) {
       return null;
     }
     const isSurebet = totalImpliedProbability < 1.0;
@@ -263,6 +327,7 @@ export class SurebetCalculatorService {
       guaranteedPayout: minPayout,
       guaranteedProfit,
       detectedAt: new Date().toISOString(),
+      ...(selectedBestOdds.some((o) => o.isLive) ? { isLive: true } : {}),
     };
   }
 
@@ -290,7 +355,7 @@ export class SurebetCalculatorService {
     return result.opportunities;
   }
 
-  public getPersistedStats(): { wplay: number; stake: number; betplay: number; total: number; timestamp: string; live: number; byBookmaker: Record<string, number> } {
+  public getPersistedStats(): { wplay: number; stake: number; betplay: number; bwin: number; rushbet: number; total: number; timestamp: string; live: number; byBookmaker: Record<string, number> } {
     const stats = OddsPersistenceService.getInstance().getStats();
     return { ...stats, live: this.liveOddsStore.length };
   }
@@ -327,11 +392,23 @@ export class SurebetCalculatorService {
     const partsA = a.split('|');
     const partsB = b.split('|');
     if (partsA.length === 2 && partsB.length === 2) {
-      const simHome = this.levenshteinSimilarity(partsA[0], partsB[0]);
-      const simAway = this.levenshteinSimilarity(partsA[1], partsB[1]);
-      return simHome >= threshold && simAway >= threshold;
+      return (
+        this.similarAtLeast(partsA[0], partsB[0], threshold) && this.similarAtLeast(partsA[1], partsB[1], threshold)
+      );
     }
-    return this.levenshteinSimilarity(a, b) >= threshold;
+    return this.similarAtLeast(a, b, threshold);
+  }
+
+  /**
+   * levenshteinSimilarity(s1, s2) >= threshold, descartando sin calcular la distancia cuando la diferencia de
+   * longitud ya lo hace imposible (distance >= |len1 - len2|, así que similitud <= 1 - |Δlen| / maxLen).
+   */
+  private similarAtLeast(s1: string, s2: string, threshold: number): boolean {
+    if (s1 === s2) return true;
+    const maxLen = Math.max(s1.length, s2.length);
+    if (maxLen === 0) return true;
+    if (1 - Math.abs(s1.length - s2.length) / maxLen < threshold) return false;
+    return this.levenshteinSimilarity(s1, s2) >= threshold;
   }
 
   private levenshteinSimilarity(s1: string, s2: string): number {
@@ -415,9 +492,19 @@ export class SurebetCalculatorService {
    * orden generaba "surebets" completamente falsos (cuotas de dos eventos
    * reales distintos combinadas como si fueran el mismo mercado).
    */
+  /**
+   * Parte "Local vs Visitante". Todos los adapters generan " vs "; " v " solo se usa si no hay " vs ", porque
+   * dentro de un nombre puede haber una "V" suelta (dobles de tenis: "Cornea V / Neuchrist M").
+   */
+  private splitEventName(eventName: string): string[] {
+    const byVs = (eventName || '').split(/\s+vs\.?\s+/i);
+    if (byVs.length === 2) return byVs;
+    const byV = (eventName || '').split(/\s+v\s+/i);
+    return byV.length === 2 ? byV : byVs;
+  }
+
   private normalizeEventKey(eventName: string): string {
-    const parts = eventName
-      .split(/\s+vs\.?\s+|\s+v\s+/i)
+    const parts = this.splitEventName(eventName)
       .map((p) => this.normalizeTeamName(p))
       .filter(Boolean);
     if (parts.length !== 2) return this.normalizeTeamName(eventName);
@@ -437,23 +524,38 @@ export class SurebetCalculatorService {
   private resolveSelectionLabel(odd: BookmakerOdd): string {
     const raw = odd.selection || '';
     const upper = raw.trim().toUpperCase();
+
+    // Las etiquetas Más/Menos y Sí/No solo se interpretan en su mercado y al INICIO del texto. Antes se buscaba
+    // "MAS"/"OVER"/"UNDER" como subcadena en cualquier selección, y nombres como "Las Palmas", "Tomas", "Thomas",
+    // "Masarova", "Rovers" o "Thunder" se tomaban por Más/Menos y el partido se descartaba.
+    if (odd.marketType === 'OVER_UNDER_2_5') {
+      if (/^(OVER|M[ÁA]S)(\s|$)/.test(upper)) return 'OVER';
+      if (/^(UNDER|MENOS)(\s|$)/.test(upper)) return 'UNDER';
+      return upper;
+    }
+    if (odd.marketType === 'BOTH_TEAMS_SCORE') {
+      if (upper === 'YES' || upper === 'SI' || upper === 'SÍ') return 'YES';
+      if (upper === 'NO') return 'NO';
+      return upper;
+    }
+
     if (upper === 'X' || upper === 'DRAW' || upper === 'EMPATE') return 'X';
-    if (upper.includes('OVER') || upper.includes('MÁS') || upper.includes('MAS')) return 'OVER';
-    if (upper.includes('UNDER') || upper.includes('MENOS')) return 'UNDER';
-    if (upper === 'YES' || upper === 'SI' || upper === 'SÍ') return 'YES';
-    if (upper === 'NO') return 'NO';
     if (upper === '1' || upper === 'HOME' || upper === 'LOCAL' || upper === 'TEAM1') return '1';
     if (upper === '2' || upper === 'AWAY' || upper === 'VISITANTE' || upper === 'TEAM2') return '2';
 
-    // Fallback: comparar el nombre de la selección contra el local/visitante
-    // del propio eventName de este odd (cada odd trae su propio "Local vs Visitante").
-    const parts = (odd.eventName || '').split(/\s+vs\.?\s+|\s+v\s+/i);
+    // Comparar el nombre de la selección contra el local/visitante del propio eventName de este odd
+    // (cada odd trae su propio "Local vs Visitante").
+    const parts = this.splitEventName(odd.eventName || '');
     if (parts.length === 2) {
       const home = this.normalizeTeamName(parts[0]);
       const away = this.normalizeTeamName(parts[1]);
       const sel = this.normalizeTeamName(raw);
       if (sel && home && sel === home) return '1';
       if (sel && away && sel === away) return '2';
+      // Nombres que la normalización deja vacíos (un equipo llamado solo "AFC"): comparar en crudo.
+      const rawSel = raw.trim().toLowerCase();
+      if (rawSel && rawSel === parts[0].trim().toLowerCase()) return '1';
+      if (rawSel && rawSel === parts[1].trim().toLowerCase()) return '2';
     }
     return upper;
   }

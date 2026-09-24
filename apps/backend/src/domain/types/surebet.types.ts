@@ -11,6 +11,10 @@ export interface BookmakerOdd {
   odd: number; // Decimal odd, e.g. 2.15
   url?: string;
   timestamp?: string;
+  /** Hora de inicio del partido (ISO 8601 UTC). Permite no mezclar partidos distintos entre los mismos rivales. */
+  startTime?: string;
+  /** El partido ya empezó (cuota en vivo): se mueve en segundos y cada casa la actualiza a su ritmo. */
+  isLive?: boolean;
 }
 
 export interface SurebetOutcome {
@@ -35,6 +39,8 @@ export interface SurebetOpportunity {
   guaranteedPayout: number; // Total payout regardless of outcome
   guaranteedProfit: number; // Guaranteed net profit
   detectedAt: string;
+  /** Alguna pata del surebet es una cuota en vivo: suele ser un desfase momentáneo entre casas. */
+  isLive?: boolean;
 }
 
 export interface AnalyzeSurebetsRequestDto {

@@ -18,7 +18,7 @@ export const SurebetPage: React.FC = () => {
   const [bankroll, setBankroll] = useState<number>(1000000);
   const [surebets, setSurebets] = useState<SurebetRow[]>([]);
   const [loading, setLoading] = useState(false);
-  const [stats, setStats] = useState<{ wplay: number; stake: number; betplay: number; total: number; byBookmaker?: Record<string, number> } | null>(null);
+  const [stats, setStats] = useState<{ wplay: number; stake: number; betplay: number; bwin: number; rushbet: number; total: number; byBookmaker?: Record<string, number> } | null>(null);
   const [history, setHistory] = useState<any[]>([]);
 
   const fetchSurebets = async () => {
@@ -70,7 +70,7 @@ export const SurebetPage: React.FC = () => {
         <div>
           <h1 style={{ fontSize: '1.5rem', fontWeight: 800 }}>💰 Surebets — Arbitraje Deportivo</h1>
           <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem' }}>
-            Wplay ({stats?.wplay ?? 0}) + Stake ({stats?.stake ?? 0}) + BetPlay ({stats?.betplay ?? 0}) = {stats?.total ?? 0} odds | TIP = 1/mejor1 + 1/mejorX + 1/mejor2 &lt; 1.0
+            Wplay ({stats?.wplay ?? 0}) + Stake ({stats?.stake ?? 0}) + BetPlay ({stats?.betplay ?? 0}) + Bwin ({stats?.bwin ?? 0}) + Rushbet ({stats?.rushbet ?? 0}) = {stats?.total ?? 0} odds | TIP = 1/mejor1 + 1/mejorX + 1/mejor2 &lt; 1.0
           </p>
         </div>
         <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
@@ -101,7 +101,7 @@ export const SurebetPage: React.FC = () => {
 
       {surebets.length === 0 ? (
         <div style={{ textAlign: 'center', padding: '2rem', background: 'var(--bg-surface)', borderRadius: '12px', border: '1px solid var(--border-color)' }}>
-          <p style={{ color: 'var(--text-muted)' }}>No hay surebets — scrapea Wplay, Stake o BetPlay para combinar cuotas.</p>
+          <p style={{ color: 'var(--text-muted)' }}>No hay surebets — scrapea Wplay, Stake, BetPlay, Bwin o Rushbet para combinar cuotas.</p>
           <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '0.5rem' }}>Se necesitan al menos 2 bookmakers con el mismo evento (ej. Wplay + Stake) y TIP &lt; 1.0</p>
         </div>
       ) : (

@@ -12,6 +12,9 @@ import type { SiteOddsAdapter } from '../domain/types/site-adapter.js';
 import type { BookmakerOdd } from '../domain/types/surebet.types.js';
 import { stakeKickerAdapter } from '../infrastructure/network/adapters/stake-kicker.adapter.js';
 import { betplayKambiAdapter } from '../infrastructure/network/adapters/betplay-kambi.adapter.js';
+import { bwinAdapter, parseBwinSportId } from '../infrastructure/network/adapters/bwin.adapter.js';
+import { rushbetKambiAdapter, parseRushbetSportSlug } from '../infrastructure/network/adapters/rushbet-kambi.adapter.js';
+import { extractWplayOdds } from '../infrastructure/selectors/wplay-extractor.js';
 import { OddsPersistenceService } from './odds-persistence.service.js';
 import { EvasionService } from './evasion.service.js';
 import { SingleTestService } from './single-test.service.js';
@@ -585,6 +588,89 @@ export class ScraperService {
     };
   }
 
+  /** 'https://stake.com.co/deportes/table_tennis' -> 'table-tennis' (slug que usa la API de Kicker). */
+  private stakeSportSlugFromUrl(url: string): string {
+    const parts = url.split('?')[0].split('#')[0].split('/').filter(Boolean);
+    let slug = (parts[parts.length - 1] || 'football').toLowerCase();
+    if (slug === 'deportes') slug = 'football';
+    return slug.replace(/_/g, '-');
+  }
+
+  /**
+   * Trae TODOS los eventos prepartido de un deporte de Stake: consulta las fechas con eventos
+   * (sports-info.json, público) de los próximos STAKE_DAYS_AHEAD días y llama a events-by-path.json
+   * una vez por fecha, dentro de la pestaña (misma sesión/huella que generó el hidenseek).
+   * Devuelve un payload por fecha con eventos.
+   */
+  private async fetchStakeSportAllDates(
+    page: Page,
+    eventsBase: string,
+    hidenseek: string,
+    sportSlug: string,
+  ): Promise<Array<{ url: string; json: any; timestamp: string }>> {
+    const STAKE_DAYS_AHEAD = 14;
+    const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Bogota' }).format(new Date());
+    // Script como texto: tsx/esbuild inyecta helpers (__name) en funciones anidadas que no existen en la página.
+    const params = JSON.stringify({ base: eventsBase, hs: hidenseek, sport: sportSlug, todayStr: today, daysAhead: STAKE_DAYS_AHEAD });
+    const script = `(async () => {
+      var p = ${params};
+      function addDays(d, n) { var t = new Date(d + 'T00:00:00Z'); t.setUTCDate(t.getUTCDate() + n); return t.toISOString().slice(0, 10); }
+      var limit = addDays(p.todayStr, p.daysAhead);
+      var dates = [p.todayStr];
+      try {
+        var infoRes = await fetch(p.base.replace('events-by-path.json', 'sports-info.json'), { headers: { Accept: 'application/json' } });
+        if (infoRes.ok) {
+          var info = await infoRes.json();
+          var sp = Object.values((info && info.sports) || {}).find(function (x) { return x && (x.slug === p.sport || x.name === p.sport); });
+          var list = (sp && sp.eventDates && sp.eventDates.dates) || [];
+          var inRange = list.filter(function (d) { return d >= p.todayStr && d <= limit; }).sort();
+          if (inRange.length > 0) dates = inRange;
+        }
+      } catch (e) {}
+      function sleep(ms) { return new Promise(function (r) { setTimeout(r, ms); }); }
+      var out = [];
+      var log = [];
+      var queue = dates.slice();
+      async function worker() {
+        while (queue.length) {
+          var date = queue.shift();
+          var url = p.base + '?path=' + encodeURIComponent(p.sport) + '&date=' + date + '&hidenseek=' + encodeURIComponent(p.hs);
+          var lastStatus = 0;
+          for (var attempt = 0; attempt < 2; attempt++) {
+            if (attempt > 0) await sleep(400);
+            try {
+              var res = await fetch(url);
+              lastStatus = res.status;
+              if (res.status === 200) {
+                var json = await res.json();
+                if (Array.isArray(json.events) && json.events.length > 0) out.push({ url: url, json: json, status: 200 });
+                lastStatus = 200;
+                break;
+              }
+            } catch (e) {}
+            if (lastStatus !== 0) break; // 406 = cupo agotado: reintentar no recupera nada
+          }
+          if (lastStatus !== 200) out.push({ url: url, json: null, status: lastStatus });
+          log.push(date + ':' + lastStatus);
+          await sleep(50);
+        }
+      }
+      await Promise.all([worker(), worker(), worker(), worker()]);
+      return { datesTried: dates.length, out: out, log: log };
+    })()`;
+    const result: any = await page
+      .evaluate(script)
+      .catch((e: any) => ({ datesTried: 0, out: [], error: e?.message }));
+
+    const good = (result.out as any[]).filter((r) => r.status === 200 && r.json);
+    const failed = (result.out as any[]).filter((r) => r.status !== 200);
+    const total = good.reduce((n, r) => n + (r.json.events?.length || 0), 0);
+    console.log(`✅ [Stake] '${sportSlug}': ${total} eventos en ${good.length}/${result.datesTried} fechas${failed.length ? ` (${failed.length} peticiones fallidas: ${[...new Set(failed.map((f) => f.status))].join(',')})` : ''}${result.error ? ` error=${result.error}` : ''}`);
+    console.log(`   ↳ [Stake] fechas '${sportSlug}': ${(result.log || []).sort().join(' ')}`);
+    const ts = new Date().toISOString();
+    return good.map((r) => ({ url: r.url, json: r.json, timestamp: ts }));
+  }
+
   // Tarea 3: Método específico para Network Interceptor (soporta múltiples URLs secuenciales)
   private async scrapeWithNetworkInterceptor(params: {
     url?: string;
@@ -593,11 +679,62 @@ export class ScraperService {
     timeoutMs?: number;
     sessionId?: string;
     adapter?: SiteOddsAdapter | null;
+    skipPersist?: boolean;
   }): Promise<any> {
     const { url, urls: rawUrls, useProxy, timeoutMs, sessionId, adapter } = params;
     const targetUrls = rawUrls && rawUrls.length > 0 ? rawUrls : url ? [url] : [];
     const primaryUrl = targetUrls[0] || '';
     const startTime = Date.now();
+
+    // Stake: cada sesión del navegador tiene un cupo corto de peticiones a events-by-path (406 al agotarlo,
+    // incluso con páginas nuevas del mismo contexto). Cada deporte del lote va en su PROPIA sesión
+    // (contexto nuevo) y la persistencia se hace una sola vez al final con todo el lote.
+    if (targetUrls.length > 1 && !params.skipPersist && targetUrls.every((u) => u.includes('stake.com.co'))) {
+      console.log(`🔀 [Stake] ${targetUrls.length} deportes: una sesión de navegador por deporte`);
+      const allOdds: BookmakerOdd[] = [];
+      const okUrls: string[] = [];
+      const badUrls: Array<{ url: string; error: string; durationMs: number }> = [];
+      let payloadCount = 0;
+      // Secuencial a propósito: en paralelo el cupo de peticiones de Stake se comparte y varios deportes dan 406.
+      const queue = [...new Set(targetUrls)];
+      const runWorker = async () => {
+        while (queue.length > 0) {
+          const u = queue.shift()!;
+          const t0 = Date.now();
+          try {
+            const sub = await this.scrapeWithNetworkInterceptor({ ...params, url: u, urls: [u], skipPersist: true });
+            allOdds.push(...(sub.odds || []));
+            okUrls.push(...(sub.successfulUrls || []));
+            badUrls.push(...(sub.failedUrls || []));
+            payloadCount += sub.payloads || 0;
+          } catch (e: any) {
+            badUrls.push({ url: u, error: e?.message || 'Error desconocido', durationMs: 0 });
+          }
+          console.log(`⏱ [Stake] ${u} listo en ${((Date.now() - t0) / 1000).toFixed(1)}s`);
+        }
+      };
+      await runWorker();
+      if (allOdds.length > 0) {
+        const { SurebetCalculatorService } = await import('./surebet-calculator.service.js');
+        SurebetCalculatorService.getInstance().addScrapedOdds(allOdds);
+        OddsPersistenceService.getInstance().saveOddsForBookmaker(allOdds[0]?.bookmaker || 'Stake', allOdds);
+        console.log(`💾 [Stake] ${allOdds.length} cuotas guardadas (${okUrls.length}/${new Set(targetUrls).size} deportes)`);
+      }
+      const allMatches = this.convertBookmakerOddsToMatches(allOdds);
+      return {
+        source: 'network' as const,
+        oddsCount: allOdds.length,
+        matches: allMatches,
+        totalMatches: allMatches.length,
+        payloads: payloadCount,
+        successfulUrls: okUrls,
+        failedUrls: badUrls,
+        durationMs: Date.now() - startTime,
+        odds: allOdds,
+        url: primaryUrl,
+        urls: targetUrls,
+      };
+    }
     console.log(`📡 [Network] Interceptando ${targetUrls.length} URL(s) para ${primaryUrl} ${adapter ? `con adapter ${adapter.domain}` : 'sin adapter (fallback Stake)'}`);
     let proxyConfig: any = null;
     let proxy: any = null;
@@ -630,6 +767,8 @@ export class ScraperService {
     const failedUrls: Array<{ url: string; error: string; durationMs: number }> = [];
     const extraPayloads: any[] = [];
     let globalHidenseek = '';
+    // Cuotas de Stake pedidas apenas la sesión obtiene su token (la ventana de validez es corta).
+    const stakePrefetch = new Map<string, Array<{ url: string; json: any; timestamp: string }>>();
     let globalEndpointBase = 'https://pre-115o-sp.websbkt.com/cache/115/es/co/America-Bogota/events-by-path.json';
 
     let context: BrowserContext | null = null;
@@ -646,8 +785,9 @@ export class ScraperService {
             if (match) {
               const token = decodeURIComponent(match[1]);
               if (!globalHidenseek || u.includes('events-by-path')) {
+                const isNewToken = token !== globalHidenseek;
                 globalHidenseek = token;
-                console.log('🔑 [Stake Multi] Hidenseek capturado de request:', globalHidenseek.slice(0, 25) + '...', 'URL:', u.slice(0, 90));
+                if (isNewToken) console.log('🔑 [Stake Multi] Hidenseek capturado de request:', globalHidenseek.slice(0, 25) + '...', 'URL:', u.replace(/hidenseek=[^&]+/, 'hidenseek=…').slice(0, 260));
               }
             }
           }
@@ -681,6 +821,14 @@ export class ScraperService {
             page = await context.newPage();
             await PlaywrightStealthFactory.applyInPageEvasions(page, fingerprint);
 
+            // Stake: solo hacen falta scripts y XHR; imágenes, fuentes y media solo alargan la carga.
+            if (currentUrl.includes('stake.com.co')) {
+              await page.route('**/*', (route) => {
+                const t = route.request().resourceType();
+                return t === 'image' || t === 'media' || t === 'font' ? route.abort() : route.continue();
+              });
+            }
+
             pageInterceptor = new OddsNetworkInterceptor(effectiveAdapter?.urlPatterns || []);
             pageInterceptor.attach(page);
 
@@ -688,6 +836,7 @@ export class ScraperService {
               // Pausa humana orgánica entre deportes o reintentos
               await EvasionService.humanDelay(1000, 200, 600);
             }
+            const tNav = Date.now();
             console.log(`📡 [Stake Multi] (${i + 1}/${targetUrls.length}) Navegando a ${currentUrl}${attempt > 1 ? ` (reintento ${attempt - 1})` : ''}`);
 
             // Listener específico para eventos: espera exclusivamente a events-by-path con cuotas reales
@@ -700,18 +849,39 @@ export class ScraperService {
               if (page) await page.waitForTimeout(2000);
             });
 
-            // Despertar widgets inmediatamente con scroll suave
-            await page.evaluate(() => window.scrollBy(0, 350)).catch(() => {});
-            await EvasionService.simulateAdvancedHumanBehavior(page);
-
-            // Esperar a que eventsPromise resuelva si no tenemos hidenseek, o brevemente si ya lo tenemos
-            if (i === 0 && !globalHidenseek) {
-              await eventsPromise;
-            } else {
-              await Promise.race([eventsPromise, page.waitForTimeout(2500)]);
+            // Stake: el hidenseek solo se acepta poco después de cargar la página y cada sesión tiene un cupo
+            // corto de peticiones, así que se piden TODAS las fechas del deporte actual ahora mismo, antes de la
+            // simulación de conducta humana. Cada deporte del lote usa su propia carga de página (cupo nuevo).
+            if (currentUrl.includes('stake.com.co') && !stakePrefetch.has(currentUrl)) {
+              const tokenDeadline = Date.now() + 18000;
+              while (!globalHidenseek && Date.now() < tokenDeadline) await page.waitForTimeout(100);
+              const tToken = Date.now();
+              if (globalHidenseek) {
+                stakePrefetch.set(
+                  currentUrl,
+                  await this.fetchStakeSportAllDates(page, globalEndpointBase, globalHidenseek, this.stakeSportSlugFromUrl(currentUrl)),
+                );
+                console.log(`⏱ [Stake] token a los ${((tToken - tNav) / 1000).toFixed(1)}s, fechas en ${((Date.now() - tToken) / 1000).toFixed(1)}s`);
+              }
             }
 
-            const pagePayloads = pageInterceptor ? pageInterceptor.getCaptured() : [];
+            // Con los eventos de Stake ya extraídos no hace falta simular conducta ni esperar a la UI.
+            const stakeHasData = (stakePrefetch.get(currentUrl)?.length ?? 0) > 0;
+            if (!stakeHasData) {
+              // Despertar widgets inmediatamente con scroll suave
+              await page.evaluate(() => window.scrollBy(0, 350)).catch(() => {});
+              await EvasionService.simulateAdvancedHumanBehavior(page);
+
+              // Esperar a que eventsPromise resuelva si no tenemos hidenseek, o brevemente si ya lo tenemos
+              if (i === 0 && !globalHidenseek) {
+                await eventsPromise;
+              } else {
+                await Promise.race([eventsPromise, page.waitForTimeout(2500)]);
+              }
+            }
+
+            // Las respuestas de la UI son un subconjunto de lo ya extraído: se ignoran si hay prefetch.
+            const pagePayloads = stakeHasData ? [] : pageInterceptor ? pageInterceptor.getCaptured() : [];
 
             // Extraer hidenseek global si aún no lo tenemos
             if (!globalHidenseek) {
@@ -757,42 +927,15 @@ export class ScraperService {
               return (Array.isArray(data.events) && data.events.length > 0) || (Array.isArray(data.data?.events) && data.data.events.length > 0);
             });
 
-            // Si el UI no emitió cuotas automáticamente (tenis, basket, tenis de mesa), extraer directamente vía API interna
+            // La UI de Stake solo pide UN torneo/día por página (a veces 1 evento). Con el token que ya
+            // generó la propia sesión, se pide el deporte completo: todas las fechas próximas en paralelo.
             const isStakeDomain = currentUrl.includes('stake.com.co') || effectiveAdapter === stakeKickerAdapter;
-            if (!hasRealEvents && isStakeDomain && page && globalHidenseek) {
-              const urlParts = currentUrl.split('/').filter(Boolean);
-              let rawSlug = urlParts[urlParts.length - 1] || 'football';
-              if (rawSlug === 'deportes') rawSlug = 'football';
-              const sportSlug = rawSlug === 'table_tennis' ? 'table-tennis' : rawSlug;
-              const expansionDateStr = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Bogota' }).format(new Date());
-
-              console.log(`📡 [Stake Multi] Extrayendo cuotas directas vía in-page para '${sportSlug}'...`);
-              const fetchRes: any = await page.evaluate(async ({ base, hs, sport, date }) => {
-                const targetUrl = `${base}?path=${encodeURIComponent(sport)}&date=${date}&hidenseek=${encodeURIComponent(hs)}`;
-                try {
-                  const res = await fetch(targetUrl, { headers: { Accept: 'application/json' } });
-                  if (res.status === 200) {
-                    const json = await res.json();
-                    const count = Array.isArray(json.events) ? json.events.length : 0;
-                    if (count > 0) return { status: 200, json, url: targetUrl };
-                  }
-                  return { status: res.status, json: null, url: targetUrl };
-                } catch (e: any) {
-                  return { status: 0, json: null, url: targetUrl, error: e?.message };
-                }
-              }, { base: globalEndpointBase, hs: globalHidenseek, sport: sportSlug, date: expansionDateStr });
-
-              if (fetchRes.status === 200 && fetchRes.json) {
-                pagePayloads.push({
-                  url: fetchRes.url,
-                  json: fetchRes.json,
-                  timestamp: new Date().toISOString(),
-                });
+            if (isStakeDomain && page && globalHidenseek) {
+              const expanded = stakePrefetch.get(currentUrl)
+                ?? (await this.fetchStakeSportAllDates(page, globalEndpointBase, globalHidenseek, this.stakeSportSlugFromUrl(currentUrl)));
+              if (expanded.length > 0) {
+                pagePayloads.push(...expanded);
                 hasRealEvents = true;
-                const count = Array.isArray(fetchRes.json.events) ? fetchRes.json.events.length : 0;
-                console.log(`✅ [Stake Multi] ${count} eventos recuperados directamente para '${sportSlug}'`);
-              } else {
-                console.warn(`⚠️ [Stake Multi] Fetch directo falló para '${sportSlug}': status=${fetchRes.status} error=${fetchRes.error || 'none'}`);
               }
             }
 
@@ -803,48 +946,6 @@ export class ScraperService {
               successfulUrls.push(currentUrl);
               urlSuccess = true;
 
-              if (isStakeDomain && page && globalHidenseek) {
-                // Extraer de inmediato todos los demás deportes del lote desde esta misma sesión activa e hidratada
-                const remainingUrls = targetUrls.slice(i + 1);
-                for (let j = 0; j < remainingUrls.length; j++) {
-                  const nextUrl = remainingUrls[j];
-                  if (successfulUrls.includes(nextUrl)) continue;
-                  const urlParts = nextUrl.split('/').filter(Boolean);
-                  let rawSlug = urlParts[urlParts.length - 1] || 'football';
-                  if (rawSlug === 'deportes') rawSlug = 'football';
-                  const sportSlug = rawSlug === 'table_tennis' ? 'table-tennis' : rawSlug;
-                  const expansionDateStr = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Bogota' }).format(new Date());
-
-                  console.log(`📡 [Stake Multi] Extrayendo directamente en sesión activa para '${sportSlug}'...`);
-                  const subFetchRes: any = await page.evaluate(async ({ base, hs, sport, date }) => {
-                    const targetUrl = `${base}?path=${encodeURIComponent(sport)}&date=${date}&hidenseek=${encodeURIComponent(hs)}`;
-                    try {
-                      const res = await fetch(targetUrl, { headers: { Accept: 'application/json' } });
-                      if (res.status === 200) {
-                        const json = await res.json();
-                        const count = Array.isArray(json.events) ? json.events.length : 0;
-                        if (count > 0) return { status: 200, json, url: targetUrl };
-                      }
-                      return { status: res.status, json: null, url: targetUrl };
-                    } catch (e: any) {
-                      return { status: 0, json: null, url: targetUrl, error: e?.message };
-                    }
-                  }, { base: globalEndpointBase, hs: globalHidenseek, sport: sportSlug, date: expansionDateStr });
-
-                  if (subFetchRes.status === 200 && subFetchRes.json) {
-                    allCapturedPayloads.push({
-                      url: subFetchRes.url,
-                      json: subFetchRes.json,
-                      timestamp: new Date().toISOString(),
-                    });
-                    successfulUrls.push(nextUrl);
-                    const count = Array.isArray(subFetchRes.json.events) ? subFetchRes.json.events.length : 0;
-                    console.log(`✅ [Stake Multi] (${i + 2 + j}/${targetUrls.length}) ${count} eventos recuperados directamente para '${sportSlug}'`);
-                  } else {
-                    console.warn(`⚠️ [Stake Multi] Extracción directa en sesión falló para '${sportSlug}' (status=${subFetchRes.status})`);
-                  }
-                }
-              }
             } else if (attempt <= MAX_RETRIES) {
               console.warn(`⚠️ [Stake Multi] Intento ${attempt} sin eventos para ${currentUrl} — reintentando...`);
             } else {
@@ -886,7 +987,7 @@ export class ScraperService {
       console.log(`📊 Odds extraídas en batch: ${odds.length} (exitosas: ${successfulUrls.length}, fallidas: ${failedUrls.length})`);
 
       // GUARDA: Alimentar motor de Surebets + persistencia temporal ÚNICAMENTE si odds.length > 0
-      if (odds.length > 0) {
+      if (odds.length > 0 && !params.skipPersist) {
         const { SurebetCalculatorService } = await import('./surebet-calculator.service.js');
         SurebetCalculatorService.getInstance().addScrapedOdds(odds);
         const persistBookmaker = odds[0]?.bookmaker || deriveBookmakerFromUrl(primaryUrl) || 'Stake';
@@ -1121,6 +1222,139 @@ export class ScraperService {
       console.warn('⚠️ [BetPlay] fetchDirect falló:', e.message);
     }
 
+    // === BWIN: Fetch directo a la CDS API de Bwin (sin Playwright) ===
+    // La API de fixtures es pública (solo requiere el x-bwin-accessid de la SPA y un Referer).
+    // Se itera cada URL del batch de forma independiente (un deporte fallido no cancela el resto).
+    try {
+      const bwinDomain = new URL(url).hostname;
+      if (bwinDomain.includes('bwin.co')) {
+        console.log(`⚡ [Bwin] Batch de ${targetUrls.length} URL(s) — fetch directo a CDS API (sin Playwright)`);
+        const allBwinOdds: BookmakerOdd[] = [];
+        const bwinSuccessfulUrls: string[] = [];
+        const bwinFailedUrls: Array<{ url: string; error: string; durationMs: number }> = [];
+
+        // Fetch directo sin navegador: los deportes del lote se piden en paralelo.
+        await Promise.all(
+          [...new Set(targetUrls)].map(async (targetUrl) => {
+            const urlStart = Date.now();
+            try {
+              const sportId = parseBwinSportId(targetUrl);
+              const urlOdds = await bwinAdapter.fetchDirect(sportId);
+              if (urlOdds.length > 0) {
+                allBwinOdds.push(...urlOdds);
+                bwinSuccessfulUrls.push(targetUrl);
+              } else {
+                bwinFailedUrls.push({ url: targetUrl, error: `Bwin no devolvió cuotas para sportId ${sportId}`, durationMs: Date.now() - urlStart });
+              }
+            } catch (urlErr: any) {
+              bwinFailedUrls.push({ url: targetUrl, error: urlErr.message || 'Error desconocido', durationMs: Date.now() - urlStart });
+              console.error(`❌ [Bwin] Error procesando ${targetUrl}:`, urlErr.message);
+            }
+          }),
+        );
+
+        // Persistir solo si hay cuotas reales — nunca sobreescribir con array vacío
+        if (allBwinOdds.length > 0) {
+          const { SurebetCalculatorService } = await import('./surebet-calculator.service.js');
+          SurebetCalculatorService.getInstance().addScrapedOdds(allBwinOdds);
+          OddsPersistenceService.getInstance().saveOddsForBookmaker('Bwin', allBwinOdds);
+          console.log(`✅ [Bwin] Batch completo: ${allBwinOdds.length} odds de ${bwinSuccessfulUrls.length} URL(s)`);
+        } else {
+          console.warn('⚠️ [Bwin] Batch completo con 0 odds — no se sobreescribe el histórico en disco');
+        }
+
+        const bwinMatches = this.convertBookmakerOddsToMatches(allBwinOdds);
+        return {
+          success: allBwinOdds.length > 0,
+          url: primaryRawUrl,
+          urls: targetUrls,
+          successfulUrls: bwinSuccessfulUrls,
+          failedUrls: bwinFailedUrls,
+          matches: bwinMatches,
+          totalMatches: bwinMatches.length,
+          durationMs: Date.now() - startTime,
+          selectorsUsed: [],
+          proxyUsed: 'Directo (Bwin CDS API pública)',
+          timestamp: new Date().toISOString(),
+          source: 'network' as const,
+          oddsCount: allBwinOdds.length,
+          htmlSize: 0,
+          bookmaker: 'Bwin',
+          ...(allBwinOdds.length === 0 && {
+            error: bwinFailedUrls[0]?.error || 'Bwin no devolvió cuotas en ninguna URL del batch.',
+          }),
+        };
+      }
+    } catch (e: any) {
+      console.warn('⚠️ [Bwin] fetchDirect falló:', e.message);
+    }
+
+    // === RUSHBET: Fetch directo a la API pública de Kambi, oferta rsico (sin Playwright) ===
+    // El deporte sale del hash de la URL ('#filter/football/'). Los deportes del lote se piden en paralelo
+    // y un fallo en uno no cancela el resto.
+    try {
+      const rushbetDomain = new URL(url).hostname;
+      if (rushbetDomain.includes('rushbet.co')) {
+        console.log(`⚡ [Rushbet] Batch de ${targetUrls.length} URL(s) — fetch directo a Kambi rsico (sin Playwright)`);
+        const allRushbetOdds: BookmakerOdd[] = [];
+        const rushbetSuccessfulUrls: string[] = [];
+        const rushbetFailedUrls: Array<{ url: string; error: string; durationMs: number }> = [];
+
+        await Promise.all(
+          [...new Set(targetUrls)].map(async (targetUrl) => {
+            const urlStart = Date.now();
+            try {
+              const sportSlug = parseRushbetSportSlug(targetUrl);
+              const urlOdds = await rushbetKambiAdapter.fetchDirect(sportSlug);
+              if (urlOdds.length > 0) {
+                allRushbetOdds.push(...urlOdds);
+                rushbetSuccessfulUrls.push(targetUrl);
+              } else {
+                rushbetFailedUrls.push({ url: targetUrl, error: `Rushbet no devolvió cuotas para '${sportSlug}'`, durationMs: Date.now() - urlStart });
+              }
+            } catch (urlErr: any) {
+              rushbetFailedUrls.push({ url: targetUrl, error: urlErr.message || 'Error desconocido', durationMs: Date.now() - urlStart });
+              console.error(`❌ [Rushbet] Error procesando ${targetUrl}:`, urlErr.message);
+            }
+          }),
+        );
+
+        // Persistir solo si hay cuotas reales — nunca sobreescribir con array vacío
+        if (allRushbetOdds.length > 0) {
+          const { SurebetCalculatorService } = await import('./surebet-calculator.service.js');
+          SurebetCalculatorService.getInstance().addScrapedOdds(allRushbetOdds);
+          OddsPersistenceService.getInstance().saveOddsForBookmaker('Rushbet', allRushbetOdds);
+          console.log(`✅ [Rushbet] Batch completo: ${allRushbetOdds.length} odds de ${rushbetSuccessfulUrls.length} URL(s)`);
+        } else {
+          console.warn('⚠️ [Rushbet] Batch completo con 0 odds — no se sobreescribe el histórico en disco');
+        }
+
+        const rushbetMatches = this.convertBookmakerOddsToMatches(allRushbetOdds);
+        return {
+          success: allRushbetOdds.length > 0,
+          url: primaryRawUrl,
+          urls: targetUrls,
+          successfulUrls: rushbetSuccessfulUrls,
+          failedUrls: rushbetFailedUrls,
+          matches: rushbetMatches,
+          totalMatches: rushbetMatches.length,
+          durationMs: Date.now() - startTime,
+          selectorsUsed: [],
+          proxyUsed: 'Directo (Kambi API pública, oferta rsico)',
+          timestamp: new Date().toISOString(),
+          source: 'network' as const,
+          oddsCount: allRushbetOdds.length,
+          htmlSize: 0,
+          bookmaker: 'Rushbet',
+          ...(allRushbetOdds.length === 0 && {
+            error: rushbetFailedUrls[0]?.error || 'Rushbet no devolvió cuotas en ninguna URL del batch.',
+          }),
+        };
+      }
+    } catch (e: any) {
+      console.warn('⚠️ [Rushbet] fetchDirect falló:', e.message);
+    }
+
     // Fix 3B: Para adapters de tipo network-only (Stake y cualquier adapter registrado),
     // NUNCA caer al DOM fallback — Stake es un widget/canvas sin datos en el DOM.
     // Si el interceptor devuelve 0 cuotas, retornamos directamente con mensaje claro
@@ -1203,7 +1437,8 @@ export class ScraperService {
               await page.waitForSelector('span.price.dec, button.price', { timeout: 8000 }).catch(() => {});
               await EvasionService.simulateAdvancedHumanBehavior(page);
 
-              const pageOdds = await ResilientSelectorEngine.extractBookmakerOdds(page, 'Wplay');
+              // Extractor dedicado: distingue el mercado de cada botón y toma el deporte de la URL.
+              const pageOdds = await extractWplayOdds(page, targetUrl);
               if (pageOdds.length > 0) {
                 allWplayOdds.push(...pageOdds);
                 wplaySuccessfulUrls.push(targetUrl);
@@ -1723,8 +1958,8 @@ export class ScraperService {
         continue;
       }
       if (o.marketType === 'OVER_UNDER_2_5') {
-        if (sel === 'over' || sel === 'más de' || sel === 'mas de') g.overOdds = o.odd;
-        else if (sel === 'under' || sel === 'menos de') g.underOdds = o.odd;
+        if (/^(over|más de|mas de)(\s|$)/.test(sel)) g.overOdds = o.odd;
+        else if (/^(under|menos de)(\s|$)/.test(sel)) g.underOdds = o.odd;
         continue;
       }
 

@@ -7,6 +7,9 @@ import { SelectorConfigPage } from './modules/scrapers/pages/SelectorConfigPage.
 import { BetPlayPage } from './modules/scrapers/pages/BetPlayPage.js';
 import { StakePage } from './modules/scrapers/pages/StakePage.js';
 import { WplayPage } from './modules/scrapers/pages/WplayPage.js';
+import { BwinPage } from './modules/scrapers/pages/BwinPage.js';
+import { RushbetPage } from './modules/scrapers/pages/RushbetPage.js';
+import { ScrapeGlobalPage } from './modules/scraping-global/pages/ScrapeGlobalPage.js';
 import { AdaptersPage } from './modules/adapters/pages/AdaptersPage.js';
 import { SurebetDashboardPage } from './modules/surebets/pages/SurebetDashboardPage.js';
 import SurebetPage from './modules/surebets/pages/SurebetPage.js';
@@ -46,6 +49,8 @@ export const App: React.FC = () => {
             />
           )}
 
+          {currentTab === 'global' && <ScrapeGlobalPage />}
+
           {currentTab === 'scrapers' && (
             <ScraperRunnerPage
               onScrapeCompleted={handleScrapeCompleted}
@@ -61,6 +66,10 @@ export const App: React.FC = () => {
           {currentTab === 'stake' && <StakePage />}
 
           {currentTab === 'wplay' && <WplayPage />}
+
+          {currentTab === 'bwin' && <BwinPage />}
+
+          {currentTab === 'rushbet' && <RushbetPage />}
 
           {currentTab === 'adapters' && <AdaptersPage />}
 

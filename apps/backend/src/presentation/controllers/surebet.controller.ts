@@ -97,6 +97,29 @@ export class SurebetController {
       }
     }
     const result = this.surebetService.analyzeOdds(deduped, totalStake, minProfit);
+
+    // Antigüedad de lo guardado por casa y deporte: lo que supera el TTL se ignoró en el cálculo.
+    const nowMs = Date.now();
+    const fresh = new Map<string, { bookmaker: string; sport: string; count: number; newestMs: number }>();
+    for (const o of deduped) {
+      const t = o.timestamp ? new Date(o.timestamp).getTime() : NaN;
+      if (isNaN(t)) continue;
+      const k = `${o.bookmaker}|${o.sport}`;
+      const cur = fresh.get(k);
+      if (cur) {
+        cur.count++;
+        cur.newestMs = Math.max(cur.newestMs, t);
+      } else {
+        fresh.set(k, { bookmaker: o.bookmaker, sport: o.sport, count: 1, newestMs: t });
+      }
+    }
+    const freshness = [...fresh.values()].map((f) => ({
+      bookmaker: f.bookmaker,
+      sport: f.sport,
+      count: f.count,
+      ageMinutes: Math.round((nowMs - f.newestMs) / 60000),
+      stale: nowMs - f.newestMs > SurebetCalculatorService.ODDS_TTL_MS,
+    }));
     // Guardar histórico
     this.saveHistory(result);
     const stats = OddsPersistenceService.getInstance().getStats();
@@ -105,7 +128,9 @@ export class SurebetController {
       data: {
         ...result,
         stats,
-        sources: { wplay: stats.wplay, stake: stats.stake, betplay: stats.betplay, total: stats.total, byBookmaker: stats.byBookmaker },
+        freshness,
+        ttlMinutes: SurebetCalculatorService.ODDS_TTL_MS / 60000,
+        sources: { wplay: stats.wplay, stake: stats.stake, betplay: stats.betplay, bwin: stats.bwin, rushbet: stats.rushbet, total: stats.total, byBookmaker: stats.byBookmaker },
       },
     });
   };

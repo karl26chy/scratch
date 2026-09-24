@@ -1,6 +1,7 @@
 import type { SiteOddsAdapter } from '../../../domain/types/site-adapter.js';
 import type { BookmakerOdd } from '../../../domain/types/surebet.types.js';
 import type { CapturedPayload } from '../odds-interceptor.js';
+import { fetchKambiListing } from './kambi-listing.js';
 
 /**
  * Adapter para BetPlay (tienda.betplay.com.co) — motor Kambi (KambiBC).
@@ -23,20 +24,11 @@ import type { CapturedPayload } from '../odds-interceptor.js';
  * Estructura de la respuesta:
  *   { events: [ { event: { id, name, homeName, awayName, ... }, betOffers: [...] } ] }
  *
- * El mercado 1X2 (Resultado Final) es el betOffer con betOfferType.id === 2.
+ * El mercado 1X2 (Resultado Final) es el betOffer con betOfferType.id === 2; Más/Menos de goles es el id 6.
  * Cada outcome trae `type` ('OT_ONE' | 'OT_CROSS' | 'OT_TWO') y `odds` como
  * entero decimal * 1000 (p.ej. 1490 -> 1.49). Los outcomes suspendidos no
  * traen el campo `odds`.
  */
-
-/** Construye los dos endpoints (US primario, EU fallback) para el deporte indicado. */
-function buildKambiUrls(sportSlug: string): string[] {
-  const qs = 'lang=es_ES&market=CO&client_id=2&channel_id=1&useCombined=true&useCombinedLive=true';
-  return [
-    `https://us.offering-api.kambicdn.com/offering/v2018/betplay/listView/${sportSlug}/all/all.json?${qs}`,
-    `https://eu.offering-api.kambicdn.com/offering/v2018/betplay/listView/${sportSlug}/all/all.json?${qs}`,
-  ];
-}
 
 const KAMBI_HEADERS = {
   'Accept': 'application/json, text/plain, */*',
@@ -62,6 +54,8 @@ function parseKambiEvents(data: any): BookmakerOdd[] {
       const homeTeam: string = ev.homeName || (ev.name || '').split(ev.nameDelimiter || '-')[0]?.trim() || 'Home';
       const awayTeam: string = ev.awayName || (ev.name || '').split(ev.nameDelimiter || '-')[1]?.trim() || 'Away';
       const eventName = `${homeTeam} vs ${awayTeam}`;
+      const startTime: string | undefined = typeof ev.start === 'string' ? ev.start : undefined;
+      const isLive = ev.state === 'STARTED';
 
       // Deporte: leer directamente del campo nativo de Kambi (en mayúsculas) y convertir a slug minúscula.
       // Ej: 'FOOTBALL' → 'football', 'TABLE_TENNIS' → 'table_tennis'
@@ -70,7 +64,7 @@ function parseKambiEvents(data: any): BookmakerOdd[] {
       const sport = sportRaw.toLowerCase() as 'football' | 'tennis' | 'basketball' | 'table_tennis';
 
       const betOffers: any[] = Array.isArray(item.betOffers) ? item.betOffers : [];
-      // 1X2 = betOfferType.id 2; Over/Under = 12; Ambos Anotan = 68
+      // 1X2 = betOfferType.id 2; Total de goles (Más/Menos) = 6; Ambos Anotan = 68 (no viene en listView)
       for (const offer of betOffers) {
         if (!Array.isArray(offer?.outcomes)) continue;
         const offerTypeId: number = offer?.betOfferType?.id;
@@ -99,23 +93,28 @@ function parseKambiEvents(data: any): BookmakerOdd[] {
               selection,
               odd: outcome.odds / 1000,
               timestamp: now,
+              ...(startTime ? { startTime } : {}),
+              ...(isLive ? { isLive } : {}),
             });
           }
-        } else if (offerTypeId === 12) {
-          // Mercado Over/Under 2.5
+        } else if (offerTypeId === 6 && sport === 'football') {
+          // Total de goles (Más/Menos). La vista de lista trae UNA línea por partido y varía entre 1.5 y 8.5:
+          // solo se toma la línea 2.5 para no mezclar líneas distintas bajo OVER_UNDER_2_5.
+          const isGoals = /goles|goals/i.test(`${offer.criterion?.label ?? ''} ${offer.criterion?.englishLabel ?? ''}`);
+          if (!isGoals) continue;
           for (const outcome of offer.outcomes) {
-            if (typeof outcome?.odds !== 'number') continue;
-            const label = outcome.line !== undefined
-              ? `${outcome.type === 'OT_OVER' ? 'Más de' : 'Menos de'} ${outcome.line / 1000}`
-              : outcome.label || outcome.englishLabel || 'Unknown';
+            if (typeof outcome?.odds !== 'number' || outcome.line !== 2500) continue;
+            if (outcome.type !== 'OT_OVER' && outcome.type !== 'OT_UNDER') continue;
             odds.push({
               bookmaker: 'BetPlay',
               eventName,
               sport,
               marketType: 'OVER_UNDER_2_5',
-              selection: label,
+              selection: `${outcome.type === 'OT_OVER' ? 'Más de' : 'Menos de'} 2.5`,
               odd: outcome.odds / 1000,
               timestamp: now,
+              ...(startTime ? { startTime } : {}),
+              ...(isLive ? { isLive } : {}),
             });
           }
         } else if (offerTypeId === 68) {
@@ -130,6 +129,8 @@ function parseKambiEvents(data: any): BookmakerOdd[] {
               selection: outcome.label || outcome.englishLabel || 'Unknown',
               odd: outcome.odds / 1000,
               timestamp: now,
+              ...(startTime ? { startTime } : {}),
+              ...(isLive ? { isLive } : {}),
             });
           }
         }
@@ -164,27 +165,27 @@ export const betplayKambiAdapter: SiteOddsAdapter & {
    *                    Por defecto 'football' para mantener compatibilidad con callers existentes.
    */
   async fetchDirect(sportSlug: string = 'football'): Promise<BookmakerOdd[]> {
-    const kambiEndpoints = buildKambiUrls(sportSlug);
-    const ts = Date.now();
-    for (const endpoint of kambiEndpoints) {
-      try {
-        const url = `${endpoint}&ncid=${ts}`;
-        console.log(`📡 [BetPlay/Kambi] Fetch directo [${sportSlug}]: ${url.split('?')[0]}`);
-        const response = await fetch(url, { headers: KAMBI_HEADERS });
-        if (!response.ok) {
-          console.warn(`⚠️ [BetPlay/Kambi] HTTP ${response.status} en ${endpoint.split('?')[0]}`);
-          continue;
-        }
-        const data = await response.json();
-        const odds = parseKambiEvents(data);
-        console.log(`✅ [BetPlay/Kambi] fetchDirect [${sportSlug}]: ${odds.length} odds (${(data.events || []).length} eventos)`);
-        return odds;
-      } catch (error: any) {
-        console.warn(`⚠️ [BetPlay/Kambi] fetchDirect falló para ${endpoint.split('?')[0]}: ${error.message}`);
-      }
+    try {
+      console.log(`📡 [BetPlay/Kambi] Fetch directo [${sportSlug}]`);
+      // Kambi limita listView a los partidos próximos según la hora (soonMode): fetchKambiListing barre las
+      // regiones cuando hace falta para no perder partidos.
+      const listing = await fetchKambiListing(sportSlug, {
+        offering: 'betplay',
+        hosts: ['us', 'eu'],
+        headers: KAMBI_HEADERS,
+        query: 'lang=es_ES&market=CO&client_id=2&channel_id=1',
+      });
+      const odds = parseKambiEvents({ events: listing.events });
+      console.log(
+        `✅ [BetPlay/Kambi] fetchDirect [${sportSlug}]: ${odds.length} odds (${listing.events.length} eventos${
+          listing.swept ? `, barrido de regiones por modo ${listing.soonMode}: ${listing.regionsFetched} ok / ${listing.regionsFailed} fallidas` : ''
+        })`,
+      );
+      return odds;
+    } catch (error: any) {
+      console.error(`❌ [BetPlay/Kambi] fetchDirect falló para [${sportSlug}]: ${error.message}`);
+      return [];
     }
-    console.error(`❌ [BetPlay/Kambi] Todos los endpoints fallaron para [${sportSlug}]`);
-    return [];
   },
 
   /**

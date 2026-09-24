@@ -8,9 +8,9 @@ import type { CapturedPayload } from '../odds-interceptor.js';
  * que no renderiza cuotas en el DOM inicial. Este adapter intercepta las
  * respuestas de red de KickerTech y las normaliza a BookmakerOdd[].
  *
- * Estado: PLACEHOLDER — pendiente de identificar el endpoint real y el formato
- * JSON (ver stake-kicker-discovery.ts). Una vez capturado, completar el mapeo
- * en adapt().
+ * Estado: operativo. events-by-path.json exige el token `hidenseek` que genera la propia sesión del
+ * navegador y limita las peticiones por sesión; por eso scraper.service.ts pide todas las fechas de UN
+ * deporte por sesión (fetchStakeSportAllDates) y este adapter solo normaliza los payloads (extract()).
  */
 /**
  * Helper para fecha dinámica (evita 406 por date fija)
@@ -215,6 +215,8 @@ export const stakeKickerAdapter: SiteOddsAdapter & {
           // teams puede ser {home, away} o el evento ya trae homeTeam/awayTeam separados
           const homeTeam: string = ev.teams?.home ?? ev.home?.name ?? ev.homeTeam ?? ev.participants?.[0]?.name ?? 'Home';
           const awayTeam: string = ev.teams?.away ?? ev.away?.name ?? ev.awayTeam ?? ev.participants?.[1]?.name ?? 'Away';
+          const startTime: string | undefined = typeof ev.date_start === 'string' ? ev.date_start : undefined;
+          const isLive = ev.is_live === true;
           const eventName = homeTeam && awayTeam ? `${homeTeam} vs ${awayTeam}` : ev.eventName ?? ev.name ?? `${homeTeam} vs ${awayTeam}`;
 
           // Metadato informativo del deporte
@@ -255,6 +257,8 @@ export const stakeKickerAdapter: SiteOddsAdapter & {
                 selection,
                 odd: Number(o.odd_value),
                 timestamp: now,
+                ...(startTime ? { startTime } : {}),
+                ...(isLive ? { isLive } : {}),
               });
             }
           }
@@ -276,6 +280,8 @@ export const stakeKickerAdapter: SiteOddsAdapter & {
                 selection: isYes ? 'SI' : 'NO',
                 odd: Number(o.odd_value),
                 timestamp: now,
+                ...(startTime ? { startTime } : {}),
+                ...(isLive ? { isLive } : {}),
               });
             }
           }
@@ -298,6 +304,8 @@ export const stakeKickerAdapter: SiteOddsAdapter & {
                 selection: isOver ? 'OVER' : 'UNDER',
                 odd: Number(o.odd_value),
                 timestamp: now,
+                ...(startTime ? { startTime } : {}),
+                ...(isLive ? { isLive } : {}),
               });
             }
           }

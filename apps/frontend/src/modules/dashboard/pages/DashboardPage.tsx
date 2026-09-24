@@ -1,7 +1,6 @@
 import React from 'react';
 import { MetricsGrid } from '../components/MetricsGrid.js';
 import { ActiveScrapesTable } from '../components/ActiveScrapesTable.js';
-import { ScrapeAllPanel } from '../components/ScrapeAllPanel.js';
 import { SystemHealth, ScrapeResult } from '../../../shared/types/common.types.js';
 
 interface DashboardPageProps {
@@ -28,8 +27,6 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ health, history, m
           Métricas en tiempo real de bypass anti-detección headless, asignación de navegadores y proxies residenciales.
         </p>
       </div>
-
-      <ScrapeAllPanel />
 
       <MetricsGrid
         metrics={metrics}
