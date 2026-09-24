@@ -1,4 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
+import { runWithScrapeOrigin } from '../../services/scrape-context.js';
 import { z } from 'zod';
 import { ScraperService } from '../../services/scraper.service.js';
 import { ProxyRotator } from '../../infrastructure/proxies/proxy-rotator.js';
@@ -364,14 +365,16 @@ export class ScraperController {
         }
       }
 
-      const result = await this.scraperService.scrapeWithCustomSelectors({
+      // Origen del scraping: el módulo Scraping Global envía origin='global'; cualquier otro llamador es 'module'.
+      const origin = req.body?.origin === 'global' ? 'global' : 'module';
+      const result = await runWithScrapeOrigin(origin, () => this.scraperService.scrapeWithCustomSelectors({
         url: primaryUrl,
         urls: rawTargets,
         selectors,
         useProxy,
         timeoutMs,
         sessionId: sessionId || `custom_${Date.now()}`,
-      });
+      }));
 
       if (!result.success) {
         res.status(result.captchaType ? 423 : 500).json({

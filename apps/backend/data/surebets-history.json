@@ -1,5 +1,3293 @@
 [
   {
+    "timestamp": "2026-09-24T06:14:39.260Z",
+    "surebetsFoundCount": 16,
+    "highestProfitMargin": 16.71,
+    "opportunities": [
+      {
+        "id": "sb_1790230479170_7zm4w",
+        "eventName": "Tomas Kucera Vs Ludek Madle",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 1.727,
+            "stakePercentage": 67.58,
+            "recommendedStake": 675802.52,
+            "expectedPayout": 1167110.95
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Rushbet",
+            "odd": 3.6,
+            "stakePercentage": 32.42,
+            "recommendedStake": 324197.48,
+            "expectedPayout": 1167110.93
+          }
+        ],
+        "totalImpliedProbability": 0.8568,
+        "isSurebet": true,
+        "profitMarginPercentage": 16.71,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1167110.93,
+        "guaranteedProfit": 167110.93,
+        "detectedAt": "2026-09-24T06:14:39.170Z",
+        "isLive": true
+      },
+      {
+        "id": "sb_1790230479170_ttpw1",
+        "eventName": "Alfred Rinka Vs Jiri Mikula",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 1.27,
+            "stakePercentage": 86.3,
+            "recommendedStake": 862998.92,
+            "expectedPayout": 1096008.63
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Wplay",
+            "odd": 8,
+            "stakePercentage": 13.7,
+            "recommendedStake": 137001.08,
+            "expectedPayout": 1096008.64
+          }
+        ],
+        "totalImpliedProbability": 0.9124,
+        "isSurebet": true,
+        "profitMarginPercentage": 9.6,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1096008.63,
+        "guaranteedProfit": 96008.63,
+        "detectedAt": "2026-09-24T06:14:39.170Z",
+        "isLive": true
+      },
+      {
+        "id": "sb_1790230479174_gyv0f",
+        "eventName": "Daniel Kouble Vs Michal Vedmoch",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 1.909,
+            "stakePercentage": 54.1,
+            "recommendedStake": 540995.43,
+            "expectedPayout": 1032760.28
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 2.25,
+            "stakePercentage": 45.9,
+            "recommendedStake": 459004.57,
+            "expectedPayout": 1032760.28
+          }
+        ],
+        "totalImpliedProbability": 0.9683,
+        "isSurebet": true,
+        "profitMarginPercentage": 3.28,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1032760.28,
+        "guaranteedProfit": 32760.28,
+        "detectedAt": "2026-09-24T06:14:39.174Z"
+      },
+      {
+        "id": "sb_1790230479197_75oye",
+        "eventName": "Dane Sweeny Vs Taro Daniel",
+        "sport": "tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 2.65,
+            "stakePercentage": 38.8,
+            "recommendedStake": 387990.76,
+            "expectedPayout": 1028175.51
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.68,
+            "stakePercentage": 61.2,
+            "recommendedStake": 612009.24,
+            "expectedPayout": 1028175.52
+          }
+        ],
+        "totalImpliedProbability": 0.9726,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.82,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1028175.51,
+        "guaranteedProfit": 28175.51,
+        "detectedAt": "2026-09-24T06:14:39.197Z",
+        "isLive": true
+      },
+      {
+        "id": "sb_1790230479172_evq0q",
+        "eventName": "Jan Kanera Vs Michal Jezek",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 1.87,
+            "stakePercentage": 54.61,
+            "recommendedStake": 546116.5,
+            "expectedPayout": 1021237.86
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Bwin",
+            "odd": 2.25,
+            "stakePercentage": 45.39,
+            "recommendedStake": 453883.5,
+            "expectedPayout": 1021237.88
+          }
+        ],
+        "totalImpliedProbability": 0.9792,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.12,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1021237.86,
+        "guaranteedProfit": 21237.86,
+        "detectedAt": "2026-09-24T06:14:39.172Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-24T06:14:34.874Z",
+    "surebetsFoundCount": 16,
+    "highestProfitMargin": 16.71,
+    "opportunities": [
+      {
+        "id": "sb_1790230474765_hczld",
+        "eventName": "Tomas Kucera Vs Ludek Madle",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 1.727,
+            "stakePercentage": 67.58,
+            "recommendedStake": 675802.52,
+            "expectedPayout": 1167110.95
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Rushbet",
+            "odd": 3.6,
+            "stakePercentage": 32.42,
+            "recommendedStake": 324197.48,
+            "expectedPayout": 1167110.93
+          }
+        ],
+        "totalImpliedProbability": 0.8568,
+        "isSurebet": true,
+        "profitMarginPercentage": 16.71,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1167110.93,
+        "guaranteedProfit": 167110.93,
+        "detectedAt": "2026-09-24T06:14:34.765Z",
+        "isLive": true
+      },
+      {
+        "id": "sb_1790230474765_uo4gv",
+        "eventName": "Alfred Rinka Vs Jiri Mikula",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 1.27,
+            "stakePercentage": 86.3,
+            "recommendedStake": 862998.92,
+            "expectedPayout": 1096008.63
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Wplay",
+            "odd": 8,
+            "stakePercentage": 13.7,
+            "recommendedStake": 137001.08,
+            "expectedPayout": 1096008.64
+          }
+        ],
+        "totalImpliedProbability": 0.9124,
+        "isSurebet": true,
+        "profitMarginPercentage": 9.6,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1096008.63,
+        "guaranteedProfit": 96008.63,
+        "detectedAt": "2026-09-24T06:14:34.765Z",
+        "isLive": true
+      },
+      {
+        "id": "sb_1790230474770_tzle6",
+        "eventName": "Daniel Kouble Vs Michal Vedmoch",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 1.909,
+            "stakePercentage": 54.1,
+            "recommendedStake": 540995.43,
+            "expectedPayout": 1032760.28
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 2.25,
+            "stakePercentage": 45.9,
+            "recommendedStake": 459004.57,
+            "expectedPayout": 1032760.28
+          }
+        ],
+        "totalImpliedProbability": 0.9683,
+        "isSurebet": true,
+        "profitMarginPercentage": 3.28,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1032760.28,
+        "guaranteedProfit": 32760.28,
+        "detectedAt": "2026-09-24T06:14:34.770Z"
+      },
+      {
+        "id": "sb_1790230474799_j15xj",
+        "eventName": "Dane Sweeny Vs Taro Daniel",
+        "sport": "tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 2.65,
+            "stakePercentage": 38.8,
+            "recommendedStake": 387990.76,
+            "expectedPayout": 1028175.51
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.68,
+            "stakePercentage": 61.2,
+            "recommendedStake": 612009.24,
+            "expectedPayout": 1028175.52
+          }
+        ],
+        "totalImpliedProbability": 0.9726,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.82,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1028175.51,
+        "guaranteedProfit": 28175.51,
+        "detectedAt": "2026-09-24T06:14:34.799Z",
+        "isLive": true
+      },
+      {
+        "id": "sb_1790230474767_m35p6",
+        "eventName": "Jan Kanera Vs Michal Jezek",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 1.87,
+            "stakePercentage": 54.61,
+            "recommendedStake": 546116.5,
+            "expectedPayout": 1021237.86
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Bwin",
+            "odd": 2.25,
+            "stakePercentage": 45.39,
+            "recommendedStake": 453883.5,
+            "expectedPayout": 1021237.88
+          }
+        ],
+        "totalImpliedProbability": 0.9792,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.12,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1021237.86,
+        "guaranteedProfit": 21237.86,
+        "detectedAt": "2026-09-24T06:14:34.767Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-24T06:14:30.593Z",
+    "surebetsFoundCount": 16,
+    "highestProfitMargin": 16.71,
+    "opportunities": [
+      {
+        "id": "sb_1790230470498_5up8k",
+        "eventName": "Tomas Kucera Vs Ludek Madle",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 1.727,
+            "stakePercentage": 67.58,
+            "recommendedStake": 675802.52,
+            "expectedPayout": 1167110.95
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Rushbet",
+            "odd": 3.6,
+            "stakePercentage": 32.42,
+            "recommendedStake": 324197.48,
+            "expectedPayout": 1167110.93
+          }
+        ],
+        "totalImpliedProbability": 0.8568,
+        "isSurebet": true,
+        "profitMarginPercentage": 16.71,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1167110.93,
+        "guaranteedProfit": 167110.93,
+        "detectedAt": "2026-09-24T06:14:30.498Z",
+        "isLive": true
+      },
+      {
+        "id": "sb_1790230470498_y2m5x",
+        "eventName": "Alfred Rinka Vs Jiri Mikula",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 1.27,
+            "stakePercentage": 86.3,
+            "recommendedStake": 862998.92,
+            "expectedPayout": 1096008.63
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Wplay",
+            "odd": 8,
+            "stakePercentage": 13.7,
+            "recommendedStake": 137001.08,
+            "expectedPayout": 1096008.64
+          }
+        ],
+        "totalImpliedProbability": 0.9124,
+        "isSurebet": true,
+        "profitMarginPercentage": 9.6,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1096008.63,
+        "guaranteedProfit": 96008.63,
+        "detectedAt": "2026-09-24T06:14:30.498Z",
+        "isLive": true
+      },
+      {
+        "id": "sb_1790230470504_y96h7",
+        "eventName": "Daniel Kouble Vs Michal Vedmoch",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 1.909,
+            "stakePercentage": 54.1,
+            "recommendedStake": 540995.43,
+            "expectedPayout": 1032760.28
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 2.25,
+            "stakePercentage": 45.9,
+            "recommendedStake": 459004.57,
+            "expectedPayout": 1032760.28
+          }
+        ],
+        "totalImpliedProbability": 0.9683,
+        "isSurebet": true,
+        "profitMarginPercentage": 3.28,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1032760.28,
+        "guaranteedProfit": 32760.28,
+        "detectedAt": "2026-09-24T06:14:30.504Z"
+      },
+      {
+        "id": "sb_1790230470529_ishkt",
+        "eventName": "Dane Sweeny Vs Taro Daniel",
+        "sport": "tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 2.65,
+            "stakePercentage": 38.8,
+            "recommendedStake": 387990.76,
+            "expectedPayout": 1028175.51
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.68,
+            "stakePercentage": 61.2,
+            "recommendedStake": 612009.24,
+            "expectedPayout": 1028175.52
+          }
+        ],
+        "totalImpliedProbability": 0.9726,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.82,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1028175.51,
+        "guaranteedProfit": 28175.51,
+        "detectedAt": "2026-09-24T06:14:30.529Z",
+        "isLive": true
+      },
+      {
+        "id": "sb_1790230470501_a4abe",
+        "eventName": "Jan Kanera Vs Michal Jezek",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 1.87,
+            "stakePercentage": 54.61,
+            "recommendedStake": 546116.5,
+            "expectedPayout": 1021237.86
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Bwin",
+            "odd": 2.25,
+            "stakePercentage": 45.39,
+            "recommendedStake": 453883.5,
+            "expectedPayout": 1021237.88
+          }
+        ],
+        "totalImpliedProbability": 0.9792,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.12,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1021237.86,
+        "guaranteedProfit": 21237.86,
+        "detectedAt": "2026-09-24T06:14:30.501Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-24T06:12:57.595Z",
+    "surebetsFoundCount": 15,
+    "highestProfitMargin": 14.98,
+    "opportunities": [
+      {
+        "id": "sb_1790230377505_iy619",
+        "eventName": "Yeon Woo Ku Vs Elena-gabriela Ruse",
+        "sport": "tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 1.533,
+            "stakePercentage": 75,
+            "recommendedStake": 750040.76,
+            "expectedPayout": 1149812.49
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 4.6,
+            "stakePercentage": 25,
+            "recommendedStake": 249959.24,
+            "expectedPayout": 1149812.5
+          }
+        ],
+        "totalImpliedProbability": 0.8697,
+        "isSurebet": true,
+        "profitMarginPercentage": 14.98,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1149812.49,
+        "guaranteedProfit": 149812.49,
+        "detectedAt": "2026-09-24T06:12:57.505Z",
+        "isLive": true
+      },
+      {
+        "id": "sb_1790230377505_21eoa",
+        "eventName": "Dane Sweeny Vs Taro Daniel",
+        "sport": "tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 2.4,
+            "stakePercentage": 45.08,
+            "recommendedStake": 450800.92,
+            "expectedPayout": 1081922.21
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.97,
+            "stakePercentage": 54.92,
+            "recommendedStake": 549199.08,
+            "expectedPayout": 1081922.19
+          }
+        ],
+        "totalImpliedProbability": 0.9243,
+        "isSurebet": true,
+        "profitMarginPercentage": 8.19,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1081922.19,
+        "guaranteedProfit": 81922.19,
+        "detectedAt": "2026-09-24T06:12:57.505Z",
+        "isLive": true
+      },
+      {
+        "id": "sb_1790230377484_x3abb",
+        "eventName": "Daniel Kouble Vs Michal Vedmoch",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 1.909,
+            "stakePercentage": 54.1,
+            "recommendedStake": 540995.43,
+            "expectedPayout": 1032760.28
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 2.25,
+            "stakePercentage": 45.9,
+            "recommendedStake": 459004.57,
+            "expectedPayout": 1032760.28
+          }
+        ],
+        "totalImpliedProbability": 0.9683,
+        "isSurebet": true,
+        "profitMarginPercentage": 3.28,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1032760.28,
+        "guaranteedProfit": 32760.28,
+        "detectedAt": "2026-09-24T06:12:57.484Z"
+      },
+      {
+        "id": "sb_1790230377479_3l6nq",
+        "eventName": "Jan Kanera Vs Michal Jezek",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 1.87,
+            "stakePercentage": 54.61,
+            "recommendedStake": 546116.5,
+            "expectedPayout": 1021237.86
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Bwin",
+            "odd": 2.25,
+            "stakePercentage": 45.39,
+            "recommendedStake": 453883.5,
+            "expectedPayout": 1021237.88
+          }
+        ],
+        "totalImpliedProbability": 0.9792,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.12,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1021237.86,
+        "guaranteedProfit": 21237.86,
+        "detectedAt": "2026-09-24T06:12:57.479Z"
+      },
+      {
+        "id": "sb_1790230377483_hb04z",
+        "eventName": "Jaroslav Strnad Vs Martin Novak",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 2.95,
+            "stakePercentage": 34.59,
+            "recommendedStake": 345898,
+            "expectedPayout": 1020399.1
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.56,
+            "stakePercentage": 65.41,
+            "recommendedStake": 654102,
+            "expectedPayout": 1020399.12
+          }
+        ],
+        "totalImpliedProbability": 0.98,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.04,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1020399.1,
+        "guaranteedProfit": 20399.1,
+        "detectedAt": "2026-09-24T06:12:57.483Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-24T06:12:53.287Z",
+    "surebetsFoundCount": 15,
+    "highestProfitMargin": 14.98,
+    "opportunities": [
+      {
+        "id": "sb_1790230373222_oizja",
+        "eventName": "Yeon Woo Ku Vs Elena-gabriela Ruse",
+        "sport": "tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 1.533,
+            "stakePercentage": 75,
+            "recommendedStake": 750040.76,
+            "expectedPayout": 1149812.49
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 4.6,
+            "stakePercentage": 25,
+            "recommendedStake": 249959.24,
+            "expectedPayout": 1149812.5
+          }
+        ],
+        "totalImpliedProbability": 0.8697,
+        "isSurebet": true,
+        "profitMarginPercentage": 14.98,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1149812.49,
+        "guaranteedProfit": 149812.49,
+        "detectedAt": "2026-09-24T06:12:53.222Z",
+        "isLive": true
+      },
+      {
+        "id": "sb_1790230373222_sonpk",
+        "eventName": "Dane Sweeny Vs Taro Daniel",
+        "sport": "tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 2.4,
+            "stakePercentage": 45.08,
+            "recommendedStake": 450800.92,
+            "expectedPayout": 1081922.21
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.97,
+            "stakePercentage": 54.92,
+            "recommendedStake": 549199.08,
+            "expectedPayout": 1081922.19
+          }
+        ],
+        "totalImpliedProbability": 0.9243,
+        "isSurebet": true,
+        "profitMarginPercentage": 8.19,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1081922.19,
+        "guaranteedProfit": 81922.19,
+        "detectedAt": "2026-09-24T06:12:53.222Z",
+        "isLive": true
+      },
+      {
+        "id": "sb_1790230373200_y5lig",
+        "eventName": "Daniel Kouble Vs Michal Vedmoch",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 1.909,
+            "stakePercentage": 54.1,
+            "recommendedStake": 540995.43,
+            "expectedPayout": 1032760.28
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 2.25,
+            "stakePercentage": 45.9,
+            "recommendedStake": 459004.57,
+            "expectedPayout": 1032760.28
+          }
+        ],
+        "totalImpliedProbability": 0.9683,
+        "isSurebet": true,
+        "profitMarginPercentage": 3.28,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1032760.28,
+        "guaranteedProfit": 32760.28,
+        "detectedAt": "2026-09-24T06:12:53.200Z"
+      },
+      {
+        "id": "sb_1790230373195_pkcib",
+        "eventName": "Jan Kanera Vs Michal Jezek",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 1.87,
+            "stakePercentage": 54.61,
+            "recommendedStake": 546116.5,
+            "expectedPayout": 1021237.86
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Bwin",
+            "odd": 2.25,
+            "stakePercentage": 45.39,
+            "recommendedStake": 453883.5,
+            "expectedPayout": 1021237.88
+          }
+        ],
+        "totalImpliedProbability": 0.9792,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.12,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1021237.86,
+        "guaranteedProfit": 21237.86,
+        "detectedAt": "2026-09-24T06:12:53.195Z"
+      },
+      {
+        "id": "sb_1790230373199_mhmut",
+        "eventName": "Jaroslav Strnad Vs Martin Novak",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 2.95,
+            "stakePercentage": 34.59,
+            "recommendedStake": 345898,
+            "expectedPayout": 1020399.1
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.56,
+            "stakePercentage": 65.41,
+            "recommendedStake": 654102,
+            "expectedPayout": 1020399.12
+          }
+        ],
+        "totalImpliedProbability": 0.98,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.04,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1020399.1,
+        "guaranteedProfit": 20399.1,
+        "detectedAt": "2026-09-24T06:12:53.199Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-24T06:12:47.228Z",
+    "surebetsFoundCount": 15,
+    "highestProfitMargin": 14.98,
+    "opportunities": [
+      {
+        "id": "sb_1790230367157_mm506",
+        "eventName": "Yeon Woo Ku Vs Elena-gabriela Ruse",
+        "sport": "tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 1.533,
+            "stakePercentage": 75,
+            "recommendedStake": 750040.76,
+            "expectedPayout": 1149812.49
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 4.6,
+            "stakePercentage": 25,
+            "recommendedStake": 249959.24,
+            "expectedPayout": 1149812.5
+          }
+        ],
+        "totalImpliedProbability": 0.8697,
+        "isSurebet": true,
+        "profitMarginPercentage": 14.98,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1149812.49,
+        "guaranteedProfit": 149812.49,
+        "detectedAt": "2026-09-24T06:12:47.157Z",
+        "isLive": true
+      },
+      {
+        "id": "sb_1790230367157_tk09h",
+        "eventName": "Dane Sweeny Vs Taro Daniel",
+        "sport": "tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 2.4,
+            "stakePercentage": 45.08,
+            "recommendedStake": 450800.92,
+            "expectedPayout": 1081922.21
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.97,
+            "stakePercentage": 54.92,
+            "recommendedStake": 549199.08,
+            "expectedPayout": 1081922.19
+          }
+        ],
+        "totalImpliedProbability": 0.9243,
+        "isSurebet": true,
+        "profitMarginPercentage": 8.19,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1081922.19,
+        "guaranteedProfit": 81922.19,
+        "detectedAt": "2026-09-24T06:12:47.157Z",
+        "isLive": true
+      },
+      {
+        "id": "sb_1790230367133_tm3yt",
+        "eventName": "Daniel Kouble Vs Michal Vedmoch",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 1.909,
+            "stakePercentage": 54.1,
+            "recommendedStake": 540995.43,
+            "expectedPayout": 1032760.28
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 2.25,
+            "stakePercentage": 45.9,
+            "recommendedStake": 459004.57,
+            "expectedPayout": 1032760.28
+          }
+        ],
+        "totalImpliedProbability": 0.9683,
+        "isSurebet": true,
+        "profitMarginPercentage": 3.28,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1032760.28,
+        "guaranteedProfit": 32760.28,
+        "detectedAt": "2026-09-24T06:12:47.133Z"
+      },
+      {
+        "id": "sb_1790230367129_zo6by",
+        "eventName": "Jan Kanera Vs Michal Jezek",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 1.87,
+            "stakePercentage": 54.61,
+            "recommendedStake": 546116.5,
+            "expectedPayout": 1021237.86
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Bwin",
+            "odd": 2.25,
+            "stakePercentage": 45.39,
+            "recommendedStake": 453883.5,
+            "expectedPayout": 1021237.88
+          }
+        ],
+        "totalImpliedProbability": 0.9792,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.12,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1021237.86,
+        "guaranteedProfit": 21237.86,
+        "detectedAt": "2026-09-24T06:12:47.129Z"
+      },
+      {
+        "id": "sb_1790230367132_i0u7j",
+        "eventName": "Jaroslav Strnad Vs Martin Novak",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 2.95,
+            "stakePercentage": 34.59,
+            "recommendedStake": 345898,
+            "expectedPayout": 1020399.1
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.56,
+            "stakePercentage": 65.41,
+            "recommendedStake": 654102,
+            "expectedPayout": 1020399.12
+          }
+        ],
+        "totalImpliedProbability": 0.98,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.04,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1020399.1,
+        "guaranteedProfit": 20399.1,
+        "detectedAt": "2026-09-24T06:12:47.132Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-24T06:06:22.984Z",
+    "surebetsFoundCount": 14,
+    "highestProfitMargin": 5.31,
+    "opportunities": [
+      {
+        "id": "sb_1790229982906_eqyb0",
+        "eventName": "Anna Bondar Vs Alina Charaeva",
+        "sport": "tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 2.2,
+            "stakePercentage": 47.87,
+            "recommendedStake": 478672.99,
+            "expectedPayout": 1053080.58
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 2.02,
+            "stakePercentage": 52.13,
+            "recommendedStake": 521327.01,
+            "expectedPayout": 1053080.56
+          }
+        ],
+        "totalImpliedProbability": 0.9496,
+        "isSurebet": true,
+        "profitMarginPercentage": 5.31,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1053080.56,
+        "guaranteedProfit": 53080.56,
+        "detectedAt": "2026-09-24T06:06:22.906Z",
+        "isLive": true
+      },
+      {
+        "id": "sb_1790229982886_tritf",
+        "eventName": "Daniel Kouble Vs Michal Vedmoch",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 1.909,
+            "stakePercentage": 54.1,
+            "recommendedStake": 540995.43,
+            "expectedPayout": 1032760.28
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 2.25,
+            "stakePercentage": 45.9,
+            "recommendedStake": 459004.57,
+            "expectedPayout": 1032760.28
+          }
+        ],
+        "totalImpliedProbability": 0.9683,
+        "isSurebet": true,
+        "profitMarginPercentage": 3.28,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1032760.28,
+        "guaranteedProfit": 32760.28,
+        "detectedAt": "2026-09-24T06:06:22.886Z"
+      },
+      {
+        "id": "sb_1790229982883_jdccr",
+        "eventName": "Jan Kanera Vs Michal Jezek",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 1.87,
+            "stakePercentage": 54.61,
+            "recommendedStake": 546116.5,
+            "expectedPayout": 1021237.86
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Bwin",
+            "odd": 2.25,
+            "stakePercentage": 45.39,
+            "recommendedStake": 453883.5,
+            "expectedPayout": 1021237.88
+          }
+        ],
+        "totalImpliedProbability": 0.9792,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.12,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1021237.86,
+        "guaranteedProfit": 21237.86,
+        "detectedAt": "2026-09-24T06:06:22.883Z"
+      },
+      {
+        "id": "sb_1790229982885_1nlh7",
+        "eventName": "Jaroslav Strnad Vs Martin Novak",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 2.95,
+            "stakePercentage": 34.59,
+            "recommendedStake": 345898,
+            "expectedPayout": 1020399.1
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.56,
+            "stakePercentage": 65.41,
+            "recommendedStake": 654102,
+            "expectedPayout": 1020399.12
+          }
+        ],
+        "totalImpliedProbability": 0.98,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.04,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1020399.1,
+        "guaranteedProfit": 20399.1,
+        "detectedAt": "2026-09-24T06:06:22.885Z"
+      },
+      {
+        "id": "sb_1790229982886_v71e6",
+        "eventName": "Frantisek Just Vs Daniel Tuma",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 2.95,
+            "stakePercentage": 34.44,
+            "recommendedStake": 344444.44,
+            "expectedPayout": 1016111.1
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.55,
+            "stakePercentage": 65.56,
+            "recommendedStake": 655555.56,
+            "expectedPayout": 1016111.12
+          }
+        ],
+        "totalImpliedProbability": 0.9841,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.61,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1016111.1,
+        "guaranteedProfit": 16111.1,
+        "detectedAt": "2026-09-24T06:06:22.886Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-24T06:06:18.664Z",
+    "surebetsFoundCount": 14,
+    "highestProfitMargin": 5.31,
+    "opportunities": [
+      {
+        "id": "sb_1790229978592_21nsp",
+        "eventName": "Anna Bondar Vs Alina Charaeva",
+        "sport": "tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 2.2,
+            "stakePercentage": 47.87,
+            "recommendedStake": 478672.99,
+            "expectedPayout": 1053080.58
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 2.02,
+            "stakePercentage": 52.13,
+            "recommendedStake": 521327.01,
+            "expectedPayout": 1053080.56
+          }
+        ],
+        "totalImpliedProbability": 0.9496,
+        "isSurebet": true,
+        "profitMarginPercentage": 5.31,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1053080.56,
+        "guaranteedProfit": 53080.56,
+        "detectedAt": "2026-09-24T06:06:18.592Z",
+        "isLive": true
+      },
+      {
+        "id": "sb_1790229978571_7jnnc",
+        "eventName": "Daniel Kouble Vs Michal Vedmoch",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 1.909,
+            "stakePercentage": 54.1,
+            "recommendedStake": 540995.43,
+            "expectedPayout": 1032760.28
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 2.25,
+            "stakePercentage": 45.9,
+            "recommendedStake": 459004.57,
+            "expectedPayout": 1032760.28
+          }
+        ],
+        "totalImpliedProbability": 0.9683,
+        "isSurebet": true,
+        "profitMarginPercentage": 3.28,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1032760.28,
+        "guaranteedProfit": 32760.28,
+        "detectedAt": "2026-09-24T06:06:18.571Z"
+      },
+      {
+        "id": "sb_1790229978567_uysup",
+        "eventName": "Jan Kanera Vs Michal Jezek",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 1.87,
+            "stakePercentage": 54.61,
+            "recommendedStake": 546116.5,
+            "expectedPayout": 1021237.86
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Bwin",
+            "odd": 2.25,
+            "stakePercentage": 45.39,
+            "recommendedStake": 453883.5,
+            "expectedPayout": 1021237.88
+          }
+        ],
+        "totalImpliedProbability": 0.9792,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.12,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1021237.86,
+        "guaranteedProfit": 21237.86,
+        "detectedAt": "2026-09-24T06:06:18.567Z"
+      },
+      {
+        "id": "sb_1790229978570_bmdzo",
+        "eventName": "Jaroslav Strnad Vs Martin Novak",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 2.95,
+            "stakePercentage": 34.59,
+            "recommendedStake": 345898,
+            "expectedPayout": 1020399.1
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.56,
+            "stakePercentage": 65.41,
+            "recommendedStake": 654102,
+            "expectedPayout": 1020399.12
+          }
+        ],
+        "totalImpliedProbability": 0.98,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.04,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1020399.1,
+        "guaranteedProfit": 20399.1,
+        "detectedAt": "2026-09-24T06:06:18.570Z"
+      },
+      {
+        "id": "sb_1790229978570_qszwz",
+        "eventName": "Frantisek Just Vs Daniel Tuma",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 2.95,
+            "stakePercentage": 34.44,
+            "recommendedStake": 344444.44,
+            "expectedPayout": 1016111.1
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.55,
+            "stakePercentage": 65.56,
+            "recommendedStake": 655555.56,
+            "expectedPayout": 1016111.12
+          }
+        ],
+        "totalImpliedProbability": 0.9841,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.61,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1016111.1,
+        "guaranteedProfit": 16111.1,
+        "detectedAt": "2026-09-24T06:06:18.570Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-24T06:05:57.545Z",
+    "surebetsFoundCount": 14,
+    "highestProfitMargin": 5.31,
+    "opportunities": [
+      {
+        "id": "sb_1790229957449_49cw2",
+        "eventName": "Anna Bondar Vs Alina Charaeva",
+        "sport": "tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Wplay",
+            "odd": 2.2,
+            "stakePercentage": 47.87,
+            "recommendedStake": 478672.99,
+            "expectedPayout": 1053080.58
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 2.02,
+            "stakePercentage": 52.13,
+            "recommendedStake": 521327.01,
+            "expectedPayout": 1053080.56
+          }
+        ],
+        "totalImpliedProbability": 0.9496,
+        "isSurebet": true,
+        "profitMarginPercentage": 5.31,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1053080.56,
+        "guaranteedProfit": 53080.56,
+        "detectedAt": "2026-09-24T06:05:57.449Z",
+        "isLive": true
+      },
+      {
+        "id": "sb_1790229957421_ty7da",
+        "eventName": "Daniel Kouble Vs Michal Vedmoch",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 1.909,
+            "stakePercentage": 54.1,
+            "recommendedStake": 540995.43,
+            "expectedPayout": 1032760.28
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 2.25,
+            "stakePercentage": 45.9,
+            "recommendedStake": 459004.57,
+            "expectedPayout": 1032760.28
+          }
+        ],
+        "totalImpliedProbability": 0.9683,
+        "isSurebet": true,
+        "profitMarginPercentage": 3.28,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1032760.28,
+        "guaranteedProfit": 32760.28,
+        "detectedAt": "2026-09-24T06:05:57.421Z"
+      },
+      {
+        "id": "sb_1790229957415_rg49f",
+        "eventName": "Jan Kanera Vs Michal Jezek",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 1.87,
+            "stakePercentage": 54.61,
+            "recommendedStake": 546116.5,
+            "expectedPayout": 1021237.86
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Bwin",
+            "odd": 2.25,
+            "stakePercentage": 45.39,
+            "recommendedStake": 453883.5,
+            "expectedPayout": 1021237.88
+          }
+        ],
+        "totalImpliedProbability": 0.9792,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.12,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1021237.86,
+        "guaranteedProfit": 21237.86,
+        "detectedAt": "2026-09-24T06:05:57.415Z"
+      },
+      {
+        "id": "sb_1790229957420_50ept",
+        "eventName": "Jaroslav Strnad Vs Martin Novak",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 2.95,
+            "stakePercentage": 34.59,
+            "recommendedStake": 345898,
+            "expectedPayout": 1020399.1
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.56,
+            "stakePercentage": 65.41,
+            "recommendedStake": 654102,
+            "expectedPayout": 1020399.12
+          }
+        ],
+        "totalImpliedProbability": 0.98,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.04,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1020399.1,
+        "guaranteedProfit": 20399.1,
+        "detectedAt": "2026-09-24T06:05:57.420Z"
+      },
+      {
+        "id": "sb_1790229957421_wiy4a",
+        "eventName": "Frantisek Just Vs Daniel Tuma",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 2.95,
+            "stakePercentage": 34.44,
+            "recommendedStake": 344444.44,
+            "expectedPayout": 1016111.1
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.55,
+            "stakePercentage": 65.56,
+            "recommendedStake": 655555.56,
+            "expectedPayout": 1016111.12
+          }
+        ],
+        "totalImpliedProbability": 0.9841,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.61,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1016111.1,
+        "guaranteedProfit": 16111.1,
+        "detectedAt": "2026-09-24T06:05:57.421Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-24T06:05:02.869Z",
+    "surebetsFoundCount": 12,
+    "highestProfitMargin": 3.28,
+    "opportunities": [
+      {
+        "id": "sb_1790229902860_gkbez",
+        "eventName": "Daniel Kouble Vs Michal Vedmoch",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 1.909,
+            "stakePercentage": 54.1,
+            "recommendedStake": 540995.43,
+            "expectedPayout": 1032760.28
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 2.25,
+            "stakePercentage": 45.9,
+            "recommendedStake": 459004.57,
+            "expectedPayout": 1032760.28
+          }
+        ],
+        "totalImpliedProbability": 0.9683,
+        "isSurebet": true,
+        "profitMarginPercentage": 3.28,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1032760.28,
+        "guaranteedProfit": 32760.28,
+        "detectedAt": "2026-09-24T06:05:02.860Z"
+      },
+      {
+        "id": "sb_1790229902854_gi36o",
+        "eventName": "Jan Kanera Vs Michal Jezek",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 1.87,
+            "stakePercentage": 54.61,
+            "recommendedStake": 546116.5,
+            "expectedPayout": 1021237.86
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Bwin",
+            "odd": 2.25,
+            "stakePercentage": 45.39,
+            "recommendedStake": 453883.5,
+            "expectedPayout": 1021237.88
+          }
+        ],
+        "totalImpliedProbability": 0.9792,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.12,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1021237.86,
+        "guaranteedProfit": 21237.86,
+        "detectedAt": "2026-09-24T06:05:02.854Z"
+      },
+      {
+        "id": "sb_1790229902857_ox9g9",
+        "eventName": "Jaroslav Strnad Vs Martin Novak",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 2.95,
+            "stakePercentage": 34.59,
+            "recommendedStake": 345898,
+            "expectedPayout": 1020399.1
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.56,
+            "stakePercentage": 65.41,
+            "recommendedStake": 654102,
+            "expectedPayout": 1020399.12
+          }
+        ],
+        "totalImpliedProbability": 0.98,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.04,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1020399.1,
+        "guaranteedProfit": 20399.1,
+        "detectedAt": "2026-09-24T06:05:02.857Z"
+      },
+      {
+        "id": "sb_1790229902858_19l5p",
+        "eventName": "Frantisek Just Vs Daniel Tuma",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 2.95,
+            "stakePercentage": 34.44,
+            "recommendedStake": 344444.44,
+            "expectedPayout": 1016111.1
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.55,
+            "stakePercentage": 65.56,
+            "recommendedStake": 655555.56,
+            "expectedPayout": 1016111.12
+          }
+        ],
+        "totalImpliedProbability": 0.9841,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.61,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1016111.1,
+        "guaranteedProfit": 16111.1,
+        "detectedAt": "2026-09-24T06:05:02.858Z"
+      },
+      {
+        "id": "sb_1790229902852_uhb4t",
+        "eventName": "Martin Sobisek Vs Vladimir Cermak",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 1.71,
+            "stakePercentage": 59.38,
+            "recommendedStake": 593824.23,
+            "expectedPayout": 1015439.43
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Bwin",
+            "odd": 2.5,
+            "stakePercentage": 40.62,
+            "recommendedStake": 406175.77,
+            "expectedPayout": 1015439.43
+          }
+        ],
+        "totalImpliedProbability": 0.9848,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.54,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1015439.43,
+        "guaranteedProfit": 15439.43,
+        "detectedAt": "2026-09-24T06:05:02.852Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-24T06:05:01.768Z",
+    "surebetsFoundCount": 12,
+    "highestProfitMargin": 3.28,
+    "opportunities": [
+      {
+        "id": "sb_1790229901761_j65ej",
+        "eventName": "Daniel Kouble Vs Michal Vedmoch",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 1.909,
+            "stakePercentage": 54.1,
+            "recommendedStake": 540995.43,
+            "expectedPayout": 1032760.28
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 2.25,
+            "stakePercentage": 45.9,
+            "recommendedStake": 459004.57,
+            "expectedPayout": 1032760.28
+          }
+        ],
+        "totalImpliedProbability": 0.9683,
+        "isSurebet": true,
+        "profitMarginPercentage": 3.28,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1032760.28,
+        "guaranteedProfit": 32760.28,
+        "detectedAt": "2026-09-24T06:05:01.761Z"
+      },
+      {
+        "id": "sb_1790229901756_cylvb",
+        "eventName": "Jan Kanera Vs Michal Jezek",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 1.87,
+            "stakePercentage": 54.61,
+            "recommendedStake": 546116.5,
+            "expectedPayout": 1021237.86
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Bwin",
+            "odd": 2.25,
+            "stakePercentage": 45.39,
+            "recommendedStake": 453883.5,
+            "expectedPayout": 1021237.88
+          }
+        ],
+        "totalImpliedProbability": 0.9792,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.12,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1021237.86,
+        "guaranteedProfit": 21237.86,
+        "detectedAt": "2026-09-24T06:05:01.756Z"
+      },
+      {
+        "id": "sb_1790229901760_fsf8h",
+        "eventName": "Jaroslav Strnad Vs Martin Novak",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 2.95,
+            "stakePercentage": 34.59,
+            "recommendedStake": 345898,
+            "expectedPayout": 1020399.1
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.56,
+            "stakePercentage": 65.41,
+            "recommendedStake": 654102,
+            "expectedPayout": 1020399.12
+          }
+        ],
+        "totalImpliedProbability": 0.98,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.04,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1020399.1,
+        "guaranteedProfit": 20399.1,
+        "detectedAt": "2026-09-24T06:05:01.760Z"
+      },
+      {
+        "id": "sb_1790229901761_37s4n",
+        "eventName": "Frantisek Just Vs Daniel Tuma",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 2.95,
+            "stakePercentage": 34.44,
+            "recommendedStake": 344444.44,
+            "expectedPayout": 1016111.1
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.55,
+            "stakePercentage": 65.56,
+            "recommendedStake": 655555.56,
+            "expectedPayout": 1016111.12
+          }
+        ],
+        "totalImpliedProbability": 0.9841,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.61,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1016111.1,
+        "guaranteedProfit": 16111.1,
+        "detectedAt": "2026-09-24T06:05:01.761Z"
+      },
+      {
+        "id": "sb_1790229901754_nk43j",
+        "eventName": "Martin Sobisek Vs Vladimir Cermak",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 1.71,
+            "stakePercentage": 59.38,
+            "recommendedStake": 593824.23,
+            "expectedPayout": 1015439.43
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Bwin",
+            "odd": 2.5,
+            "stakePercentage": 40.62,
+            "recommendedStake": 406175.77,
+            "expectedPayout": 1015439.43
+          }
+        ],
+        "totalImpliedProbability": 0.9848,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.54,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1015439.43,
+        "guaranteedProfit": 15439.43,
+        "detectedAt": "2026-09-24T06:05:01.754Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-24T06:04:59.273Z",
+    "surebetsFoundCount": 0,
+    "highestProfitMargin": 0,
+    "opportunities": []
+  },
+  {
+    "timestamp": "2026-09-24T06:04:49.679Z",
+    "surebetsFoundCount": 0,
+    "highestProfitMargin": 0,
+    "opportunities": []
+  },
+  {
+    "timestamp": "2026-09-24T06:04:38.294Z",
+    "surebetsFoundCount": 0,
+    "highestProfitMargin": 0,
+    "opportunities": []
+  },
+  {
+    "timestamp": "2026-09-24T06:04:38.285Z",
+    "surebetsFoundCount": 0,
+    "highestProfitMargin": 0,
+    "opportunities": []
+  },
+  {
+    "timestamp": "2026-09-24T06:04:38.260Z",
+    "surebetsFoundCount": 0,
+    "highestProfitMargin": 0,
+    "opportunities": []
+  },
+  {
+    "timestamp": "2026-09-24T06:00:41.771Z",
+    "surebetsFoundCount": 12,
+    "highestProfitMargin": 3.28,
+    "opportunities": [
+      {
+        "id": "sb_1790229641733_r9g7l",
+        "eventName": "Daniel Kouble Vs Michal Vedmoch",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 1.909,
+            "stakePercentage": 54.1,
+            "recommendedStake": 540995.43,
+            "expectedPayout": 1032760.28
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 2.25,
+            "stakePercentage": 45.9,
+            "recommendedStake": 459004.57,
+            "expectedPayout": 1032760.28
+          }
+        ],
+        "totalImpliedProbability": 0.9683,
+        "isSurebet": true,
+        "profitMarginPercentage": 3.28,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1032760.28,
+        "guaranteedProfit": 32760.28,
+        "detectedAt": "2026-09-24T06:00:41.733Z"
+      },
+      {
+        "id": "sb_1790229641729_z6zua",
+        "eventName": "Jan Kanera Vs Michal Jezek",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 1.87,
+            "stakePercentage": 54.61,
+            "recommendedStake": 546116.5,
+            "expectedPayout": 1021237.86
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Bwin",
+            "odd": 2.25,
+            "stakePercentage": 45.39,
+            "recommendedStake": 453883.5,
+            "expectedPayout": 1021237.88
+          }
+        ],
+        "totalImpliedProbability": 0.9792,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.12,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1021237.86,
+        "guaranteedProfit": 21237.86,
+        "detectedAt": "2026-09-24T06:00:41.729Z"
+      },
+      {
+        "id": "sb_1790229641732_lsthh",
+        "eventName": "Jaroslav Strnad (1964) Vs Martin Novak",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 2.95,
+            "stakePercentage": 34.59,
+            "recommendedStake": 345898,
+            "expectedPayout": 1020399.1
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.56,
+            "stakePercentage": 65.41,
+            "recommendedStake": 654102,
+            "expectedPayout": 1020399.12
+          }
+        ],
+        "totalImpliedProbability": 0.98,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.04,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1020399.1,
+        "guaranteedProfit": 20399.1,
+        "detectedAt": "2026-09-24T06:00:41.732Z"
+      },
+      {
+        "id": "sb_1790229641733_57t51",
+        "eventName": "Frantisek Just Vs Daniel Tuma",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 2.95,
+            "stakePercentage": 34.44,
+            "recommendedStake": 344444.44,
+            "expectedPayout": 1016111.1
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.55,
+            "stakePercentage": 65.56,
+            "recommendedStake": 655555.56,
+            "expectedPayout": 1016111.12
+          }
+        ],
+        "totalImpliedProbability": 0.9841,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.61,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1016111.1,
+        "guaranteedProfit": 16111.1,
+        "detectedAt": "2026-09-24T06:00:41.733Z"
+      },
+      {
+        "id": "sb_1790229641728_npy5x",
+        "eventName": "Martin Sobisek Vs Vladimir Cermak",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 1.71,
+            "stakePercentage": 59.38,
+            "recommendedStake": 593824.23,
+            "expectedPayout": 1015439.43
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Bwin",
+            "odd": 2.5,
+            "stakePercentage": 40.62,
+            "recommendedStake": 406175.77,
+            "expectedPayout": 1015439.43
+          }
+        ],
+        "totalImpliedProbability": 0.9848,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.54,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1015439.43,
+        "guaranteedProfit": 15439.43,
+        "detectedAt": "2026-09-24T06:00:41.728Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-24T06:00:37.629Z",
+    "surebetsFoundCount": 12,
+    "highestProfitMargin": 3.28,
+    "opportunities": [
+      {
+        "id": "sb_1790229637594_8tvnx",
+        "eventName": "Daniel Kouble Vs Michal Vedmoch",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 1.909,
+            "stakePercentage": 54.1,
+            "recommendedStake": 540995.43,
+            "expectedPayout": 1032760.28
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 2.25,
+            "stakePercentage": 45.9,
+            "recommendedStake": 459004.57,
+            "expectedPayout": 1032760.28
+          }
+        ],
+        "totalImpliedProbability": 0.9683,
+        "isSurebet": true,
+        "profitMarginPercentage": 3.28,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1032760.28,
+        "guaranteedProfit": 32760.28,
+        "detectedAt": "2026-09-24T06:00:37.594Z"
+      },
+      {
+        "id": "sb_1790229637592_3ysne",
+        "eventName": "Jan Kanera Vs Michal Jezek",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 1.87,
+            "stakePercentage": 54.61,
+            "recommendedStake": 546116.5,
+            "expectedPayout": 1021237.86
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Bwin",
+            "odd": 2.25,
+            "stakePercentage": 45.39,
+            "recommendedStake": 453883.5,
+            "expectedPayout": 1021237.88
+          }
+        ],
+        "totalImpliedProbability": 0.9792,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.12,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1021237.86,
+        "guaranteedProfit": 21237.86,
+        "detectedAt": "2026-09-24T06:00:37.592Z"
+      },
+      {
+        "id": "sb_1790229637594_yh8x0",
+        "eventName": "Jaroslav Strnad (1964) Vs Martin Novak",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 2.95,
+            "stakePercentage": 34.59,
+            "recommendedStake": 345898,
+            "expectedPayout": 1020399.1
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.56,
+            "stakePercentage": 65.41,
+            "recommendedStake": 654102,
+            "expectedPayout": 1020399.12
+          }
+        ],
+        "totalImpliedProbability": 0.98,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.04,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1020399.1,
+        "guaranteedProfit": 20399.1,
+        "detectedAt": "2026-09-24T06:00:37.594Z"
+      },
+      {
+        "id": "sb_1790229637594_yiq5s",
+        "eventName": "Frantisek Just Vs Daniel Tuma",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 2.95,
+            "stakePercentage": 34.44,
+            "recommendedStake": 344444.44,
+            "expectedPayout": 1016111.1
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.55,
+            "stakePercentage": 65.56,
+            "recommendedStake": 655555.56,
+            "expectedPayout": 1016111.12
+          }
+        ],
+        "totalImpliedProbability": 0.9841,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.61,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1016111.1,
+        "guaranteedProfit": 16111.1,
+        "detectedAt": "2026-09-24T06:00:37.594Z"
+      },
+      {
+        "id": "sb_1790229637591_bf163",
+        "eventName": "Martin Sobisek Vs Vladimir Cermak",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 1.71,
+            "stakePercentage": 59.38,
+            "recommendedStake": 593824.23,
+            "expectedPayout": 1015439.43
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Bwin",
+            "odd": 2.5,
+            "stakePercentage": 40.62,
+            "recommendedStake": 406175.77,
+            "expectedPayout": 1015439.43
+          }
+        ],
+        "totalImpliedProbability": 0.9848,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.54,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1015439.43,
+        "guaranteedProfit": 15439.43,
+        "detectedAt": "2026-09-24T06:00:37.591Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-24T06:00:32.149Z",
+    "surebetsFoundCount": 12,
+    "highestProfitMargin": 3.28,
+    "opportunities": [
+      {
+        "id": "sb_1790229632105_bgie4",
+        "eventName": "Daniel Kouble Vs Michal Vedmoch",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 1.909,
+            "stakePercentage": 54.1,
+            "recommendedStake": 540995.43,
+            "expectedPayout": 1032760.28
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 2.25,
+            "stakePercentage": 45.9,
+            "recommendedStake": 459004.57,
+            "expectedPayout": 1032760.28
+          }
+        ],
+        "totalImpliedProbability": 0.9683,
+        "isSurebet": true,
+        "profitMarginPercentage": 3.28,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1032760.28,
+        "guaranteedProfit": 32760.28,
+        "detectedAt": "2026-09-24T06:00:32.105Z"
+      },
+      {
+        "id": "sb_1790229632101_w369h",
+        "eventName": "Jan Kanera Vs Michal Jezek",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 1.87,
+            "stakePercentage": 54.61,
+            "recommendedStake": 546116.5,
+            "expectedPayout": 1021237.86
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Bwin",
+            "odd": 2.25,
+            "stakePercentage": 45.39,
+            "recommendedStake": 453883.5,
+            "expectedPayout": 1021237.88
+          }
+        ],
+        "totalImpliedProbability": 0.9792,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.12,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1021237.86,
+        "guaranteedProfit": 21237.86,
+        "detectedAt": "2026-09-24T06:00:32.101Z"
+      },
+      {
+        "id": "sb_1790229632104_ik56n",
+        "eventName": "Jaroslav Strnad (1964) Vs Martin Novak",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 2.95,
+            "stakePercentage": 34.59,
+            "recommendedStake": 345898,
+            "expectedPayout": 1020399.1
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.56,
+            "stakePercentage": 65.41,
+            "recommendedStake": 654102,
+            "expectedPayout": 1020399.12
+          }
+        ],
+        "totalImpliedProbability": 0.98,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.04,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1020399.1,
+        "guaranteedProfit": 20399.1,
+        "detectedAt": "2026-09-24T06:00:32.104Z"
+      },
+      {
+        "id": "sb_1790229632105_z80qv",
+        "eventName": "Frantisek Just Vs Daniel Tuma",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 2.95,
+            "stakePercentage": 34.44,
+            "recommendedStake": 344444.44,
+            "expectedPayout": 1016111.1
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.55,
+            "stakePercentage": 65.56,
+            "recommendedStake": 655555.56,
+            "expectedPayout": 1016111.12
+          }
+        ],
+        "totalImpliedProbability": 0.9841,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.61,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1016111.1,
+        "guaranteedProfit": 16111.1,
+        "detectedAt": "2026-09-24T06:00:32.105Z"
+      },
+      {
+        "id": "sb_1790229632100_xaqt1",
+        "eventName": "Martin Sobisek Vs Vladimir Cermak",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 1.71,
+            "stakePercentage": 59.38,
+            "recommendedStake": 593824.23,
+            "expectedPayout": 1015439.43
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Bwin",
+            "odd": 2.5,
+            "stakePercentage": 40.62,
+            "recommendedStake": 406175.77,
+            "expectedPayout": 1015439.43
+          }
+        ],
+        "totalImpliedProbability": 0.9848,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.54,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1015439.43,
+        "guaranteedProfit": 15439.43,
+        "detectedAt": "2026-09-24T06:00:32.100Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-24T05:58:20.003Z",
+    "surebetsFoundCount": 12,
+    "highestProfitMargin": 3.28,
+    "opportunities": [
+      {
+        "id": "sb_1790229499970_7pgst",
+        "eventName": "Daniel Kouble Vs Michal Vedmoch",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 1.909,
+            "stakePercentage": 54.1,
+            "recommendedStake": 540995.43,
+            "expectedPayout": 1032760.28
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 2.25,
+            "stakePercentage": 45.9,
+            "recommendedStake": 459004.57,
+            "expectedPayout": 1032760.28
+          }
+        ],
+        "totalImpliedProbability": 0.9683,
+        "isSurebet": true,
+        "profitMarginPercentage": 3.28,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1032760.28,
+        "guaranteedProfit": 32760.28,
+        "detectedAt": "2026-09-24T05:58:19.970Z"
+      },
+      {
+        "id": "sb_1790229499967_7443m",
+        "eventName": "Jan Kanera Vs Michal Jezek",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 1.87,
+            "stakePercentage": 54.61,
+            "recommendedStake": 546116.5,
+            "expectedPayout": 1021237.86
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Bwin",
+            "odd": 2.25,
+            "stakePercentage": 45.39,
+            "recommendedStake": 453883.5,
+            "expectedPayout": 1021237.88
+          }
+        ],
+        "totalImpliedProbability": 0.9792,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.12,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1021237.86,
+        "guaranteedProfit": 21237.86,
+        "detectedAt": "2026-09-24T05:58:19.967Z"
+      },
+      {
+        "id": "sb_1790229499969_d3klu",
+        "eventName": "Jaroslav Strnad (1964) Vs Martin Novak",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 2.95,
+            "stakePercentage": 34.59,
+            "recommendedStake": 345898,
+            "expectedPayout": 1020399.1
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.56,
+            "stakePercentage": 65.41,
+            "recommendedStake": 654102,
+            "expectedPayout": 1020399.12
+          }
+        ],
+        "totalImpliedProbability": 0.98,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.04,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1020399.1,
+        "guaranteedProfit": 20399.1,
+        "detectedAt": "2026-09-24T05:58:19.969Z"
+      },
+      {
+        "id": "sb_1790229499970_uxntu",
+        "eventName": "Frantisek Just Vs Daniel Tuma",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 2.95,
+            "stakePercentage": 34.44,
+            "recommendedStake": 344444.44,
+            "expectedPayout": 1016111.1
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.55,
+            "stakePercentage": 65.56,
+            "recommendedStake": 655555.56,
+            "expectedPayout": 1016111.12
+          }
+        ],
+        "totalImpliedProbability": 0.9841,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.61,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1016111.1,
+        "guaranteedProfit": 16111.1,
+        "detectedAt": "2026-09-24T05:58:19.970Z"
+      },
+      {
+        "id": "sb_1790229499966_qfzue",
+        "eventName": "Martin Sobisek Vs Vladimir Cermak",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 1.71,
+            "stakePercentage": 59.38,
+            "recommendedStake": 593824.23,
+            "expectedPayout": 1015439.43
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Bwin",
+            "odd": 2.5,
+            "stakePercentage": 40.62,
+            "recommendedStake": 406175.77,
+            "expectedPayout": 1015439.43
+          }
+        ],
+        "totalImpliedProbability": 0.9848,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.54,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1015439.43,
+        "guaranteedProfit": 15439.43,
+        "detectedAt": "2026-09-24T05:58:19.966Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-24T05:58:15.440Z",
+    "surebetsFoundCount": 12,
+    "highestProfitMargin": 3.28,
+    "opportunities": [
+      {
+        "id": "sb_1790229495398_xc4gp",
+        "eventName": "Daniel Kouble Vs Michal Vedmoch",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 1.909,
+            "stakePercentage": 54.1,
+            "recommendedStake": 540995.43,
+            "expectedPayout": 1032760.28
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 2.25,
+            "stakePercentage": 45.9,
+            "recommendedStake": 459004.57,
+            "expectedPayout": 1032760.28
+          }
+        ],
+        "totalImpliedProbability": 0.9683,
+        "isSurebet": true,
+        "profitMarginPercentage": 3.28,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1032760.28,
+        "guaranteedProfit": 32760.28,
+        "detectedAt": "2026-09-24T05:58:15.398Z"
+      },
+      {
+        "id": "sb_1790229495395_tjr3f",
+        "eventName": "Jan Kanera Vs Michal Jezek",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 1.87,
+            "stakePercentage": 54.61,
+            "recommendedStake": 546116.5,
+            "expectedPayout": 1021237.86
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Bwin",
+            "odd": 2.25,
+            "stakePercentage": 45.39,
+            "recommendedStake": 453883.5,
+            "expectedPayout": 1021237.88
+          }
+        ],
+        "totalImpliedProbability": 0.9792,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.12,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1021237.86,
+        "guaranteedProfit": 21237.86,
+        "detectedAt": "2026-09-24T05:58:15.395Z"
+      },
+      {
+        "id": "sb_1790229495398_7xkti",
+        "eventName": "Jaroslav Strnad (1964) Vs Martin Novak",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 2.95,
+            "stakePercentage": 34.59,
+            "recommendedStake": 345898,
+            "expectedPayout": 1020399.1
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.56,
+            "stakePercentage": 65.41,
+            "recommendedStake": 654102,
+            "expectedPayout": 1020399.12
+          }
+        ],
+        "totalImpliedProbability": 0.98,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.04,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1020399.1,
+        "guaranteedProfit": 20399.1,
+        "detectedAt": "2026-09-24T05:58:15.398Z"
+      },
+      {
+        "id": "sb_1790229495398_qfyk1",
+        "eventName": "Frantisek Just Vs Daniel Tuma",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 2.95,
+            "stakePercentage": 34.44,
+            "recommendedStake": 344444.44,
+            "expectedPayout": 1016111.1
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.55,
+            "stakePercentage": 65.56,
+            "recommendedStake": 655555.56,
+            "expectedPayout": 1016111.12
+          }
+        ],
+        "totalImpliedProbability": 0.9841,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.61,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1016111.1,
+        "guaranteedProfit": 16111.1,
+        "detectedAt": "2026-09-24T05:58:15.398Z"
+      },
+      {
+        "id": "sb_1790229495394_8ygmw",
+        "eventName": "Martin Sobisek Vs Vladimir Cermak",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 1.71,
+            "stakePercentage": 59.38,
+            "recommendedStake": 593824.23,
+            "expectedPayout": 1015439.43
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Bwin",
+            "odd": 2.5,
+            "stakePercentage": 40.62,
+            "recommendedStake": 406175.77,
+            "expectedPayout": 1015439.43
+          }
+        ],
+        "totalImpliedProbability": 0.9848,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.54,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1015439.43,
+        "guaranteedProfit": 15439.43,
+        "detectedAt": "2026-09-24T05:58:15.394Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-24T05:58:11.288Z",
+    "surebetsFoundCount": 12,
+    "highestProfitMargin": 3.28,
+    "opportunities": [
+      {
+        "id": "sb_1790229491254_3sdse",
+        "eventName": "Daniel Kouble Vs Michal Vedmoch",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 1.909,
+            "stakePercentage": 54.1,
+            "recommendedStake": 540995.43,
+            "expectedPayout": 1032760.28
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 2.25,
+            "stakePercentage": 45.9,
+            "recommendedStake": 459004.57,
+            "expectedPayout": 1032760.28
+          }
+        ],
+        "totalImpliedProbability": 0.9683,
+        "isSurebet": true,
+        "profitMarginPercentage": 3.28,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1032760.28,
+        "guaranteedProfit": 32760.28,
+        "detectedAt": "2026-09-24T05:58:11.254Z"
+      },
+      {
+        "id": "sb_1790229491251_0inte",
+        "eventName": "Jan Kanera Vs Michal Jezek",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 1.87,
+            "stakePercentage": 54.61,
+            "recommendedStake": 546116.5,
+            "expectedPayout": 1021237.86
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Bwin",
+            "odd": 2.25,
+            "stakePercentage": 45.39,
+            "recommendedStake": 453883.5,
+            "expectedPayout": 1021237.88
+          }
+        ],
+        "totalImpliedProbability": 0.9792,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.12,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1021237.86,
+        "guaranteedProfit": 21237.86,
+        "detectedAt": "2026-09-24T05:58:11.251Z"
+      },
+      {
+        "id": "sb_1790229491254_x25gg",
+        "eventName": "Jaroslav Strnad (1964) Vs Martin Novak",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 2.95,
+            "stakePercentage": 34.59,
+            "recommendedStake": 345898,
+            "expectedPayout": 1020399.1
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.56,
+            "stakePercentage": 65.41,
+            "recommendedStake": 654102,
+            "expectedPayout": 1020399.12
+          }
+        ],
+        "totalImpliedProbability": 0.98,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.04,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1020399.1,
+        "guaranteedProfit": 20399.1,
+        "detectedAt": "2026-09-24T05:58:11.254Z"
+      },
+      {
+        "id": "sb_1790229491254_7fzeu",
+        "eventName": "Frantisek Just Vs Daniel Tuma",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 2.95,
+            "stakePercentage": 34.44,
+            "recommendedStake": 344444.44,
+            "expectedPayout": 1016111.1
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.55,
+            "stakePercentage": 65.56,
+            "recommendedStake": 655555.56,
+            "expectedPayout": 1016111.12
+          }
+        ],
+        "totalImpliedProbability": 0.9841,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.61,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1016111.1,
+        "guaranteedProfit": 16111.1,
+        "detectedAt": "2026-09-24T05:58:11.254Z"
+      },
+      {
+        "id": "sb_1790229491250_p5jul",
+        "eventName": "Martin Sobisek Vs Vladimir Cermak",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 1.71,
+            "stakePercentage": 59.38,
+            "recommendedStake": 593824.23,
+            "expectedPayout": 1015439.43
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Bwin",
+            "odd": 2.5,
+            "stakePercentage": 40.62,
+            "recommendedStake": 406175.77,
+            "expectedPayout": 1015439.43
+          }
+        ],
+        "totalImpliedProbability": 0.9848,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.54,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1015439.43,
+        "guaranteedProfit": 15439.43,
+        "detectedAt": "2026-09-24T05:58:11.250Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-24T05:50:10.836Z",
+    "surebetsFoundCount": 12,
+    "highestProfitMargin": 3.28,
+    "opportunities": [
+      {
+        "id": "sb_1790229010798_tqss7",
+        "eventName": "Daniel Kouble Vs Michal Vedmoch",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 1.909,
+            "stakePercentage": 54.1,
+            "recommendedStake": 540995.43,
+            "expectedPayout": 1032760.28
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 2.25,
+            "stakePercentage": 45.9,
+            "recommendedStake": 459004.57,
+            "expectedPayout": 1032760.28
+          }
+        ],
+        "totalImpliedProbability": 0.9683,
+        "isSurebet": true,
+        "profitMarginPercentage": 3.28,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1032760.28,
+        "guaranteedProfit": 32760.28,
+        "detectedAt": "2026-09-24T05:50:10.798Z"
+      },
+      {
+        "id": "sb_1790229010795_fj6lz",
+        "eventName": "Jan Kanera Vs Michal Jezek",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 1.87,
+            "stakePercentage": 54.61,
+            "recommendedStake": 546116.5,
+            "expectedPayout": 1021237.86
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Bwin",
+            "odd": 2.25,
+            "stakePercentage": 45.39,
+            "recommendedStake": 453883.5,
+            "expectedPayout": 1021237.88
+          }
+        ],
+        "totalImpliedProbability": 0.9792,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.12,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1021237.86,
+        "guaranteedProfit": 21237.86,
+        "detectedAt": "2026-09-24T05:50:10.795Z"
+      },
+      {
+        "id": "sb_1790229010797_nt28c",
+        "eventName": "Jaroslav Strnad (1964) Vs Martin Novak",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 2.95,
+            "stakePercentage": 34.59,
+            "recommendedStake": 345898,
+            "expectedPayout": 1020399.1
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.56,
+            "stakePercentage": 65.41,
+            "recommendedStake": 654102,
+            "expectedPayout": 1020399.12
+          }
+        ],
+        "totalImpliedProbability": 0.98,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.04,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1020399.1,
+        "guaranteedProfit": 20399.1,
+        "detectedAt": "2026-09-24T05:50:10.797Z"
+      },
+      {
+        "id": "sb_1790229010798_5ktpn",
+        "eventName": "Frantisek Just Vs Daniel Tuma",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 2.95,
+            "stakePercentage": 34.44,
+            "recommendedStake": 344444.44,
+            "expectedPayout": 1016111.1
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.55,
+            "stakePercentage": 65.56,
+            "recommendedStake": 655555.56,
+            "expectedPayout": 1016111.12
+          }
+        ],
+        "totalImpliedProbability": 0.9841,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.61,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1016111.1,
+        "guaranteedProfit": 16111.1,
+        "detectedAt": "2026-09-24T05:50:10.798Z"
+      },
+      {
+        "id": "sb_1790229010794_b5nf6",
+        "eventName": "Martin Sobisek Vs Vladimir Cermak",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 1.71,
+            "stakePercentage": 59.38,
+            "recommendedStake": 593824.23,
+            "expectedPayout": 1015439.43
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Bwin",
+            "odd": 2.5,
+            "stakePercentage": 40.62,
+            "recommendedStake": 406175.77,
+            "expectedPayout": 1015439.43
+          }
+        ],
+        "totalImpliedProbability": 0.9848,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.54,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1015439.43,
+        "guaranteedProfit": 15439.43,
+        "detectedAt": "2026-09-24T05:50:10.794Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-24T05:50:08.658Z",
+    "surebetsFoundCount": 12,
+    "highestProfitMargin": 3.28,
+    "opportunities": [
+      {
+        "id": "sb_1790229008618_tr4nl",
+        "eventName": "Daniel Kouble Vs Michal Vedmoch",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 1.909,
+            "stakePercentage": 54.1,
+            "recommendedStake": 540995.43,
+            "expectedPayout": 1032760.28
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 2.25,
+            "stakePercentage": 45.9,
+            "recommendedStake": 459004.57,
+            "expectedPayout": 1032760.28
+          }
+        ],
+        "totalImpliedProbability": 0.9683,
+        "isSurebet": true,
+        "profitMarginPercentage": 3.28,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1032760.28,
+        "guaranteedProfit": 32760.28,
+        "detectedAt": "2026-09-24T05:50:08.618Z"
+      },
+      {
+        "id": "sb_1790229008615_9he7q",
+        "eventName": "Jan Kanera Vs Michal Jezek",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 1.87,
+            "stakePercentage": 54.61,
+            "recommendedStake": 546116.5,
+            "expectedPayout": 1021237.86
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Bwin",
+            "odd": 2.25,
+            "stakePercentage": 45.39,
+            "recommendedStake": 453883.5,
+            "expectedPayout": 1021237.88
+          }
+        ],
+        "totalImpliedProbability": 0.9792,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.12,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1021237.86,
+        "guaranteedProfit": 21237.86,
+        "detectedAt": "2026-09-24T05:50:08.615Z"
+      },
+      {
+        "id": "sb_1790229008617_59our",
+        "eventName": "Jaroslav Strnad (1964) Vs Martin Novak",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 2.95,
+            "stakePercentage": 34.59,
+            "recommendedStake": 345898,
+            "expectedPayout": 1020399.1
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.56,
+            "stakePercentage": 65.41,
+            "recommendedStake": 654102,
+            "expectedPayout": 1020399.12
+          }
+        ],
+        "totalImpliedProbability": 0.98,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.04,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1020399.1,
+        "guaranteedProfit": 20399.1,
+        "detectedAt": "2026-09-24T05:50:08.617Z"
+      },
+      {
+        "id": "sb_1790229008618_af0ar",
+        "eventName": "Frantisek Just Vs Daniel Tuma",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 2.95,
+            "stakePercentage": 34.44,
+            "recommendedStake": 344444.44,
+            "expectedPayout": 1016111.1
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.55,
+            "stakePercentage": 65.56,
+            "recommendedStake": 655555.56,
+            "expectedPayout": 1016111.12
+          }
+        ],
+        "totalImpliedProbability": 0.9841,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.61,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1016111.1,
+        "guaranteedProfit": 16111.1,
+        "detectedAt": "2026-09-24T05:50:08.618Z"
+      },
+      {
+        "id": "sb_1790229008614_8e3ze",
+        "eventName": "Martin Sobisek Vs Vladimir Cermak",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 1.71,
+            "stakePercentage": 59.38,
+            "recommendedStake": 593824.23,
+            "expectedPayout": 1015439.43
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Bwin",
+            "odd": 2.5,
+            "stakePercentage": 40.62,
+            "recommendedStake": 406175.77,
+            "expectedPayout": 1015439.43
+          }
+        ],
+        "totalImpliedProbability": 0.9848,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.54,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1015439.43,
+        "guaranteedProfit": 15439.43,
+        "detectedAt": "2026-09-24T05:50:08.614Z"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-24T05:50:04.864Z",
+    "surebetsFoundCount": 12,
+    "highestProfitMargin": 3.28,
+    "opportunities": [
+      {
+        "id": "sb_1790229004820_eoc1r",
+        "eventName": "Daniel Kouble Vs Michal Vedmoch",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 1.909,
+            "stakePercentage": 54.1,
+            "recommendedStake": 540995.43,
+            "expectedPayout": 1032760.28
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 2.25,
+            "stakePercentage": 45.9,
+            "recommendedStake": 459004.57,
+            "expectedPayout": 1032760.28
+          }
+        ],
+        "totalImpliedProbability": 0.9683,
+        "isSurebet": true,
+        "profitMarginPercentage": 3.28,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1032760.28,
+        "guaranteedProfit": 32760.28,
+        "detectedAt": "2026-09-24T05:50:04.820Z"
+      },
+      {
+        "id": "sb_1790229004817_67gd3",
+        "eventName": "Jan Kanera Vs Michal Jezek",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 1.87,
+            "stakePercentage": 54.61,
+            "recommendedStake": 546116.5,
+            "expectedPayout": 1021237.86
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Bwin",
+            "odd": 2.25,
+            "stakePercentage": 45.39,
+            "recommendedStake": 453883.5,
+            "expectedPayout": 1021237.88
+          }
+        ],
+        "totalImpliedProbability": 0.9792,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.12,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1021237.86,
+        "guaranteedProfit": 21237.86,
+        "detectedAt": "2026-09-24T05:50:04.817Z"
+      },
+      {
+        "id": "sb_1790229004820_cnbbb",
+        "eventName": "Jaroslav Strnad (1964) Vs Martin Novak",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 2.95,
+            "stakePercentage": 34.59,
+            "recommendedStake": 345898,
+            "expectedPayout": 1020399.1
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.56,
+            "stakePercentage": 65.41,
+            "recommendedStake": 654102,
+            "expectedPayout": 1020399.12
+          }
+        ],
+        "totalImpliedProbability": 0.98,
+        "isSurebet": true,
+        "profitMarginPercentage": 2.04,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1020399.1,
+        "guaranteedProfit": 20399.1,
+        "detectedAt": "2026-09-24T05:50:04.820Z"
+      },
+      {
+        "id": "sb_1790229004820_ks5oc",
+        "eventName": "Frantisek Just Vs Daniel Tuma",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "Bwin",
+            "odd": 2.95,
+            "stakePercentage": 34.44,
+            "recommendedStake": 344444.44,
+            "expectedPayout": 1016111.1
+          },
+          {
+            "selection": "2",
+            "bookmaker": "BetPlay",
+            "odd": 1.55,
+            "stakePercentage": 65.56,
+            "recommendedStake": 655555.56,
+            "expectedPayout": 1016111.12
+          }
+        ],
+        "totalImpliedProbability": 0.9841,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.61,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1016111.1,
+        "guaranteedProfit": 16111.1,
+        "detectedAt": "2026-09-24T05:50:04.820Z"
+      },
+      {
+        "id": "sb_1790229004816_fxyfz",
+        "eventName": "Martin Sobisek Vs Vladimir Cermak",
+        "sport": "table_tennis",
+        "marketType": "MONEYLINE_2WAY",
+        "outcomes": [
+          {
+            "selection": "1",
+            "bookmaker": "BetPlay",
+            "odd": 1.71,
+            "stakePercentage": 59.38,
+            "recommendedStake": 593824.23,
+            "expectedPayout": 1015439.43
+          },
+          {
+            "selection": "2",
+            "bookmaker": "Bwin",
+            "odd": 2.5,
+            "stakePercentage": 40.62,
+            "recommendedStake": 406175.77,
+            "expectedPayout": 1015439.43
+          }
+        ],
+        "totalImpliedProbability": 0.9848,
+        "isSurebet": true,
+        "profitMarginPercentage": 1.54,
+        "totalInvestment": 1000000,
+        "guaranteedPayout": 1015439.43,
+        "guaranteedProfit": 15439.43,
+        "detectedAt": "2026-09-24T05:50:04.816Z"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-09-24T05:27:58.518Z",
     "surebetsFoundCount": 14,
     "highestProfitMargin": 15.86,
@@ -4252,2863 +7540,5 @@
         "detectedAt": "2026-09-24T04:26:27.399Z"
       }
     ]
-  },
-  {
-    "timestamp": "2026-09-24T04:22:50.446Z",
-    "surebetsFoundCount": 23,
-    "highestProfitMargin": 91.8,
-    "opportunities": [
-      {
-        "id": "sb_1790223770380_tjii2",
-        "eventName": "Yexin Ma Vs Kimberly Birrell",
-        "sport": "tennis",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Rushbet",
-            "odd": 13,
-            "stakePercentage": 14.75,
-            "recommendedStake": 147540.98,
-            "expectedPayout": 1918032.74
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Wplay",
-            "odd": 2.25,
-            "stakePercentage": 85.25,
-            "recommendedStake": 852459.02,
-            "expectedPayout": 1918032.8
-          }
-        ],
-        "totalImpliedProbability": 0.5214,
-        "isSurebet": true,
-        "profitMarginPercentage": 91.8,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1918032.74,
-        "guaranteedProfit": 918032.74,
-        "detectedAt": "2026-09-24T04:22:50.380Z"
-      },
-      {
-        "id": "sb_1790223770437_mfbwm",
-        "eventName": "Wojciech Iwasyszyn Vs Bartlomiej Wisniewski",
-        "sport": "table_tennis",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Bwin",
-            "odd": 1.75,
-            "stakePercentage": 80,
-            "recommendedStake": 800000,
-            "expectedPayout": 1400000
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Rushbet",
-            "odd": 7,
-            "stakePercentage": 20,
-            "recommendedStake": 200000,
-            "expectedPayout": 1400000
-          }
-        ],
-        "totalImpliedProbability": 0.7143,
-        "isSurebet": true,
-        "profitMarginPercentage": 40,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1400000,
-        "guaranteedProfit": 400000,
-        "detectedAt": "2026-09-24T04:22:50.437Z"
-      },
-      {
-        "id": "sb_1790223770429_8c35o",
-        "eventName": "Sakura Hosogi Vs Rinko Matsuda",
-        "sport": "tennis",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "BetPlay",
-            "odd": 4.1,
-            "stakePercentage": 34.08,
-            "recommendedStake": 340836.01,
-            "expectedPayout": 1397427.64
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Rushbet",
-            "odd": 2.12,
-            "stakePercentage": 65.92,
-            "recommendedStake": 659163.99,
-            "expectedPayout": 1397427.66
-          }
-        ],
-        "totalImpliedProbability": 0.7156,
-        "isSurebet": true,
-        "profitMarginPercentage": 39.74,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1397427.64,
-        "guaranteedProfit": 397427.64,
-        "detectedAt": "2026-09-24T04:22:50.429Z"
-      },
-      {
-        "id": "sb_1790223770385_2qpnt",
-        "eventName": "Amirreza Abbasi Vs Petr David",
-        "sport": "table_tennis",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Bwin",
-            "odd": 4.33,
-            "stakePercentage": 30.5,
-            "recommendedStake": 304975.92,
-            "expectedPayout": 1320545.73
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Wplay",
-            "odd": 1.9,
-            "stakePercentage": 69.5,
-            "recommendedStake": 695024.08,
-            "expectedPayout": 1320545.75
-          }
-        ],
-        "totalImpliedProbability": 0.7573,
-        "isSurebet": true,
-        "profitMarginPercentage": 32.05,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1320545.73,
-        "guaranteedProfit": 320545.73,
-        "detectedAt": "2026-09-24T04:22:50.385Z"
-      },
-      {
-        "id": "sb_1790223770385_khymc",
-        "eventName": "Szymon Kolasa Vs Jakub Kuzmicz",
-        "sport": "table_tennis",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Bwin",
-            "odd": 1.85,
-            "stakePercentage": 68.1,
-            "recommendedStake": 681034.48,
-            "expectedPayout": 1259913.79
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Rushbet",
-            "odd": 3.95,
-            "stakePercentage": 31.9,
-            "recommendedStake": 318965.52,
-            "expectedPayout": 1259913.8
-          }
-        ],
-        "totalImpliedProbability": 0.7937,
-        "isSurebet": true,
-        "profitMarginPercentage": 25.99,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1259913.79,
-        "guaranteedProfit": 259913.79,
-        "detectedAt": "2026-09-24T04:22:50.385Z"
-      }
-    ]
-  },
-  {
-    "timestamp": "2026-09-24T04:22:23.921Z",
-    "surebetsFoundCount": 23,
-    "highestProfitMargin": 91.8,
-    "opportunities": [
-      {
-        "id": "sb_1790223743857_zkzyk",
-        "eventName": "Yexin Ma Vs Kimberly Birrell",
-        "sport": "tennis",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Rushbet",
-            "odd": 13,
-            "stakePercentage": 14.75,
-            "recommendedStake": 147540.98,
-            "expectedPayout": 1918032.74
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Wplay",
-            "odd": 2.25,
-            "stakePercentage": 85.25,
-            "recommendedStake": 852459.02,
-            "expectedPayout": 1918032.8
-          }
-        ],
-        "totalImpliedProbability": 0.5214,
-        "isSurebet": true,
-        "profitMarginPercentage": 91.8,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1918032.74,
-        "guaranteedProfit": 918032.74,
-        "detectedAt": "2026-09-24T04:22:23.857Z"
-      },
-      {
-        "id": "sb_1790223743908_3z6yj",
-        "eventName": "Wojciech Iwasyszyn Vs Bartlomiej Wisniewski",
-        "sport": "table_tennis",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Bwin",
-            "odd": 1.75,
-            "stakePercentage": 80,
-            "recommendedStake": 800000,
-            "expectedPayout": 1400000
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Rushbet",
-            "odd": 7,
-            "stakePercentage": 20,
-            "recommendedStake": 200000,
-            "expectedPayout": 1400000
-          }
-        ],
-        "totalImpliedProbability": 0.7143,
-        "isSurebet": true,
-        "profitMarginPercentage": 40,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1400000,
-        "guaranteedProfit": 400000,
-        "detectedAt": "2026-09-24T04:22:23.908Z"
-      },
-      {
-        "id": "sb_1790223743901_od99n",
-        "eventName": "Sakura Hosogi Vs Rinko Matsuda",
-        "sport": "tennis",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "BetPlay",
-            "odd": 4.1,
-            "stakePercentage": 34.08,
-            "recommendedStake": 340836.01,
-            "expectedPayout": 1397427.64
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Rushbet",
-            "odd": 2.12,
-            "stakePercentage": 65.92,
-            "recommendedStake": 659163.99,
-            "expectedPayout": 1397427.66
-          }
-        ],
-        "totalImpliedProbability": 0.7156,
-        "isSurebet": true,
-        "profitMarginPercentage": 39.74,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1397427.64,
-        "guaranteedProfit": 397427.64,
-        "detectedAt": "2026-09-24T04:22:23.901Z"
-      },
-      {
-        "id": "sb_1790223743860_b6jjd",
-        "eventName": "Amirreza Abbasi Vs Petr David",
-        "sport": "table_tennis",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Bwin",
-            "odd": 4.33,
-            "stakePercentage": 30.5,
-            "recommendedStake": 304975.92,
-            "expectedPayout": 1320545.73
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Wplay",
-            "odd": 1.9,
-            "stakePercentage": 69.5,
-            "recommendedStake": 695024.08,
-            "expectedPayout": 1320545.75
-          }
-        ],
-        "totalImpliedProbability": 0.7573,
-        "isSurebet": true,
-        "profitMarginPercentage": 32.05,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1320545.73,
-        "guaranteedProfit": 320545.73,
-        "detectedAt": "2026-09-24T04:22:23.860Z"
-      },
-      {
-        "id": "sb_1790223743860_qn9gf",
-        "eventName": "Szymon Kolasa Vs Jakub Kuzmicz",
-        "sport": "table_tennis",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Bwin",
-            "odd": 1.85,
-            "stakePercentage": 68.1,
-            "recommendedStake": 681034.48,
-            "expectedPayout": 1259913.79
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Rushbet",
-            "odd": 3.95,
-            "stakePercentage": 31.9,
-            "recommendedStake": 318965.52,
-            "expectedPayout": 1259913.8
-          }
-        ],
-        "totalImpliedProbability": 0.7937,
-        "isSurebet": true,
-        "profitMarginPercentage": 25.99,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1259913.79,
-        "guaranteedProfit": 259913.79,
-        "detectedAt": "2026-09-24T04:22:23.860Z"
-      }
-    ]
-  },
-  {
-    "timestamp": "2026-09-24T04:21:39.621Z",
-    "surebetsFoundCount": 23,
-    "highestProfitMargin": 91.8,
-    "opportunities": [
-      {
-        "id": "sb_1790223699530_wwzd1",
-        "eventName": "Yexin Ma Vs Kimberly Birrell",
-        "sport": "tennis",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Rushbet",
-            "odd": 13,
-            "stakePercentage": 14.75,
-            "recommendedStake": 147540.98,
-            "expectedPayout": 1918032.74
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Wplay",
-            "odd": 2.25,
-            "stakePercentage": 85.25,
-            "recommendedStake": 852459.02,
-            "expectedPayout": 1918032.8
-          }
-        ],
-        "totalImpliedProbability": 0.5214,
-        "isSurebet": true,
-        "profitMarginPercentage": 91.8,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1918032.74,
-        "guaranteedProfit": 918032.74,
-        "detectedAt": "2026-09-24T04:21:39.530Z"
-      },
-      {
-        "id": "sb_1790223699605_l9tec",
-        "eventName": "Wojciech Iwasyszyn Vs Bartlomiej Wisniewski",
-        "sport": "table_tennis",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Bwin",
-            "odd": 1.75,
-            "stakePercentage": 80,
-            "recommendedStake": 800000,
-            "expectedPayout": 1400000
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Rushbet",
-            "odd": 7,
-            "stakePercentage": 20,
-            "recommendedStake": 200000,
-            "expectedPayout": 1400000
-          }
-        ],
-        "totalImpliedProbability": 0.7143,
-        "isSurebet": true,
-        "profitMarginPercentage": 40,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1400000,
-        "guaranteedProfit": 400000,
-        "detectedAt": "2026-09-24T04:21:39.605Z"
-      },
-      {
-        "id": "sb_1790223699592_hkxvw",
-        "eventName": "Sakura Hosogi Vs Rinko Matsuda",
-        "sport": "tennis",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "BetPlay",
-            "odd": 4.1,
-            "stakePercentage": 34.08,
-            "recommendedStake": 340836.01,
-            "expectedPayout": 1397427.64
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Rushbet",
-            "odd": 2.12,
-            "stakePercentage": 65.92,
-            "recommendedStake": 659163.99,
-            "expectedPayout": 1397427.66
-          }
-        ],
-        "totalImpliedProbability": 0.7156,
-        "isSurebet": true,
-        "profitMarginPercentage": 39.74,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1397427.64,
-        "guaranteedProfit": 397427.64,
-        "detectedAt": "2026-09-24T04:21:39.592Z"
-      },
-      {
-        "id": "sb_1790223699536_se7t3",
-        "eventName": "Amirreza Abbasi Vs Petr David",
-        "sport": "table_tennis",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Bwin",
-            "odd": 4.33,
-            "stakePercentage": 30.5,
-            "recommendedStake": 304975.92,
-            "expectedPayout": 1320545.73
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Wplay",
-            "odd": 1.9,
-            "stakePercentage": 69.5,
-            "recommendedStake": 695024.08,
-            "expectedPayout": 1320545.75
-          }
-        ],
-        "totalImpliedProbability": 0.7573,
-        "isSurebet": true,
-        "profitMarginPercentage": 32.05,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1320545.73,
-        "guaranteedProfit": 320545.73,
-        "detectedAt": "2026-09-24T04:21:39.536Z"
-      },
-      {
-        "id": "sb_1790223699536_lnkrp",
-        "eventName": "Szymon Kolasa Vs Jakub Kuzmicz",
-        "sport": "table_tennis",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Bwin",
-            "odd": 1.85,
-            "stakePercentage": 68.1,
-            "recommendedStake": 681034.48,
-            "expectedPayout": 1259913.79
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Rushbet",
-            "odd": 3.95,
-            "stakePercentage": 31.9,
-            "recommendedStake": 318965.52,
-            "expectedPayout": 1259913.8
-          }
-        ],
-        "totalImpliedProbability": 0.7937,
-        "isSurebet": true,
-        "profitMarginPercentage": 25.99,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1259913.79,
-        "guaranteedProfit": 259913.79,
-        "detectedAt": "2026-09-24T04:21:39.536Z"
-      }
-    ]
-  },
-  {
-    "timestamp": "2026-09-24T04:14:01.323Z",
-    "surebetsFoundCount": 18,
-    "highestProfitMargin": 32.05,
-    "opportunities": [
-      {
-        "id": "sb_1790223241274_dbu7t",
-        "eventName": "Amirreza Abbasi Vs Petr David",
-        "sport": "table_tennis",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Bwin",
-            "odd": 4.33,
-            "stakePercentage": 30.5,
-            "recommendedStake": 304975.92,
-            "expectedPayout": 1320545.73
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Wplay",
-            "odd": 1.9,
-            "stakePercentage": 69.5,
-            "recommendedStake": 695024.08,
-            "expectedPayout": 1320545.75
-          }
-        ],
-        "totalImpliedProbability": 0.7573,
-        "isSurebet": true,
-        "profitMarginPercentage": 32.05,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1320545.73,
-        "guaranteedProfit": 320545.73,
-        "detectedAt": "2026-09-24T04:14:01.274Z"
-      },
-      {
-        "id": "sb_1790223241309_6xkvb",
-        "eventName": "Meng Yi Chen Vs Ruien Zhang",
-        "sport": "tennis",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "BetPlay",
-            "odd": 5,
-            "stakePercentage": 24.81,
-            "recommendedStake": 248120.3,
-            "expectedPayout": 1240601.5
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Bwin",
-            "odd": 1.65,
-            "stakePercentage": 75.19,
-            "recommendedStake": 751879.7,
-            "expectedPayout": 1240601.5
-          }
-        ],
-        "totalImpliedProbability": 0.8061,
-        "isSurebet": true,
-        "profitMarginPercentage": 24.06,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1240601.5,
-        "guaranteedProfit": 240601.5,
-        "detectedAt": "2026-09-24T04:14:01.309Z"
-      },
-      {
-        "id": "sb_1790223241309_jej2a",
-        "eventName": "Xiao Tang Vs Yuhan Wang",
-        "sport": "tennis",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Bwin",
-            "odd": 12,
-            "stakePercentage": 10.04,
-            "recommendedStake": 100449.78,
-            "expectedPayout": 1205397.36
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
-            "odd": 1.34,
-            "stakePercentage": 89.96,
-            "recommendedStake": 899550.22,
-            "expectedPayout": 1205397.29
-          }
-        ],
-        "totalImpliedProbability": 0.8296,
-        "isSurebet": true,
-        "profitMarginPercentage": 20.54,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1205397.29,
-        "guaranteedProfit": 205397.29,
-        "detectedAt": "2026-09-24T04:14:01.309Z"
-      },
-      {
-        "id": "sb_1790223241270_4o42f",
-        "eventName": "Anna Bondar Vs Alina Charaeva",
-        "sport": "tennis",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "BetPlay",
-            "odd": 1.6,
-            "stakePercentage": 68,
-            "recommendedStake": 680000,
-            "expectedPayout": 1088000
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Wplay",
-            "odd": 3.4,
-            "stakePercentage": 32,
-            "recommendedStake": 320000,
-            "expectedPayout": 1088000
-          }
-        ],
-        "totalImpliedProbability": 0.9191,
-        "isSurebet": true,
-        "profitMarginPercentage": 8.8,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1088000,
-        "guaranteedProfit": 88000,
-        "detectedAt": "2026-09-24T04:14:01.270Z"
-      },
-      {
-        "id": "sb_1790223241283_rmhwb",
-        "eventName": "Deportivo Espanol Reserves Vs Centro Espanol Reserves",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "BetPlay",
-            "odd": 1.44,
-            "stakePercentage": 71.99,
-            "recommendedStake": 719915.13,
-            "expectedPayout": 1036677.79
-          },
-          {
-            "selection": "X",
-            "bookmaker": "Stake",
-            "odd": 5,
-            "stakePercentage": 20.73,
-            "recommendedStake": 207335.56,
-            "expectedPayout": 1036677.8
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Stake",
-            "odd": 14.25,
-            "stakePercentage": 7.27,
-            "recommendedStake": 72749.31,
-            "expectedPayout": 1036677.67
-          }
-        ],
-        "totalImpliedProbability": 0.9646,
-        "isSurebet": true,
-        "profitMarginPercentage": 3.67,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1036677.67,
-        "guaranteedProfit": 36677.67,
-        "detectedAt": "2026-09-24T04:14:01.283Z"
-      }
-    ]
-  },
-  {
-    "timestamp": "2026-09-24T04:13:33.905Z",
-    "surebetsFoundCount": 18,
-    "highestProfitMargin": 32.05,
-    "opportunities": [
-      {
-        "id": "sb_1790223213870_8zhdv",
-        "eventName": "Amirreza Abbasi Vs Petr David",
-        "sport": "table_tennis",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Bwin",
-            "odd": 4.33,
-            "stakePercentage": 30.5,
-            "recommendedStake": 304975.92,
-            "expectedPayout": 1320545.73
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Wplay",
-            "odd": 1.9,
-            "stakePercentage": 69.5,
-            "recommendedStake": 695024.08,
-            "expectedPayout": 1320545.75
-          }
-        ],
-        "totalImpliedProbability": 0.7573,
-        "isSurebet": true,
-        "profitMarginPercentage": 32.05,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1320545.73,
-        "guaranteedProfit": 320545.73,
-        "detectedAt": "2026-09-24T04:13:33.870Z"
-      },
-      {
-        "id": "sb_1790223213895_jufpn",
-        "eventName": "Meng Yi Chen Vs Ruien Zhang",
-        "sport": "tennis",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "BetPlay",
-            "odd": 5,
-            "stakePercentage": 24.81,
-            "recommendedStake": 248120.3,
-            "expectedPayout": 1240601.5
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Bwin",
-            "odd": 1.65,
-            "stakePercentage": 75.19,
-            "recommendedStake": 751879.7,
-            "expectedPayout": 1240601.5
-          }
-        ],
-        "totalImpliedProbability": 0.8061,
-        "isSurebet": true,
-        "profitMarginPercentage": 24.06,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1240601.5,
-        "guaranteedProfit": 240601.5,
-        "detectedAt": "2026-09-24T04:13:33.895Z"
-      },
-      {
-        "id": "sb_1790223213895_z710s",
-        "eventName": "Xiao Tang Vs Yuhan Wang",
-        "sport": "tennis",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Bwin",
-            "odd": 12,
-            "stakePercentage": 10.04,
-            "recommendedStake": 100449.78,
-            "expectedPayout": 1205397.36
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
-            "odd": 1.34,
-            "stakePercentage": 89.96,
-            "recommendedStake": 899550.22,
-            "expectedPayout": 1205397.29
-          }
-        ],
-        "totalImpliedProbability": 0.8296,
-        "isSurebet": true,
-        "profitMarginPercentage": 20.54,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1205397.29,
-        "guaranteedProfit": 205397.29,
-        "detectedAt": "2026-09-24T04:13:33.895Z"
-      },
-      {
-        "id": "sb_1790223213868_4v501",
-        "eventName": "Anna Bondar Vs Alina Charaeva",
-        "sport": "tennis",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "BetPlay",
-            "odd": 1.6,
-            "stakePercentage": 68,
-            "recommendedStake": 680000,
-            "expectedPayout": 1088000
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Wplay",
-            "odd": 3.4,
-            "stakePercentage": 32,
-            "recommendedStake": 320000,
-            "expectedPayout": 1088000
-          }
-        ],
-        "totalImpliedProbability": 0.9191,
-        "isSurebet": true,
-        "profitMarginPercentage": 8.8,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1088000,
-        "guaranteedProfit": 88000,
-        "detectedAt": "2026-09-24T04:13:33.869Z"
-      },
-      {
-        "id": "sb_1790223213876_j3h2q",
-        "eventName": "Deportivo Espanol Reserves Vs Centro Espanol Reserves",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "BetPlay",
-            "odd": 1.44,
-            "stakePercentage": 71.99,
-            "recommendedStake": 719915.13,
-            "expectedPayout": 1036677.79
-          },
-          {
-            "selection": "X",
-            "bookmaker": "Stake",
-            "odd": 5,
-            "stakePercentage": 20.73,
-            "recommendedStake": 207335.56,
-            "expectedPayout": 1036677.8
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Stake",
-            "odd": 14.25,
-            "stakePercentage": 7.27,
-            "recommendedStake": 72749.31,
-            "expectedPayout": 1036677.67
-          }
-        ],
-        "totalImpliedProbability": 0.9646,
-        "isSurebet": true,
-        "profitMarginPercentage": 3.67,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1036677.67,
-        "guaranteedProfit": 36677.67,
-        "detectedAt": "2026-09-24T04:13:33.876Z"
-      }
-    ]
-  },
-  {
-    "timestamp": "2026-09-24T04:09:25.944Z",
-    "surebetsFoundCount": 18,
-    "highestProfitMargin": 17.69,
-    "opportunities": [
-      {
-        "id": "sb_1790222965903_ubbxl",
-        "eventName": "Amirreza Abbasi Vs Petr David",
-        "sport": "table_tennis",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Wplay",
-            "odd": 1.8,
-            "stakePercentage": 65.38,
-            "recommendedStake": 653846.15,
-            "expectedPayout": 1176923.07
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Bwin",
-            "odd": 3.4,
-            "stakePercentage": 34.62,
-            "recommendedStake": 346153.85,
-            "expectedPayout": 1176923.09
-          }
-        ],
-        "totalImpliedProbability": 0.8497,
-        "isSurebet": true,
-        "profitMarginPercentage": 17.69,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1176923.07,
-        "guaranteedProfit": 176923.07,
-        "detectedAt": "2026-09-24T04:09:25.903Z"
-      },
-      {
-        "id": "sb_1790222965933_rq96e",
-        "eventName": "Meng Yi Chen Vs Ruien Zhang",
-        "sport": "tennis",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "BetPlay",
-            "odd": 5,
-            "stakePercentage": 22.48,
-            "recommendedStake": 224806.2,
-            "expectedPayout": 1124031
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Bwin",
-            "odd": 1.45,
-            "stakePercentage": 77.52,
-            "recommendedStake": 775193.8,
-            "expectedPayout": 1124031.01
-          }
-        ],
-        "totalImpliedProbability": 0.8897,
-        "isSurebet": true,
-        "profitMarginPercentage": 12.4,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1124031,
-        "guaranteedProfit": 124031,
-        "detectedAt": "2026-09-24T04:09:25.933Z"
-      },
-      {
-        "id": "sb_1790222965899_y0tnl",
-        "eventName": "Anna Bondar Vs Alina Charaeva",
-        "sport": "tennis",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "BetPlay",
-            "odd": 1.6,
-            "stakePercentage": 68,
-            "recommendedStake": 680000,
-            "expectedPayout": 1088000
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Wplay",
-            "odd": 3.4,
-            "stakePercentage": 32,
-            "recommendedStake": 320000,
-            "expectedPayout": 1088000
-          }
-        ],
-        "totalImpliedProbability": 0.9191,
-        "isSurebet": true,
-        "profitMarginPercentage": 8.8,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1088000,
-        "guaranteedProfit": 88000,
-        "detectedAt": "2026-09-24T04:09:25.899Z"
-      },
-      {
-        "id": "sb_1790222965910_jy59b",
-        "eventName": "Deportivo Espanol Reserves Vs Centro Espanol Reserves",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "BetPlay",
-            "odd": 1.44,
-            "stakePercentage": 71.99,
-            "recommendedStake": 719915.13,
-            "expectedPayout": 1036677.79
-          },
-          {
-            "selection": "X",
-            "bookmaker": "Stake",
-            "odd": 5,
-            "stakePercentage": 20.73,
-            "recommendedStake": 207335.56,
-            "expectedPayout": 1036677.8
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Stake",
-            "odd": 14.25,
-            "stakePercentage": 7.27,
-            "recommendedStake": 72749.31,
-            "expectedPayout": 1036677.67
-          }
-        ],
-        "totalImpliedProbability": 0.9646,
-        "isSurebet": true,
-        "profitMarginPercentage": 3.67,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1036677.67,
-        "guaranteedProfit": 36677.67,
-        "detectedAt": "2026-09-24T04:09:25.910Z"
-      },
-      {
-        "id": "sb_1790222965937_h604w",
-        "eventName": "Daniel Kouble Vs Michal Vedmoch",
-        "sport": "table_tennis",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Bwin",
-            "odd": 1.909,
-            "stakePercentage": 54.1,
-            "recommendedStake": 540995.43,
-            "expectedPayout": 1032760.28
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
-            "odd": 2.25,
-            "stakePercentage": 45.9,
-            "recommendedStake": 459004.57,
-            "expectedPayout": 1032760.28
-          }
-        ],
-        "totalImpliedProbability": 0.9683,
-        "isSurebet": true,
-        "profitMarginPercentage": 3.28,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1032760.28,
-        "guaranteedProfit": 32760.28,
-        "detectedAt": "2026-09-24T04:09:25.937Z"
-      }
-    ]
-  },
-  {
-    "timestamp": "2026-09-24T04:09:04.876Z",
-    "surebetsFoundCount": 18,
-    "highestProfitMargin": 17.69,
-    "opportunities": [
-      {
-        "id": "sb_1790222944832_jn96f",
-        "eventName": "Amirreza Abbasi Vs Petr David",
-        "sport": "table_tennis",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Wplay",
-            "odd": 1.8,
-            "stakePercentage": 65.38,
-            "recommendedStake": 653846.15,
-            "expectedPayout": 1176923.07
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Bwin",
-            "odd": 3.4,
-            "stakePercentage": 34.62,
-            "recommendedStake": 346153.85,
-            "expectedPayout": 1176923.09
-          }
-        ],
-        "totalImpliedProbability": 0.8497,
-        "isSurebet": true,
-        "profitMarginPercentage": 17.69,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1176923.07,
-        "guaranteedProfit": 176923.07,
-        "detectedAt": "2026-09-24T04:09:04.832Z"
-      },
-      {
-        "id": "sb_1790222944863_cqcn0",
-        "eventName": "Meng Yi Chen Vs Ruien Zhang",
-        "sport": "tennis",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "BetPlay",
-            "odd": 5,
-            "stakePercentage": 22.48,
-            "recommendedStake": 224806.2,
-            "expectedPayout": 1124031
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Bwin",
-            "odd": 1.45,
-            "stakePercentage": 77.52,
-            "recommendedStake": 775193.8,
-            "expectedPayout": 1124031.01
-          }
-        ],
-        "totalImpliedProbability": 0.8897,
-        "isSurebet": true,
-        "profitMarginPercentage": 12.4,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1124031,
-        "guaranteedProfit": 124031,
-        "detectedAt": "2026-09-24T04:09:04.863Z"
-      },
-      {
-        "id": "sb_1790222944829_z1uu0",
-        "eventName": "Anna Bondar Vs Alina Charaeva",
-        "sport": "tennis",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "BetPlay",
-            "odd": 1.6,
-            "stakePercentage": 68,
-            "recommendedStake": 680000,
-            "expectedPayout": 1088000
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Wplay",
-            "odd": 3.4,
-            "stakePercentage": 32,
-            "recommendedStake": 320000,
-            "expectedPayout": 1088000
-          }
-        ],
-        "totalImpliedProbability": 0.9191,
-        "isSurebet": true,
-        "profitMarginPercentage": 8.8,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1088000,
-        "guaranteedProfit": 88000,
-        "detectedAt": "2026-09-24T04:09:04.829Z"
-      },
-      {
-        "id": "sb_1790222944840_r2qoz",
-        "eventName": "Deportivo Espanol Reserves Vs Centro Espanol Reserves",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "BetPlay",
-            "odd": 1.44,
-            "stakePercentage": 71.99,
-            "recommendedStake": 719915.13,
-            "expectedPayout": 1036677.79
-          },
-          {
-            "selection": "X",
-            "bookmaker": "Stake",
-            "odd": 5,
-            "stakePercentage": 20.73,
-            "recommendedStake": 207335.56,
-            "expectedPayout": 1036677.8
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Stake",
-            "odd": 14.25,
-            "stakePercentage": 7.27,
-            "recommendedStake": 72749.31,
-            "expectedPayout": 1036677.67
-          }
-        ],
-        "totalImpliedProbability": 0.9646,
-        "isSurebet": true,
-        "profitMarginPercentage": 3.67,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1036677.67,
-        "guaranteedProfit": 36677.67,
-        "detectedAt": "2026-09-24T04:09:04.840Z"
-      },
-      {
-        "id": "sb_1790222944868_nrk5n",
-        "eventName": "Daniel Kouble Vs Michal Vedmoch",
-        "sport": "table_tennis",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Bwin",
-            "odd": 1.909,
-            "stakePercentage": 54.1,
-            "recommendedStake": 540995.43,
-            "expectedPayout": 1032760.28
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
-            "odd": 2.25,
-            "stakePercentage": 45.9,
-            "recommendedStake": 459004.57,
-            "expectedPayout": 1032760.28
-          }
-        ],
-        "totalImpliedProbability": 0.9683,
-        "isSurebet": true,
-        "profitMarginPercentage": 3.28,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1032760.28,
-        "guaranteedProfit": 32760.28,
-        "detectedAt": "2026-09-24T04:09:04.868Z"
-      }
-    ]
-  },
-  {
-    "timestamp": "2026-09-24T03:59:16.843Z",
-    "surebetsFoundCount": 3,
-    "highestProfitMargin": 8.8,
-    "opportunities": [
-      {
-        "id": "sb_1790222356806_6hero",
-        "eventName": "Anna Bondar Vs Alina Charaeva",
-        "sport": "tennis",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "BetPlay",
-            "odd": 1.6,
-            "stakePercentage": 68,
-            "recommendedStake": 680000,
-            "expectedPayout": 1088000
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Wplay",
-            "odd": 3.4,
-            "stakePercentage": 32,
-            "recommendedStake": 320000,
-            "expectedPayout": 1088000
-          }
-        ],
-        "totalImpliedProbability": 0.9191,
-        "isSurebet": true,
-        "profitMarginPercentage": 8.8,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1088000,
-        "guaranteedProfit": 88000,
-        "detectedAt": "2026-09-24T03:59:16.806Z"
-      },
-      {
-        "id": "sb_1790222356813_rowyi",
-        "eventName": "Deportivo Espanol Reserves Vs Centro Espanol Reserves",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "BetPlay",
-            "odd": 1.44,
-            "stakePercentage": 71.99,
-            "recommendedStake": 719915.13,
-            "expectedPayout": 1036677.79
-          },
-          {
-            "selection": "X",
-            "bookmaker": "Stake",
-            "odd": 5,
-            "stakePercentage": 20.73,
-            "recommendedStake": 207335.56,
-            "expectedPayout": 1036677.8
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Stake",
-            "odd": 14.25,
-            "stakePercentage": 7.27,
-            "recommendedStake": 72749.31,
-            "expectedPayout": 1036677.67
-          }
-        ],
-        "totalImpliedProbability": 0.9646,
-        "isSurebet": true,
-        "profitMarginPercentage": 3.67,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1036677.67,
-        "guaranteedProfit": 36677.67,
-        "detectedAt": "2026-09-24T03:59:16.813Z"
-      },
-      {
-        "id": "sb_1790222356805_agvot",
-        "eventName": "Deportivo Cali Vs Aguilas Doradas Rionegro",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Wplay",
-            "odd": 1.89,
-            "stakePercentage": 52.95,
-            "recommendedStake": 529549.82,
-            "expectedPayout": 1000849.16
-          },
-          {
-            "selection": "X",
-            "bookmaker": "BetPlay",
-            "odd": 3.65,
-            "stakePercentage": 27.42,
-            "recommendedStake": 274205.25,
-            "expectedPayout": 1000849.16
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
-            "odd": 5.1,
-            "stakePercentage": 19.62,
-            "recommendedStake": 196244.93,
-            "expectedPayout": 1000849.14
-          }
-        ],
-        "totalImpliedProbability": 0.9992,
-        "isSurebet": true,
-        "profitMarginPercentage": 0.08,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1000849.14,
-        "guaranteedProfit": 849.14,
-        "detectedAt": "2026-09-24T03:59:16.805Z"
-      }
-    ]
-  },
-  {
-    "timestamp": "2026-09-24T03:58:51.805Z",
-    "surebetsFoundCount": 3,
-    "highestProfitMargin": 8.8,
-    "opportunities": [
-      {
-        "id": "sb_1790222331768_3nzgb",
-        "eventName": "Anna Bondar Vs Alina Charaeva",
-        "sport": "tennis",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "BetPlay",
-            "odd": 1.6,
-            "stakePercentage": 68,
-            "recommendedStake": 680000,
-            "expectedPayout": 1088000
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Wplay",
-            "odd": 3.4,
-            "stakePercentage": 32,
-            "recommendedStake": 320000,
-            "expectedPayout": 1088000
-          }
-        ],
-        "totalImpliedProbability": 0.9191,
-        "isSurebet": true,
-        "profitMarginPercentage": 8.8,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1088000,
-        "guaranteedProfit": 88000,
-        "detectedAt": "2026-09-24T03:58:51.768Z"
-      },
-      {
-        "id": "sb_1790222331778_ey575",
-        "eventName": "Deportivo Espanol Reserves Vs Centro Espanol Reserves",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "BetPlay",
-            "odd": 1.44,
-            "stakePercentage": 71.99,
-            "recommendedStake": 719915.13,
-            "expectedPayout": 1036677.79
-          },
-          {
-            "selection": "X",
-            "bookmaker": "Stake",
-            "odd": 5,
-            "stakePercentage": 20.73,
-            "recommendedStake": 207335.56,
-            "expectedPayout": 1036677.8
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Stake",
-            "odd": 14.25,
-            "stakePercentage": 7.27,
-            "recommendedStake": 72749.31,
-            "expectedPayout": 1036677.67
-          }
-        ],
-        "totalImpliedProbability": 0.9646,
-        "isSurebet": true,
-        "profitMarginPercentage": 3.67,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1036677.67,
-        "guaranteedProfit": 36677.67,
-        "detectedAt": "2026-09-24T03:58:51.778Z"
-      },
-      {
-        "id": "sb_1790222331767_a7186",
-        "eventName": "Deportivo Cali Vs Aguilas Doradas Rionegro",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Wplay",
-            "odd": 1.89,
-            "stakePercentage": 52.95,
-            "recommendedStake": 529549.82,
-            "expectedPayout": 1000849.16
-          },
-          {
-            "selection": "X",
-            "bookmaker": "BetPlay",
-            "odd": 3.65,
-            "stakePercentage": 27.42,
-            "recommendedStake": 274205.25,
-            "expectedPayout": 1000849.16
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
-            "odd": 5.1,
-            "stakePercentage": 19.62,
-            "recommendedStake": 196244.93,
-            "expectedPayout": 1000849.14
-          }
-        ],
-        "totalImpliedProbability": 0.9992,
-        "isSurebet": true,
-        "profitMarginPercentage": 0.08,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1000849.14,
-        "guaranteedProfit": 849.14,
-        "detectedAt": "2026-09-24T03:58:51.767Z"
-      }
-    ]
-  },
-  {
-    "timestamp": "2026-09-24T03:53:03.957Z",
-    "surebetsFoundCount": 2,
-    "highestProfitMargin": 8.8,
-    "opportunities": [
-      {
-        "id": "sb_1790221983935_2tef0",
-        "eventName": "Anna Bondar Vs Alina Charaeva",
-        "sport": "tennis",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "BetPlay",
-            "odd": 1.6,
-            "stakePercentage": 68,
-            "recommendedStake": 680000,
-            "expectedPayout": 1088000
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Wplay",
-            "odd": 3.4,
-            "stakePercentage": 32,
-            "recommendedStake": 320000,
-            "expectedPayout": 1088000
-          }
-        ],
-        "totalImpliedProbability": 0.9191,
-        "isSurebet": true,
-        "profitMarginPercentage": 8.8,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1088000,
-        "guaranteedProfit": 88000,
-        "detectedAt": "2026-09-24T03:53:03.935Z"
-      },
-      {
-        "id": "sb_1790221983935_q3rru",
-        "eventName": "Deportivo Cali Vs Aguilas Doradas Rionegro",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Wplay",
-            "odd": 1.89,
-            "stakePercentage": 52.95,
-            "recommendedStake": 529549.82,
-            "expectedPayout": 1000849.16
-          },
-          {
-            "selection": "X",
-            "bookmaker": "BetPlay",
-            "odd": 3.65,
-            "stakePercentage": 27.42,
-            "recommendedStake": 274205.25,
-            "expectedPayout": 1000849.16
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
-            "odd": 5.1,
-            "stakePercentage": 19.62,
-            "recommendedStake": 196244.93,
-            "expectedPayout": 1000849.14
-          }
-        ],
-        "totalImpliedProbability": 0.9992,
-        "isSurebet": true,
-        "profitMarginPercentage": 0.08,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1000849.14,
-        "guaranteedProfit": 849.14,
-        "detectedAt": "2026-09-24T03:53:03.935Z"
-      }
-    ]
-  },
-  {
-    "timestamp": "2026-09-24T03:52:48.352Z",
-    "surebetsFoundCount": 2,
-    "highestProfitMargin": 8.8,
-    "opportunities": [
-      {
-        "id": "sb_1790221968319_n8q9s",
-        "eventName": "Anna Bondar Vs Alina Charaeva",
-        "sport": "tennis",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "BetPlay",
-            "odd": 1.6,
-            "stakePercentage": 68,
-            "recommendedStake": 680000,
-            "expectedPayout": 1088000
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Wplay",
-            "odd": 3.4,
-            "stakePercentage": 32,
-            "recommendedStake": 320000,
-            "expectedPayout": 1088000
-          }
-        ],
-        "totalImpliedProbability": 0.9191,
-        "isSurebet": true,
-        "profitMarginPercentage": 8.8,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1088000,
-        "guaranteedProfit": 88000,
-        "detectedAt": "2026-09-24T03:52:48.319Z"
-      },
-      {
-        "id": "sb_1790221968318_w0nbm",
-        "eventName": "Deportivo Cali Vs Aguilas Doradas Rionegro",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Wplay",
-            "odd": 1.89,
-            "stakePercentage": 52.95,
-            "recommendedStake": 529549.82,
-            "expectedPayout": 1000849.16
-          },
-          {
-            "selection": "X",
-            "bookmaker": "BetPlay",
-            "odd": 3.65,
-            "stakePercentage": 27.42,
-            "recommendedStake": 274205.25,
-            "expectedPayout": 1000849.16
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
-            "odd": 5.1,
-            "stakePercentage": 19.62,
-            "recommendedStake": 196244.93,
-            "expectedPayout": 1000849.14
-          }
-        ],
-        "totalImpliedProbability": 0.9992,
-        "isSurebet": true,
-        "profitMarginPercentage": 0.08,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1000849.14,
-        "guaranteedProfit": 849.14,
-        "detectedAt": "2026-09-24T03:52:48.318Z"
-      }
-    ]
-  },
-  {
-    "timestamp": "2026-09-24T03:48:27.454Z",
-    "surebetsFoundCount": 0,
-    "highestProfitMargin": -3.74,
-    "opportunities": [
-      {
-        "id": "sb_1790221707431_hhp6z",
-        "eventName": "Vancouver Whitecaps Vs Dc United",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Bwin",
-            "odd": 1.28,
-            "stakePercentage": 75.21,
-            "recommendedStake": 752061.75,
-            "expectedPayout": 962639.04
-          },
-          {
-            "selection": "X",
-            "bookmaker": "Bwin",
-            "odd": 6.25,
-            "stakePercentage": 15.4,
-            "recommendedStake": 154022.25,
-            "expectedPayout": 962639.06
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Stake",
-            "odd": 10.25,
-            "stakePercentage": 9.39,
-            "recommendedStake": 93916,
-            "expectedPayout": 962639
-          }
-        ],
-        "totalImpliedProbability": 1.0388,
-        "isSurebet": false,
-        "profitMarginPercentage": -3.74,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 962639,
-        "guaranteedProfit": -37361,
-        "detectedAt": "2026-09-24T03:48:27.431Z"
-      },
-      {
-        "id": "sb_1790221707438_034z6",
-        "eventName": "Mali Vs Cabo Verde",
-        "sport": "football",
-        "marketType": "BOTH_TEAMS_SCORE",
-        "outcomes": [
-          {
-            "selection": "YES",
-            "bookmaker": "Stake",
-            "odd": 2.45,
-            "stakePercentage": 39.21,
-            "recommendedStake": 392059.55,
-            "expectedPayout": 960545.9
-          },
-          {
-            "selection": "NO",
-            "bookmaker": "Bwin",
-            "odd": 1.58,
-            "stakePercentage": 60.79,
-            "recommendedStake": 607940.45,
-            "expectedPayout": 960545.91
-          }
-        ],
-        "totalImpliedProbability": 1.0411,
-        "isSurebet": false,
-        "profitMarginPercentage": -3.95,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 960545.9,
-        "guaranteedProfit": -39454.1,
-        "detectedAt": "2026-09-24T03:48:27.438Z"
-      },
-      {
-        "id": "sb_1790221707430_sb6iz",
-        "eventName": "México Vs Colombia",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Stake",
-            "odd": 2.65,
-            "stakePercentage": 36.22,
-            "recommendedStake": 362201.62,
-            "expectedPayout": 959834.29
-          },
-          {
-            "selection": "X",
-            "bookmaker": "Bwin",
-            "odd": 3.4,
-            "stakePercentage": 28.23,
-            "recommendedStake": 282304.2,
-            "expectedPayout": 959834.28
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Stake",
-            "odd": 2.7,
-            "stakePercentage": 35.55,
-            "recommendedStake": 355494.18,
-            "expectedPayout": 959834.29
-          }
-        ],
-        "totalImpliedProbability": 1.0418,
-        "isSurebet": false,
-        "profitMarginPercentage": -4.02,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 959834.28,
-        "guaranteedProfit": -40165.72,
-        "detectedAt": "2026-09-24T03:48:27.430Z"
-      },
-      {
-        "id": "sb_1790221707439_h59w8",
-        "eventName": "Países Bajos Vs Alemania",
-        "sport": "football",
-        "marketType": "OVER_UNDER_2_5",
-        "outcomes": [
-          {
-            "selection": "OVER",
-            "bookmaker": "Bwin",
-            "odd": 1.46,
-            "stakePercentage": 65.73,
-            "recommendedStake": 657277,
-            "expectedPayout": 959624.42
-          },
-          {
-            "selection": "UNDER",
-            "bookmaker": "Stake",
-            "odd": 2.8,
-            "stakePercentage": 34.27,
-            "recommendedStake": 342723,
-            "expectedPayout": 959624.4
-          }
-        ],
-        "totalImpliedProbability": 1.0421,
-        "isSurebet": false,
-        "profitMarginPercentage": -4.04,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 959624.4,
-        "guaranteedProfit": -40375.6,
-        "detectedAt": "2026-09-24T03:48:27.439Z"
-      },
-      {
-        "id": "sb_1790221707440_hxsq9",
-        "eventName": "Portugal Vs Wales",
-        "sport": "football",
-        "marketType": "OVER_UNDER_2_5",
-        "outcomes": [
-          {
-            "selection": "OVER",
-            "bookmaker": "Bwin",
-            "odd": 1.52,
-            "stakePercentage": 63.11,
-            "recommendedStake": 631067.96,
-            "expectedPayout": 959223.3
-          },
-          {
-            "selection": "UNDER",
-            "bookmaker": "Stake",
-            "odd": 2.6,
-            "stakePercentage": 36.89,
-            "recommendedStake": 368932.04,
-            "expectedPayout": 959223.3
-          }
-        ],
-        "totalImpliedProbability": 1.0425,
-        "isSurebet": false,
-        "profitMarginPercentage": -4.08,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 959223.3,
-        "guaranteedProfit": -40776.7,
-        "detectedAt": "2026-09-24T03:48:27.440Z"
-      }
-    ]
-  },
-  {
-    "timestamp": "2026-09-24T03:48:19.222Z",
-    "surebetsFoundCount": 0,
-    "highestProfitMargin": -3.74,
-    "opportunities": [
-      {
-        "id": "sb_1790221699206_j6w5o",
-        "eventName": "Vancouver Whitecaps Vs Dc United",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Bwin",
-            "odd": 1.28,
-            "stakePercentage": 75.21,
-            "recommendedStake": 752061.75,
-            "expectedPayout": 962639.04
-          },
-          {
-            "selection": "X",
-            "bookmaker": "Bwin",
-            "odd": 6.25,
-            "stakePercentage": 15.4,
-            "recommendedStake": 154022.25,
-            "expectedPayout": 962639.06
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Stake",
-            "odd": 10.25,
-            "stakePercentage": 9.39,
-            "recommendedStake": 93916,
-            "expectedPayout": 962639
-          }
-        ],
-        "totalImpliedProbability": 1.0388,
-        "isSurebet": false,
-        "profitMarginPercentage": -3.74,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 962639,
-        "guaranteedProfit": -37361,
-        "detectedAt": "2026-09-24T03:48:19.206Z"
-      },
-      {
-        "id": "sb_1790221699211_cris5",
-        "eventName": "Mali Vs Cabo Verde",
-        "sport": "football",
-        "marketType": "BOTH_TEAMS_SCORE",
-        "outcomes": [
-          {
-            "selection": "YES",
-            "bookmaker": "Stake",
-            "odd": 2.45,
-            "stakePercentage": 39.21,
-            "recommendedStake": 392059.55,
-            "expectedPayout": 960545.9
-          },
-          {
-            "selection": "NO",
-            "bookmaker": "Bwin",
-            "odd": 1.58,
-            "stakePercentage": 60.79,
-            "recommendedStake": 607940.45,
-            "expectedPayout": 960545.91
-          }
-        ],
-        "totalImpliedProbability": 1.0411,
-        "isSurebet": false,
-        "profitMarginPercentage": -3.95,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 960545.9,
-        "guaranteedProfit": -39454.1,
-        "detectedAt": "2026-09-24T03:48:19.211Z"
-      },
-      {
-        "id": "sb_1790221699206_d85ds",
-        "eventName": "México Vs Colombia",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Stake",
-            "odd": 2.65,
-            "stakePercentage": 36.22,
-            "recommendedStake": 362201.62,
-            "expectedPayout": 959834.29
-          },
-          {
-            "selection": "X",
-            "bookmaker": "Bwin",
-            "odd": 3.4,
-            "stakePercentage": 28.23,
-            "recommendedStake": 282304.2,
-            "expectedPayout": 959834.28
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Stake",
-            "odd": 2.7,
-            "stakePercentage": 35.55,
-            "recommendedStake": 355494.18,
-            "expectedPayout": 959834.29
-          }
-        ],
-        "totalImpliedProbability": 1.0418,
-        "isSurebet": false,
-        "profitMarginPercentage": -4.02,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 959834.28,
-        "guaranteedProfit": -40165.72,
-        "detectedAt": "2026-09-24T03:48:19.206Z"
-      },
-      {
-        "id": "sb_1790221699212_0lm1z",
-        "eventName": "Países Bajos Vs Alemania",
-        "sport": "football",
-        "marketType": "OVER_UNDER_2_5",
-        "outcomes": [
-          {
-            "selection": "OVER",
-            "bookmaker": "Bwin",
-            "odd": 1.46,
-            "stakePercentage": 65.73,
-            "recommendedStake": 657277,
-            "expectedPayout": 959624.42
-          },
-          {
-            "selection": "UNDER",
-            "bookmaker": "Stake",
-            "odd": 2.8,
-            "stakePercentage": 34.27,
-            "recommendedStake": 342723,
-            "expectedPayout": 959624.4
-          }
-        ],
-        "totalImpliedProbability": 1.0421,
-        "isSurebet": false,
-        "profitMarginPercentage": -4.04,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 959624.4,
-        "guaranteedProfit": -40375.6,
-        "detectedAt": "2026-09-24T03:48:19.212Z"
-      },
-      {
-        "id": "sb_1790221699212_n7kq6",
-        "eventName": "Portugal Vs Wales",
-        "sport": "football",
-        "marketType": "OVER_UNDER_2_5",
-        "outcomes": [
-          {
-            "selection": "OVER",
-            "bookmaker": "Bwin",
-            "odd": 1.52,
-            "stakePercentage": 63.11,
-            "recommendedStake": 631067.96,
-            "expectedPayout": 959223.3
-          },
-          {
-            "selection": "UNDER",
-            "bookmaker": "Stake",
-            "odd": 2.6,
-            "stakePercentage": 36.89,
-            "recommendedStake": 368932.04,
-            "expectedPayout": 959223.3
-          }
-        ],
-        "totalImpliedProbability": 1.0425,
-        "isSurebet": false,
-        "profitMarginPercentage": -4.08,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 959223.3,
-        "guaranteedProfit": -40776.7,
-        "detectedAt": "2026-09-24T03:48:19.212Z"
-      }
-    ]
-  },
-  {
-    "timestamp": "2026-09-24T03:48:02.123Z",
-    "surebetsFoundCount": 0,
-    "highestProfitMargin": 0,
-    "opportunities": []
-  },
-  {
-    "timestamp": "2026-09-24T03:47:46.660Z",
-    "surebetsFoundCount": 0,
-    "highestProfitMargin": 0,
-    "opportunities": []
-  },
-  {
-    "timestamp": "2026-09-24T03:10:34.745Z",
-    "surebetsFoundCount": 2,
-    "highestProfitMargin": 12.75,
-    "opportunities": [
-      {
-        "id": "sb_1790219434725_0n540",
-        "eventName": "Xelaju Mc Vs Antigua Gfc",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "BetPlay",
-            "odd": 1.36,
-            "stakePercentage": 82.91,
-            "recommendedStake": 829079.15,
-            "expectedPayout": 1127547.64
-          },
-          {
-            "selection": "X",
-            "bookmaker": "Bwin",
-            "odd": 9.25,
-            "stakePercentage": 12.19,
-            "recommendedStake": 121897.04,
-            "expectedPayout": 1127547.62
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Bwin",
-            "odd": 23,
-            "stakePercentage": 4.9,
-            "recommendedStake": 49023.81,
-            "expectedPayout": 1127547.63
-          }
-        ],
-        "totalImpliedProbability": 0.8869,
-        "isSurebet": true,
-        "profitMarginPercentage": 12.75,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1127547.62,
-        "guaranteedProfit": 127547.62,
-        "detectedAt": "2026-09-24T03:10:34.725Z"
-      },
-      {
-        "id": "sb_1790219434728_k4wf7",
-        "eventName": "Vancouver Fc Vs Inter Toronto Fc",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Bwin",
-            "odd": 5.25,
-            "stakePercentage": 20.91,
-            "recommendedStake": 209052.73,
-            "expectedPayout": 1097526.83
-          },
-          {
-            "selection": "X",
-            "bookmaker": "BetPlay",
-            "odd": 3.2,
-            "stakePercentage": 34.3,
-            "recommendedStake": 342977.13,
-            "expectedPayout": 1097526.82
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
-            "odd": 2.45,
-            "stakePercentage": 44.8,
-            "recommendedStake": 447970.14,
-            "expectedPayout": 1097526.84
-          }
-        ],
-        "totalImpliedProbability": 0.9111,
-        "isSurebet": true,
-        "profitMarginPercentage": 9.75,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1097526.82,
-        "guaranteedProfit": 97526.82,
-        "detectedAt": "2026-09-24T03:10:34.728Z"
-      }
-    ]
-  },
-  {
-    "timestamp": "2026-09-24T03:10:21.816Z",
-    "surebetsFoundCount": 2,
-    "highestProfitMargin": 12.75,
-    "opportunities": [
-      {
-        "id": "sb_1790219421791_r0bsp",
-        "eventName": "Xelaju Mc Vs Antigua Gfc",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "BetPlay",
-            "odd": 1.36,
-            "stakePercentage": 82.91,
-            "recommendedStake": 829079.15,
-            "expectedPayout": 1127547.64
-          },
-          {
-            "selection": "X",
-            "bookmaker": "Bwin",
-            "odd": 9.25,
-            "stakePercentage": 12.19,
-            "recommendedStake": 121897.04,
-            "expectedPayout": 1127547.62
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Bwin",
-            "odd": 23,
-            "stakePercentage": 4.9,
-            "recommendedStake": 49023.81,
-            "expectedPayout": 1127547.63
-          }
-        ],
-        "totalImpliedProbability": 0.8869,
-        "isSurebet": true,
-        "profitMarginPercentage": 12.75,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1127547.62,
-        "guaranteedProfit": 127547.62,
-        "detectedAt": "2026-09-24T03:10:21.791Z"
-      },
-      {
-        "id": "sb_1790219421795_eyqva",
-        "eventName": "Vancouver Fc Vs Inter Toronto Fc",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Bwin",
-            "odd": 5.25,
-            "stakePercentage": 20.91,
-            "recommendedStake": 209052.73,
-            "expectedPayout": 1097526.83
-          },
-          {
-            "selection": "X",
-            "bookmaker": "BetPlay",
-            "odd": 3.2,
-            "stakePercentage": 34.3,
-            "recommendedStake": 342977.13,
-            "expectedPayout": 1097526.82
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
-            "odd": 2.45,
-            "stakePercentage": 44.8,
-            "recommendedStake": 447970.14,
-            "expectedPayout": 1097526.84
-          }
-        ],
-        "totalImpliedProbability": 0.9111,
-        "isSurebet": true,
-        "profitMarginPercentage": 9.75,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 1097526.82,
-        "guaranteedProfit": 97526.82,
-        "detectedAt": "2026-09-24T03:10:21.795Z"
-      }
-    ]
-  },
-  {
-    "timestamp": "2026-09-24T02:48:22.472Z",
-    "surebetsFoundCount": 0,
-    "highestProfitMargin": 0,
-    "opportunities": []
-  },
-  {
-    "timestamp": "2026-09-24T02:47:56.472Z",
-    "surebetsFoundCount": 0,
-    "highestProfitMargin": -1.05,
-    "opportunities": [
-      {
-        "id": "sb_1790218076458_uqeji",
-        "eventName": "Deportivo Cali Vs Aguilas Doradas Rionegro",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Wplay",
-            "odd": 1.85,
-            "stakePercentage": 53.49,
-            "recommendedStake": 534875.37,
-            "expectedPayout": 989519.43
-          },
-          {
-            "selection": "X",
-            "bookmaker": "BetPlay",
-            "odd": 3.65,
-            "stakePercentage": 27.11,
-            "recommendedStake": 271101.21,
-            "expectedPayout": 989519.42
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
-            "odd": 5.1,
-            "stakePercentage": 19.4,
-            "recommendedStake": 194023.42,
-            "expectedPayout": 989519.44
-          }
-        ],
-        "totalImpliedProbability": 1.0106,
-        "isSurebet": false,
-        "profitMarginPercentage": -1.05,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 989519.42,
-        "guaranteedProfit": -10480.58,
-        "detectedAt": "2026-09-24T02:47:56.458Z"
-      },
-      {
-        "id": "sb_1790218076457_63gca",
-        "eventName": "Atlético Nacional Vs Millonarios",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Wplay",
-            "odd": 1.87,
-            "stakePercentage": 51.93,
-            "recommendedStake": 519287.83,
-            "expectedPayout": 971068.24
-          },
-          {
-            "selection": "X",
-            "bookmaker": "BetPlay",
-            "odd": 3.85,
-            "stakePercentage": 25.22,
-            "recommendedStake": 252225.52,
-            "expectedPayout": 971068.25
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
-            "odd": 4.25,
-            "stakePercentage": 22.85,
-            "recommendedStake": 228486.65,
-            "expectedPayout": 971068.26
-          }
-        ],
-        "totalImpliedProbability": 1.0298,
-        "isSurebet": false,
-        "profitMarginPercentage": -2.89,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 971068.24,
-        "guaranteedProfit": -28931.76,
-        "detectedAt": "2026-09-24T02:47:56.457Z"
-      },
-      {
-        "id": "sb_1790218076458_zd0gi",
-        "eventName": "Deportivo Pereira Vs Internacional De Bogota",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "BetPlay",
-            "odd": 3.5,
-            "stakePercentage": 27.71,
-            "recommendedStake": 277063.67,
-            "expectedPayout": 969722.85
-          },
-          {
-            "selection": "X",
-            "bookmaker": "Wplay",
-            "odd": 3.3,
-            "stakePercentage": 29.39,
-            "recommendedStake": 293855.41,
-            "expectedPayout": 969722.85
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Wplay",
-            "odd": 2.26,
-            "stakePercentage": 42.91,
-            "recommendedStake": 429080.92,
-            "expectedPayout": 969722.88
-          }
-        ],
-        "totalImpliedProbability": 1.0312,
-        "isSurebet": false,
-        "profitMarginPercentage": -3.03,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 969722.85,
-        "guaranteedProfit": -30277.15,
-        "detectedAt": "2026-09-24T02:47:56.458Z"
-      },
-      {
-        "id": "sb_1790218076458_d9686",
-        "eventName": "Sho Shimabukuro Vs Hugo Gaston",
-        "sport": "tennis",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Wplay",
-            "odd": 2.05,
-            "stakePercentage": 47.16,
-            "recommendedStake": 471649.48,
-            "expectedPayout": 966881.43
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
-            "odd": 1.83,
-            "stakePercentage": 52.84,
-            "recommendedStake": 528350.52,
-            "expectedPayout": 966881.45
-          }
-        ],
-        "totalImpliedProbability": 1.0343,
-        "isSurebet": false,
-        "profitMarginPercentage": -3.31,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 966881.43,
-        "guaranteedProfit": -33118.57,
-        "detectedAt": "2026-09-24T02:47:56.458Z"
-      },
-      {
-        "id": "sb_1790218076459_5pgty",
-        "eventName": "Perth Wildcats Vs Adelaide 36ers",
-        "sport": "basketball",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Wplay",
-            "odd": 2,
-            "stakePercentage": 48.32,
-            "recommendedStake": 483204.13,
-            "expectedPayout": 966408.26
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
-            "odd": 1.87,
-            "stakePercentage": 51.68,
-            "recommendedStake": 516795.87,
-            "expectedPayout": 966408.28
-          }
-        ],
-        "totalImpliedProbability": 1.0348,
-        "isSurebet": false,
-        "profitMarginPercentage": -3.36,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 966408.26,
-        "guaranteedProfit": -33591.74,
-        "detectedAt": "2026-09-24T02:47:56.459Z"
-      }
-    ]
-  },
-  {
-    "timestamp": "2026-09-24T02:47:54.928Z",
-    "surebetsFoundCount": 0,
-    "highestProfitMargin": -1.05,
-    "opportunities": [
-      {
-        "id": "sb_1790218074910_5jj6t",
-        "eventName": "Deportivo Cali Vs Aguilas Doradas Rionegro",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Wplay",
-            "odd": 1.85,
-            "stakePercentage": 53.49,
-            "recommendedStake": 534875.37,
-            "expectedPayout": 989519.43
-          },
-          {
-            "selection": "X",
-            "bookmaker": "BetPlay",
-            "odd": 3.65,
-            "stakePercentage": 27.11,
-            "recommendedStake": 271101.21,
-            "expectedPayout": 989519.42
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
-            "odd": 5.1,
-            "stakePercentage": 19.4,
-            "recommendedStake": 194023.42,
-            "expectedPayout": 989519.44
-          }
-        ],
-        "totalImpliedProbability": 1.0106,
-        "isSurebet": false,
-        "profitMarginPercentage": -1.05,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 989519.42,
-        "guaranteedProfit": -10480.58,
-        "detectedAt": "2026-09-24T02:47:54.910Z"
-      },
-      {
-        "id": "sb_1790218074910_uiufx",
-        "eventName": "Atlético Nacional Vs Millonarios",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Wplay",
-            "odd": 1.87,
-            "stakePercentage": 51.93,
-            "recommendedStake": 519287.83,
-            "expectedPayout": 971068.24
-          },
-          {
-            "selection": "X",
-            "bookmaker": "BetPlay",
-            "odd": 3.85,
-            "stakePercentage": 25.22,
-            "recommendedStake": 252225.52,
-            "expectedPayout": 971068.25
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
-            "odd": 4.25,
-            "stakePercentage": 22.85,
-            "recommendedStake": 228486.65,
-            "expectedPayout": 971068.26
-          }
-        ],
-        "totalImpliedProbability": 1.0298,
-        "isSurebet": false,
-        "profitMarginPercentage": -2.89,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 971068.24,
-        "guaranteedProfit": -28931.76,
-        "detectedAt": "2026-09-24T02:47:54.910Z"
-      },
-      {
-        "id": "sb_1790218074910_yd2c7",
-        "eventName": "Deportivo Pereira Vs Internacional De Bogota",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "BetPlay",
-            "odd": 3.5,
-            "stakePercentage": 27.71,
-            "recommendedStake": 277063.67,
-            "expectedPayout": 969722.85
-          },
-          {
-            "selection": "X",
-            "bookmaker": "Wplay",
-            "odd": 3.3,
-            "stakePercentage": 29.39,
-            "recommendedStake": 293855.41,
-            "expectedPayout": 969722.85
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Wplay",
-            "odd": 2.26,
-            "stakePercentage": 42.91,
-            "recommendedStake": 429080.92,
-            "expectedPayout": 969722.88
-          }
-        ],
-        "totalImpliedProbability": 1.0312,
-        "isSurebet": false,
-        "profitMarginPercentage": -3.03,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 969722.85,
-        "guaranteedProfit": -30277.15,
-        "detectedAt": "2026-09-24T02:47:54.910Z"
-      },
-      {
-        "id": "sb_1790218074911_86ian",
-        "eventName": "Sho Shimabukuro Vs Hugo Gaston",
-        "sport": "tennis",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Wplay",
-            "odd": 2.05,
-            "stakePercentage": 47.16,
-            "recommendedStake": 471649.48,
-            "expectedPayout": 966881.43
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
-            "odd": 1.83,
-            "stakePercentage": 52.84,
-            "recommendedStake": 528350.52,
-            "expectedPayout": 966881.45
-          }
-        ],
-        "totalImpliedProbability": 1.0343,
-        "isSurebet": false,
-        "profitMarginPercentage": -3.31,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 966881.43,
-        "guaranteedProfit": -33118.57,
-        "detectedAt": "2026-09-24T02:47:54.911Z"
-      },
-      {
-        "id": "sb_1790218074912_9sgog",
-        "eventName": "Perth Wildcats Vs Adelaide 36ers",
-        "sport": "basketball",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Wplay",
-            "odd": 2,
-            "stakePercentage": 48.32,
-            "recommendedStake": 483204.13,
-            "expectedPayout": 966408.26
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
-            "odd": 1.87,
-            "stakePercentage": 51.68,
-            "recommendedStake": 516795.87,
-            "expectedPayout": 966408.28
-          }
-        ],
-        "totalImpliedProbability": 1.0348,
-        "isSurebet": false,
-        "profitMarginPercentage": -3.36,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 966408.26,
-        "guaranteedProfit": -33591.74,
-        "detectedAt": "2026-09-24T02:47:54.912Z"
-      }
-    ]
-  },
-  {
-    "timestamp": "2026-09-24T02:47:53.286Z",
-    "surebetsFoundCount": 0,
-    "highestProfitMargin": 0,
-    "opportunities": []
-  },
-  {
-    "timestamp": "2026-09-24T02:47:47.968Z",
-    "surebetsFoundCount": 0,
-    "highestProfitMargin": 0,
-    "opportunities": []
-  },
-  {
-    "timestamp": "2026-09-24T02:38:00.255Z",
-    "surebetsFoundCount": 0,
-    "highestProfitMargin": -1.05,
-    "opportunities": [
-      {
-        "id": "sb_1790217480242_rektm",
-        "eventName": "Deportivo Cali Vs Aguilas Doradas Rionegro",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Wplay",
-            "odd": 1.85,
-            "stakePercentage": 53.49,
-            "recommendedStake": 534875.37,
-            "expectedPayout": 989519.43
-          },
-          {
-            "selection": "X",
-            "bookmaker": "BetPlay",
-            "odd": 3.65,
-            "stakePercentage": 27.11,
-            "recommendedStake": 271101.21,
-            "expectedPayout": 989519.42
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
-            "odd": 5.1,
-            "stakePercentage": 19.4,
-            "recommendedStake": 194023.42,
-            "expectedPayout": 989519.44
-          }
-        ],
-        "totalImpliedProbability": 1.0106,
-        "isSurebet": false,
-        "profitMarginPercentage": -1.05,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 989519.42,
-        "guaranteedProfit": -10480.58,
-        "detectedAt": "2026-09-24T02:38:00.242Z"
-      },
-      {
-        "id": "sb_1790217480242_8y9qd",
-        "eventName": "Atlético Nacional Vs Millonarios",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Wplay",
-            "odd": 1.87,
-            "stakePercentage": 51.93,
-            "recommendedStake": 519287.83,
-            "expectedPayout": 971068.24
-          },
-          {
-            "selection": "X",
-            "bookmaker": "BetPlay",
-            "odd": 3.85,
-            "stakePercentage": 25.22,
-            "recommendedStake": 252225.52,
-            "expectedPayout": 971068.25
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
-            "odd": 4.25,
-            "stakePercentage": 22.85,
-            "recommendedStake": 228486.65,
-            "expectedPayout": 971068.26
-          }
-        ],
-        "totalImpliedProbability": 1.0298,
-        "isSurebet": false,
-        "profitMarginPercentage": -2.89,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 971068.24,
-        "guaranteedProfit": -28931.76,
-        "detectedAt": "2026-09-24T02:38:00.242Z"
-      },
-      {
-        "id": "sb_1790217480242_vb3xd",
-        "eventName": "Deportivo Pereira Vs Internacional De Bogota",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "BetPlay",
-            "odd": 3.5,
-            "stakePercentage": 27.71,
-            "recommendedStake": 277063.67,
-            "expectedPayout": 969722.85
-          },
-          {
-            "selection": "X",
-            "bookmaker": "Wplay",
-            "odd": 3.3,
-            "stakePercentage": 29.39,
-            "recommendedStake": 293855.41,
-            "expectedPayout": 969722.85
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Wplay",
-            "odd": 2.26,
-            "stakePercentage": 42.91,
-            "recommendedStake": 429080.92,
-            "expectedPayout": 969722.88
-          }
-        ],
-        "totalImpliedProbability": 1.0312,
-        "isSurebet": false,
-        "profitMarginPercentage": -3.03,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 969722.85,
-        "guaranteedProfit": -30277.15,
-        "detectedAt": "2026-09-24T02:38:00.242Z"
-      },
-      {
-        "id": "sb_1790217480242_kj61w",
-        "eventName": "Sho Shimabukuro Vs Hugo Gaston",
-        "sport": "tennis",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Wplay",
-            "odd": 2.05,
-            "stakePercentage": 47.16,
-            "recommendedStake": 471649.48,
-            "expectedPayout": 966881.43
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
-            "odd": 1.83,
-            "stakePercentage": 52.84,
-            "recommendedStake": 528350.52,
-            "expectedPayout": 966881.45
-          }
-        ],
-        "totalImpliedProbability": 1.0343,
-        "isSurebet": false,
-        "profitMarginPercentage": -3.31,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 966881.43,
-        "guaranteedProfit": -33118.57,
-        "detectedAt": "2026-09-24T02:38:00.242Z"
-      },
-      {
-        "id": "sb_1790217480243_ymu7d",
-        "eventName": "Perth Wildcats Vs Adelaide 36ers",
-        "sport": "basketball",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Wplay",
-            "odd": 2,
-            "stakePercentage": 48.32,
-            "recommendedStake": 483204.13,
-            "expectedPayout": 966408.26
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
-            "odd": 1.87,
-            "stakePercentage": 51.68,
-            "recommendedStake": 516795.87,
-            "expectedPayout": 966408.28
-          }
-        ],
-        "totalImpliedProbability": 1.0348,
-        "isSurebet": false,
-        "profitMarginPercentage": -3.36,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 966408.26,
-        "guaranteedProfit": -33591.74,
-        "detectedAt": "2026-09-24T02:38:00.243Z"
-      }
-    ]
-  },
-  {
-    "timestamp": "2026-09-24T02:37:56.665Z",
-    "surebetsFoundCount": 0,
-    "highestProfitMargin": -1.05,
-    "opportunities": [
-      {
-        "id": "sb_1790217476647_tv9jn",
-        "eventName": "Deportivo Cali Vs Aguilas Doradas Rionegro",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Wplay",
-            "odd": 1.85,
-            "stakePercentage": 53.49,
-            "recommendedStake": 534875.37,
-            "expectedPayout": 989519.43
-          },
-          {
-            "selection": "X",
-            "bookmaker": "BetPlay",
-            "odd": 3.65,
-            "stakePercentage": 27.11,
-            "recommendedStake": 271101.21,
-            "expectedPayout": 989519.42
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
-            "odd": 5.1,
-            "stakePercentage": 19.4,
-            "recommendedStake": 194023.42,
-            "expectedPayout": 989519.44
-          }
-        ],
-        "totalImpliedProbability": 1.0106,
-        "isSurebet": false,
-        "profitMarginPercentage": -1.05,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 989519.42,
-        "guaranteedProfit": -10480.58,
-        "detectedAt": "2026-09-24T02:37:56.647Z"
-      },
-      {
-        "id": "sb_1790217476647_ofuv3",
-        "eventName": "Atlético Nacional Vs Millonarios",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Wplay",
-            "odd": 1.87,
-            "stakePercentage": 51.93,
-            "recommendedStake": 519287.83,
-            "expectedPayout": 971068.24
-          },
-          {
-            "selection": "X",
-            "bookmaker": "BetPlay",
-            "odd": 3.85,
-            "stakePercentage": 25.22,
-            "recommendedStake": 252225.52,
-            "expectedPayout": 971068.25
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
-            "odd": 4.25,
-            "stakePercentage": 22.85,
-            "recommendedStake": 228486.65,
-            "expectedPayout": 971068.26
-          }
-        ],
-        "totalImpliedProbability": 1.0298,
-        "isSurebet": false,
-        "profitMarginPercentage": -2.89,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 971068.24,
-        "guaranteedProfit": -28931.76,
-        "detectedAt": "2026-09-24T02:37:56.647Z"
-      },
-      {
-        "id": "sb_1790217476647_xrfrl",
-        "eventName": "Deportivo Pereira Vs Internacional De Bogota",
-        "sport": "football",
-        "marketType": "1X2",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "BetPlay",
-            "odd": 3.5,
-            "stakePercentage": 27.71,
-            "recommendedStake": 277063.67,
-            "expectedPayout": 969722.85
-          },
-          {
-            "selection": "X",
-            "bookmaker": "Wplay",
-            "odd": 3.3,
-            "stakePercentage": 29.39,
-            "recommendedStake": 293855.41,
-            "expectedPayout": 969722.85
-          },
-          {
-            "selection": "2",
-            "bookmaker": "Wplay",
-            "odd": 2.26,
-            "stakePercentage": 42.91,
-            "recommendedStake": 429080.92,
-            "expectedPayout": 969722.88
-          }
-        ],
-        "totalImpliedProbability": 1.0312,
-        "isSurebet": false,
-        "profitMarginPercentage": -3.03,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 969722.85,
-        "guaranteedProfit": -30277.15,
-        "detectedAt": "2026-09-24T02:37:56.647Z"
-      },
-      {
-        "id": "sb_1790217476648_t23ln",
-        "eventName": "Sho Shimabukuro Vs Hugo Gaston",
-        "sport": "tennis",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Wplay",
-            "odd": 2.05,
-            "stakePercentage": 47.16,
-            "recommendedStake": 471649.48,
-            "expectedPayout": 966881.43
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
-            "odd": 1.83,
-            "stakePercentage": 52.84,
-            "recommendedStake": 528350.52,
-            "expectedPayout": 966881.45
-          }
-        ],
-        "totalImpliedProbability": 1.0343,
-        "isSurebet": false,
-        "profitMarginPercentage": -3.31,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 966881.43,
-        "guaranteedProfit": -33118.57,
-        "detectedAt": "2026-09-24T02:37:56.648Z"
-      },
-      {
-        "id": "sb_1790217476650_xhsmg",
-        "eventName": "Perth Wildcats Vs Adelaide 36ers",
-        "sport": "basketball",
-        "marketType": "MONEYLINE_2WAY",
-        "outcomes": [
-          {
-            "selection": "1",
-            "bookmaker": "Wplay",
-            "odd": 2,
-            "stakePercentage": 48.32,
-            "recommendedStake": 483204.13,
-            "expectedPayout": 966408.26
-          },
-          {
-            "selection": "2",
-            "bookmaker": "BetPlay",
-            "odd": 1.87,
-            "stakePercentage": 51.68,
-            "recommendedStake": 516795.87,
-            "expectedPayout": 966408.28
-          }
-        ],
-        "totalImpliedProbability": 1.0348,
-        "isSurebet": false,
-        "profitMarginPercentage": -3.36,
-        "totalInvestment": 1000000,
-        "guaranteedPayout": 966408.26,
-        "guaranteedProfit": -33591.74,
-        "detectedAt": "2026-09-24T02:37:56.650Z"
-      }
-    ]
-  },
-  {
-    "timestamp": "2026-09-24T02:37:55.133Z",
-    "surebetsFoundCount": 0,
-    "highestProfitMargin": 0,
-    "opportunities": []
   }
 ]

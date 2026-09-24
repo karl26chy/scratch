@@ -336,8 +336,8 @@ export class SurebetCalculatorService {
    * Ahora incluye persistencia (wplay + stake) para combinar ambas vistas
    */
   public getLiveOpportunities(totalStake = 1000000): SurebetOpportunity[] { // COP
-    const persisted = OddsPersistenceService.getInstance().getAllOdds();
-    const combined = [...persisted, ...this.liveOddsStore];
+    // Solo las cuotas del último Scraping Global (no las de scrapers sueltos de cada módulo ni el store en memoria).
+    const combined = OddsPersistenceService.getInstance().getAllOdds('global');
     // Deduplicar por bookmaker+event+selection
     const seen = new Set<string>();
     const deduped: BookmakerOdd[] = [];
@@ -356,12 +356,12 @@ export class SurebetCalculatorService {
   }
 
   public getPersistedStats(): { wplay: number; stake: number; betplay: number; bwin: number; rushbet: number; total: number; timestamp: string; live: number; byBookmaker: Record<string, number> } {
-    const stats = OddsPersistenceService.getInstance().getStats();
+    const stats = OddsPersistenceService.getInstance().getStats('global');
     return { ...stats, live: this.liveOddsStore.length };
   }
 
   public getAllPersistedOdds(): BookmakerOdd[] {
-    return OddsPersistenceService.getInstance().getAllOdds();
+    return OddsPersistenceService.getInstance().getAllOdds('global');
   }
 
   private getRequiredSelectionsForMarket(marketType: MarketType): string[] {

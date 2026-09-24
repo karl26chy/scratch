@@ -12,6 +12,7 @@ interface SurebetRow {
   profitMarginPercentage: number;
   totalInvestment: number;
   guaranteedProfit: number;
+  isLive?: boolean;
 }
 
 export const SurebetPage: React.FC = () => {
@@ -20,6 +21,7 @@ export const SurebetPage: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [stats, setStats] = useState<{ wplay: number; stake: number; betplay: number; bwin: number; rushbet: number; total: number; byBookmaker?: Record<string, number> } | null>(null);
   const [history, setHistory] = useState<any[]>([]);
+  const [lastGlobalAt, setLastGlobalAt] = useState<string | null>(null);
 
   const fetchSurebets = async () => {
     setLoading(true);
@@ -29,6 +31,7 @@ export const SurebetPage: React.FC = () => {
       if (json.success) {
         setSurebets(json.data.opportunities || []);
         setStats(json.data.stats || json.data.sources || null);
+        setLastGlobalAt(json.data.stats?.timestamp ?? null);
       }
     } catch (e) {
       console.error(e);
@@ -49,6 +52,9 @@ export const SurebetPage: React.FC = () => {
     fetchSurebets();
     fetchHistory();
   }, []);
+
+  // Antigüedad del último Scraping Global (el cálculo usa solo esos datos)
+  const globalAgeMin = lastGlobalAt && (stats?.total ?? 0) > 0 ? Math.max(0, Math.round((Date.now() - new Date(lastGlobalAt).getTime()) / 60000)) : null;
 
   const handleCalculate = () => {
     fetchSurebets();
@@ -99,9 +105,26 @@ export const SurebetPage: React.FC = () => {
         </div>
       </div>
 
+      <div
+        style={{
+          padding: '0.75rem 1rem',
+          borderRadius: '10px',
+          fontSize: '0.8rem',
+          border: `1px solid ${globalAgeMin === null ? 'rgba(245,158,11,0.3)' : 'rgba(99,102,241,0.3)'}`,
+          background: globalAgeMin === null ? 'rgba(245,158,11,0.1)' : 'rgba(99,102,241,0.08)',
+          color: globalAgeMin === null ? '#fbbf24' : 'var(--text-secondary)',
+        }}
+      >
+        {globalAgeMin === null ? (
+          <>🌐 Aún no hay datos: este módulo calcula <strong>solo con el Scraping Global</strong>. Ejecuta uno desde <strong>Scraping Global</strong> (el scraping de cada casa por separado no entra al cálculo).</>
+        ) : (
+          <>🌐 Calculando con los datos del <strong>último Scraping Global</strong> (hace {globalAgeMin} min). El scraping de cada casa por separado no entra al cálculo.</>
+        )}
+      </div>
+
       {surebets.length === 0 ? (
         <div style={{ textAlign: 'center', padding: '2rem', background: 'var(--bg-surface)', borderRadius: '12px', border: '1px solid var(--border-color)' }}>
-          <p style={{ color: 'var(--text-muted)' }}>No hay surebets — scrapea Wplay, Stake, BetPlay, Bwin o Rushbet para combinar cuotas.</p>
+          <p style={{ color: 'var(--text-muted)' }}>No hay surebets — ejecuta un Scraping Global para combinar las cuotas de todas las casas.</p>
           <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '0.5rem' }}>Se necesitan al menos 2 bookmakers con el mismo evento (ej. Wplay + Stake) y TIP &lt; 1.0</p>
         </div>
       ) : (
@@ -124,7 +147,10 @@ export const SurebetPage: React.FC = () => {
                 const best2 = sb.outcomes.find((o) => o.selection === '2');
                 return (
                   <tr key={sb.id} style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-                    <td style={{ padding: '0.7rem', fontWeight: 600 }}>{sb.eventName}</td>
+                    <td style={{ padding: '0.7rem', fontWeight: 600 }}>
+                      {sb.eventName}
+                      {sb.isLive && <span style={{ marginLeft: '0.5rem', fontSize: '0.7rem', color: '#fbbf24' }}>🔴 EN VIVO</span>}
+                    </td>
                     <td style={{ padding: '0.7rem' }}>{best1 ? `${best1.odd} (${best1.bookmaker})` : '-'}</td>
                     <td style={{ padding: '0.7rem' }}>{bestX ? `${bestX.odd} (${bestX.bookmaker})` : '-'}</td>
                     <td style={{ padding: '0.7rem' }}>{best2 ? `${best2.odd} (${best2.bookmaker})` : '-'}</td>

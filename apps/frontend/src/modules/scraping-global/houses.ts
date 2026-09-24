@@ -126,7 +126,8 @@ export async function scrapeHouse(house: HouseConfig, sports: SportKey[]): Promi
     const res = await fetch(`${API_BASE}/scrape/custom`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ urls, selectors: EMPTY_SELECTORS, useProxy: false, timeoutMs: house.backendTimeoutMs }),
+      // origin: 'global' → el backend guarda estas cuotas en el almacén que usa el módulo Arbitraje & Surebets.
+      body: JSON.stringify({ urls, selectors: EMPTY_SELECTORS, useProxy: false, timeoutMs: house.backendTimeoutMs, origin: 'global' }),
       signal: controller.signal,
     });
     const data = await res.json();

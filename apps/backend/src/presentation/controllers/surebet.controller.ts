@@ -122,13 +122,14 @@ export class SurebetController {
     }));
     // Guardar histórico
     this.saveHistory(result);
-    const stats = OddsPersistenceService.getInstance().getStats();
+    const stats = OddsPersistenceService.getInstance().getStats('global');
     res.status(200).json({
       success: true,
       data: {
         ...result,
         stats,
         freshness,
+        source: 'global',
         ttlMinutes: SurebetCalculatorService.ODDS_TTL_MS / 60000,
         sources: { wplay: stats.wplay, stake: stats.stake, betplay: stats.betplay, bwin: stats.bwin, rushbet: stats.rushbet, total: stats.total, byBookmaker: stats.byBookmaker },
       },

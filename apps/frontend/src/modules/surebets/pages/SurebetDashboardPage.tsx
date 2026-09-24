@@ -120,6 +120,9 @@ export const SurebetDashboardPage: React.FC = () => {
           <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginTop: '0.3rem' }}>
             Monitoreo en tiempo real de discrepancias en cuotas decimales con cálculo de probabilidad implícita total (TIP) y optimización de capital.
           </p>
+          <p style={{ color: 'var(--text-muted)', fontSize: '0.8rem', marginTop: '0.3rem' }}>
+            🌐 Calcula únicamente con los datos del último <strong>Scraping Global</strong>.
+          </p>
         </div>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>

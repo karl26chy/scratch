@@ -1,6 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import type { BookmakerOdd } from '../domain/types/surebet.types.js';
+import { currentScrapeOrigin } from './scrape-context.js';
 
 // Bookmakers conocidos por nombre — cualquier otro se guarda dinámicamente
 // bajo su propio slug (derivado del nombre) en vez de perderse o mezclarse
@@ -16,7 +17,18 @@ interface PersistedOdds {
 const MIN_REPLACE_RATIO = 0.25;
 
 const DATA_DIR = path.resolve(process.cwd(), 'data');
-const DATA_FILE = path.join(DATA_DIR, 'odds.json');
+/**
+ * Dos almacenes:
+ *  - 'module': odds.json — todo lo que guarda cualquier scraper (páginas dedicadas y Scraping Global).
+ *  - 'global': odds-global.json — solo lo que guarda el módulo Scraping Global. Es la ÚNICA fuente del módulo
+ *    Arbitraje & Surebets: así el cálculo usa una foto coherente de un mismo scraping global y no mezcla cuotas
+ *    sueltas de páginas dedicadas scrapeadas en momentos distintos.
+ */
+export type OddsStore = 'module' | 'global';
+const DATA_FILES: Record<OddsStore, string> = {
+  module: path.join(DATA_DIR, 'odds.json'),
+  global: path.join(DATA_DIR, 'odds-global.json'),
+};
 
 function ensureDataDir(): void {
   if (!fs.existsSync(DATA_DIR)) {
@@ -41,8 +53,9 @@ export class OddsPersistenceService {
     return OddsPersistenceService.instance;
   }
 
-  private loadRaw(): PersistedOdds {
+  private loadRaw(store: OddsStore = 'module'): PersistedOdds {
     ensureDataDir();
+    const DATA_FILE = DATA_FILES[store];
     if (!fs.existsSync(DATA_FILE)) {
       return { books: {}, timestamp: new Date().toISOString() };
     }
@@ -64,9 +77,9 @@ export class OddsPersistenceService {
     }
   }
 
-  private saveRaw(data: PersistedOdds): void {
+  private saveRaw(data: PersistedOdds, store: OddsStore = 'module'): void {
     ensureDataDir();
-    fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2), 'utf-8');
+    fs.writeFileSync(DATA_FILES[store], JSON.stringify(data, null, 2), 'utf-8');
   }
 
   public saveWplayOdds(odds: BookmakerOdd[]): void {
@@ -92,7 +105,13 @@ export class OddsPersistenceService {
   }
 
   private saveOddsForSlug(slug: string, odds: BookmakerOdd[]): void {
-    const current = this.loadRaw();
+    // Siempre al almacén general; si el scraping viene del Scraping Global, también al almacén global.
+    this.mergeIntoStore('module', slug, odds);
+    if (currentScrapeOrigin() === 'global') this.mergeIntoStore('global', slug, odds);
+  }
+
+  private mergeIntoStore(store: OddsStore, slug: string, odds: BookmakerOdd[]): void {
+    const current = this.loadRaw(store);
     // Reemplaza solo los deportes presentes en este scraping: scrapear únicamente tenis no debe
     // borrar las cuotas de fútbol que la misma casa ya tenía guardadas.
     const previous = current.books[slug] || [];
@@ -122,26 +141,28 @@ export class OddsPersistenceService {
 
     current.books[slug] = [...survivors, ...odds];
     current.timestamp = new Date().toISOString();
-    this.saveRaw(current);
+    this.saveRaw(current, store);
     const mergedNote = mergeSports.size ? ` · fusionado (muestra pequeña): ${[...mergeSports].join(', ')}` : '';
-    console.log(`💾 [OddsPersistence] ${slug} guardado: ${odds.length} odds nuevas (+${survivors.length} previas conservadas)${mergedNote}`);
+    console.log(`💾 [OddsPersistence:${store}] ${slug} guardado: ${odds.length} odds nuevas (+${survivors.length} previas conservadas)${mergedNote}`);
   }
 
-  public loadOdds(): PersistedOdds {
-    return this.loadRaw();
+  public loadOdds(store: OddsStore = 'global'): PersistedOdds {
+    return this.loadRaw(store);
   }
 
-  public getAllOdds(): BookmakerOdd[] {
-    const data = this.loadRaw();
+  /** Cuotas guardadas. Por defecto las del Scraping Global (fuente del cálculo de surebets). */
+  public getAllOdds(store: OddsStore = 'global'): BookmakerOdd[] {
+    const data = this.loadRaw(store);
     return Object.values(data.books).flat();
   }
 
   public clear(): void {
-    this.saveRaw({ books: {}, timestamp: new Date().toISOString() });
+    this.saveRaw({ books: {}, timestamp: new Date().toISOString() }, 'module');
+    this.saveRaw({ books: {}, timestamp: new Date().toISOString() }, 'global');
   }
 
-  public getStats(): { total: number; timestamp: string; byBookmaker: Record<string, number>; wplay: number; stake: number; betplay: number; bwin: number; rushbet: number } {
-    const data = this.loadRaw();
+  public getStats(store: OddsStore = 'global'): { total: number; timestamp: string; byBookmaker: Record<string, number>; wplay: number; stake: number; betplay: number; bwin: number; rushbet: number } {
+    const data = this.loadRaw(store);
     const byBookmaker: Record<string, number> = {};
     let total = 0;
     for (const [slug, list] of Object.entries(data.books)) {
