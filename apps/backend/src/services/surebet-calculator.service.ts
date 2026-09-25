@@ -12,12 +12,20 @@ import { distance } from 'fastest-levenshtein';
 export class SurebetCalculatorService {
   /** Una cuota por encima de esta proporción de la mediana (3+ casas) se considera un valor atípico. */
   private static readonly MAX_ODD_OVER_MEDIAN = 1.5;
-  /** Las cuotas guardadas con más antigüedad que esto se ignoran en el cálculo. */
-  public static readonly ODDS_TTL_MS = 60 * 60 * 1000;
+  /** Antigüedad máxima (desde el scraping) de una cuota prepartido. Más vieja se ignora en el cálculo. */
+  public static readonly ODDS_TTL_MS = 20 * 60 * 1000;
+  /** Antigüedad máxima de una cuota en vivo: cambian en segundos. */
+  public static readonly LIVE_ODDS_TTL_MS = 3 * 60 * 1000;
   /** Tolerancia entre horas de inicio para considerar que dos cuotas son del MISMO partido. */
   private static readonly MAX_START_DIFF_MS = 45 * 60 * 1000;
-  /** Diferencia máxima de antigüedad entre las patas de un surebet. */
-  private static readonly MAX_LEG_SKEW_MS = 15 * 60 * 1000;
+  /** Tenis: la hora publicada es un "no antes de" que Bwin y Stake desplazan hasta ~2 h respecto a las demás casas. */
+  private static readonly MAX_START_DIFF_TENNIS_MS = 90 * 60 * 1000;
+  /** Diferencia máxima de hora para aceptar un emparejamiento por nombre aproximado (ver relaxedSameMatch). */
+  private static readonly RELAXED_START_DIFF_MS = 15 * 60 * 1000;
+  /** Diferencia máxima de antigüedad entre las patas de un surebet prepartido. */
+  private static readonly MAX_LEG_SKEW_MS = 10 * 60 * 1000;
+  /** ...y cuando alguna pata es en vivo. */
+  private static readonly MAX_LIVE_LEG_SKEW_MS = 2 * 60 * 1000;
 
   private static instance: SurebetCalculatorService;
   private liveOddsStore: BookmakerOdd[] = [];
@@ -72,17 +80,10 @@ export class SurebetCalculatorService {
     totalStake: number = 1000000, // COP
     minProfitMargin: number = 0
   ): AnalyzeSurebetsResponseDto {
-    // TTL: ignorar odds con más de 60 minutos para análisis. El scraping es manual
-    // (botón "Scrapear Todas las Casas" o los módulos dedicados), no continuo, así
-    // que una ventana de 5 minutos descartaba casi siempre el último scrape para
-    // cuando el usuario llegaba a revisar el feed de oportunidades.
-    const ttlMs = SurebetCalculatorService.ODDS_TTL_MS;
+    // Vigencia: el scraping es manual (Scraping Global), no continuo. Se ignoran las cuotas demasiado viejas
+    // según su tipo (prepartido / en vivo) y las prepartido cuyo partido ya empezó.
     const now = Date.now();
-    const freshOdds = odds.filter((o) => {
-      if (!o.timestamp) return true;
-      return now - new Date(o.timestamp).getTime() < ttlMs;
-    });
-    odds = freshOdds;
+    odds = odds.filter((o) => this.isOddCurrent(o, now));
     if (!odds || odds.length === 0) {
       return {
         success: true,
@@ -115,12 +116,17 @@ export class SurebetCalculatorService {
       originalName: string;
       start: number | null;
       odds: BookmakerOdd[];
+      /** casa -> nombre con el que esa casa lista este partido (una casa no lista el mismo partido con dos nombres). */
+      houseNames: Map<string, string>;
     }
     const groups: MatchGroup[] = [];
     const groupsBySlot = new Map<string, MatchGroup[]>();
     const groupsByName = new Map<string, MatchGroup[]>();
-    const startsCompatible = (a: number | null, b: number | null): boolean =>
-      a === null || b === null || Math.abs(a - b) <= SurebetCalculatorService.MAX_START_DIFF_MS;
+    const startsCompatible = (a: number | null, b: number | null, sport: SportType): boolean =>
+      a === null ||
+      b === null ||
+      Math.abs(a - b) <=
+        (sport === 'tennis' ? SurebetCalculatorService.MAX_START_DIFF_TENNIS_MS : SurebetCalculatorService.MAX_START_DIFF_MS);
 
     for (const odd of odds) {
       if (!odd.odd || isNaN(odd.odd) || odd.odd <= 1.0) continue;
@@ -130,29 +136,51 @@ export class SurebetCalculatorService {
       const sport = (odd.sport || 'football') as SportType;
       const slotKey = `${marketType}:::${sport}`;
       const nameKey = `${slotKey}:::${eventPart}`;
+      const houseKey = odd.bookmaker.trim().toLowerCase();
       const parsedStart = odd.startTime ? new Date(odd.startTime).getTime() : NaN;
       const start = isNaN(parsedStart) ? null : parsedStart;
 
-      let group: MatchGroup | undefined = groupsByName.get(nameKey)?.find((g) => startsCompatible(g.start, start));
+      let group: MatchGroup | undefined = groupsByName.get(nameKey)?.find((g) => startsCompatible(g.start, start, sport));
       if (!group) {
+        // Las coincidencias estrictas ganan de inmediato. Las aproximadas (fútbol: traducciones y sufijos de club;
+        // tenis: iniciales y dobles) solo se aceptan si hay UN único candidato: con dos es ambiguo y no se fusiona.
+        const loose: MatchGroup[] = [];
         for (const candidate of groupsBySlot.get(slotKey) || []) {
-          const similar =
+          if (!startsCompatible(candidate.start, start, sport)) continue;
+          const strict =
             sport === 'table_tennis'
               ? this.tableTennisEventsMatch(eventPart, candidate.eventPart)
               : this.eventNamesAreSimilar(eventPart, candidate.eventPart);
-          if (similar && startsCompatible(candidate.start, start)) {
+          if (strict) {
             group = candidate;
             break;
           }
+          // Una casa nunca lista el mismo partido con dos nombres: si el candidato ya trae OTRO evento de esta casa,
+          // no puede ser el mismo partido (evita fusionar, p. ej., dos partidos "(U-21)" de la misma casa).
+          const sameHouseName = candidate.houseNames.get(houseKey);
+          if (sameHouseName !== undefined && sameHouseName !== odd.eventName) continue;
+          if (
+            (sport === 'tennis' && this.tennisEventsMatch(odd.eventName, candidate.originalName)) ||
+            this.relaxedSameMatch(sport, eventPart, candidate.eventPart, start, candidate.start)
+          ) {
+            loose.push(candidate);
+          }
         }
+        if (!group && loose.length === 1) group = loose[0];
       }
 
       if (group) {
         group.odds.push(odd);
+        if (!group.houseNames.has(houseKey)) group.houseNames.set(houseKey, odd.eventName);
         if (group.start === null && start !== null) group.start = start;
+        // Registrar también este nombre: las demás cuotas con el mismo nombre exacto (p. ej. Rushbet y BetPlay, mismo
+        // proveedor) deben ir directo a este grupo y no re-evaluarse como candidatas aproximadas.
+        const named = groupsByName.get(nameKey);
+        if (!named) groupsByName.set(nameKey, [group]);
+        else if (!named.includes(group)) named.push(group);
       } else {
         // originalName: nombre humano del PRIMER odd del grupo (es lo que verá el usuario, nunca la clave interna).
-        const created: MatchGroup = { eventPart, marketType, sport, originalName: odd.eventName, start, odds: [odd] };
+        const created: MatchGroup = { eventPart, marketType, sport, originalName: odd.eventName, start, odds: [odd], houseNames: new Map([[houseKey, odd.eventName]]) };
         groups.push(created);
         const slot = groupsBySlot.get(slotKey);
         if (slot) slot.push(created);
@@ -273,7 +301,10 @@ export class SurebetCalculatorService {
     // 3) Frescura: las cuotas de un surebet deben ser de momentos cercanos; combinar una cuota de hace 40 min
     //    con otra de hace 1 min (sobre todo en vivo) genera arbitrajes que ya no existen.
     const stamps = selectedBestOdds.map((o) => (o.timestamp ? new Date(o.timestamp).getTime() : NaN)).filter((t) => !isNaN(t));
-    if (stamps.length === selectedBestOdds.length && Math.max(...stamps) - Math.min(...stamps) > SurebetCalculatorService.MAX_LEG_SKEW_MS) {
+    const maxSkew = selectedBestOdds.some((o) => o.isLive)
+      ? SurebetCalculatorService.MAX_LIVE_LEG_SKEW_MS
+      : SurebetCalculatorService.MAX_LEG_SKEW_MS;
+    if (stamps.length === selectedBestOdds.length && Math.max(...stamps) - Math.min(...stamps) > maxSkew) {
       return null;
     }
     const isSurebet = totalImpliedProbability < 1.0;
@@ -355,7 +386,7 @@ export class SurebetCalculatorService {
     return result.opportunities;
   }
 
-  public getPersistedStats(): { wplay: number; stake: number; betplay: number; bwin: number; rushbet: number; total: number; timestamp: string; live: number; byBookmaker: Record<string, number> } {
+  public getPersistedStats(): { wplay: number; stake: number; betplay: number; bwin: number; rushbet: number; betsson: number; total: number; timestamp: string; live: number; byBookmaker: Record<string, number> } {
     const stats = OddsPersistenceService.getInstance().getStats('global');
     return { ...stats, live: this.liveOddsStore.length };
   }
@@ -416,6 +447,100 @@ export class SurebetCalculatorService {
     const maxLen = Math.max(s1.length, s2.length);
     if (maxLen === 0) return 1.0;
     return 1.0 - distance(s1, s2) / maxLen;
+  }
+
+  /** Vigente = dentro del TTL de su tipo y, si es prepartido, con el partido aún sin empezar. */
+  private isOddCurrent(o: BookmakerOdd, now: number): boolean {
+    if (o.timestamp) {
+      const age = now - new Date(o.timestamp).getTime();
+      const ttl = o.isLive ? SurebetCalculatorService.LIVE_ODDS_TTL_MS : SurebetCalculatorService.ODDS_TTL_MS;
+      if (!(age < ttl)) return false;
+    }
+    if (!o.isLive && o.startTime) {
+      const start = new Date(o.startTime).getTime();
+      if (!isNaN(start) && start <= now) return false;
+    }
+    return true;
+  }
+
+  /**
+   * Fútbol: acepta nombres aproximados (>= 0.60 por lado, en vez de 0.80) SOLO si las dos horas de inicio son
+   * conocidas y están a <= 15 min. Cubre traducciones y sufijos ("Napoli"/"Nápoles", "Querétaro F.C."/"Querétaro").
+   * La hora casi idéntica es la garantía; el llamador además exige que el candidato sea único.
+   */
+  private relaxedSameMatch(sport: SportType, keyA: string, keyB: string, startA: number | null, startB: number | null): boolean {
+    if (sport !== 'football') return false;
+    if (startA === null || startB === null || Math.abs(startA - startB) > SurebetCalculatorService.RELAXED_START_DIFF_MS) return false;
+    const a = keyA.split('|');
+    const b = keyB.split('|');
+    if (a.length !== 2 || b.length !== 2) return false;
+    return this.relaxedSideMatches(a[0], b[0]) && this.relaxedSideMatches(a[1], b[1]);
+  }
+
+  /**
+   * Compara el nombre SIN sufijos de categoría (si no, "Estonia (U-21)" y "Eslovaquia (U-21)" se parecen por el sufijo).
+   * La categoría de edad y la de reserva ("II", "B") deben coincidir; la de mujeres puede faltar en una casa.
+   */
+  private relaxedSideMatches(sideA: string, sideB: string): boolean {
+    const a = this.splitQualifiers(sideA);
+    const b = this.splitQualifiers(sideB);
+    if (a.quals !== b.quals || a.core.length < 4 || b.core.length < 4) return false;
+    return this.similarAtLeast(a.core, b.core, 0.6);
+  }
+
+  private splitQualifiers(side: string): { core: string; quals: string } {
+    const tokens = side.split(' ').filter(Boolean);
+    const quals: string[] = [];
+    const core: string[] = [];
+    for (let i = 0; i < tokens.length; i++) {
+      const t = tokens[i];
+      if ((t === 'u' || t === 'sub') && /^\d{2}$/.test(tokens[i + 1] || '')) {
+        quals.push('u' + tokens[++i]);
+      } else if (t === 'ii' || t === 'b') {
+        quals.push('reserva');
+      } else if (t !== 'f' && t !== 'fem' && t !== 'femenino' && t !== 'women' && t !== 'w') {
+        core.push(t);
+      }
+    }
+    return { core: core.join(' '), quals: quals.sort().join(',') };
+  }
+
+  /**
+   * Tenis (individuales y dobles): las casas escriben "Bayldon B / Fancutt T", "B. Bayldon/T. Fancutt" o "A Kubareva" /
+   * "Anna Kubareva", y en dobles a veces cambian el orden de la pareja. Se compara jugador a jugador (local con local,
+   * visitante con visitante). Un jugador coincide si su apellido (token más largo) es casi igual y los demás tokens
+   * son compatibles como iniciales.
+   */
+  private tennisEventsMatch(rawA: string, rawB: string): boolean {
+    const a = this.splitEventName(rawA);
+    const b = this.splitEventName(rawB);
+    if (a.length !== 2 || b.length !== 2) return false;
+    return this.tennisSideMatches(a[0], b[0]) && this.tennisSideMatches(a[1], b[1]);
+  }
+
+  private tennisSideMatches(sideA: string, sideB: string): boolean {
+    const pa = sideA.split('/').map((p) => p.trim()).filter(Boolean);
+    const pb = sideB.split('/').map((p) => p.trim()).filter(Boolean);
+    if (pa.length === 0 || pa.length !== pb.length || pa.length > 2) return false;
+    if (pa.length === 1) return this.tennisPlayersMatch(pa[0], pb[0]);
+    return (
+      (this.tennisPlayersMatch(pa[0], pb[0]) && this.tennisPlayersMatch(pa[1], pb[1])) ||
+      (this.tennisPlayersMatch(pa[0], pb[1]) && this.tennisPlayersMatch(pa[1], pb[0]))
+    );
+  }
+
+  private tennisPlayersMatch(p1: string, p2: string): boolean {
+    const t1 = this.normalizeTeamName(p1).split(' ').filter(Boolean);
+    const t2 = this.normalizeTeamName(p2).split(' ').filter(Boolean);
+    if (t1.length === 0 || t2.length === 0) return false;
+    const longest = (t: string[]) => t.reduce((x, y) => (y.length > x.length ? y : x), '');
+    const s1 = longest(t1);
+    const s2 = longest(t2);
+    if (this.levenshteinSimilarity(s1, s2) < 0.85) return false;
+    const r1 = t1.filter((t) => t !== s1);
+    const r2 = t2.filter((t) => t !== s2);
+    if (r1.length === 0 || r2.length === 0) return true;
+    return r1.some((x) => r2.some((y) => x.startsWith(y) || y.startsWith(x)));
   }
 
   /**

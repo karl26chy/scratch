@@ -85,7 +85,7 @@ export const ScrapeGlobalPage: React.FC = () => {
   const [surebets, setSurebets] = useState<SurebetRow[]>([]);
   const [totalOdds, setTotalOdds] = useState<number | null>(null);
   const [freshness, setFreshness] = useState<FreshnessRow[]>([]);
-  const [ttlMinutes, setTtlMinutes] = useState(60);
+  const [ttlMinutes, setTtlMinutes] = useState(20);
   const [surebetsError, setSurebetsError] = useState<string | null>(null);
   const startedAt = useRef<Record<string, number>>({});
 
@@ -173,7 +173,7 @@ export const ScrapeGlobalPage: React.FC = () => {
         setSurebets(json.data.opportunities || []);
         setTotalOdds(json.data.stats?.total ?? null);
         setFreshness(json.data.freshness || []);
-        setTtlMinutes(json.data.ttlMinutes ?? 60);
+        setTtlMinutes(json.data.ttlMinutes ?? 20);
       } else {
         setSurebetsError('No se pudo calcular surebets tras el scraping.');
       }

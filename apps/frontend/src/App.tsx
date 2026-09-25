@@ -9,6 +9,7 @@ import { StakePage } from './modules/scrapers/pages/StakePage.js';
 import { WplayPage } from './modules/scrapers/pages/WplayPage.js';
 import { BwinPage } from './modules/scrapers/pages/BwinPage.js';
 import { RushbetPage } from './modules/scrapers/pages/RushbetPage.js';
+import { BetssonPage } from './modules/scrapers/pages/BetssonPage.js';
 import { ScrapeGlobalPage } from './modules/scraping-global/pages/ScrapeGlobalPage.js';
 import { AdaptersPage } from './modules/adapters/pages/AdaptersPage.js';
 import { SurebetDashboardPage } from './modules/surebets/pages/SurebetDashboardPage.js';
@@ -70,6 +71,8 @@ export const App: React.FC = () => {
           {currentTab === 'bwin' && <BwinPage />}
 
           {currentTab === 'rushbet' && <RushbetPage />}
+
+          {currentTab === 'betsson' && <BetssonPage />}
 
           {currentTab === 'adapters' && <AdaptersPage />}
 

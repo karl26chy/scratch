@@ -138,7 +138,8 @@ const inSlug = (name: string, slug: string): boolean => {
 const MONTHS: Record<string, number> = { ene: 0, feb: 1, mar: 2, abr: 3, may: 4, jun: 5, jul: 6, ago: 7, sep: 8, set: 8, oct: 9, nov: 10, dic: 11 };
 
 /**
- * '24 Sep' + '19:30' (hora de Bogotá, UTC-5) → ISO UTC. Sin fecha (en vivo) devuelve undefined.
+ * '24 Sep' + '19:30' (la página muestra hora UTC-3, no la de Bogotá: medido contra BetPlay/Bwin, con UTC-5 todos los
+ * deportes quedaban exactamente 120 min tarde) → ISO UTC. Sin fecha (en vivo) devuelve undefined.
  * El año se infiere: la fecha más cercana en el futuro (o de hasta 2 días atrás).
  */
 export function parseWplayStart(dateText: string, timeText: string, now = new Date()): string | undefined {
@@ -147,7 +148,7 @@ export function parseWplayStart(dateText: string, timeText: string, now = new Da
   if (!d || !t) return undefined;
   const month = MONTHS[d[2].toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')];
   if (month === undefined) return undefined;
-  const at = (year: number) => new Date(Date.UTC(year, month, Number(d[1]), Number(t[1]) + 5, Number(t[2])));
+  const at = (year: number) => new Date(Date.UTC(year, month, Number(d[1]), Number(t[1]) + 3, Number(t[2])));
   let dt = at(now.getUTCFullYear());
   if (dt.getTime() < now.getTime() - 2 * 86400000) dt = at(now.getUTCFullYear() + 1);
   return dt.toISOString();

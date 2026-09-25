@@ -1,7 +1,7 @@
 export const API_BASE = 'http://localhost:4000/api';
 
 export type SportKey = 'football' | 'tennis' | 'basketball' | 'table_tennis';
-export type HouseKey = 'betplay' | 'stake' | 'wplay' | 'bwin' | 'rushbet';
+export type HouseKey = 'betplay' | 'stake' | 'wplay' | 'bwin' | 'rushbet' | 'betsson';
 
 export interface SportInfo {
   key: SportKey;
@@ -100,6 +100,20 @@ export const HOUSES: HouseConfig[] = [
     clientTimeoutMs: 60_000,
     backendTimeoutMs: 45_000,
     method: 'API Kambi',
+    browser: false,
+  },
+  {
+    key: 'betsson',
+    label: 'Betsson',
+    urls: {
+      football: 'https://www.betsson.co/apuestas-deportivas/futbol?tab=allLeagues',
+      tennis: 'https://www.betsson.co/apuestas-deportivas/tenis',
+      basketball: 'https://www.betsson.co/apuestas-deportivas/baloncesto',
+      table_tennis: 'https://www.betsson.co/apuestas-deportivas/tenis-de-mesa',
+    },
+    clientTimeoutMs: 60_000,
+    backendTimeoutMs: 45_000,
+    method: 'API directa',
     browser: false,
   },
 ];

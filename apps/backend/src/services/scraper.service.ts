@@ -15,6 +15,7 @@ import { betplayKambiAdapter } from '../infrastructure/network/adapters/betplay-
 import { bwinAdapter, parseBwinSportId } from '../infrastructure/network/adapters/bwin.adapter.js';
 import { rushbetKambiAdapter, parseRushbetSportSlug } from '../infrastructure/network/adapters/rushbet-kambi.adapter.js';
 import { extractWplayOdds } from '../infrastructure/selectors/wplay-extractor.js';
+import { betssonAdapter, parseBetssonSportSlug } from '../infrastructure/network/adapters/betsson.adapter.js';
 import { OddsPersistenceService } from './odds-persistence.service.js';
 import { EvasionService } from './evasion.service.js';
 import { SingleTestService } from './single-test.service.js';
@@ -1353,6 +1354,72 @@ export class ScraperService {
       }
     } catch (e: any) {
       console.warn('⚠️ [Rushbet] fetchDirect falló:', e.message);
+    }
+
+    // === BETSSON: Fetch directo a la API interna de Betsson (sin Playwright) ===
+    // El deporte sale de la ruta de la URL ('/apuestas-deportivas/futbol'). Los deportes del lote se piden en
+    // paralelo y un fallo en uno no cancela el resto.
+    try {
+      const betssonDomain = new URL(url).hostname;
+      if (betssonDomain.includes('betsson.co')) {
+        console.log(`⚡ [Betsson] Batch de ${targetUrls.length} URL(s) — fetch directo a la API interna (sin Playwright)`);
+        const allBetssonOdds: BookmakerOdd[] = [];
+        const betssonSuccessfulUrls: string[] = [];
+        const betssonFailedUrls: Array<{ url: string; error: string; durationMs: number }> = [];
+
+        await Promise.all(
+          [...new Set(targetUrls)].map(async (targetUrl) => {
+            const urlStart = Date.now();
+            try {
+              const sportSlug = parseBetssonSportSlug(targetUrl);
+              const urlOdds = await betssonAdapter.fetchDirect(sportSlug);
+              if (urlOdds.length > 0) {
+                allBetssonOdds.push(...urlOdds);
+                betssonSuccessfulUrls.push(targetUrl);
+              } else {
+                betssonFailedUrls.push({ url: targetUrl, error: `Betsson no devolvió cuotas para '${sportSlug}'`, durationMs: Date.now() - urlStart });
+              }
+            } catch (urlErr: any) {
+              betssonFailedUrls.push({ url: targetUrl, error: urlErr.message || 'Error desconocido', durationMs: Date.now() - urlStart });
+              console.error(`❌ [Betsson] Error procesando ${targetUrl}:`, urlErr.message);
+            }
+          }),
+        );
+
+        // Persistir solo si hay cuotas reales — nunca sobreescribir con array vacío
+        if (allBetssonOdds.length > 0) {
+          const { SurebetCalculatorService } = await import('./surebet-calculator.service.js');
+          SurebetCalculatorService.getInstance().addScrapedOdds(allBetssonOdds);
+          OddsPersistenceService.getInstance().saveOddsForBookmaker('Betsson', allBetssonOdds);
+          console.log(`✅ [Betsson] Batch completo: ${allBetssonOdds.length} odds de ${betssonSuccessfulUrls.length} URL(s)`);
+        } else {
+          console.warn('⚠️ [Betsson] Batch completo con 0 odds — no se sobreescribe el histórico en disco');
+        }
+
+        const betssonMatches = this.convertBookmakerOddsToMatches(allBetssonOdds);
+        return {
+          success: allBetssonOdds.length > 0,
+          url: primaryRawUrl,
+          urls: targetUrls,
+          successfulUrls: betssonSuccessfulUrls,
+          failedUrls: betssonFailedUrls,
+          matches: betssonMatches,
+          totalMatches: betssonMatches.length,
+          durationMs: Date.now() - startTime,
+          selectorsUsed: [],
+          proxyUsed: 'Directo (API interna de Betsson)',
+          timestamp: new Date().toISOString(),
+          source: 'network' as const,
+          oddsCount: allBetssonOdds.length,
+          htmlSize: 0,
+          bookmaker: 'Betsson',
+          ...(allBetssonOdds.length === 0 && {
+            error: betssonFailedUrls[0]?.error || 'Betsson no devolvió cuotas en ninguna URL del batch.',
+          }),
+        };
+      }
+    } catch (e: any) {
+      console.warn('⚠️ [Betsson] fetchDirect falló:', e.message);
     }
 
     // Fix 3B: Para adapters de tipo network-only (Stake y cualquier adapter registrado),

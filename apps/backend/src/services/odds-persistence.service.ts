@@ -3,10 +3,11 @@ import * as path from 'path';
 import type { BookmakerOdd } from '../domain/types/surebet.types.js';
 import { currentScrapeOrigin } from './scrape-context.js';
 
+
 // Bookmakers conocidos por nombre — cualquier otro se guarda dinámicamente
 // bajo su propio slug (derivado del nombre) en vez de perderse o mezclarse
 // incorrectamente con otra casa (bug previo: todo lo no reconocido cala como "wplay").
-const KNOWN_BOOKMAKERS = ['wplay', 'stake', 'betplay', 'bwin', 'rushbet'] as const;
+const KNOWN_BOOKMAKERS = ['wplay', 'stake', 'betplay', 'bwin', 'rushbet', 'betsson'] as const;
 
 interface PersistedOdds {
   books: Record<string, BookmakerOdd[]>;
@@ -105,7 +106,6 @@ export class OddsPersistenceService {
   }
 
   private saveOddsForSlug(slug: string, odds: BookmakerOdd[]): void {
-    // Siempre al almacén general; si el scraping viene del Scraping Global, también al almacén global.
     this.mergeIntoStore('module', slug, odds);
     if (currentScrapeOrigin() === 'global') this.mergeIntoStore('global', slug, odds);
   }
@@ -161,7 +161,7 @@ export class OddsPersistenceService {
     this.saveRaw({ books: {}, timestamp: new Date().toISOString() }, 'global');
   }
 
-  public getStats(store: OddsStore = 'global'): { total: number; timestamp: string; byBookmaker: Record<string, number>; wplay: number; stake: number; betplay: number; bwin: number; rushbet: number } {
+  public getStats(store: OddsStore = 'global'): { total: number; timestamp: string; byBookmaker: Record<string, number>; wplay: number; stake: number; betplay: number; bwin: number; rushbet: number; betsson: number } {
     const data = this.loadRaw(store);
     const byBookmaker: Record<string, number> = {};
     let total = 0;
@@ -179,6 +179,7 @@ export class OddsPersistenceService {
       betplay: byBookmaker.betplay || 0,
       bwin: byBookmaker.bwin || 0,
       rushbet: byBookmaker.rushbet || 0,
+      betsson: byBookmaker.betsson || 0,
     };
   }
 }

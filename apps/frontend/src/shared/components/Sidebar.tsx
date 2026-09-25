@@ -1,7 +1,7 @@
 import React from 'react';
-import { LayoutDashboard, PlaySquare, TrendingUp, ShieldAlert, Network, Layers, Goal, Dice5, Coins, Trophy, Flame, Globe } from 'lucide-react';
+import { LayoutDashboard, PlaySquare, TrendingUp, ShieldAlert, Network, Layers, Goal, Dice5, Coins, Trophy, Flame, Globe, Crown } from 'lucide-react';
 
-export type NavTab = 'dashboard' | 'global' | 'scrapers' | 'selector-config' | 'adapters' | 'surebets' | 'betplay' | 'stake' | 'wplay' | 'bwin' | 'rushbet';
+export type NavTab = 'dashboard' | 'global' | 'scrapers' | 'selector-config' | 'adapters' | 'surebets' | 'betplay' | 'stake' | 'wplay' | 'bwin' | 'rushbet' | 'betsson';
 
 interface SidebarProps {
   currentTab: NavTab;
@@ -19,6 +19,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentTab, onSelectTab }) => 
     { id: 'wplay' as NavTab, label: 'Scraping Wplay', icon: <Coins size={18} /> },
     { id: 'bwin' as NavTab, label: 'Scraping Bwin', icon: <Trophy size={18} /> },
     { id: 'rushbet' as NavTab, label: 'Scraping Rushbet', icon: <Flame size={18} /> },
+    { id: 'betsson' as NavTab, label: 'Scraping Betsson', icon: <Crown size={18} /> },
     { id: 'adapters' as NavTab, label: 'Adapters de Red', icon: <Network size={18} /> },
     { id: 'surebets' as NavTab, label: 'Arbitraje & Surebets', icon: <TrendingUp size={18} /> },
   ];

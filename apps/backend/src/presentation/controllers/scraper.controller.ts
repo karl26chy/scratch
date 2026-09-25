@@ -342,8 +342,9 @@ export class ScraperController {
       const isWplay = primaryHost.includes('wplay.co');
       const isBwin = primaryHost.includes('bwin.co');
       const isRushbet = primaryHost.includes('rushbet.co');
+      const isBetsson = primaryHost.includes('betsson.co');
       const hasRegisteredAdapter = !!this.adapterRegistry.getForUrl(primaryUrl);
-      if (isStake || isBetPlay || isWplay || isBwin || isRushbet || hasRegisteredAdapter) {
+      if (isStake || isBetPlay || isWplay || isBwin || isRushbet || isBetsson || hasRegisteredAdapter) {
         selectors = {
           events: selectors.events || '',
           homeTeam: selectors.homeTeam || '',

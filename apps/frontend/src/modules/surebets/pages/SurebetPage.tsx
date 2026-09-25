@@ -19,7 +19,7 @@ export const SurebetPage: React.FC = () => {
   const [bankroll, setBankroll] = useState<number>(1000000);
   const [surebets, setSurebets] = useState<SurebetRow[]>([]);
   const [loading, setLoading] = useState(false);
-  const [stats, setStats] = useState<{ wplay: number; stake: number; betplay: number; bwin: number; rushbet: number; total: number; byBookmaker?: Record<string, number> } | null>(null);
+  const [stats, setStats] = useState<{ wplay: number; stake: number; betplay: number; bwin: number; rushbet: number; betsson: number; total: number; byBookmaker?: Record<string, number> } | null>(null);
   const [history, setHistory] = useState<any[]>([]);
   const [lastGlobalAt, setLastGlobalAt] = useState<string | null>(null);
 
@@ -76,7 +76,7 @@ export const SurebetPage: React.FC = () => {
         <div>
           <h1 style={{ fontSize: '1.5rem', fontWeight: 800 }}>💰 Surebets — Arbitraje Deportivo</h1>
           <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem' }}>
-            Wplay ({stats?.wplay ?? 0}) + Stake ({stats?.stake ?? 0}) + BetPlay ({stats?.betplay ?? 0}) + Bwin ({stats?.bwin ?? 0}) + Rushbet ({stats?.rushbet ?? 0}) = {stats?.total ?? 0} odds | TIP = 1/mejor1 + 1/mejorX + 1/mejor2 &lt; 1.0
+            Wplay ({stats?.wplay ?? 0}) + Stake ({stats?.stake ?? 0}) + BetPlay ({stats?.betplay ?? 0}) + Bwin ({stats?.bwin ?? 0}) + Rushbet ({stats?.rushbet ?? 0}) + Betsson ({stats?.betsson ?? 0}) = {stats?.total ?? 0} odds | TIP = 1/mejor1 + 1/mejorX + 1/mejor2 &lt; 1.0
           </p>
         </div>
         <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
